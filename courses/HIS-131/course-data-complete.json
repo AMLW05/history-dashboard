@@ -1,0 +1,57 @@
+{
+  "course": {
+    "code": "HIS-131",
+    "title": "American History I",
+    "subtitle": "To 1865",
+    "credits": 3,
+    "term": "Spring 2026",
+    "institution": "FTCC / NCCCS",
+    "textbook": "The American Yawp",
+    "textbookURL": "https://www.americanyawp.com",
+    "description": "Survey of American history from pre-Columbian times through the Civil War",
+    "completionPercent": 100,
+    "qmStandardsMet": 22,
+    "qmStandardsTotal": 22,
+    "totalPoints": 1120,
+    "autoGradedPercent": 67,
+    "totalActivities": 26
+  },
+  "statistics": {
+    "modules": 8,
+    "learningActivities": 26,
+    "quizzes": 8,
+    "checkpoints": 3,
+    "discussions": 4,
+    "finalProject": 1,
+    "dataAnalysisActivities": 2,
+    "autoGradedPoints": 750,
+    "manualGradedPoints": 370
+  },
+  "clos": [
+    {
+      "id": "CLO1",
+      "number": 1,
+      "text": "Analyze the social, political, and economic development of the United States from pre-Columbian times through 1865",
+      "bloomsLevel": "Analyze"
+    },
+    {
+      "id": "CLO2",
+      "number": 2,
+      "text": "Evaluate how diverse groups (Native Americans, Europeans, Africans, women) shaped American society and institutions",
+      "bloomsLevel": "Evaluate"
+    },
+    {
+      "id": "CLO3",
+      "number": 3,
+      "text": "Apply historical thinking skills to interpret primary and secondary sources",
+      "bloomsLevel": "Apply"
+    },
+    {
+      "id": "CLO4",
+      "number": 4,
+      "text": "Communicate historical arguments effectively through written and visual projects",
+      "bloomsLevel": "Create"
+    }
+  ],
+  "modules": []
+}

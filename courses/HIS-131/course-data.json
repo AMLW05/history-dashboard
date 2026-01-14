@@ -1,0 +1,1183 @@
+{
+  "course": {
+    "code": "HIS-131",
+    "title": "American History I",
+    "subtitle": "To 1865",
+    "credits": 3,
+    "term": "Spring 2026",
+    "institution": "FTCC / NCCCS",
+    "textbook": "The American Yawp",
+    "textbookURL": "https://www.americanyawp.com",
+    "description": "Survey of American history from pre-Columbian times through the Civil War, emphasizing social, political, and economic development.",
+    "status": "certification-ready",
+    "completionPercent": 100,
+    "qmStandardsMet": 22,
+    "qmStandardsTotal": 22,
+    "totalPoints": 1120,
+    "autoGradedPercent": 67,
+    "totalActivities": 26
+  },
+  "statistics": {
+    "modules": 8,
+    "learningActivities": 26,
+    "quizzes": 8,
+    "checkpoints": 3,
+    "discussions": 4,
+    "finalProject": 1,
+    "dataAnalysisActivities": 2,
+    "autoGradedPoints": 750,
+    "manualGradedPoints": 370
+  },
+  "clos": [
+    {
+      "id": "CLO1",
+      "number": 1,
+      "text": "Analyze the social, political, and economic development of the United States from pre-Columbian times through 1865",
+      "bloomsLevel": "Analyze",
+      "category": "Historical Knowledge"
+    },
+    {
+      "id": "CLO2",
+      "number": 2,
+      "text": "Evaluate how diverse groups (Native Americans, Europeans, Africans, women) shaped American society and institutions",
+      "bloomsLevel": "Evaluate",
+      "category": "Multiple Perspectives"
+    },
+    {
+      "id": "CLO3",
+      "number": 3,
+      "text": "Apply historical thinking skills to interpret primary and secondary sources",
+      "bloomsLevel": "Apply",
+      "category": "Source Analysis"
+    },
+    {
+      "id": "CLO4",
+      "number": 4,
+      "text": "Communicate historical arguments effectively through written and visual projects",
+      "bloomsLevel": "Create",
+      "category": "Communication"
+    }
+  ],
+  "historicalThinkingSkills": [
+    {
+      "id": "HTS1",
+      "name": "Source Analysis",
+      "description": "Distinguish primary from secondary sources, evaluate credibility, identify bias",
+      "progression": ["Module 1: Identify", "Module 3: Analyze", "Module 5: Evaluate", "Module 7: Synthesize"]
+    },
+    {
+      "id": "HTS2",
+      "name": "Chronological Reasoning",
+      "description": "Sequence events, identify cause-effect relationships, understand periodization",
+      "progression": ["Module 1: Timeline", "Module 3: Causation", "Module 5: Change over time", "Module 7: Turning points"]
+    },
+    {
+      "id": "HTS3",
+      "name": "Contextualization",
+      "description": "Situate events within broader historical, geographic, and cultural contexts",
+      "progression": ["Module 2: Local context", "Module 4: National context", "Module 6: Sectional context", "Module 8: Global context"]
+    },
+    {
+      "id": "HTS4",
+      "name": "Comparison",
+      "description": "Compare historical developments across time, space, and groups",
+      "progression": ["Module 2: Groups", "Module 4: Regions", "Module 6: Movements", "Module 8: Ideologies"]
+    },
+    {
+      "id": "HTS5",
+      "name": "Argumentation",
+      "description": "Construct historical arguments using evidence",
+      "progression": ["Module 1: Thesis", "Module 3: Evidence", "Module 5: Synthesis", "Module 7: Final Project"]
+    },
+    {
+      "id": "HTS6",
+      "name": "Data Literacy",
+      "description": "Interpret quantitative historical evidence (charts, graphs, maps, statistics)",
+      "progression": ["Module 3: Election data analysis", "Module 6: Reform movement data analysis"]
+    }
+  ],
+  "programScaffolding": {
+    "description": "How HIS-131 connects to other history courses and program-level goals",
+    "courses": [
+      {
+        "code": "HIS-131",
+        "title": "American History I (to 1865)",
+        "focusSkills": ["Foundation", "Source Analysis", "Chronology", "Basic Causation"],
+        "themes": ["Colonial Development", "Revolutionary Change", "Democratic Expansion", "Sectional Crisis"],
+        "bloomsEmphasis": "Remember, Understand, Apply"
+      },
+      {
+        "code": "HIS-132",
+        "title": "American History II (1865-Present)",
+        "focusSkills": ["Continuity & Change", "Multiple Causation", "Synthesis", "Presentism"],
+        "themes": ["Reconstruction", "Industrialization", "Global Power", "Civil Rights", "Contemporary Issues"],
+        "bloomsEmphasis": "Apply, Analyze, Evaluate"
+      },
+      {
+        "code": "HIS-111",
+        "title": "World Civilizations I (to 1500)",
+        "focusSkills": ["Comparative Analysis", "Cultural Context", "Global Connections"],
+        "themes": ["Early Civilizations", "Classical Empires", "World Religions", "Trade Networks"],
+        "bloomsEmphasis": "Remember, Understand, Apply, Analyze"
+      },
+      {
+        "code": "HIS-112",
+        "title": "World Civilizations II (1500-Present)",
+        "focusSkills": ["Globalization", "Modernization", "Cross-Cultural Exchange"],
+        "themes": ["Colonialism", "Revolutions", "World Wars", "Decolonization", "Globalization"],
+        "bloomsEmphasis": "Apply, Analyze, Evaluate, Create"
+      }
+    ],
+    "programGoals": [
+      {
+        "id": "PG1",
+        "text": "Demonstrate critical thinking through historical analysis",
+        "mappedCourses": ["HIS-131", "HIS-132", "HIS-111", "HIS-112"]
+      },
+      {
+        "id": "PG2",
+        "text": "Evaluate diverse perspectives and cultural contexts",
+        "mappedCourses": ["HIS-131", "HIS-132", "HIS-111", "HIS-112"]
+      },
+      {
+        "id": "PG3",
+        "text": "Apply information literacy skills to primary and secondary sources",
+        "mappedCourses": ["HIS-131", "HIS-132", "HIS-111", "HIS-112"]
+      },
+      {
+        "id": "PG4",
+        "text": "Communicate historical arguments effectively in writing",
+        "mappedCourses": ["HIS-131", "HIS-132", "HIS-111", "HIS-112"]
+      },
+      {
+        "id": "PG5",
+        "text": "Engage civic responsibility through understanding of historical change",
+        "mappedCourses": ["HIS-131", "HIS-132", "HIS-111", "HIS-112"]
+      }
+    ],
+    "thematicProgression": {
+      "power": ["HIS-131: Colonial authority", "HIS-132: Federal expansion", "HIS-111: Empires", "HIS-112: Nation-states"],
+      "identity": ["HIS-131: American identity", "HIS-132: Pluralism & diversity", "HIS-111: Cultural exchange", "HIS-112: Globalization"],
+      "economy": ["HIS-131: Slavery & market", "HIS-132: Industrialization", "HIS-111: Trade networks", "HIS-112: Capitalism"],
+      "reform": ["HIS-131: Abolition & democracy", "HIS-132: Civil rights", "HIS-111: Religious movements", "HIS-112: Human rights"],
+      "conflict": ["HIS-131: Revolutionary & Civil War", "HIS-132: World Wars", "HIS-111: Empire building", "HIS-112: Cold War"]
+    }
+  },
+  "modules": [
+    {
+      "number": 1,
+      "title": "Indigenous America & First Contact",
+      "dates": "Prehistory-1675",
+      "yawpChapters": ["1", "2"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/01-the-new-world/",
+        "https://www.americanyawp.com/text/02-colliding-cultures/"
+      ],
+      "inquiryQuestions": [
+        "Who lived in the Americas before 1492, and how did they organize their societies?",
+        "What happened when Europeans, Africans, and Indigenous peoples first encountered each other?",
+        "How did disease shape the outcomes of European colonization more than military conquest?"
+      ],
+      "theme": "Collision of Worlds",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Describe pre-Columbian Indigenous civilizations and their diverse societies",
+          "bloomsLevel": "Remember/Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS3"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze the effects of the Columbian Exchange on Indigenous and European populations",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate the role of Spanish colonialism in creating new racial hierarchies",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Indigenous America",
+          "yawpChapter": "1",
+          "description": "Pre-Columbian civilizations, diverse Indigenous societies, agricultural innovations",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: European Exploration",
+          "yawpChapter": "2",
+          "description": "Causes of exploration, technological advances, different European approaches",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: First Contact & Columbian Exchange",
+          "yawpChapter": "2",
+          "description": "Disease devastation, Spanish conquest, creation of racial hierarchies",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 key historical terms with their correct definitions. Terms include Columbian Exchange, Cahokia, Encomienda, Mestizaje, and more. You have 2 attempts and 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Answer 10 multiple-choice questions about key people and events from Indigenous America through First Contact. You have 2 attempts and 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose between Timeline Builder (sort events into time periods) or Comparison Activity (analyze differences between Indigenous societies). You have 2 attempts and 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 1 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Project Checkpoint 1: Topic Selection",
+          "points": 50,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 3],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Colonial Development",
+      "dates": "1620-1763",
+      "yawpChapters": ["3", "4"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/03-british-north-america/",
+        "https://www.americanyawp.com/text/04-colonial-society/"
+      ],
+      "inquiryQuestions": [
+        "How did English colonists transform fluid racial categories into fixed legal systems of slavery?",
+        "What role did religious and political conflicts in Britain play in shaping colonial development?",
+        "How did different groups resist or adapt to European colonization?"
+      ],
+      "theme": "Creating Race & Empire",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Explain the development of race-based slavery in British North America",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS3"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze colonial rebellions and resistance movements (Bacon's Rebellion, Pueblo Revolt)",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate the impact of the Great Awakening and consumer revolution on colonial identity",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Creating Race & Slavery",
+          "yawpChapter": "3",
+          "description": "From indentured servitude to race-based slavery, Bacon's Rebellion, Atlantic slave trade",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Rebellion & Resistance",
+          "yawpChapter": "3",
+          "description": "Pueblo Revolt, Metacom's War, Stono Rebellion, enslaved people's resistance",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Colonial Identity & Society",
+          "yawpChapter": "4",
+          "description": "Great Awakening, consumer revolution, regional differences, Seven Years' War",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 key terms including race-based slavery, indentured servitude, Bacon's Rebellion, Middle Passage, Great Awakening, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about key people (Nathaniel Bacon, Popé, George Whitefield, Olaudah Equiano) and events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose Timeline (sort events 1620-1763) or Comparison (analyze regional differences in colonial development). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 2 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 1: Colonial Life Perspectives",
+          "points": 30,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Revolution & New Nation",
+      "dates": "1763-1800",
+      "yawpChapters": ["5", "6", "7"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/05-the-american-revolution/",
+        "https://www.americanyawp.com/text/06-a-new-nation/",
+        "https://www.americanyawp.com/text/07-the-early-republic/"
+      ],
+      "inquiryQuestions": [
+        "How did colonists transform from proud British subjects to independence seekers in just one decade?",
+        "In what ways did popular protests reshape the Revolution from elite-led to broadly inclusive?",
+        "How did debates over federal power reveal fundamental disagreements about the nation's future?"
+      ],
+      "theme": "Revolutionary Transformation",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the causes and consequences of the American Revolution",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate how revolutionary rhetoric clashed with slavery and limited rights for women and Native Americans",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the debates over the Constitution and competing visions of federal power",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS3", "HTS5"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Revolutionary Ideas & Causes",
+          "yawpChapter": "5",
+          "description": "Imperial crisis, popular protest, Boston Massacre, Tea Party, road to independence",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Revolutionary War & Experiences",
+          "yawpChapter": "5",
+          "description": "Military conflict, African American participation, women's roles, Native American alliances",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Creating a New Nation",
+          "yawpChapter": "6, 7",
+          "description": "Articles of Confederation, Constitutional Convention, Federalist/Anti-Federalist debates, Bill of Rights",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Stamp Act, Sons of Liberty, Constitutional Convention, Federalist Papers, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Samuel Adams, George Washington, Abigail Adams, James Madison, and key revolutionary events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence revolutionary events 1763-1800) or Comparison (analyze Federalist vs Anti-Federalist positions). 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M3-LA4",
+          "title": "LA4: Analyzing the Election of 1800",
+          "format": "Mixed Question Types (Categorization, Hotspot, Matching, Multiple Answer, Numeric)",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "linkedSkills": ["HTS6"],
+          "studentInstructions": "Analyze historical data from the Election of 1800 including voting eligibility, electoral votes, and population statistics. View 3 detailed charts and answer 10 questions using various question types. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 3 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Project Checkpoint 2: Revolutionary Voice Research",
+          "points": 50,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Early Republic & Market Revolution",
+      "dates": "1800-1824",
+      "yawpChapters": ["7", "8"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/07-the-early-republic/",
+        "https://www.americanyawp.com/text/08-the-market-revolution/"
+      ],
+      "inquiryQuestions": [
+        "How did Jefferson's democratic rhetoric align with his actual policies regarding race and Native sovereignty?",
+        "How did the War of 1812 transform American nationalism and Native resistance movements?",
+        "How did transportation and technology transform regional economies differently across North and South?"
+      ],
+      "theme": "Testing Democracy & Markets",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Evaluate Jeffersonian democracy and its contradictions",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS4", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze the causes and effects of the War of 1812 on American identity",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how the Market Revolution reshaped labor, family, and gender roles",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS4"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Early Republic & Testing Revolutionary Ideals",
+          "yawpChapter": "7",
+          "description": "Jeffersonian democracy, Louisiana Purchase, Embargo Act, War of 1812, Haitian Revolution impact",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Market Revolution & Economic Transformation",
+          "yawpChapter": "8",
+          "description": "Transportation revolution, Erie Canal, cotton gin, factory system, wage labor",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Freedom Struggles & Reform Movements",
+          "yawpChapter": "7, 8",
+          "description": "Native resistance (Tecumseh), cult of domesticity, Panic of 1819",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Jeffersonian democracy, Louisiana Purchase, Market Revolution, cotton gin, cult of domesticity. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Thomas Jefferson, Toussaint Louverture, Eli Whitney, Tecumseh, and key events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose Timeline (sort events 1800-1824) or Comparison (analyze Market Revolution's different impacts on North vs South). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Midterm Exam",
+          "title": "Module 4 Midterm Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 1-4"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 2: Market Revolution Impact",
+          "points": 30,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [3],
+          "linkedCLOs": ["CLO1", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Jacksonian Democracy & Expansion",
+      "dates": "1815-1840",
+      "yawpChapters": ["9", "10"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/09-democracy-in-america/",
+        "https://www.americanyawp.com/text/10-religion-and-reform/"
+      ],
+      "inquiryQuestions": [
+        "How did expanding white male suffrage occur alongside systematic disenfranchisement of Black voters?",
+        "What does the Bank War reveal about competing visions of democratic power and economic justice?",
+        "How did westward expansion and Indian Removal reflect American ambitions and contradictions?"
+      ],
+      "theme": "Democratic Contradictions",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the expansion and limitations of Jacksonian democracy",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS4", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate the impact of Indian Removal policies on Native American nations",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the political and economic consequences of the Bank War",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS2"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Territorial Expansion & Indigenous Removal",
+          "yawpChapter": "9",
+          "description": "Manifest Destiny, Indian Removal Act, Trail of Tears, Cherokee Nation resistance",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Jacksonian Democracy & Political Transformation",
+          "yawpChapter": "9",
+          "description": "Universal white male suffrage, Bank War, nullification crisis, second party system",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Religious Awakening & Reform Movements",
+          "yawpChapter": "10",
+          "description": "Second Great Awakening, utopian communities, early reform movements",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Manifest Destiny, Indian Removal Act, Trail of Tears, Bank War, nullification crisis. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Andrew Jackson, John Ross, John C. Calhoun, and key events of the Jacksonian era. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence events 1815-1840) or Comparison (analyze who gained vs lost rights in Jacksonian era). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 5 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Project Checkpoint 3: Historical Context Analysis",
+          "points": 50,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Reform & Social Movements",
+      "dates": "1820-1850",
+      "yawpChapters": ["10", "11"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/10-religion-and-reform/",
+        "https://www.americanyawp.com/text/11-the-cotton-revolution/"
+      ],
+      "inquiryQuestions": [
+        "How did evangelical revivals inspire Americans to pursue social reform movements?",
+        "Why did abolitionism prove so divisive compared to other reform movements?",
+        "How did women's participation in reform lead them to advocate for their own equality?"
+      ],
+      "theme": "Reform & Resistance",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the connections between religious revival and social reform movements",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS4"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate the strategies and divisions within the abolitionist movement",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how women's reform work led to the women's rights movement",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Religious Fervor & Social Reform",
+          "yawpChapter": "10",
+          "description": "Second Great Awakening, temperance, education reform, moral reform societies",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Abolitionism & Resistance",
+          "yawpChapter": "10, 11",
+          "description": "Antislavery movement, gradualism vs immediatism, Black abolitionists, slave resistance",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Women's Rights & Intersecting Reforms",
+          "yawpChapter": "10",
+          "description": "Seneca Falls Convention, women reformers, connections between movements",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including temperance, abolitionism, Seneca Falls, American Anti-Slavery Society, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about William Lloyd Garrison, Frederick Douglass, Elizabeth Cady Stanton, and reform movements. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence reform movements 1820-1850) or Comparison (analyze different reform strategies). 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M6-LA4",
+          "title": "LA4: Analyzing Antebellum Reform Movements",
+          "format": "Mixed Question Types (Ordering, Multiple Answer, Categorization, Numeric, Matching)",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "linkedSkills": ["HTS6"],
+          "studentInstructions": "Analyze historical data about reform movement growth, antislavery petitions, and women's participation. View 4 detailed charts and answer 10 questions. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 6 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 3: Reform Movements",
+          "points": 30,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Sectional Crisis",
+      "dates": "1845-1860",
+      "yawpChapters": ["11", "12", "13"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/11-the-cotton-revolution/",
+        "https://www.americanyawp.com/text/12-manifest-destiny/",
+        "https://www.americanyawp.com/text/13-the-sectional-crisis/"
+      ],
+      "inquiryQuestions": [
+        "How did westward expansion transform slavery from a regional institution into a national crisis?",
+        "What role did Black activism play in escalating antislavery politics beyond compromise?",
+        "Why did the Republican Party's 1860 victory precipitate secession rather than negotiation?"
+      ],
+      "theme": "Irreconcilable Division",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze how territorial expansion created irreconcilable sectional divisions",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS4"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate the breakdown of political compromises from Missouri to Kansas-Nebraska",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS3", "HTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how the 1860 election triggered the secession crisis",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS2"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Territorial Expansion & Sectional Conflict",
+          "yawpChapter": "11, 12, 13",
+          "description": "Mexican-American War, Wilmot Proviso, Compromise of 1850, popular sovereignty",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Compromises Under Strain",
+          "yawpChapter": "13",
+          "description": "Kansas-Nebraska Act, Bleeding Kansas, Dred Scott decision, Lincoln-Douglas debates",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Fracture Accelerates",
+          "yawpChapter": "13",
+          "description": "John Brown's raid, Republican Party rise, Election of 1860, secession crisis",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Compromise of 1850, Kansas-Nebraska Act, Dred Scott, popular sovereignty, secession. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Stephen Douglas, Abraham Lincoln, John Brown, and sectional crisis events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence sectional crisis events 1845-1860) or Comparison (analyze Northern vs Southern perspectives). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 7 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Final Project",
+          "title": "Final Project: Historical Research Presentation",
+          "points": 100,
+          "rubric": "RUBRIC_3_Final_Project",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO1", "CLO2", "CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Civil War",
+      "dates": "1860-1865",
+      "yawpChapters": ["14"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/14-the-civil-war/"
+      ],
+      "inquiryQuestions": [
+        "How did the Civil War transform from a conflict to preserve the Union into a war for emancipation?",
+        "What role did enslaved people and free African Americans play in forcing this ideological shift?",
+        "How did the war reshape society, gender roles, and family structures across North and South?"
+      ],
+      "theme": "War & Transformation",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the causes, course, and consequences of the Civil War",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate how African Americans shaped the war's transformation into an emancipation struggle",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the social and economic impacts of the war on different populations",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS3", "HTS4"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Secession Crisis & War Begins",
+          "yawpChapter": "14",
+          "description": "Fort Sumter, mobilization, early battles, border states, strategies",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Emancipation & Total War",
+          "yawpChapter": "14",
+          "description": "Emancipation Proclamation, Black soldiers, home front, draft riots, Sherman's march",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Union Victory & War's Transformation",
+          "yawpChapter": "14",
+          "description": "Gettysburg, Appomattox, Lincoln's assassination, war's impact on society and economy",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Emancipation Proclamation, total war, contraband, Gettysburg Address, Appomattox. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Abraham Lincoln, Robert E. Lee, Ulysses S. Grant, and major Civil War events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence Civil War events 1860-1865) or Comparison (analyze Union vs Confederate advantages/disadvantages). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Final Exam",
+          "title": "Module 8 Final Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 5-8"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 4: Civil War Reflections",
+          "points": 30,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO1", "CLO2", "CLO4"]
+        }
+      ]
+    }
+  ]
+}
