@@ -1,0 +1,14 @@
+# GitHub Language Statistics Configuration
+# Tell GitHub to recognize this as primarily an HTML project
+
+# Mark JavaScript files as vendored/documentation to reduce their weight
+*-activities.js linguist-documentation
+app.js linguist-vendored=false
+
+# Ensure HTML and CSS are properly weighted
+*.html linguist-detectable=true
+*.css linguist-detectable=true
+*.js linguist-detectable=true
+
+# Set primary language
+*.html linguist-language=HTML
