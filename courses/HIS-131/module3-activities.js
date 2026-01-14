@@ -169,3 +169,109 @@ const module3Checkpoint = {
         ]
     }
 };
+
+// Module 3 Quiz (10 questions covering Revolution & New Nation)
+const module3Quiz = {
+    questions: [
+        {
+            q: "The phrase 'No taxation without representation' emerged in response to:",
+            answers: [
+                "The Boston Massacre",
+                "The Stamp Act of 1765 ✓",
+                "The Declaration of Independence",
+                "The Tea Act"
+            ],
+            correct: 1
+        },
+        {
+            q: "Thomas Paine's Common Sense (1776) was significant because it:",
+            answers: [
+                "Argued for reconciliation with Britain",
+                "Convinced many colonists to support independence ✓",
+                "Defended the Articles of Confederation",
+                "Opposed the Constitution"
+            ],
+            correct: 1
+        },
+        {
+            q: "Which battle is considered the turning point of the Revolutionary War because it convinced France to ally with America?",
+            answers: [
+                "Lexington and Concord",
+                "Bunker Hill",
+                "Saratoga ✓",
+                "Yorktown"
+            ],
+            correct: 2
+        },
+        {
+            q: "The Articles of Confederation created a weak central government primarily because the Founders:",
+            answers: [
+                "Wanted to preserve state sovereignty and feared centralized tyranny ✓",
+                "Copied the British parliamentary system",
+                "Believed in monarchy",
+                "Wanted to emulate French government"
+            ],
+            correct: 0
+        },
+        {
+            q: "Shays' Rebellion (1786-1787) was important because it:",
+            answers: [
+                "Successfully overthrew the Massachusetts government",
+                "Demonstrated the weakness of the Articles and prompted the Constitutional Convention ✓",
+                "Led to the Bill of Rights",
+                "Ended the Revolutionary War"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Great Compromise at the Constitutional Convention resolved conflict between large and small states by:",
+            answers: [
+                "Giving equal representation to all states",
+                "Creating a bicameral legislature with proportional and equal representation ✓",
+                "Eliminating state governments",
+                "Allowing only large states to vote"
+            ],
+            correct: 1
+        },
+        {
+            q: "Anti-Federalists opposed ratification of the Constitution because they:",
+            answers: [
+                "Wanted a stronger federal government",
+                "Feared it gave too much power to the central government and lacked a bill of rights ✓",
+                "Supported British rule",
+                "Opposed all forms of government"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Bill of Rights was added to the Constitution to:",
+            answers: [
+                "Strengthen federal power",
+                "Address Anti-Federalist concerns by protecting individual liberties ✓",
+                "Abolish slavery",
+                "Establish the Supreme Court"
+            ],
+            correct: 1
+        },
+        {
+            q: "Alexander Hamilton's financial plan aimed to:",
+            answers: [
+                "Eliminate all federal taxes and debts",
+                "Establish federal credit, assume state debts, and create a national bank ✓",
+                "Return power to state governments",
+                "Prohibit interstate commerce"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Whiskey Rebellion (1794) was significant because:",
+            answers: [
+                "It successfully eliminated the whiskey tax",
+                "Washington's military response demonstrated federal authority under the new Constitution ✓",
+                "It led to repeal of the Constitution",
+                "It started the Revolutionary War"
+            ],
+            correct: 1
+        }
+    ]
+};

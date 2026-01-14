@@ -100,3 +100,109 @@ const module2Discussion = {
         historicalAccuracy: 10
     }
 };
+
+// Module 2 Quiz (10 questions covering Colonial Development)
+const module2Quiz = {
+    questions: [
+        {
+            q: "Race-based slavery in the British colonies differed from earlier forms of servitude because:",
+            answers: [
+                "It was temporary and allowed for eventual freedom",
+                "It was hereditary and permanently tied to African ancestry ✓",
+                "It applied equally to Europeans and Africans",
+                "It was only used for agricultural labor"
+            ],
+            correct: 1
+        },
+        {
+            q: "Bacon's Rebellion (1676) was significant because it:",
+            answers: [
+                "Successfully established democracy in Virginia",
+                "Led elites to harden racial categories to prevent future unity between poor whites and Blacks ✓",
+                "Ended the use of indentured servants in all colonies",
+                "Resulted in immediate abolition of slavery"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Pueblo Revolt of 1680 was unique among Indigenous resistance movements because:",
+            answers: [
+                "It failed within weeks of starting",
+                "It successfully expelled Spanish colonizers for 12 years ✓",
+                "It was led by European sympathizers",
+                "It resulted in a peace treaty with Spain"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Middle Passage refers to:",
+            answers: [
+                "The journey from England to the American colonies",
+                "The brutal transatlantic voyage enslaving Africans from Africa to the Americas ✓",
+                "The route between northern and southern colonies",
+                "The path westward across the Appalachian Mountains"
+            ],
+            correct: 1
+        },
+        {
+            q: "Which statement best describes mercantilism?",
+            answers: [
+                "An economic system promoting free trade between all nations",
+                "A policy where colonies exist to enrich the mother country through restricted trade ✓",
+                "A religious movement encouraging moral commerce",
+                "A labor system replacing slavery with wage work"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Great Awakening challenged traditional authority by:",
+            answers: [
+                "Promoting rational thought over emotion",
+                "Emphasizing personal faith and emotional experience over formal church hierarchy ✓",
+                "Calling for separation of church and state",
+                "Establishing new government institutions"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Consumer Revolution in the colonies:",
+            answers: [
+                "Made colonists economically independent from Britain",
+                "Created shared material culture with Britain while increasing colonial debt ✓",
+                "Led to lower prices for all goods",
+                "Eliminated social class distinctions"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Seven Years' War (1754-1763) resulted in:",
+            answers: [
+                "French victory and expansion in North America",
+                "British acquisition of French Canada and Spanish Florida ✓",
+                "Colonial independence from Britain",
+                "End of all European claims in North America"
+            ],
+            correct: 1
+        },
+        {
+            q: "Olaudah Equiano's autobiography was significant because it:",
+            answers: [
+                "Provided a firsthand account of the horrors of the Middle Passage and slavery ✓",
+                "Described the Great Awakening revivals",
+                "Documented Bacon's Rebellion",
+                "Explained Puritan theology"
+            ],
+            correct: 0
+        },
+        {
+            q: "Salutary neglect refers to:",
+            answers: [
+                "Britain's harsh enforcement of colonial trade laws",
+                "Colonial mistreatment of Indigenous peoples",
+                "Britain's loose enforcement of laws, allowing colonial self-governance to develop ✓",
+                "The policy of ignoring slavery in southern colonies"
+            ],
+            correct: 2
+        }
+    ]
+};

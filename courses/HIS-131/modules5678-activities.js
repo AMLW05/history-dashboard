@@ -460,3 +460,783 @@ Choose ONE question to explore:
 - Discuss: How does understanding this history help us understand America today?`,
     rubric: "RUBRIC_2_Discussion_Boards"
 };
+
+// ===== MODULE QUIZZES =====
+
+// Module 5 Quiz (10 questions covering Jacksonian Democracy & Expansion)
+const module5Quiz = {
+    questions: [
+        {
+            q: "Jacksonian Democracy expanded voting rights to:",
+            answers: [
+                "All citizens including women and African Americans",
+                "White men regardless of property ownership ✓",
+                "Only wealthy landowners",
+                "Everyone over age 18"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Indian Removal Act of 1830:",
+            answers: [
+                "Granted Native Americans citizenship",
+                "Authorized forced relocation of Native peoples west of the Mississippi ✓",
+                "Protected Native lands from settlement",
+                "Ended all conflicts with Native nations"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Trail of Tears resulted in:",
+            answers: [
+                "Cherokee victory over forced removal",
+                "Approximately 4,000 Cherokee deaths during forced removal ✓",
+                "Peaceful relocation of all tribes",
+                "Compensation for Native lands"
+            ],
+            correct: 1
+        },
+        {
+            q: "Andrew Jackson opposed the Second Bank of the United States because he:",
+            answers: [
+                "Wanted stronger federal banking control",
+                "Viewed it as elite corruption threatening democracy ✓",
+                "Supported state banks exclusively",
+                "Believed all banks should be abolished"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Nullification Crisis (1832-1833) involved:",
+            answers: [
+                "South Carolina claiming the right to nullify federal tariffs ✓",
+                "Jackson's impeachment proceedings",
+                "The abolition of slavery",
+                "Native American treaty negotiations"
+            ],
+            correct: 0
+        },
+        {
+            q: "Manifest Destiny was the belief that:",
+            answers: [
+                "Slavery should expand nationwide",
+                "The U.S. was destined to expand across the continent ✓",
+                "Native Americans should govern their own territories",
+                "Immigration should be restricted"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Second Great Awakening:",
+            answers: [
+                "Emphasized rational thought over emotion",
+                "Inspired various social reform movements ✓",
+                "Rejected all organized religion",
+                "Focused exclusively on wealthy elites"
+            ],
+            correct: 1
+        },
+        {
+            q: "William Lloyd Garrison's The Liberator advocated for:",
+            answers: [
+                "Gradual emancipation over decades",
+                "Colonization of freed slaves to Africa",
+                "Immediate abolition of slavery ✓",
+                "Preserving the Union above all else"
+            ],
+            correct: 2
+        },
+        {
+            q: "The Seneca Falls Convention (1848) issued the Declaration of Sentiments demanding:",
+            answers: [
+                "End to slavery",
+                "Women's equal rights including voting ✓",
+                "Prohibition of alcohol",
+                "Education reform"
+            ],
+            correct: 1
+        },
+        {
+            q: "The spoils system refers to:",
+            answers: [
+                "Distribution of war plunder to soldiers",
+                "Rewarding political supporters with government jobs ✓",
+                "Taxation of imported goods",
+                "Land distribution to settlers"
+            ],
+            correct: 1
+        }
+    ]
+};
+
+// Module 6 Quiz (10 questions covering Reform & Social Movements)
+const module6Quiz = {
+    questions: [
+        {
+            q: "The temperance movement primarily targeted:",
+            answers: [
+                "Slavery",
+                "Alcohol consumption ✓",
+                "Poverty",
+                "Illiteracy"
+            ],
+            correct: 1
+        },
+        {
+            q: "Immediate abolitionists differed from gradualists by:",
+            answers: [
+                "Demanding instant end to slavery without compensation ✓",
+                "Supporting slow, compensated emancipation",
+                "Focusing only on preventing slavery's expansion",
+                "Advocating colonization to Africa"
+            ],
+            correct: 0
+        },
+        {
+            q: "Frederick Douglass was significant to the abolitionist movement as:",
+            answers: [
+                "A white minister advocating for slaves",
+                "A formerly enslaved person who became a powerful orator and writer ✓",
+                "A politician who passed antislavery laws",
+                "A Underground Railroad conductor"
+            ],
+            correct: 1
+        },
+        {
+            q: "The American Anti-Slavery Society was founded to:",
+            answers: [
+                "Support gradual emancipation",
+                "Promote immediate abolition through moral persuasion ✓",
+                "Colonize freed slaves in Africa",
+                "Purchase and free enslaved people"
+            ],
+            correct: 1
+        },
+        {
+            q: "Women's participation in abolitionism led to:",
+            answers: [
+                "Universal acceptance of women activists",
+                "Women being excluded from all reform movements",
+                "The emergence of the women's rights movement ✓",
+                "Immediate women's suffrage"
+            ],
+            correct: 2
+        },
+        {
+            q: "Elizabeth Cady Stanton was a key figure in:",
+            answers: [
+                "The temperance movement only",
+                "The women's rights movement ✓",
+                "The transcendentalist movement",
+                "The Second Great Awakening"
+            ],
+            correct: 1
+        },
+        {
+            q: "Utopian communities like Brook Farm sought to:",
+            answers: [
+                "Create model societies based on cooperation and equality ✓",
+                "Establish slave plantations",
+                "Build military fortifications",
+                "Promote industrial capitalism"
+            ],
+            correct: 0
+        },
+        {
+            q: "Public education reform in this era focused on:",
+            answers: [
+                "Educating only the wealthy elite",
+                "Creating common schools to educate all children ✓",
+                "Eliminating all formal schooling",
+                "Segregating schools by wealth"
+            ],
+            correct: 1
+        },
+        {
+            q: "The reform movements of this era were largely inspired by:",
+            answers: [
+                "European revolutionary ideologies",
+                "The Second Great Awakening and religious revival ✓",
+                "Economic depression",
+                "Government mandates"
+            ],
+            correct: 1
+        },
+        {
+            q: "Abolitionism was most divisive compared to other reforms because:",
+            answers: [
+                "It cost too much money",
+                "It directly challenged the economic foundation of the South ✓",
+                "It was supported by too few people",
+                "It focused on foreign policy"
+            ],
+            correct: 1
+        }
+    ]
+};
+
+// Module 7 Quiz (10 questions covering Sectional Crisis)
+const module7Quiz = {
+    questions: [
+        {
+            q: "The Compromise of 1850 included:",
+            answers: [
+                "Banning slavery in all new territories",
+                "A stricter Fugitive Slave Act requiring Northerners to return escaped slaves ✓",
+                "Abolition of slavery in Washington D.C.",
+                "Equal representation for slave and free states"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Kansas-Nebraska Act (1854) allowed:",
+            answers: [
+                "Congress to decide slavery in new territories",
+                "Popular sovereignty letting settlers decide on slavery ✓",
+                "Immediate abolition in Kansas and Nebraska",
+                "Slavery only in Kansas"
+            ],
+            correct: 1
+        },
+        {
+            q: "'Bleeding Kansas' refers to:",
+            answers: [
+                "A Native American battle",
+                "Violent conflict between pro-slavery and antislavery settlers ✓",
+                "A disease outbreak",
+                "A failed railroad project"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Dred Scott decision (1857) ruled that:",
+            answers: [
+                "All enslaved people were automatically free in free states",
+                "African Americans had no rights as citizens and Congress couldn't ban slavery in territories ✓",
+                "Slavery was unconstitutional",
+                "The Missouri Compromise was valid"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Lincoln-Douglas debates (1858) centered on:",
+            answers: [
+                "Tariff policy",
+                "The expansion of slavery into territories ✓",
+                "Banking regulation",
+                "Foreign policy"
+            ],
+            correct: 1
+        },
+        {
+            q: "John Brown's raid on Harpers Ferry (1859) attempted to:",
+            answers: [
+                "Negotiate with slaveholders",
+                "Seize a federal arsenal to arm enslaved people for rebellion ✓",
+                "Establish a utopian community",
+                "Free only his own family members"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Republican Party formed in the 1850s primarily to:",
+            answers: [
+                "Preserve slavery where it existed",
+                "Oppose the expansion of slavery into western territories ✓",
+                "Support states' rights",
+                "Promote immediate abolition"
+            ],
+            correct: 1
+        },
+        {
+            q: "Abraham Lincoln's election in 1860 triggered secession because:",
+            answers: [
+                "He promised immediate abolition",
+                "Southern states feared a president opposed to slavery's expansion ✓",
+                "He won the popular vote in the South",
+                "He advocated for high tariffs"
+            ],
+            correct: 1
+        },
+        {
+            q: "Popular sovereignty was the idea that:",
+            answers: [
+                "Congress should decide on slavery in territories",
+                "Settlers in territories should vote on whether to allow slavery ✓",
+                "The Supreme Court should decide slavery issues",
+                "Each state could nullify federal laws"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Wilmot Proviso proposed:",
+            answers: [
+                "Expanding slavery to all territories",
+                "Banning slavery in territories acquired from Mexico ✓",
+                "Immediate abolition nationwide",
+                "Compensating slaveholders"
+            ],
+            correct: 1
+        }
+    ]
+};
+
+// Module 8 Quiz (10 questions covering Civil War)
+const module8Quiz = {
+    questions: [
+        {
+            q: "The Civil War began when:",
+            answers: [
+                "Lincoln was elected president",
+                "Confederate forces fired on Fort Sumter ✓",
+                "The Emancipation Proclamation was issued",
+                "Lee surrendered at Appomattox"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Emancipation Proclamation (January 1, 1863):",
+            answers: [
+                "Freed all enslaved people nationwide immediately",
+                "Freed enslaved people in Confederate-controlled territory ✓",
+                "Banned slavery in Union border states",
+                "Ended the Civil War"
+            ],
+            correct: 1
+        },
+        {
+            q: "African Americans contributed to the Union war effort by:",
+            answers: [
+                "Serving as soldiers in the United States Colored Troops ✓",
+                "Being prohibited from all military service",
+                "Only serving as slaves to Confederate forces",
+                "Leading all Union armies"
+            ],
+            correct: 0
+        },
+        {
+            q: "The term 'contraband' during the Civil War referred to:",
+            answers: [
+                "Illegal weapons",
+                "Enslaved people who escaped to Union lines ✓",
+                "Smuggled goods from Europe",
+                "Confederate currency"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Battle of Gettysburg (July 1863) was significant because:",
+            answers: [
+                "It began the Civil War",
+                "It was the bloodiest battle and turned back Lee's invasion of the North ✓",
+                "It ended the war immediately",
+                "It was the first Union victory"
+            ],
+            correct: 1
+        },
+        {
+            q: "Total war, as practiced by General Sherman, involved:",
+            answers: [
+                "Targeting only military installations",
+                "Destroying civilian infrastructure and resources to break Southern will ✓",
+                "Avoiding all civilian areas",
+                "Negotiating peace settlements"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Gettysburg Address redefined the war's purpose as:",
+            answers: [
+                "Only preserving the Union",
+                "Preserving the Union AND achieving a 'new birth of freedom' ✓",
+                "Conquering the South",
+                "Expanding westward"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Civil War ended when:",
+            answers: [
+                "Lincoln was assassinated",
+                "Robert E. Lee surrendered to Ulysses S. Grant at Appomattox ✓",
+                "The Emancipation Proclamation was issued",
+                "Sherman captured Atlanta"
+            ],
+            correct: 1
+        },
+        {
+            q: "Women's roles during the Civil War included:",
+            answers: [
+                "Only staying home with no involvement",
+                "Nursing, managing farms/plantations, working in factories, and espionage ✓",
+                "Serving as generals in both armies",
+                "Being completely exempt from war impacts"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Civil War transformed from preserving the Union to a war for emancipation primarily due to:",
+            answers: [
+                "European pressure",
+                "African Americans' actions (escaping, fighting) and abolitionist advocacy ✓",
+                "Southern surrender offers",
+                "Economic considerations alone"
+            ],
+            correct: 1
+        }
+    ]
+};
+
+// ===== FINAL EXAM =====
+
+// Final Exam (35 comprehensive questions covering all 8 modules)
+const finalExam = {
+    title: "Final Exam: Comprehensive Assessment (Modules 1-8)",
+    instructions: "This comprehensive final exam covers all course material from Pre-Columbian America through the Civil War (Modules 1-8). Answer all 35 questions. You have 120 minutes and 1 attempt. Questions include multiple choice, true/false, and matching concepts.",
+    questions: [
+        // Module 1 (4 questions)
+        {
+            q: "Which of the following best describes the demographic impact of the Columbian Exchange on Indigenous populations?",
+            answers: [
+                "Gradual population growth due to new crops",
+                "Disease epidemics killing up to 90% in some regions ✓",
+                "No significant population changes",
+                "Immediate recovery through European medicine"
+            ],
+            correct: 1
+        },
+        {
+            q: "The encomienda system in Spanish colonies:",
+            answers: [
+                "Granted colonists control over Indigenous labor in exchange for Christianization ✓",
+                "Abolished all forms of forced labor",
+                "Gave Indigenous peoples land ownership",
+                "Promoted equal partnership between Spanish and Native peoples"
+            ],
+            correct: 0
+        },
+        {
+            q: "True or False: The Haudenosaunee (Iroquois) Confederacy influenced American ideas about democratic federation.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        {
+            q: "Cahokia was significant as:",
+            answers: [
+                "The Aztec capital city",
+                "A major Mississippian city with up to 30,000 people near modern St. Louis ✓",
+                "A Spanish mission in California",
+                "An Inca fortress in Peru"
+            ],
+            correct: 1
+        },
+        // Module 2 (4 questions)
+        {
+            q: "Bacon's Rebellion (1676) led Virginia elites to shift toward race-based slavery because:",
+            answers: [
+                "Slavery was more profitable than any other system",
+                "Poor whites and enslaved Blacks united, threatening elite power ✓",
+                "Britain mandated the use of enslaved labor",
+                "Indentured servants became unavailable"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Pueblo Revolt of 1680 was unique because:",
+            answers: [
+                "It failed immediately",
+                "It successfully expelled Spanish colonizers for 12 years ✓",
+                "It was led by Spanish sympathizers",
+                "It had no lasting impact"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Great Awakening of the 1730s-1740s:",
+            answers: [
+                "Reinforced formal church authority",
+                "Emphasized personal emotional religious experience and challenged established churches ✓",
+                "Rejected all forms of Christianity",
+                "Was limited to wealthy colonists"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: The Seven Years' War resulted in Britain acquiring French Canada.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        // Module 3 (5 questions)
+        {
+            q: "Thomas Paine's Common Sense (1776) was significant because it:",
+            answers: [
+                "Defended monarchy",
+                "Convinced many colonists to support independence ✓",
+                "Opposed the Revolution",
+                "Supported reconciliation with Britain"
+            ],
+            correct: 1
+        },
+        {
+            q: "Shays' Rebellion demonstrated that:",
+            answers: [
+                "The Articles of Confederation were too strong",
+                "The Articles created a weak federal government unable to handle crises ✓",
+                "State governments had too little power",
+                "Farmers were completely satisfied with their economic situation"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Constitutional Convention's Great Compromise resolved conflict by:",
+            answers: [
+                "Creating a bicameral legislature with proportional and equal representation ✓",
+                "Giving all power to large states",
+                "Eliminating state governments entirely",
+                "Maintaining the Articles of Confederation"
+            ],
+            correct: 0
+        },
+        {
+            q: "Anti-Federalists opposed the Constitution primarily because:",
+            answers: [
+                "It was too weak",
+                "It lacked a bill of rights and gave too much power to central government ✓",
+                "It abolished slavery",
+                "It created too many states"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: The Whiskey Rebellion demonstrated federal authority under the new Constitution.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        // Module 4 (4 questions)
+        {
+            q: "The Louisiana Purchase (1803) was significant because it:",
+            answers: [
+                "Ended the War of 1812",
+                "Doubled U.S. territory for $15 million ✓",
+                "Abolished slavery in western lands",
+                "Gave Native Americans more rights"
+            ],
+            correct: 1
+        },
+        {
+            q: "Eli Whitney's cotton gin:",
+            answers: [
+                "Made slavery less profitable",
+                "Made cotton highly profitable and entrenched slavery ✓",
+                "Was rejected by southern planters",
+                "Only worked for wheat production"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Missouri Compromise (1820) attempted to:",
+            answers: [
+                "End slavery entirely",
+                "Balance free and slave states while banning slavery north of 36°30' line ✓",
+                "Give Missouri to France",
+                "Prevent westward expansion"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: The Market Revolution shifted the economy from subsistence farming to commercial agriculture and wage labor.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        // Module 5 (4 questions)
+        {
+            q: "The Indian Removal Act of 1830:",
+            answers: [
+                "Protected Native American lands",
+                "Authorized forced relocation of Native peoples west of the Mississippi ✓",
+                "Granted citizenship to all Native Americans",
+                "Ended all conflicts peacefully"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Trail of Tears resulted in approximately how many Cherokee deaths?",
+            answers: [
+                "Fewer than 100",
+                "Around 4,000 ✓",
+                "Over 20,000",
+                "No deaths occurred"
+            ],
+            correct: 1
+        },
+        {
+            q: "Andrew Jackson's 'Bank War' targeted:",
+            answers: [
+                "State banks",
+                "The Second Bank of the United States ✓",
+                "European banks",
+                "All banking institutions"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Seneca Falls Convention (1848) focused on:",
+            answers: [
+                "Abolishing slavery",
+                "Women's equal rights including suffrage ✓",
+                "Temperance",
+                "Education reform only"
+            ],
+            correct: 1
+        },
+        // Module 6 (5 questions)
+        {
+            q: "Immediate abolitionists like William Lloyd Garrison demanded:",
+            answers: [
+                "Gradual, compensated emancipation",
+                "Instant end to slavery without compensation or colonization ✓",
+                "Returning enslaved people to Africa",
+                "Maintaining slavery where it existed"
+            ],
+            correct: 1
+        },
+        {
+            q: "Frederick Douglass contributed to abolitionism as:",
+            answers: [
+                "A white minister",
+                "A formerly enslaved person who became a powerful orator and writer ✓",
+                "A southern plantation owner",
+                "A European observer"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: Women's participation in reform movements led to the emergence of the women's rights movement.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        {
+            q: "Reform movements of this era were largely inspired by:",
+            answers: [
+                "Economic depression",
+                "The Second Great Awakening and religious revival ✓",
+                "Government mandates",
+                "Foreign intervention"
+            ],
+            correct: 1
+        },
+        {
+            q: "Elizabeth Cady Stanton was a key leader in:",
+            answers: [
+                "The temperance movement only",
+                "The women's rights movement ✓",
+                "The transcendentalist movement",
+                "Banking reform"
+            ],
+            correct: 1
+        },
+        // Module 7 (5 questions)
+        {
+            q: "The Compromise of 1850 included a stricter Fugitive Slave Act that:",
+            answers: [
+                "Freed all escaped slaves",
+                "Required Northerners to return escaped slaves to owners ✓",
+                "Abolished slavery in border states",
+                "Granted slaves jury trials"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Kansas-Nebraska Act (1854) introduced:",
+            answers: [
+                "Congressional control of slavery in territories",
+                "Popular sovereignty letting settlers vote on slavery ✓",
+                "Immediate abolition",
+                "Extension of Missouri Compromise line"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Dred Scott decision (1857) ruled that:",
+            answers: [
+                "Enslaved people were citizens with rights",
+                "African Americans had no citizenship rights and Congress couldn't ban territorial slavery ✓",
+                "Slavery was unconstitutional",
+                "The Missouri Compromise was valid"
+            ],
+            correct: 1
+        },
+        {
+            q: "John Brown's raid on Harpers Ferry attempted to:",
+            answers: [
+                "Negotiate with slaveholders",
+                "Seize weapons to arm enslaved people for rebellion ✓",
+                "Establish a peaceful colony",
+                "Convince the government to end slavery"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: Lincoln's election in 1860 triggered Southern secession because he opposed slavery's expansion.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        // Module 8 (4 questions)
+        {
+            q: "The Emancipation Proclamation (1863) freed enslaved people in:",
+            answers: [
+                "All states immediately",
+                "Confederate-controlled territories ✓",
+                "Union border states",
+                "Only Washington D.C."
+            ],
+            correct: 1
+        },
+        {
+            q: "The Battle of Gettysburg (July 1863) was the turning point because:",
+            answers: [
+                "It began the war",
+                "It was the bloodiest battle and stopped Lee's Northern invasion ✓",
+                "It ended the war",
+                "It was the first battle"
+            ],
+            correct: 1
+        },
+        {
+            q: "True or False: African Americans served in the United States Colored Troops during the Civil War.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0
+        },
+        {
+            q: "The Civil War ended when:",
+            answers: [
+                "The Emancipation Proclamation was issued",
+                "Robert E. Lee surrendered at Appomattox Court House ✓",
+                "Lincoln was assassinated",
+                "Atlanta was captured"
+            ],
+            correct: 1
+        }
+    ]
+};

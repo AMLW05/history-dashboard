@@ -72,6 +72,112 @@ const module1Activities = {
     }
 };
 
+// Module 1 Quiz (10 questions covering all MLOs)
+const module1Quiz = {
+    questions: [
+        {
+            q: "Which of the following best describes the Columbian Exchange?",
+            answers: [
+                "The exchange of diplomatic envoys between European nations during colonization",
+                "The transfer of plants, animals, diseases, and people between the Americas and Europe/Africa ✓",
+                "The trade routes established by Christopher Columbus in the Caribbean",
+                "The religious conversion of Indigenous peoples to Christianity"
+            ],
+            correct: 1
+        },
+        {
+            q: "What was the PRIMARY cause of Indigenous population decline after European contact?",
+            answers: [
+                "Forced labor in mines and plantations",
+                "Warfare with European colonizers",
+                "European diseases like smallpox ✓",
+                "Destruction of food supplies"
+            ],
+            correct: 2
+        },
+        {
+            q: "The encomienda system granted Spanish colonists:",
+            answers: [
+                "Land ownership in the Americas",
+                "Control over Indigenous labor in exchange for Christianization ✓",
+                "Exclusive trading rights with Native nations",
+                "Military command over colonial territories"
+            ],
+            correct: 1
+        },
+        {
+            q: "Which Indigenous civilization built the city of Tenochtitlan?",
+            answers: [
+                "Inca Empire",
+                "Maya civilization",
+                "Aztec (Mexica) Empire ✓",
+                "Mississippian culture"
+            ],
+            correct: 2
+        },
+        {
+            q: "The 'Three Sisters' agricultural system refers to:",
+            answers: [
+                "Three Indigenous women leaders who formed political alliances",
+                "Growing corn, beans, and squash together for mutual benefit ✓",
+                "Three Spanish missions established in California",
+                "Three trading partnerships between European and Native groups"
+            ],
+            correct: 1
+        },
+        {
+            q: "Cahokia, one of North America's largest pre-Columbian cities, was located near modern:",
+            answers: [
+                "Mexico City",
+                "New York City",
+                "St. Louis ✓",
+                "Santa Fe"
+            ],
+            correct: 2
+        },
+        {
+            q: "The Haudenosaunee (Iroquois) Confederacy's Great Law of Peace established:",
+            answers: [
+                "Trade agreements with Dutch colonists",
+                "Democratic principles and federation government ✓",
+                "Peace treaties ending all intertribal warfare",
+                "Religious conversion to Christianity"
+            ],
+            correct: 1
+        },
+        {
+            q: "Mestizaje in Spanish colonial society referred to:",
+            answers: [
+                "The system of forced labor in silver mines",
+                "Racial mixing between Europeans, Indigenous peoples, and Africans ✓",
+                "The Catholic Church's role in colonial governance",
+                "Land grants given to conquistadors"
+            ],
+            correct: 1
+        },
+        {
+            q: "Which technological advancement was MOST crucial in enabling European oceanic exploration?",
+            answers: [
+                "The printing press",
+                "Gunpowder weapons",
+                "The caravel ship and astrolabe ✓",
+                "The compass alone"
+            ],
+            correct: 2
+        },
+        {
+            q: "Spain completed the Reconquista in 1492, which involved:",
+            answers: [
+                "Conquering the Aztec Empire in Mexico",
+                "Establishing the first colony in the Caribbean",
+                "Reconquering the Iberian Peninsula from Muslim rule ✓",
+                "Defeating Portugal in a naval war"
+            ],
+            correct: 2
+        }
+    ]
+};
+
 const rubricData = {
     rubric1: {
         title: "Rubric 1: Project Checkpoints (50 points)",

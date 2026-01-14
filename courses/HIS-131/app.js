@@ -228,18 +228,19 @@ function buildActivity(a, mn, idx) {
 }
 
 function buildAssessment(a, mn) {
-    const id = 'm' + mn + '-assess-' + (a.type === 'Discussion Board' ? 'disc' : a.type === 'Project Checkpoint' ? 'checkpoint' : 'quiz');
+    const id = 'm' + mn + '-assess-' + (a.type === 'Discussion Board' ? 'disc' : a.type === 'Project Checkpoint' ? 'checkpoint' : a.type === 'Midterm Exam' ? 'midterm' : a.type === 'Final Exam' ? 'final' : 'quiz');
     let details = '';
 
-    // Get module-specific discussion/checkpoint data
+    // Get module-specific data (discussions, checkpoints, projects, quizzes, exams)
     const moduleData = {
-        2: typeof module2Discussion !== 'undefined' ? { discussion: module2Discussion } : null,
-        3: typeof module3Checkpoint !== 'undefined' ? { checkpoint: module3Checkpoint } : null,
-        4: typeof module4Discussion !== 'undefined' ? { discussion: module4Discussion } : null,
-        5: typeof module5Checkpoint !== 'undefined' ? { checkpoint: module5Checkpoint } : null,
-        6: typeof module6Discussion !== 'undefined' ? { discussion: module6Discussion } : null,
-        7: typeof module7FinalProject !== 'undefined' ? { finalProject: module7FinalProject } : null,
-        8: typeof module8Discussion !== 'undefined' ? { discussion: module8Discussion } : null
+        1: { quiz: typeof module1Quiz !== 'undefined' ? module1Quiz : null },
+        2: { discussion: typeof module2Discussion !== 'undefined' ? module2Discussion : null, quiz: typeof module2Quiz !== 'undefined' ? module2Quiz : null },
+        3: { checkpoint: typeof module3Checkpoint !== 'undefined' ? module3Checkpoint : null, quiz: typeof module3Quiz !== 'undefined' ? module3Quiz : null },
+        4: { discussion: typeof module4Discussion !== 'undefined' ? module4Discussion : null, quiz: typeof module4Quiz !== 'undefined' ? module4Quiz : null, midterm: typeof module4Midterm !== 'undefined' ? module4Midterm : null },
+        5: { checkpoint: typeof module5Checkpoint !== 'undefined' ? module5Checkpoint : null, quiz: typeof module5Quiz !== 'undefined' ? module5Quiz : null },
+        6: { discussion: typeof module6Discussion !== 'undefined' ? module6Discussion : null, quiz: typeof module6Quiz !== 'undefined' ? module6Quiz : null },
+        7: { finalProject: typeof module7FinalProject !== 'undefined' ? module7FinalProject : null, quiz: typeof module7Quiz !== 'undefined' ? module7Quiz : null },
+        8: { discussion: typeof module8Discussion !== 'undefined' ? module8Discussion : null, quiz: typeof module8Quiz !== 'undefined' ? module8Quiz : null, finalExam: typeof finalExam !== 'undefined' ? finalExam : null }
     };
 
     const modData = moduleData[mn];
@@ -295,6 +296,54 @@ function buildAssessment(a, mn) {
             details += '</ul>';
         }
         details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + proj.rubric + '</p></div>';
+    }
+    // Module Quiz
+    else if (a.type === 'Module Quiz' && modData && modData.quiz) {
+        const quiz = modData.quiz;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<h4 style="margin-top:0;color:var(--accent)">Module ' + mn + ' Quiz Questions</h4>';
+        quiz.questions.forEach((q, i) => {
+            details += '<div class="question-block" style="margin-top:20px;padding:15px;background:white;border-radius:4px;border-left:4px solid var(--accent)"><div class="question-text"><strong>Q' + (i+1) + ':</strong> ' + q.q + '</div>';
+            q.answers.forEach((ans, aidx) => {
+                details += '<div class="answer-option' + (aidx === q.correct ? ' correct' : '') + '" style="margin:8px 0 8px 20px">' + String.fromCharCode(97+aidx) + ') ' + ans + '</div>';
+            });
+            details += '</div>';
+        });
+        details += '</div>';
+    }
+    // Midterm Exam
+    else if (a.type === 'Midterm Exam' && modData && modData.midterm) {
+        const exam = modData.midterm;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<h4 style="margin-top:0;color:var(--accent)">' + exam.title + '</h4>';
+        details += '<p style="margin:10px 0;font-style:italic">' + exam.instructions + '</p>';
+        details += '<h5 style="margin-top:20px">Exam Questions (' + exam.questions.length + ' total):</h5>';
+        exam.questions.forEach((q, i) => {
+            details += '<div class="question-block" style="margin-top:15px;padding:15px;background:white;border-radius:4px;border-left:4px solid var(--success)"><div class="question-text"><strong>Q' + (i+1) + ':</strong> ' + q.q;
+            if (q.type) details += ' <span style="font-size:0.85em;color:var(--gray)">(' + q.type + ')</span>';
+            details += '</div>';
+            q.answers.forEach((ans, aidx) => {
+                details += '<div class="answer-option' + (aidx === q.correct ? ' correct' : '') + '" style="margin:8px 0 8px 20px">' + String.fromCharCode(97+aidx) + ') ' + ans + '</div>';
+            });
+            details += '</div>';
+        });
+        details += '</div>';
+    }
+    // Final Exam
+    else if (a.type === 'Final Exam' && modData && modData.finalExam) {
+        const exam = modData.finalExam;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<h4 style="margin-top:0;color:var(--accent)">' + exam.title + '</h4>';
+        details += '<p style="margin:10px 0;font-style:italic">' + exam.instructions + '</p>';
+        details += '<h5 style="margin-top:20px">Comprehensive Final Exam Questions (' + exam.questions.length + ' total):</h5>';
+        exam.questions.forEach((q, i) => {
+            details += '<div class="question-block" style="margin-top:15px;padding:15px;background:white;border-radius:4px;border-left:4px solid var(--warning)"><div class="question-text"><strong>Q' + (i+1) + ':</strong> ' + q.q + '</div>';
+            q.answers.forEach((ans, aidx) => {
+                details += '<div class="answer-option' + (aidx === q.correct ? ' correct' : '') + '" style="margin:8px 0 8px 20px">' + String.fromCharCode(97+aidx) + ') ' + ans + '</div>';
+            });
+            details += '</div>';
+        });
+        details += '</div>';
     }
 
     // Build the card

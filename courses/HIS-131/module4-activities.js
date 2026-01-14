@@ -94,3 +94,397 @@ const module4Discussion = {
 - Connect to broader themes about capitalism, freedom, and inequality`,
     rubric: "RUBRIC_2_Discussion_Boards"
 };
+
+// Module 4 Quiz (10 questions covering Early Republic & Market Revolution)
+const module4Quiz = {
+    questions: [
+        {
+            q: "Jeffersonian Democracy emphasized:",
+            answers: [
+                "Strong central government and industrial development",
+                "Agrarian virtue, limited government, and strict constitutional interpretation ✓",
+                "Rapid westward expansion without restrictions",
+                "Federal support for banking and manufacturing"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Louisiana Purchase (1803) was significant because it:",
+            answers: [
+                "Ended the War of 1812",
+                "Doubled the size of the United States ✓",
+                "Abolished slavery in western territories",
+                "Established the Missouri Compromise"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Embargo Act of 1807:",
+            answers: [
+                "Successfully forced Britain to respect American shipping",
+                "Hurt the American economy more than its intended targets ✓",
+                "Led directly to the War of 1812",
+                "Increased American manufacturing overnight"
+            ],
+            correct: 1
+        },
+        {
+            q: "Tecumseh's pan-Indian confederacy aimed to:",
+            answers: [
+                "Ally Native nations with the United States",
+                "Resist American territorial expansion ✓",
+                "Promote trade between tribes and settlers",
+                "Convert Indigenous peoples to Christianity"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Haitian Revolution led by Toussaint Louverture was significant to American slavery because it:",
+            answers: [
+                "Inspired immediate abolition in the South",
+                "Terrified Southern slaveholders and led to harsher slave codes ✓",
+                "Had no impact on American slavery",
+                "Convinced Jefferson to end the slave trade"
+            ],
+            correct: 1
+        },
+        {
+            q: "Eli Whitney's cotton gin (1793):",
+            answers: [
+                "Made slavery obsolete and unprofitable",
+                "Made cotton highly profitable and entrenched slavery ✓",
+                "Was immediately banned in southern states",
+                "Only worked for tobacco production"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Erie Canal (completed 1825) was important because it:",
+            answers: [
+                "Connected the Great Lakes to the Atlantic, transforming the Northern economy ✓",
+                "Linked the Mississippi River to the Gulf of Mexico",
+                "Provided water for southern cotton plantations",
+                "Enabled westward migration to California"
+            ],
+            correct: 0
+        },
+        {
+            q: "The 'cult of domesticity' ideology:",
+            answers: [
+                "Encouraged women to work in factories",
+                "Promoted women's political participation",
+                "Confined middle-class women to home as moral guardians ✓",
+                "Applied equally to all women regardless of class or race"
+            ],
+            correct: 2
+        },
+        {
+            q: "The Missouri Compromise (1820) attempted to resolve conflict over:",
+            answers: [
+                "Tariffs on imported goods",
+                "The expansion of slavery into western territories ✓",
+                "Native American removal policies",
+                "Banking regulations"
+            ],
+            correct: 1
+        },
+        {
+            q: "The Panic of 1819 demonstrated:",
+            answers: [
+                "The stability of the American banking system",
+                "The dangers of market economy and speculative capitalism ✓",
+                "That economic depressions were impossible in America",
+                "The success of Jefferson's economic policies"
+            ],
+            correct: 1
+        }
+    ]
+};
+
+// Module 4 Midterm Exam (25 questions covering Modules 1-4)
+const module4Midterm = {
+    title: "Midterm Exam: Modules 1-4 Comprehensive Assessment",
+    instructions: "This exam covers material from Modules 1-4 (Pre-Columbian through 1824). Answer all 25 questions. You have 90 minutes and 1 attempt.",
+    questions: [
+        // Module 1 questions (6 questions)
+        {
+            q: "The Columbian Exchange refers to:",
+            answers: [
+                "Trade agreements between European nations",
+                "The transfer of plants, animals, diseases, and people between Americas and Europe/Africa ✓",
+                "Christopher Columbus's navigation routes",
+                "The exchange of diplomatic envoys"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "What was the PRIMARY demographic impact of European contact on Indigenous populations?",
+            answers: [
+                "Forced migration to western territories",
+                "Disease epidemics killing up to 90% in some areas ✓",
+                "Assimilation into European culture",
+                "Immediate enslavement"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The encomienda system granted Spanish colonists:",
+            answers: [
+                "Land ownership rights",
+                "Control over Indigenous labor in exchange for Christianization ✓",
+                "Exclusive trading privileges",
+                "Military authority"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "True or False: The Haudenosaunee (Iroquois) Confederacy's Great Law of Peace influenced American colonial ideas about federation.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0,
+            type: "True/False"
+        },
+        {
+            q: "Which Indigenous city near modern St. Louis had 10,000-30,000 inhabitants at its peak?",
+            answers: [
+                "Tenochtitlan",
+                "Cahokia ✓",
+                "Cuzco",
+                "Chaco Canyon"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The 'Three Sisters' agricultural system involved growing:",
+            answers: [
+                "Wheat, barley, and oats",
+                "Corn, beans, and squash ✓",
+                "Rice, tobacco, and cotton",
+                "Potatoes, tomatoes, and peppers"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        // Module 2 questions (6 questions)
+        {
+            q: "Bacon's Rebellion (1676) led Virginia elites to:",
+            answers: [
+                "Abolish indentured servitude immediately",
+                "Harden racial categories to prevent poor whites and Blacks from uniting ✓",
+                "Grant more rights to all colonists",
+                "End all forms of slavery"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The Middle Passage specifically refers to:",
+            answers: [
+                "The route between northern and southern colonies",
+                "The transatlantic voyage enslaving Africans from Africa to Americas ✓",
+                "The journey from England to America",
+                "Trade routes through the Caribbean"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "True or False: The Pueblo Revolt of 1680 successfully expelled Spanish colonizers from New Mexico for 12 years.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0,
+            type: "True/False"
+        },
+        {
+            q: "The Great Awakening (1730s-1740s) challenged traditional authority by:",
+            answers: [
+                "Promoting rational philosophy",
+                "Emphasizing personal faith and emotional religious experience ✓",
+                "Supporting established church hierarchies",
+                "Opposing all forms of religion"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "Mercantilism was an economic system where:",
+            answers: [
+                "Colonies existed to enrich the mother country through trade ✓",
+                "Free trade was encouraged between all nations",
+                "Colonies were economically independent",
+                "Religious groups controlled commerce"
+            ],
+            correct: 0,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The Seven Years' War (1754-1763) resulted in:",
+            answers: [
+                "French control of North America",
+                "British acquisition of French Canada ✓",
+                "Spanish dominance in the Caribbean",
+                "Colonial independence from Europe"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        // Module 3 questions (7 questions)
+        {
+            q: "The slogan 'No taxation without representation' emerged in response to:",
+            answers: [
+                "The Boston Massacre",
+                "The Stamp Act of 1765 ✓",
+                "The Declaration of Independence",
+                "The Constitutional Convention"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "Thomas Paine's Common Sense (1776) was influential because it:",
+            answers: [
+                "Defended British rule",
+                "Convinced many colonists to support independence ✓",
+                "Criticized the Constitution",
+                "Advocated for monarchy"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "True or False: The Articles of Confederation created a strong central government with extensive powers.",
+            answers: [
+                "True",
+                "False ✓"
+            ],
+            correct: 1,
+            type: "True/False"
+        },
+        {
+            q: "Shays' Rebellion (1786-1787) was significant because it:",
+            answers: [
+                "Successfully overthrew the federal government",
+                "Demonstrated weaknesses of the Articles and prompted Constitutional Convention ✓",
+                "Led to immediate abolition of slavery",
+                "Ended the Revolutionary War"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "Anti-Federalists opposed the Constitution because they:",
+            answers: [
+                "Wanted stronger federal government",
+                "Feared it gave too much power to central government and lacked bill of rights ✓",
+                "Supported British monarchy",
+                "Opposed all taxation"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The Bill of Rights consists of:",
+            answers: [
+                "The Declaration of Independence",
+                "The first 10 amendments to the Constitution ✓",
+                "The Articles of Confederation",
+                "The Federalist Papers"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "Alexander Hamilton's financial plan included:",
+            answers: [
+                "Eliminating all federal debt",
+                "Creating a national bank and assuming state debts ✓",
+                "Abolishing federal taxes",
+                "Returning to British currency"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        // Module 4 questions (6 questions)
+        {
+            q: "The Louisiana Purchase (1803):",
+            answers: [
+                "Tripled the size of the United States",
+                "Doubled the size of the United States ✓",
+                "Added only Florida to the U.S.",
+                "Resulted in war with France"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "True or False: Eli Whitney's cotton gin made slavery less profitable and helped lead to its decline.",
+            answers: [
+                "True",
+                "False ✓"
+            ],
+            correct: 1,
+            type: "True/False"
+        },
+        {
+            q: "Tecumseh's pan-Indian confederacy sought to:",
+            answers: [
+                "Ally with American settlers",
+                "Resist American territorial expansion ✓",
+                "Establish trade monopolies",
+                "Convert tribes to Christianity"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The War of 1812 was fought primarily between:",
+            answers: [
+                "U.S. and France",
+                "U.S. and Spain",
+                "U.S. and Britain ✓",
+                "U.S. and Mexico"
+            ],
+            correct: 2,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The Missouri Compromise (1820) addressed:",
+            answers: [
+                "Tariff regulations",
+                "The expansion of slavery into western territories ✓",
+                "Native American rights",
+                "Banking policies"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "The Market Revolution transformed the American economy by:",
+            answers: [
+                "Eliminating all farming",
+                "Shifting from subsistence farming to commercial agriculture and wage labor ✓",
+                "Ending all international trade",
+                "Making everyone equally wealthy"
+            ],
+            correct: 1,
+            type: "Multiple Choice"
+        },
+        {
+            q: "True or False: The Erie Canal connected the Great Lakes to the Atlantic Ocean via the Hudson River.",
+            answers: [
+                "True ✓",
+                "False"
+            ],
+            correct: 0,
+            type: "True/False"
+        }
+    ]
+};
