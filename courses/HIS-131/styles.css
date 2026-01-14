@@ -422,6 +422,36 @@ tr:nth-child(even) {
     transform: translateY(-2px);
 }
 
+.print-btn, .copy-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.3s;
+    margin-left: 10px;
+    font-family: 'Georgia', serif;
+}
+
+.print-btn:hover, .copy-btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
+}
+
+.print-btn:active, .copy-btn:active {
+    transform: translateY(0);
+}
+
+.activity-header > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 @media (max-width: 768px) {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);

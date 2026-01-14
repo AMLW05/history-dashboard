@@ -32,6 +32,43 @@ function toggleModule(n) {
     h.classList.toggle('active');
 }
 
+function printModule(n, event) {
+    event.stopPropagation();
+    const content = document.getElementById('module-content-' + n);
+    const moduleTitle = content.previousElementSibling.querySelector('.module-title').textContent;
+
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>' + moduleTitle + '</title>');
+    printWindow.document.write('<style>body{font-family:Georgia,serif;padding:20px;line-height:1.8}h1,h2,h3{color:#2c1810}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ccc;padding:10px;text-align:left}th{background:#8b4513;color:white}.question-block{margin:15px 0;padding:15px;background:#f5f5f5;border-left:3px solid #8b4513}.answer-option{padding:8px;margin:5px 0}.correct{background:#d4edda;font-weight:600}</style>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write('<h1>' + moduleTitle + '</h1>');
+    printWindow.document.write(content.innerHTML);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+}
+
+function copyActivity(mn, idx, event) {
+    event.stopPropagation();
+    const details = document.getElementById('activity-details-m' + mn + '-a' + idx);
+    const activityTitle = details.parentElement.querySelector('.activity-title').textContent;
+
+    let textContent = activityTitle + '\n\n' + details.innerText;
+
+    navigator.clipboard.writeText(textContent).then(() => {
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#00b894';
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+        }, 2000);
+    }).catch(err => {
+        alert('Copy failed. Please select and copy manually.');
+    });
+}
+
 function toggleActivity(id) {
     document.getElementById('activity-details-' + id).classList.toggle('active');
 }
@@ -43,7 +80,7 @@ function renderModules() {
     courseData.modules.forEach(m => {
         const card = document.createElement('div');
         card.className = 'module-card';
-        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
+        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><button class="print-btn" onclick="printModule(' + m.number + ', event)" title="Print module for Canvas">🖨️ Print</button><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
         container.appendChild(card);
     });
 }
@@ -66,46 +103,88 @@ function buildActivity(a, mn, idx) {
     const feat = a.featured ? ' featured' : '';
     let details = '<p><strong>Instructions:</strong> ' + a.studentInstructions + '</p>';
 
-    // Add full questions for Module 1
-    if (mn === 1 && typeof module1Activities !== 'undefined') {
-        if (idx === 0 && module1Activities.la1) {
-            details += '<h4 style="margin-top:20px">Matching Pairs (15 items):</h4><table style="margin-top:10px"><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody>';
-            module1Activities.la1.questions.forEach(q => {
-                details += '<tr><td><strong>' + q.term + '</strong></td><td>' + q.def + '</td></tr>';
+    // Get module activities data
+    const moduleData = {
+        1: typeof module1Activities !== 'undefined' ? module1Activities : null,
+        2: typeof module2Activities !== 'undefined' ? module2Activities : null,
+        3: typeof module3Activities !== 'undefined' ? module3Activities : null,
+        4: typeof module4Activities !== 'undefined' ? module4Activities : null,
+        5: typeof module5Activities !== 'undefined' ? module5Activities : null,
+        6: typeof module6Activities !== 'undefined' ? module6Activities : null,
+        7: typeof module7Activities !== 'undefined' ? module7Activities : null,
+        8: typeof module8Activities !== 'undefined' ? module8Activities : null
+    };
+
+    const modAct = moduleData[mn];
+    if (!modAct) return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><span class="toggle-icon">▼</span></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
+
+    // LA1: Matching questions
+    if (idx === 0 && modAct.la1) {
+        details += '<h4 style="margin-top:20px">Matching Pairs (15 items):</h4><table style="margin-top:10px"><thead><tr><th style="width:30%">Term</th><th>Definition</th></tr></thead><tbody>';
+        modAct.la1.questions.forEach(q => {
+            details += '<tr><td><strong>' + q.term + '</strong></td><td>' + q.def + '</td></tr>';
+        });
+        details += '</tbody></table>';
+    }
+    // LA2: Multiple choice
+    else if (idx === 1 && modAct.la2) {
+        details += '<h4 style="margin-top:20px">Multiple Choice Questions (10 items):</h4>';
+        modAct.la2.questions.forEach((q, i) => {
+            details += '<div class="question-block"><div class="question-text">Q' + (i+1) + ': ' + q.q + '</div>';
+            q.answers.forEach((ans, aidx) => {
+                details += '<div class="answer-option' + (aidx === q.correct ? ' correct' : '') + '">' + String.fromCharCode(97+aidx) + ') ' + ans + '</div>';
             });
-            details += '</tbody></table>';
-        }
-        else if (idx === 1 && module1Activities.la2) {
-            details += '<h4 style="margin-top:20px">Multiple Choice Questions (10 items):</h4>';
-            module1Activities.la2.questions.forEach((q, i) => {
-                details += '<div class="question-block"><div class="question-text">Q' + (i+1) + ': ' + q.q + '</div>';
-                q.answers.forEach((ans, aidx) => {
-                    details += '<div class="answer-option' + (aidx === q.correct ? ' correct' : '') + '">' + String.fromCharCode(97+aidx) + ') ' + ans + '</div>';
-                });
-                details += '</div>';
-            });
-        }
-        else if (idx === 2 && module1Activities.la3) {
+            details += '</div>';
+        });
+    }
+    // LA3: Timeline + Comparison OR Data Analysis
+    else if (idx === 2 && modAct.la3) {
+        if (modAct.la3.timelineBuilder) {
             details += '<h4 style="margin-top:20px">Option A: Timeline Builder</h4>';
-            details += '<p style="margin:10px 0"><strong>' + module1Activities.la3.timelineBuilder.instructions + '</strong></p>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.timelineBuilder.instructions + '</strong></p>';
             details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Event</th><th style="width:20%">Date</th></tr></thead><tbody>';
-            module1Activities.la3.timelineBuilder.events.forEach((e, i) => {
+            modAct.la3.timelineBuilder.events.forEach((e, i) => {
                 details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + e.event + '</td><td>' + e.date + '</td></tr>';
             });
             details += '</tbody></table>';
+        }
 
+        if (modAct.la3.comparisonActivity) {
             details += '<h4 style="margin-top:30px">Option B: Comparison Activity</h4>';
-            details += '<p style="margin:10px 0"><strong>' + module1Activities.la3.comparisonActivity.instructions + '</strong></p>';
-            details += '<p style="margin:10px 0;padding:10px;background:var(--gray-light);border-radius:4px"><strong>Societies:</strong> ' + module1Activities.la3.comparisonActivity.societies.join(' | ') + '</p>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.comparisonActivity.instructions + '</strong></p>';
+            if (modAct.la3.comparisonActivity.regions) {
+                details += '<p style="margin:10px 0;padding:10px;background:var(--gray-light);border-radius:4px"><strong>Categories:</strong> ' + modAct.la3.comparisonActivity.regions.join(' | ') + '</p>';
+            }
             details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Characteristic</th><th style="width:35%">Answer</th></tr></thead><tbody>';
-            module1Activities.la3.comparisonActivity.characteristics.forEach((c, i) => {
+            modAct.la3.comparisonActivity.characteristics.forEach((c, i) => {
                 details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + c.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + c.answer + '</span></td></tr>';
             });
             details += '</tbody></table>';
         }
+
+        if (modAct.la3.dataAnalysis) {
+            details += '<h4 style="margin-top:30px">📊 Data Analysis Activity</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.dataAnalysis.instructions + '</strong></p>';
+            details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)"><h5>' + modAct.la3.dataAnalysis.chartData.title + '</h5><p style="margin-top:10px;font-style:italic">Chart would be displayed here in Canvas using Chart.js or similar visualization</p></div>';
+            details += '<h5 style="margin-top:20px">Analysis Questions:</h5><ol style="margin-left:20px;line-height:2">';
+            modAct.la3.dataAnalysis.questions.forEach(q => {
+                details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
+            });
+            details += '</ol></div>';
+        }
+    }
+    // LA4: Additional activities (Module 3 has LA4)
+    else if (idx === 3 && modAct.la4) {
+        details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
+        details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
+        details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
+        modAct.la4.items.forEach((item, i) => {
+            details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
+        });
+        details += '</tbody></table>';
     }
 
-    return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><span class="toggle-icon">▼</span></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
+    return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><div><button class="copy-btn" onclick="copyActivity(' + mn + ',' + idx + ', event)" title="Copy to clipboard for Canvas">📋 Copy</button><span class="toggle-icon">▼</span></div></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
 }
 
 function buildAssessment(a) {
