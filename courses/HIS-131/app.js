@@ -37,15 +37,34 @@ function printModule(n, event) {
     const content = document.getElementById('module-content-' + n);
     const moduleTitle = content.previousElementSibling.querySelector('.module-title').textContent;
 
-    const printWindow = window.open('', '_blank');
-    printWindow.document.write('<html><head><title>' + moduleTitle + '</title>');
-    printWindow.document.write('<style>body{font-family:Georgia,serif;padding:20px;line-height:1.8}h1,h2,h3{color:#2c1810}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ccc;padding:10px;text-align:left}th{background:#8b4513;color:white}.question-block{margin:15px 0;padding:15px;background:#f5f5f5;border-left:3px solid #8b4513}.answer-option{padding:8px;margin:5px 0}.correct{background:#d4edda;font-weight:600}</style>');
-    printWindow.document.write('</head><body>');
-    printWindow.document.write('<h1>' + moduleTitle + '</h1>');
-    printWindow.document.write(content.innerHTML);
-    printWindow.document.write('</body></html>');
-    printWindow.document.close();
-    printWindow.print();
+    // Create modal overlay (like CSC-113)
+    const modal = document.createElement('div');
+    modal.className = 'modal-container';
+    modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px;';
+
+    modal.innerHTML = `
+        <div style="background: var(--parchment); border-radius: 12px; max-width: 1000px; width: 100%; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 3px solid var(--accent);">
+            <div class="modal-header-print" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 2px solid var(--accent);">
+                <h3 style="margin: 0; color: var(--ink);">📄 ${moduleTitle}</h3>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="window.print()" style="background: var(--success); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif;">🖨️ Print</button>
+                    <button onclick="this.closest('.modal-container').remove()" style="background: #d63031; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif;">✕ Close</button>
+                </div>
+            </div>
+            <div class="modal-content-print" style="padding: 30px; overflow-y: auto; flex: 1; background: var(--parchment);">
+                ${content.innerHTML}
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Close on background click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
 }
 
 function copyActivity(mn, idx, event) {

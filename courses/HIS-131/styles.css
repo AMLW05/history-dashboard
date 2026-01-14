@@ -452,6 +452,29 @@ tr:nth-child(even) {
     gap: 10px;
 }
 
+@media print {
+    .modal-header-print, .modal-container {
+        display: none !important;
+    }
+    .modal-content-print {
+        padding: 0 !important;
+        max-height: none !important;
+        overflow: visible !important;
+    }
+    body {
+        background: white !important;
+    }
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    ul, ol, table {
+        page-break-inside: avoid;
+    }
+    .print-btn, .copy-btn {
+        display: none !important;
+    }
+}
+
 @media (max-width: 768px) {
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
