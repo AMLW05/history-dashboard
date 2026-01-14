@@ -69,6 +69,27 @@ function copyActivity(mn, idx, event) {
     });
 }
 
+function copyAssessment(id, event) {
+    event.stopPropagation();
+    const details = document.getElementById('activity-details-' + id);
+    const assessmentTitle = details.parentElement.querySelector('.activity-title').textContent;
+
+    let textContent = assessmentTitle + '\n\n' + details.innerText;
+
+    navigator.clipboard.writeText(textContent).then(() => {
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = '✓ Copied!';
+        btn.style.background = '#00b894';
+        setTimeout(() => {
+            btn.textContent = originalText;
+            btn.style.background = '';
+        }, 2000);
+    }).catch(err => {
+        alert('Copy failed. Please select and copy manually.');
+    });
+}
+
 function toggleActivity(id) {
     document.getElementById('activity-details-' + id).classList.toggle('active');
 }
@@ -93,7 +114,7 @@ function buildModuleContent(m) {
     html += '</ol></div><div class="subsection"><h3 class="subsection-title">Learning Activities</h3>';
     m.activities.forEach((a, i) => html += buildActivity(a, m.number, i));
     html += '</div><div class="subsection"><h3 class="subsection-title">Assessments</h3>';
-    m.assessments.forEach(a => html += buildAssessment(a));
+    m.assessments.forEach(a => html += buildAssessment(a, m.number));
     html += '</div>';
     return html;
 }
@@ -187,7 +208,82 @@ function buildActivity(a, mn, idx) {
     return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><div><button class="copy-btn" onclick="copyActivity(' + mn + ',' + idx + ', event)" title="Copy to clipboard for Canvas">📋 Copy</button><span class="toggle-icon">▼</span></div></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
 }
 
-function buildAssessment(a) {
+function buildAssessment(a, mn) {
+    const id = 'm' + mn + '-assess-' + (a.type === 'Discussion Board' ? 'disc' : a.type === 'Project Checkpoint' ? 'checkpoint' : 'quiz');
+    let details = '';
+
+    // Get module-specific discussion/checkpoint data
+    const moduleData = {
+        2: typeof module2Discussion !== 'undefined' ? { discussion: module2Discussion } : null,
+        3: typeof module3Checkpoint !== 'undefined' ? { checkpoint: module3Checkpoint } : null,
+        4: typeof module4Discussion !== 'undefined' ? { discussion: module4Discussion } : null,
+        5: typeof module5Checkpoint !== 'undefined' ? { checkpoint: module5Checkpoint } : null,
+        6: typeof module6Discussion !== 'undefined' ? { discussion: module6Discussion } : null,
+        7: typeof module7FinalProject !== 'undefined' ? { finalProject: module7FinalProject } : null,
+        8: typeof module8Discussion !== 'undefined' ? { discussion: module8Discussion } : null
+    };
+
+    const modData = moduleData[mn];
+
+    // Discussion Board
+    if (a.type === 'Discussion Board' && modData && modData.discussion) {
+        const disc = modData.discussion;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<h4 style="margin-top:0;color:var(--accent)">Discussion Prompt</h4>';
+        details += '<div style="white-space:pre-wrap;line-height:1.8">' + disc.prompt + '</div>';
+        if (disc.pointsBreakdown) {
+            details += '<h4 style="margin-top:20px;color:var(--accent)">Points Breakdown</h4><ul>';
+            Object.keys(disc.pointsBreakdown).forEach(key => {
+                details += '<li><strong>' + key.replace(/([A-Z])/g, ' $1').trim() + ':</strong> ' + disc.pointsBreakdown[key] + ' points</li>';
+            });
+            details += '</ul>';
+        }
+        details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + disc.rubric + '</p></div>';
+    }
+    // Project Checkpoint
+    else if (a.type === 'Project Checkpoint' && modData && modData.checkpoint) {
+        const check = modData.checkpoint;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<div style="white-space:pre-wrap;line-height:1.8">' + check.instructions + '</div>';
+        if (check.scaffolding) {
+            details += '<h4 style="margin-top:20px;color:var(--accent)">Scaffolding & Tips</h4>';
+            if (check.scaffolding.thesisTemplates) {
+                details += '<h5>Thesis Templates:</h5><ul>';
+                check.scaffolding.thesisTemplates.forEach(t => details += '<li>' + t + '</li>');
+                details += '</ul>';
+            }
+            if (check.scaffolding.commonMistakes) {
+                details += '<h5 style="margin-top:15px">Common Mistakes:</h5><ul>';
+                check.scaffolding.commonMistakes.forEach(m => details += '<li>' + m + '</li>');
+                details += '</ul>';
+            }
+            if (check.scaffolding.primarySourceQuestions) {
+                details += '<h5 style="margin-top:15px">Primary Source Analysis Questions:</h5><ul>';
+                check.scaffolding.primarySourceQuestions.forEach(q => details += '<li>' + q + '</li>');
+                details += '</ul>';
+            }
+        }
+        details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + check.rubric + '</p></div>';
+    }
+    // Final Project
+    else if (a.title && a.title.includes('Final Project') && modData && modData.finalProject) {
+        const proj = modData.finalProject;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<div style="white-space:pre-wrap;line-height:1.8">' + proj.instructions + '</div>';
+        if (proj.exampleTopics) {
+            details += '<h4 style="margin-top:20px;color:var(--accent)">Example Topics</h4><ul>';
+            proj.exampleTopics.forEach(t => details += '<li>' + t + '</li>');
+            details += '</ul>';
+        }
+        details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + proj.rubric + '</p></div>';
+    }
+
+    // Build the card
+    if (details) {
+        return '<div class="activity-card" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div><div><button class="copy-btn" onclick="copyAssessment(\'' + id + '\', event)" title="Copy to clipboard">📋 Copy</button><span class="toggle-icon">▼</span></div></div>' + (a.questionCount ? '<div class="activity-meta">' + a.questionCount + ' questions</div>' : '') + '<div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
+    }
+
+    // Fallback for assessments without detailed data
     return '<div class="activity-card"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div></div>' + (a.questionCount ? '<div class="activity-meta">' + a.questionCount + ' questions</div>' : '') + '</div>';
 }
 
