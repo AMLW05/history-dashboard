@@ -233,7 +233,7 @@ function buildAssessment(a, mn) {
 
     // Get module-specific data (discussions, checkpoints, projects, quizzes, exams)
     const moduleData = {
-        1: { quiz: typeof module1Quiz !== 'undefined' ? module1Quiz : null },
+        1: { checkpoint: typeof module1Checkpoint !== 'undefined' ? module1Checkpoint : null, quiz: typeof module1Quiz !== 'undefined' ? module1Quiz : null },
         2: { discussion: typeof module2Discussion !== 'undefined' ? module2Discussion : null, quiz: typeof module2Quiz !== 'undefined' ? module2Quiz : null },
         3: { checkpoint: typeof module3Checkpoint !== 'undefined' ? module3Checkpoint : null, quiz: typeof module3Quiz !== 'undefined' ? module3Quiz : null },
         4: { discussion: typeof module4Discussion !== 'undefined' ? module4Discussion : null, quiz: typeof module4Quiz !== 'undefined' ? module4Quiz : null, midterm: typeof module4Midterm !== 'undefined' ? module4Midterm : null },
@@ -346,13 +346,22 @@ function buildAssessment(a, mn) {
         details += '</div>';
     }
 
-    // Build the card
+    // Build the card with consistent button handling
     if (details) {
-        return '<div class="activity-card" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div><div><button class="copy-btn" onclick="copyAssessment(\'' + id + '\', event)" title="Copy to clipboard">📋 Copy</button><span class="toggle-icon">▼</span></div></div>' + (a.questionCount ? '<div class="activity-meta">' + a.questionCount + ' questions</div>' : '') + '<div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
+        // Determine button text and metadata
+        let buttonHtml = '<button class="copy-btn" onclick="copyAssessment(\'' + id + '\', event)" title="Copy to clipboard">📋 Copy</button>';
+        let metaHtml = '';
+
+        // Add question count if available
+        if (a.questionCount) {
+            metaHtml = '<div class="activity-meta">' + a.questionCount + ' questions</div>';
+        }
+
+        return '<div class="activity-card" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div><div>' + buttonHtml + '<span class="toggle-icon">▼</span></div></div>' + metaHtml + '<div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
     }
 
-    // Fallback for assessments without detailed data
-    return '<div class="activity-card"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div></div>' + (a.questionCount ? '<div class="activity-meta">' + a.questionCount + ' questions</div>' : '') + '</div>';
+    // Fallback for assessments without detailed data (shouldn't happen with new system)
+    return '<div class="activity-card"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span></div><span class="toggle-icon">▼</span></div>' + (a.questionCount ? '<div class="activity-meta">' + a.questionCount + ' questions</div>' : '') + '</div>';
 }
 
 function renderRubrics() {

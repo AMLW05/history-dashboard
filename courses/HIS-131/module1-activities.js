@@ -178,6 +178,53 @@ const module1Quiz = {
     ]
 };
 
+// Module 1 Project Checkpoint 1: Topic Selection
+const module1Checkpoint = {
+    title: "Project Checkpoint 1: Topic Selection",
+    instructions: `**Purpose**: Begin your semester-long research project by selecting a topic or primary source from Module 1 (Indigenous America & First Contact, Prehistory-1675).
+
+**Assignment** (Submit 300-400 words):
+1. **Topic Selection**: Choose ONE of the following approaches:
+   - A specific Indigenous society or leader (e.g., Cahokia, Haudenosaunee Confederacy, Popé and the Pueblo Revolt)
+   - An aspect of the Columbian Exchange (e.g., spread of specific diseases, introduction of horses to Plains societies)
+   - Spanish colonialism and its impacts (e.g., encomienda system, racial hierarchies, religious conversion)
+   - A specific primary source from the era (e.g., Columbus's letters, Las Casas's writings, Indigenous oral histories)
+
+2. **Why This Topic?**: Explain why this topic interests you and why it's historically significant
+
+3. **Initial Research Questions**: List 2-3 specific questions you want to investigate
+
+4. **Preliminary Sources**: Identify at least 2 sources you plan to use:
+   - At least 1 must be a primary source (document, artifact, oral history from the period)
+   - At least 1 must be a credible secondary source (scholarly article, academic book, museum resource)
+   - Provide full citations in Chicago/Turabian format
+
+**Example Topics**:
+- "The Great Law of Peace: How the Haudenosaunee Confederacy influenced American democratic ideals"
+- "Cahokia's Collapse: Environmental and social factors in Mississippian decline"
+- "Smallpox as a Weapon: Disease and conquest in the Spanish invasion of the Aztec Empire"
+- "Bartolomé de Las Casas: A Spanish priest's eyewitness account of Indigenous suffering"
+
+**What You'll Do Next**:
+- Checkpoint 2 (Module 3): Develop your thesis and expand your research
+- Checkpoint 3 (Module 5): Analyze your sources and refine your argument
+- Final Project (Module 7): Present your complete research`,
+    rubric: "RUBRIC_1_Project_Checkpoints",
+    scaffolding: {
+        tips: [
+            "✅ Choose a topic that genuinely interests you - you'll work with it all semester",
+            "✅ Be specific - 'Spanish colonialism' is too broad, but 'the encomienda system in New Mexico' works",
+            "✅ Start with American Yawp chapters 1-2 for background, then find more specialized sources",
+            "✅ Primary sources from this era: Columbus's diary, Spanish colonial records, Indigenous oral histories, archaeological findings"
+        ],
+        commonMistakes: [
+            "❌ Topic too broad: 'Native Americans' → ✅ 'The Three Sisters agricultural system and its nutritional benefits'",
+            "❌ Only using textbook → ✅ Finding primary sources and scholarly articles",
+            "❌ Just summarizing facts → ✅ Asking analytical questions about causes, effects, and significance"
+        ]
+    }
+};
+
 const rubricData = {
     rubric1: {
         title: "Rubric 1: Project Checkpoints (50 points)",
