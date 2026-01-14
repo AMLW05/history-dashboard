@@ -87,7 +87,7 @@ Courses build on each other thematically:
 
 ## Deployment
 
-**GitHub Pages URL**: `https://YOUR-USERNAME.github.io/history-dashboard/`
+**GitHub Pages URL**: `https://AMLW05.github.io/history-dashboard/`
 
 **Local Development**:
 ```bash
