@@ -32,6 +32,43 @@ const module1Activities = {
             { q: "Which European country established the encomienda labor system in its American colonies?", answers: ["England", "France", "Spain ✓", "Portugal"], correct: 2 },
             { q: "Cahokia was located near which modern U.S. city?", answers: ["New York", "St. Louis ✓", "Chicago", "Atlanta"], correct: 1 }
         ]
+    },
+    la3: {
+        timelineBuilder: {
+            title: "Timeline Builder: Chronological Sorting",
+            instructions: "Drag and drop 10 events into the correct chronological order from earliest to latest.",
+            events: [
+                { event: "Cahokia reaches peak population (10,000-30,000 people)", date: "1050-1200 CE", order: 1 },
+                { event: "Aztec Empire establishes Tenochtitlan as capital", date: "1325 CE", order: 2 },
+                { event: "Spain completes Reconquista by conquering Granada", date: "1492 CE", order: 3 },
+                { event: "Christopher Columbus reaches Caribbean islands", date: "1492 CE", order: 4 },
+                { event: "Vasco da Gama reaches India, establishing sea route", date: "1498 CE", order: 5 },
+                { event: "Ferdinand Magellan begins first circumnavigation voyage", date: "1519 CE", order: 6 },
+                { event: "Hernán Cortés conquers Aztec Empire", date: "1519-1521 CE", order: 7 },
+                { event: "Francisco Pizarro conquers Inca Empire in Peru", date: "1532-1533 CE", order: 8 },
+                { event: "Spanish establish encomienda labor system in colonies", date: "1503-1542 CE", order: 9 },
+                { event: "Smallpox epidemic devastates Indigenous populations across Americas", date: "1520s-1600s CE", order: 10 }
+            ]
+        },
+        comparisonActivity: {
+            title: "Comparison Activity: Indigenous Societies",
+            instructions: "Categorize characteristics by the Indigenous society they describe. Some characteristics may apply to multiple societies.",
+            societies: ["Mississippian (Cahokia)", "Aztec (Mexica)", "Haudenosaunee (Iroquois)", "Pueblo Peoples"],
+            characteristics: [
+                { text: "Built large earthen mounds for ceremonial purposes", answer: "Mississippian (Cahokia)" },
+                { text: "Constructed multi-story cliff dwellings in Southwest", answer: "Pueblo Peoples" },
+                { text: "Established democratic confederation with Great Law of Peace", answer: "Haudenosaunee (Iroquois)" },
+                { text: "Built island capital city with population over 200,000", answer: "Aztec (Mexica)" },
+                { text: "Practiced Three Sisters agriculture (corn, beans, squash)", answer: "Multiple: All societies" },
+                { text: "Located in modern-day St. Louis area", answer: "Mississippian (Cahokia)" },
+                { text: "Formed alliance of five (later six) nations", answer: "Haudenosaunee (Iroquois)" },
+                { text: "Conquered by Hernán Cortés in 1521", answer: "Aztec (Mexica)" },
+                { text: "Known for adobe brick construction", answer: "Pueblo Peoples" },
+                { text: "Peak population occurred around 1050-1200 CE", answer: "Mississippian (Cahokia)" },
+                { text: "Located in what is now Mexico City", answer: "Aztec (Mexica)" },
+                { text: "Influenced American colonial ideas about federation", answer: "Haudenosaunee (Iroquois)" }
+            ]
+        }
     }
 };
 

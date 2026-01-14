@@ -85,6 +85,24 @@ function buildActivity(a, mn, idx) {
                 details += '</div>';
             });
         }
+        else if (idx === 2 && module1Activities.la3) {
+            details += '<h4 style="margin-top:20px">Option A: Timeline Builder</h4>';
+            details += '<p style="margin:10px 0"><strong>' + module1Activities.la3.timelineBuilder.instructions + '</strong></p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Event</th><th style="width:20%">Date</th></tr></thead><tbody>';
+            module1Activities.la3.timelineBuilder.events.forEach((e, i) => {
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + e.event + '</td><td>' + e.date + '</td></tr>';
+            });
+            details += '</tbody></table>';
+
+            details += '<h4 style="margin-top:30px">Option B: Comparison Activity</h4>';
+            details += '<p style="margin:10px 0"><strong>' + module1Activities.la3.comparisonActivity.instructions + '</strong></p>';
+            details += '<p style="margin:10px 0;padding:10px;background:var(--gray-light);border-radius:4px"><strong>Societies:</strong> ' + module1Activities.la3.comparisonActivity.societies.join(' | ') + '</p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Characteristic</th><th style="width:35%">Answer</th></tr></thead><tbody>';
+            module1Activities.la3.comparisonActivity.characteristics.forEach((c, i) => {
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + c.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + c.answer + '</span></td></tr>';
+            });
+            details += '</tbody></table>';
+        }
     }
 
     return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><span class="toggle-icon">▼</span></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';
