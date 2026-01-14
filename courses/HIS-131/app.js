@@ -16,6 +16,7 @@ function renderAll() {
     renderModules();
     renderRubrics();
     renderSkills();
+    renderResources();
 }
 
 function showTab(id) {
@@ -423,5 +424,57 @@ function renderSkills() {
         html += '</ul></div>';
         div.innerHTML = html;
         c.appendChild(div);
+    });
+}
+
+function renderResources() {
+    const c = document.getElementById('resources-container');
+    if (typeof courseResources === 'undefined') return;
+
+    Object.keys(courseResources).forEach(key => {
+        const resource = courseResources[key];
+        const id = 'resource-' + key;
+
+        const card = document.createElement('div');
+        card.className = 'activity-card';
+        card.onclick = () => toggleActivity(id);
+
+        let html = '<div class="activity-header">';
+        html += '<div><span style="font-size:1.5em;margin-right:10px">' + resource.icon + '</span>';
+        html += '<span class="activity-title">' + resource.title + '</span></div>';
+        html += '<div><button class="copy-btn" onclick="copyResource(\'' + id + '\', event)" title="Copy to clipboard">📋 Copy</button>';
+        html += '<span class="toggle-icon">▼</span></div></div>';
+
+        html += '<div id="activity-details-' + id + '" class="activity-details">';
+        html += '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+
+        resource.sections.forEach((section, idx) => {
+            html += '<div style="margin-top:' + (idx > 0 ? '25px' : '0') + '">';
+            html += '<h4 style="color:var(--accent);margin-bottom:10px">' + section.heading + '</h4>';
+            html += '<div style="white-space:pre-wrap;line-height:1.8">' + section.content + '</div>';
+            html += '</div>';
+        });
+
+        html += '</div></div>';
+        card.innerHTML = html;
+        c.appendChild(card);
+    });
+}
+
+function copyResource(id, event) {
+    event.stopPropagation();
+    const details = document.getElementById('activity-details-' + id);
+    if (!details) return;
+
+    const text = details.innerText;
+    navigator.clipboard.writeText(text).then(() => {
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        btn.style.background = 'var(--success)';
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+        }, 2000);
     });
 }
