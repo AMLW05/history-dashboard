@@ -354,7 +354,7 @@ function buildAssessment(a, mn) {
         details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + proj.rubric + '</p></div>';
     }
     // Final Portfolio (Module 7)
-    else if (a.title && a.title.includes('Final Portfolio') && modData && modData.finalPortfolio) {
+    else if ((a.type === 'Final Project' || (a.title && a.title.includes('Final Portfolio'))) && modData && modData.finalPortfolio) {
         const portfolio = modData.finalPortfolio;
         details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
         details += '<div style="white-space:pre-wrap;line-height:1.8">' + portfolio.instructions + '</div>';

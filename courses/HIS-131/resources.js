@@ -218,6 +218,109 @@ Examples:
             }
         ]
     },
+    portfolio: {
+        title: "Portfolio Project Guide",
+        icon: "🎨",
+        sections: [
+            {
+                heading: "What is the Portfolio Project?",
+                content: `**The "What is America?" Portfolio** is your semester-long exploration of American identity from pre-Columbian times through the Civil War.
+
+You will create 6 pieces throughout the semester (Modules 1, 2, 3, 4, 5, 6), then compile and synthesize them in a final portfolio (Module 7).
+
+**Purpose**:
+- Develop historical thinking skills progressively
+- Explore how "America" was defined and redefined across time
+- Create authentic historical analysis
+- Demonstrate your intellectual growth`
+            },
+            {
+                heading: "Portfolio Pieces Schedule",
+                content: `**Part A (Module 1)**: Initial Definition
+- Define "What is America?" BEFORE studying history
+- 200-300 words
+- Baseline for comparison
+
+**Piece #1 (Module 1)**: First Encounters
+- How did Indigenous peoples, Europeans, and Africans shape early America?
+- 25 points
+
+**Piece #2 (Module 2)**: Colonial Identity Formation
+- What defined colonial American identity?
+- Included in Discussion Board 1
+- 50 points
+
+**Piece #3 (Module 3)**: Revolutionary Ideals
+- How did Revolutionary ideals define America?
+- 100 points
+
+**Piece #4 (Module 4)**: Democratic Promises
+- Who was included/excluded in early American democracy?
+- Included in Discussion Board 2
+- 50 points
+
+**Piece #5 (Module 5)**: Expansion & Reform
+- How did territorial expansion and reform movements redefine America?
+- 100 points
+
+**Piece #6 (Module 6)**: Slavery & Freedom
+- How did debates over slavery shape American identity?
+- Included in Discussion Board 3
+- 50 points
+
+**FINAL PORTFOLIO (Module 7)**:
+- Compile all 6 pieces
+- Write synthesis analysis
+- Create new "What is America?" definition
+- 200 points`
+            },
+            {
+                heading: "Format & Submission Tips",
+                content: `**Accepted Formats**:
+- Visual presentations (slides, infographics, posters)
+- Written analyses (essays, reports)
+- Mixed media (text + visuals)
+- Digital formats (Google Slides, PowerPoint, PDFs)
+
+**Submission Guidelines**:
+- Upload to Canvas by each module's deadline
+- Save ALL pieces - you'll need them for final portfolio
+- Use clear file names: "YourName_Module1_Piece1.pdf"
+- Include your name and module number on each piece
+
+**Pro Tips**:
+- Start early - these take thoughtful work
+- Use specific historical evidence
+- Ask "So what?" - explain significance
+- Revise before submitting
+- Save drafts in multiple locations`
+            },
+            {
+                heading: "Grading Criteria",
+                content: `Portfolio pieces are graded on:
+
+**Historical Accuracy (30%)**:
+- Correct use of facts, dates, evidence
+- Accurate representation of historical context
+
+**Analysis & Argumentation (30%)**:
+- Clear thesis or central argument
+- Use of evidence to support claims
+- Critical thinking about causes/effects
+
+**Multiple Perspectives (20%)**:
+- Consideration of different groups' experiences
+- Recognition of complexity and contradictions
+
+**Organization & Presentation (20%)**:
+- Clear structure
+- Professional appearance
+- Correct grammar and mechanics
+
+See rubrics for detailed scoring guides.`
+            }
+        ]
+    },
     research: {
         title: "Research Tips & Finding Sources",
         icon: "🔍",
