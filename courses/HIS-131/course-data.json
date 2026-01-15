@@ -13,8 +13,8 @@
     "completionPercent": 100,
     "qmStandardsMet": 0,
     "qmStandardsTotal": 22,
-    "totalPoints": 1120,
-    "autoGradedPercent": 67,
+    "totalPoints": 1680,
+    "autoGradedPercent": 49,
     "totalActivities": 26
   },
   "statistics": {
@@ -25,8 +25,8 @@
     "discussions": 4,
     "finalProject": 1,
     "dataAnalysisActivities": 2,
-    "autoGradedPoints": 750,
-    "manualGradedPoints": 370
+    "autoGradedPoints": 830,
+    "manualGradedPoints": 850
   },
   "clos": [
     {
@@ -279,7 +279,7 @@
         },
         {
           "type": "Project Checkpoint",
-          "title": "Project Checkpoint 1: Topic Selection",
+          "title": "Module 1 Project Checkpoint: Initial Definition + Piece #1",
           "points": 50,
           "rubric": "RUBRIC_1_Project_Checkpoints",
           "linkedMLOs": [1, 3],
@@ -402,8 +402,8 @@
         },
         {
           "type": "Discussion Board",
-          "title": "Discussion Board 1: Colonial Life Perspectives",
-          "points": 30,
+          "title": "Discussion Board 1: Colonial Tensions & Portfolio Piece #2",
+          "points": 100,
           "rubric": "RUBRIC_2_Discussion_Boards",
           "linkedMLOs": [1, 2],
           "linkedCLOs": ["CLO2", "CLO4"]
@@ -540,8 +540,8 @@
         },
         {
           "type": "Project Checkpoint",
-          "title": "Project Checkpoint 2: Revolutionary Voice Research",
-          "points": 50,
+          "title": "Module 3 Project Checkpoint: Piece #3 - Revolutionary Voice",
+          "points": 100,
           "rubric": "RUBRIC_1_Project_Checkpoints",
           "linkedMLOs": [1, 2],
           "linkedCLOs": ["CLO3", "CLO4"]
@@ -664,8 +664,8 @@
         },
         {
           "type": "Discussion Board",
-          "title": "Discussion Board 2: Market Revolution Impact",
-          "points": 30,
+          "title": "Discussion Board 2: Democratic Ideals & Portfolio Piece #4",
+          "points": 100,
           "rubric": "RUBRIC_2_Discussion_Boards",
           "linkedMLOs": [3],
           "linkedCLOs": ["CLO1", "CLO4"]
@@ -787,8 +787,8 @@
         },
         {
           "type": "Project Checkpoint",
-          "title": "Project Checkpoint 3: Historical Context Analysis",
-          "points": 50,
+          "title": "Module 5 Project Checkpoint: Piece #5 - Map of Ambition",
+          "points": 100,
           "rubric": "RUBRIC_1_Project_Checkpoints",
           "linkedMLOs": [1, 2],
           "linkedCLOs": ["CLO3", "CLO4"]
@@ -924,8 +924,8 @@
         },
         {
           "type": "Discussion Board",
-          "title": "Discussion Board 3: Reform Movements",
-          "points": 30,
+          "title": "Discussion Board 3: Reform Strategies & Portfolio Piece #6",
+          "points": 100,
           "rubric": "RUBRIC_2_Discussion_Boards",
           "linkedMLOs": [1, 2],
           "linkedCLOs": ["CLO2", "CLO4"]
@@ -1048,8 +1048,8 @@
         },
         {
           "type": "Final Project",
-          "title": "Final Project: Historical Research Presentation",
-          "points": 100,
+          "title": "Module 7 Final Portfolio: 'What is America?' Complete Journey",
+          "points": 200,
           "rubric": "RUBRIC_3_Final_Project",
           "linkedMLOs": [1, 2],
           "linkedCLOs": ["CLO1", "CLO2", "CLO3", "CLO4"]
@@ -1171,8 +1171,8 @@
         },
         {
           "type": "Discussion Board",
-          "title": "Discussion Board 4: Civil War Reflections",
-          "points": 30,
+          "title": "Discussion Board 4: War's Legacy & Final Reflection",
+          "points": 100,
           "rubric": "RUBRIC_2_Discussion_Boards",
           "linkedMLOs": [2, 3],
           "linkedCLOs": ["CLO1", "CLO2", "CLO4"]

@@ -73,26 +73,52 @@ const module4Activities = {
 };
 
 const module4Discussion = {
-    title: "Discussion Board 2: Market Revolution Impact",
-    prompt: `The Market Revolution (1790s-1840s) transformed the American economy from local subsistence farming to national markets, wage labor, and commercial agriculture. Choose ONE perspective:
+    title: "Discussion Board 2: Democratic Ideals & Portfolio Piece #4",
+    prompt: `**Connection to Portfolio**: This discussion helps you develop ideas for your Piece #4 (Symbol or Document) that you'll create for your Module 7 portfolio.
 
-1. **Northern Mill Worker**: You're a young woman working at Lowell Mills in Massachusetts. How has factory work changed your life compared to farm life? What opportunities and constraints do you face?
+**Discussion Prompt** (300-350 words):
 
-2. **Southern Enslaved Person**: You've been "sold down the river" from Virginia to a Mississippi cotton plantation. How has the cotton boom and interstate slave trade affected your life, family, and work?
+Analyze how the Market Revolution (1790s-1840s) and Jeffersonian era revealed contradictions between democratic ideals and economic realities. Choose ONE of the following to analyze using PRIMARY SOURCE EVIDENCE:
 
-3. **Western Farmer**: You've moved to Ohio after the Erie Canal opened. How do new transportation networks affect your farm's production and connection to markets?
+**Option 1: Analyze Economic Freedom Through Documents**
+Using primary sources (labor contracts, advertisements, court records, economic data), analyze how the Market Revolution redefined "freedom" for workers. Consider:
+- What do Lowell Mill records reveal about women's economic opportunities and constraints?
+- How do wage labor contracts differ from earlier forms of work?
+- What evidence shows workers' agency and resistance?
+- How did "freedom to work" create new forms of dependence?
 
-**Initial Post** (250+ words):
-- Describe your daily life and economic circumstances
-- Explain how Market Revolution changes helped or hurt you
-- Use specific evidence from course materials
-- Consider: What new opportunities exist? What freedoms are lost?
+**Option 2: Analyze Citizenship and Rights Through the Haitian Revolution**
+Using historical documents and Jefferson's writings, analyze how the Haitian Revolution exposed American contradictions. Consider:
+- What do Jefferson's letters reveal about elite fears of Black revolution?
+- How did southern states respond with new slave codes? (Use legal documents)
+- What evidence exists of Black Americans' awareness and inspiration from Haiti?
+- How did this challenge American claims of universal liberty?
 
-**Peer Responses** (100+ words each, 2 responses):
-- Compare experiences across different regions or social positions
-- Discuss how Market Revolution created winners and losers
-- Connect to broader themes about capitalism, freedom, and inequality`,
-    rubric: "RUBRIC_2_Discussion_Boards"
+**Option 3: Analyze Indigenous Sovereignty Through Tecumseh's Resistance**
+Using speeches, treaty documents, and contemporary accounts, analyze Indigenous resistance to American expansion. Consider:
+- What primary sources document Tecumseh's vision of pan-Indian unity?
+- How do land treaties reveal American expansion strategies?
+- What does the evidence show about Indigenous agency and political organization?
+- How did American "freedom" depend on Indigenous dispossession?
+
+**Initial Post Requirements** (300-350 words):
+- Choose ONE option and clearly state your choice
+- Cite at least 2 specific primary sources or historical documents
+- Analyze the evidence - don't roleplay or speak "as" historical figures
+- Connect to Module 4 theme: "Liberty and justice—now what?"
+- Explain how this analysis might inform your Portfolio Piece #4
+
+**Peer Response Requirements** (150-200 words each, respond to 2 classmates):
+- Engage with classmates who chose DIFFERENT options than you
+- Compare contradictions: What patterns do you see across different groups?
+- Offer additional evidence or context
+- Ask analytical questions that deepen understanding`,
+    rubric: "RUBRIC_2_Discussion_Boards",
+    pointsBreakdown: {
+        initialPost: 40,
+        peerResponses: 40,
+        portfolioConnection: 20
+    }
 };
 
 // Module 4 Quiz (10 questions covering Early Republic & Market Revolution)

@@ -175,7 +175,10 @@ function buildModuleContent(m) {
     let html = '<div class="subsection"><h3 class="subsection-title">Inquiry Questions</h3><ul class="inquiry-list">';
     m.inquiryQuestions.forEach(q => html += '<li>' + q + '</li>');
     html += '</ul></div><div class="subsection"><h3 class="subsection-title">Module Learning Objectives</h3><ol class="mlo-list">';
-    m.mlos.forEach(mlo => html += '<li><strong>MLO' + mlo.number + ':</strong> ' + mlo.text + '</li>');
+    m.mlos.forEach(mlo => {
+        const cloLinks = mlo.linkedCLOs && mlo.linkedCLOs.length > 0 ? ' <em>(' + mlo.linkedCLOs.join(', ') + ')</em>' : '';
+        html += '<li><strong>MLO' + mlo.number + ':</strong> ' + mlo.text + cloLinks + '</li>';
+    });
     html += '</ol></div><div class="subsection"><h3 class="subsection-title">Learning Activities</h3>';
     m.activities.forEach((a, i) => html += buildActivity(a, m.number, i));
     html += '</div><div class="subsection"><h3 class="subsection-title">Assessments</h3>';

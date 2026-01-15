@@ -112,64 +112,6 @@ const module3Activities = {
     }
 };
 
-const module3Checkpoint = {
-    title: "Project Checkpoint 2: Research Progress",
-    instructions: `Submit a 2-3 page update on your final project research. This checkpoint helps you stay on track and get feedback before Module 7.
-
-**Required Components:**
-
-1. **Thesis Statement** (1 paragraph)
-   - State your historical argument clearly
-   - What specific question are you answering?
-   - Example: "The Election of 1800 represented not just a transfer of power, but a fundamental redefinition of federal authority that revealed deep sectional divisions threatening national unity."
-
-2. **Primary Source Analysis** (1-2 pages)
-   - Analyze at least ONE primary source in depth
-   - What is this source? (letter, speech, image, data, etc.)
-   - Who created it, when, and why?
-   - What does it reveal about your topic?
-   - How does it support or complicate your thesis?
-
-3. **Secondary Source Integration** (1/2 - 1 page)
-   - Summarize arguments from at least 2 scholarly secondary sources
-   - How do historians interpret your topic differently?
-   - Where does your argument fit in these debates?
-
-4. **Research Plan** (1/2 page)
-   - What additional sources do you still need?
-   - What questions remain unanswered?
-   - What challenges have you encountered?
-
-**Grading**: This checkpoint uses Rubric 1 (Project Checkpoints - 50 points)
-- Topic/Source Selection & Clarity: 15 pts
-- Historical Context & Understanding: 15 pts
-- Research Planning & Sources: 15 pts
-- Writing Mechanics & Format: 5 pts`,
-    rubric: "RUBRIC_1_Project_Checkpoints",
-    scaffolding: {
-        thesisTemplates: [
-            "While most historians argue [common interpretation], analysis of [your sources] reveals that [your argument].",
-            "The [event/topic] represented not merely [simple interpretation], but rather [complex argument] because [reasons].",
-            "[Topic] fundamentally challenged [existing system] by [specific ways], ultimately leading to [consequences]."
-        ],
-        primarySourceQuestions: [
-            "Who created this source and what was their perspective/bias?",
-            "What was the historical context when this was created?",
-            "What does the SOURCE SAY vs. what does it REVEAL (read between the lines)?",
-            "What is missing from this source? Whose voices aren't included?",
-            "How does this source connect to broader historical themes?"
-        ],
-        commonMistakes: [
-            "❌ Thesis too broad: 'The Revolution changed America'",
-            "✅ Thesis specific: 'The Revolution's rhetoric of liberty exposed contradictions in slavery, leading southern planters to develop new justifications for racial hierarchy by 1800'",
-            "❌ Just summarizing sources without analysis",
-            "✅ Analyzing what sources reveal about historical change",
-            "❌ Using only textbook or general websites",
-            "✅ Using primary sources and scholarly articles"
-        ]
-    }
-};
-
 // Module 3 Quiz (10 questions covering Revolution & New Nation)
 const module3Quiz = {
     questions: [

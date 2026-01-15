@@ -208,28 +208,52 @@ const module6Activities = {
 };
 
 const module6Discussion = {
-    title: "Discussion Board 3: 1850s Crisis Perspectives",
-    prompt: `The 1850s saw sectional tensions escalate toward civil war. Choose ONE perspective:
+    title: "Discussion Board 3: Reform Strategies & Portfolio Piece #6",
+    prompt: `**Connection to Portfolio**: This discussion helps you develop ideas for your Piece #6 (Reform Movement Analysis) that you'll create for your Module 7 portfolio.
 
-1. **Northern Free Soiler**: You oppose slavery's expansion but don't necessarily support abolition or racial equality. Why do you fear slavery's spread into western territories?
+**Discussion Prompt** (300-350 words):
 
-2. **Southern Planter**: You view Northern criticism of slavery as attack on your way of life, property rights, and racial order. How do you defend slavery and states' rights?
+Analyze how antebellum reform movements (1820-1850) used different strategies to challenge inequality and injustice. Choose ONE of the following to analyze using PRIMARY SOURCE EVIDENCE:
 
-3. **Northern Abolitionist**: You demand immediate emancipation. How do events like Fugitive Slave Act and Dred Scott decision radicalize your activism?
+**Option 1: Analyze Abolitionist Strategies Through Documents**
+Using primary sources (antislavery newspapers, speeches, petitions, convention proceedings), analyze how abolitionists debated strategies. Consider:
+- What do documents from William Lloyd Garrison reveal about "immediatism"?
+- How do Frederick Douglass's speeches show Black abolitionists' leadership?
+- What evidence exists of gradualist vs. immediatist debates?
+- How did abolitionists use print culture, petitions, and moral suasion?
 
-4. **Border State Moderate**: Living in Missouri or Kentucky, you try to find middle ground. Why does compromise become increasingly impossible?
+**Option 2: Analyze Women's Rights Through the Seneca Falls Convention**
+Using the Declaration of Sentiments and other documents, analyze how women's reform work led to feminist activism. Consider:
+- How does the Declaration of Sentiments use revolutionary rhetoric?
+- What primary sources show women's involvement in temperance, abolition, moral reform?
+- How did these experiences lead to demands for suffrage and property rights?
+- What divisions existed among women reformers (class, race)?
 
-**Initial Post** (250+ words):
-- Explain your position on slavery and its expansion
-- Discuss specific 1850s events (Compromise of 1850, Kansas-Nebraska Act, Dred Scott, John Brown)
-- Use historical evidence from course materials
-- Explain why compromise failed
+**Option 3: Analyze Utopian Communities Through Primary Sources**
+Using community documents, rules, visitor accounts, analyze experimental societies. Consider:
+- What do Shaker, Oneida, Brook Farm, or New Harmony documents reveal?
+- How did communities attempt to reform society through example?
+- What evidence exists of successes and failures?
+- How did these experiments challenge gender roles, property, labor?
 
-**Peer Responses** (100+ words each, respond to 2):
-- Engage with someone from DIFFERENT perspective
-- Explain points of fundamental disagreement
-- Discuss: Was Civil War inevitable by 1860? Why or why not?`,
-    rubric: "RUBRIC_2_Discussion_Boards"
+**Initial Post Requirements** (300-350 words):
+- Choose ONE option and clearly state your choice
+- Cite at least 2 specific primary sources or historical documents
+- Analyze the evidence - don't roleplay or speak "as" historical figures
+- Connect to Module 6 theme: "Breaking Point—reforming or resisting?"
+- Explain how this analysis might inform your Portfolio Piece #6
+
+**Peer Response Requirements** (150-200 words each, respond to 2 classmates):
+- Engage with classmates who chose DIFFERENT options than you
+- Compare reform strategies: What made some movements more/less effective?
+- Offer additional evidence or context
+- Ask analytical questions that deepen understanding`,
+    rubric: "RUBRIC_2_Discussion_Boards",
+    pointsBreakdown: {
+        initialPost: 40,
+        peerResponses: 40,
+        portfolioConnection: 20
+    }
 };
 
 // ===== MODULE 7: Civil War & Reconstruction (1861-1877) =====
