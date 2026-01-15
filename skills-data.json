@@ -1,0 +1,126 @@
+{
+  "program": "FTCC History Program",
+  "skills": [
+    {
+      "id": "HTS1",
+      "name": "Source Analysis",
+      "description": "Ability to distinguish, evaluate, and interpret primary and secondary historical sources"
+    },
+    {
+      "id": "HTS2",
+      "name": "Chronological Reasoning",
+      "description": "Understanding cause-effect relationships, continuity and change over time"
+    },
+    {
+      "id": "HTS3",
+      "name": "Contextualization",
+      "description": "Placing events and processes within broader historical contexts"
+    },
+    {
+      "id": "HTS4",
+      "name": "Comparison",
+      "description": "Analyzing similarities and differences across time periods, regions, and groups"
+    },
+    {
+      "id": "HTS5",
+      "name": "Argumentation",
+      "description": "Constructing evidence-based historical arguments and interpretations"
+    },
+    {
+      "id": "HTS6",
+      "name": "Data Literacy",
+      "description": "Interpreting quantitative historical data and creating data-driven arguments"
+    }
+  ],
+  "courses": [
+    {
+      "code": "HIS-131",
+      "title": "American History I",
+      "subtitle": "Pre-Columbian Times Through 1865",
+      "status": "complete",
+      "skillLevels": {
+        "HTS1": {
+          "level": "Foundational",
+          "description": "Identify and distinguish between primary and secondary sources",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS2": {
+          "level": "Foundational",
+          "description": "Sequence events and identify basic cause-effect relationships",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS3": {
+          "level": "Foundational",
+          "description": "Describe historical context of events in their time and place",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS4": {
+          "level": "Foundational",
+          "description": "Compare basic similarities and differences across regions/groups",
+          "modules": [3, 4, 5, 6, 7]
+        },
+        "HTS5": {
+          "level": "Foundational",
+          "description": "Construct basic thesis statements with supporting evidence",
+          "modules": [2, 4, 6, 7, 8]
+        },
+        "HTS6": {
+          "level": "Foundational",
+          "description": "Read and interpret basic historical charts and data",
+          "modules": [3, 5, 7]
+        }
+      }
+    },
+    {
+      "code": "HIS-132",
+      "title": "American History II",
+      "subtitle": "1865 to Present",
+      "status": "complete",
+      "skillLevels": {
+        "HTS1": {
+          "level": "Intermediate",
+          "description": "Evaluate source credibility, bias, and perspective",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS2": {
+          "level": "Intermediate",
+          "description": "Analyze continuity and change over time, identify turning points",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS3": {
+          "level": "Intermediate",
+          "description": "Connect historical context to contemporary issues",
+          "modules": [1, 2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS4": {
+          "level": "Intermediate",
+          "description": "Make evaluative comparisons across eras and movements",
+          "modules": [2, 3, 4, 5, 6, 7, 8]
+        },
+        "HTS5": {
+          "level": "Intermediate",
+          "description": "Develop complex arguments with counterarguments",
+          "modules": [2, 4, 6, 7, 8]
+        },
+        "HTS6": {
+          "level": "Intermediate",
+          "description": "Interpret quantitative data and create data-driven historical arguments",
+          "modules": [3, 6, 7, 8],
+          "featured": true
+        }
+      }
+    },
+    {
+      "code": "HIS-111",
+      "title": "World Civilizations I",
+      "subtitle": "To 1500",
+      "status": "planned"
+    },
+    {
+      "code": "HIS-112",
+      "title": "World Civilizations II",
+      "subtitle": "1500 to Present",
+      "status": "planned"
+    }
+  ]
+}

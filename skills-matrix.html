@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Thinking Skills Matrix | FTCC History</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --parchment: #f4e8d0;
+            --parchment-dark: #d4c4a8;
+            --ink: #2c1810;
+            --ink-light: #5a4a3a;
+            --accent: #8b4513;
+            --accent-light: #cd853f;
+            --success: #2d5016;
+            --gray-light: #f8f4ed;
+            --warning: #fdcb6e;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            background: linear-gradient(135deg, var(--parchment-dark) 0%, var(--parchment) 100%);
+            min-height: 100vh;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(44, 24, 16, 0.3);
+            overflow: hidden;
+            border: 3px solid var(--accent);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--ink) 0%, var(--ink-light) 100%);
+            color: var(--parchment);
+            padding: 40px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent);
+            position: relative;
+        }
+
+        .header h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .header p { font-size: 1.1em; opacity: 0.95; }
+
+        .nav-tabs {
+            display: flex;
+            background: var(--gray-light);
+            border-bottom: 2px solid var(--accent-light);
+            overflow-x: auto;
+        }
+
+        .nav-tab {
+            padding: 20px 30px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--ink-light);
+            transition: all 0.3s;
+            white-space: nowrap;
+            border-bottom: 3px solid transparent;
+            font-family: Georgia, serif;
+        }
+
+        .nav-tab:hover { background: rgba(139, 69, 19, 0.1); }
+        .nav-tab.active {
+            background: white;
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .tab-content { display: none; padding: 40px; }
+        .tab-content.active { display: block; }
+
+        .matrix-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .matrix-table th, .matrix-table td {
+            padding: 15px;
+            border: 2px solid var(--accent-light);
+            text-align: center;
+        }
+
+        .matrix-table th {
+            background: var(--accent);
+            color: white;
+            font-weight: bold;
+        }
+
+        .matrix-table td {
+            background: white;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .matrix-table td:hover {
+            background: var(--gray-light);
+            transform: scale(1.05);
+        }
+
+        .level-foundational { background: #e8f4f8 !important; color: #0077aa; font-weight: bold; }
+        .level-intermediate { background: #fff3cd !important; color: #856404; font-weight: bold; }
+        .level-advanced { background: #d4edda !important; color: var(--success); font-weight: bold; }
+        .level-planned { background: #f8f9fa !important; color: #999; font-style: italic; }
+
+        .skill-card {
+            background: var(--gray-light);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skill-name { font-size: 1.3em; color: var(--accent); font-weight: bold; }
+        .skill-badge { padding: 5px 12px; border-radius: 20px; font-size: 0.85em; font-weight: bold; }
+
+        .progression-track {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .progression-item {
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 2px solid var(--accent-light);
+        }
+
+        .progression-course { font-weight: bold; color: var(--accent); margin-bottom: 5px; }
+        .progression-desc { font-size: 0.95em; color: var(--ink-light); }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal.active { display: flex; }
+
+        .modal-content {
+            background: var(--parchment);
+            border-radius: 12px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            border: 3px solid var(--accent);
+        }
+
+        .modal-header {
+            background: var(--ink);
+            color: var(--parchment);
+            padding: 25px;
+            border-bottom: 3px solid var(--accent);
+        }
+
+        .modal-body { padding: 30px; line-height: 1.8; }
+
+        .close-btn {
+            float: right;
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Georgia, serif;
+        }
+
+        .close-btn:hover { background: var(--accent-light); }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .course-comparison {
+            background: var(--gray-light);
+            padding: 25px;
+            border-radius: 12px;
+            border: 3px solid var(--accent);
+        }
+
+        .course-comparison h3 {
+            color: var(--accent);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" style="position:absolute;top:20px;left:20px;color:var(--parchment);text-decoration:none;font-weight:bold;padding:10px 20px;background:rgba(255,255,255,0.1);border-radius:6px;border:2px solid var(--parchment);">← Back</a>
+            <h1>📚 Historical Thinking Skills Matrix</h1>
+            <p>Progressive Skill Development Across FTCC History Program</p>
+        </div>
+
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('matrix')">🔗 Skills Matrix</button>
+            <button class="nav-tab" onclick="showTab('threading')">🔄 Skill Progression</button>
+            <button class="nav-tab" onclick="showTab('comparison')">⚖️ Course Comparison</button>
+        </div>
+
+        <div id="matrix" class="tab-content active">
+            <h2 style="color: var(--ink); margin-bottom: 10px;">Skills Alignment Matrix</h2>
+            <p style="color: var(--ink-light); margin-bottom: 20px;">Shows how each historical thinking skill progresses across courses. Click cells for details.</p>
+            <table class="matrix-table" id="matrixTable"></table>
+        </div>
+
+        <div id="threading" class="tab-content">
+            <h2 style="color: var(--ink); margin-bottom: 10px;">Skill Threading Across Courses</h2>
+            <p style="color: var(--ink-light); margin-bottom: 20px;">How each skill builds from foundational to advanced levels.</p>
+            <div id="skillThreads"></div>
+        </div>
+
+        <div id="comparison" class="tab-content">
+            <h2 style="color: var(--ink); margin-bottom: 10px;">Course Comparison</h2>
+            <p style="color: var(--ink-light); margin-bottom: 20px;">Side-by-side comparison of skill development in HIS-131 and HIS-132.</p>
+            <div id="comparisonView"></div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal" onclick="if(event.target === this) closeModal()">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close-btn" onclick="closeModal()">✕ Close</button>
+                <h2 id="modalTitle" style="margin-top:10px;"></h2>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        let skillsData = {};
+
+        async function loadData() {
+            const response = await fetch('skills-data.json');
+            skillsData = await response.json();
+            renderMatrix();
+            renderSkillThreads();
+            renderComparison();
+        }
+
+        function showTab(tabName) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.nav-tab').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        function renderMatrix() {
+            const table = document.getElementById('matrixTable');
+            const activeCourses = skillsData.courses.filter(c => c.status !== 'planned');
+
+            let html = '<thead><tr><th style="width:20%">Historical Thinking Skill</th>';
+            activeCourses.forEach(course => {
+                html += `<th>${course.code}<br><small style="font-weight:normal;opacity:0.9">${course.title}</small></th>`;
+            });
+            html += '</tr></thead><tbody>';
+
+            skillsData.skills.forEach(skill => {
+                html += `<tr><td style="text-align:left;font-weight:bold;background:var(--gray-light)">${skill.name}</td>`;
+                activeCourses.forEach(course => {
+                    const skillLevel = course.skillLevels?.[skill.id];
+                    if (skillLevel) {
+                        const levelClass = `level-${skillLevel.level.toLowerCase()}`;
+                        html += `<td class="${levelClass}" onclick='showSkillDetail("${skill.id}", "${course.code}")'>${skillLevel.level}<br><small style="font-size:0.8em">${skillLevel.modules.length} modules</small></td>`;
+                    } else {
+                        html += `<td class="level-planned">-</td>`;
+                    }
+                });
+                html += '</tr>';
+            });
+
+            html += '</tbody>';
+            table.innerHTML = html;
+        }
+
+        function renderSkillThreads() {
+            const container = document.getElementById('skillThreads');
+
+            html = '';
+            skillsData.skills.forEach(skill => {
+                html += `<div class="skill-card">
+                    <div class="skill-header">
+                        <div class="skill-name">${skill.name}</div>
+                    </div>
+                    <p style="color:var(--ink-light);margin-bottom:15px">${skill.description}</p>
+                    <div class="progression-track">`;
+
+                skillsData.courses.filter(c => c.status !== 'planned').forEach(course => {
+                    const skillLevel = course.skillLevels?.[skill.id];
+                    if (skillLevel) {
+                        html += `<div class="progression-item">
+                            <div class="progression-course">${course.code}: ${skillLevel.level}</div>
+                            <div class="progression-desc">${skillLevel.description}</div>
+                            <div style="margin-top:8px;font-size:0.85em;color:var(--accent)">
+                                <strong>Modules:</strong> ${skillLevel.modules.join(', ')}
+                            </div>
+                        </div>`;
+                    }
+                });
+
+                html += `</div></div>`;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function renderComparison() {
+            const container = document.getElementById('comparisonView');
+            const his131 = skillsData.courses.find(c => c.code === 'HIS-131');
+            const his132 = skillsData.courses.find(c => c.code === 'HIS-132');
+
+            let html = '<div class="comparison-grid">';
+
+            html += `<div class="course-comparison">
+                <h3>${his131.code}: ${his131.title}</h3>
+                <p style="font-style:italic;margin-bottom:15px">${his131.subtitle}</p>`;
+
+            skillsData.skills.forEach(skill => {
+                const level = his131.skillLevels[skill.id];
+                if (level) {
+                    html += `<div style="margin-bottom:15px;padding:12px;background:white;border-radius:6px;border-left:4px solid var(--accent)">
+                        <div style="font-weight:bold;color:var(--accent)">${skill.name}: ${level.level}</div>
+                        <div style="font-size:0.9em;margin-top:5px">${level.description}</div>
+                    </div>`;
+                }
+            });
+            html += '</div>';
+
+            html += `<div class="course-comparison">
+                <h3>${his132.code}: ${his132.title}</h3>
+                <p style="font-style:italic;margin-bottom:15px">${his132.subtitle}</p>`;
+
+            skillsData.skills.forEach(skill => {
+                const level = his132.skillLevels[skill.id];
+                if (level) {
+                    html += `<div style="margin-bottom:15px;padding:12px;background:white;border-radius:6px;border-left:4px solid var(--accent)">
+                        <div style="font-weight:bold;color:var(--accent)">${skill.name}: ${level.level}</div>
+                        <div style="font-size:0.9em;margin-top:5px">${level.description}</div>
+                        ${level.featured ? '<div style="margin-top:5px;color:var(--success);font-weight:bold">⭐ Featured</div>' : ''}
+                    </div>`;
+                }
+            });
+            html += '</div></div>';
+
+            container.innerHTML = html;
+        }
+
+        function showSkillDetail(skillId, courseCode) {
+            const skill = skillsData.skills.find(s => s.id === skillId);
+            const course = skillsData.courses.find(c => c.code === courseCode);
+            const skillLevel = course.skillLevels[skillId];
+
+            document.getElementById('modalTitle').textContent = `${skill.name} in ${course.code}`;
+            document.getElementById('modalBody').innerHTML = `
+                <h3 style="color:var(--accent);margin-bottom:10px">${course.title}</h3>
+                <p style="margin-bottom:15px;font-style:italic">${course.subtitle}</p>
+
+                <div style="background:var(--gray-light);padding:15px;border-radius:8px;margin-bottom:15px">
+                    <strong>Skill Level:</strong> <span style="color:var(--accent);font-size:1.2em">${skillLevel.level}</span>
+                </div>
+
+                <div style="margin-bottom:15px">
+                    <strong style="color:var(--accent)">Skill Description:</strong>
+                    <p style="margin-top:5px">${skill.description}</p>
+                </div>
+
+                <div style="margin-bottom:15px">
+                    <strong style="color:var(--accent)">Course Implementation:</strong>
+                    <p style="margin-top:5px">${skillLevel.description}</p>
+                </div>
+
+                <div>
+                    <strong style="color:var(--accent)">Modules Where Skill is Developed:</strong>
+                    <p style="margin-top:5px">Modules ${skillLevel.modules.join(', ')}</p>
+                </div>
+            `;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+        }
+
+        loadData();
+    </script>
+</body>
+</html>
