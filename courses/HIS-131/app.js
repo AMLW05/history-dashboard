@@ -33,38 +33,44 @@ function toggleModule(n) {
     h.classList.toggle('active');
 }
 
-function printModule(n, event) {
+function copyModuleContent(n, event) {
     event.stopPropagation();
     const content = document.getElementById('module-content-' + n);
-    const moduleTitle = content.previousElementSibling.querySelector('.module-title').textContent;
+    const moduleData = courseData.modules.find(m => m.number === n);
 
-    // Create modal overlay (like CSC-113)
-    const modal = document.createElement('div');
-    modal.className = 'modal-container';
-    modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px;';
+    if (!content || !moduleData) return;
 
-    modal.innerHTML = `
-        <div style="background: var(--parchment); border-radius: 12px; max-width: 1000px; width: 100%; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 3px solid var(--accent);">
-            <div class="modal-header-print" style="display: flex; justify-content: space-between; align-items: center; padding: 20px; border-bottom: 2px solid var(--accent);">
-                <h3 style="margin: 0; color: var(--ink);">📄 ${moduleTitle}</h3>
-                <div style="display: flex; gap: 10px;">
-                    <button onclick="window.print()" style="background: var(--success); color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif;">🖨️ Print</button>
-                    <button onclick="this.closest('.modal-container').remove()" style="background: #d63031; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif;">✕ Close</button>
-                </div>
-            </div>
-            <div class="modal-content-print" style="padding: 30px; overflow-y: auto; flex: 1; background: var(--parchment);">
-                ${content.innerHTML}
-            </div>
-        </div>
-    `;
+    // Build Canvas-ready text format
+    let canvasText = `MODULE ${n}: ${moduleData.title}\n`;
+    canvasText += `Dates: ${moduleData.dates}\n`;
+    canvasText += `Theme: ${moduleData.theme}\n\n`;
 
-    document.body.appendChild(modal);
+    canvasText += `INQUIRY QUESTIONS:\n`;
+    moduleData.inquiryQuestions.forEach((q, i) => canvasText += `${i + 1}. ${q}\n`);
 
-    // Close on background click
-    modal.addEventListener('click', function(e) {
-        if (e.target === modal) {
-            modal.remove();
-        }
+    canvasText += `\nMODULE LEARNING OBJECTIVES:\n`;
+    moduleData.mlos.forEach(mlo => canvasText += `MLO ${mlo.number}: ${mlo.text}\n`);
+
+    canvasText += `\nLEARNING ACTIVITIES:\n`;
+    moduleData.activities.forEach((act, i) => canvasText += `Activity ${i + 1}: ${act.title} (${act.points} points)\n`);
+
+    canvasText += `\nASSESSMENTS:\n`;
+    moduleData.assessments.forEach(assess => canvasText += `- ${assess.title} (${assess.points} points${assess.autoGraded ? ' - Auto-Graded' : ''})\n`);
+
+    // Copy to clipboard
+    navigator.clipboard.writeText(canvasText).then(() => {
+        // Show success notification
+        const btn = event.target;
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '✅ Copied!';
+        btn.style.background = 'var(--success)';
+        setTimeout(() => {
+            btn.innerHTML = originalText;
+            btn.style.background = '';
+        }, 2000);
+    }).catch(err => {
+        alert('Failed to copy. Please try selecting and copying manually.');
+        console.error('Copy failed:', err);
     });
 }
 
@@ -121,7 +127,7 @@ function renderModules() {
     courseData.modules.forEach(m => {
         const card = document.createElement('div');
         card.className = 'module-card';
-        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><button class="print-btn" onclick="printModule(' + m.number + ', event)" title="Print module for Canvas">🖨️ Print</button><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
+        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><button class="copy-btn" onclick="copyModuleContent(' + m.number + ', event)" title="Copy module content for Canvas">📋 Copy</button><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
         container.appendChild(card);
     });
 }

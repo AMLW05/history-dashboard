@@ -299,6 +299,15 @@ body {
     border-color: #d4af37;
 }
 
+/* Skills cards should not be clickable */
+#skills-container .activity-card {
+    cursor: default;
+}
+
+#skills-container .activity-card:hover {
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+}
+
 .activity-header {
     display: flex;
     justify-content: space-between;

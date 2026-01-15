@@ -73,31 +73,51 @@ const module2Activities = {
 };
 
 const module2Discussion = {
-    title: "Discussion Board 1: Colonial Life Perspectives",
-    prompt: `Choose ONE of the following perspectives and write a thoughtful response (250+ words):
+    title: "Discussion Board 1: Colonial Tensions & Portfolio Piece #2",
+    prompt: `**Connection to Portfolio**: This discussion helps you develop ideas for your Piece #2 (Colonial Character or Tension Map) that you'll create for your Module 7 portfolio.
 
-1. **Enslaved African Perspective**: How would an enslaved person in 1750 South Carolina describe their daily life, resistance strategies, and community? Use evidence from the Middle Passage, plantation labor, and resistance movements like Stono Rebellion.
+**Discussion Prompt** (300-350 words):
 
-2. **Indentured Servant Perspective**: How would a newly arrived indentured servant in 1670 Virginia view their prospects for freedom and land ownership before vs. after Bacon's Rebellion?
+Analyze how colonial tensions shaped different groups' experiences between 1620-1763. Choose ONE of the following to analyze using PRIMARY SOURCE EVIDENCE:
 
-3. **Indigenous Leader Perspective**: How would a Pueblo leader explain why they joined Popé's Revolt in 1680? What did they hope to achieve and preserve?
+**Option 1: Analyze Resistance Through Documents**
+Using primary sources (letters, petitions, court records, contemporary accounts), analyze how enslaved Africans resisted slavery in colonial America. Consider:
+- What forms of resistance appear in historical documents? (Stono Rebellion records, freedom suits, petitions, etc.)
+- How do these sources reveal agency and community?
+- What do these documents tell us about tensions between enslavers and enslaved people?
+- How did these tensions contribute to "shared resentment" that could create common cause?
 
-**Initial Post Requirements** (250+ words):
-- State your chosen perspective clearly
-- Include specific historical evidence from at least 2 course materials
-- Analyze how this person would view their opportunities and challenges
-- Consider: What would they fear? What would they hope for? How would they resist or adapt?
+**Option 2: Analyze Class Conflict Through Bacon's Rebellion**
+Using evidence from Bacon's Rebellion (1676), analyze class and racial tensions in colonial Virginia. Consider:
+- What grievances did poor colonists and servants have against Virginia elites?
+- How did the rebellion initially unite poor whites and Black Virginians?
+- Why did Virginia elites harden racial categories after the rebellion?
+- How did this tension shape colonial society going forward?
 
-**Peer Response Requirements** (100+ words each, respond to 2 classmates):
-- Engage with a classmate who chose a DIFFERENT perspective than you
-- Make connections or contrasts between the two perspectives
-- Ask a thoughtful question or offer additional historical context
-- Build on their analysis with new evidence or insights`,
+**Option 3: Analyze Indigenous Resistance Through the Pueblo Revolt**
+Using historical accounts of the Pueblo Revolt (1680), analyze Indigenous resistance to Spanish colonialism. Consider:
+- What primary sources document Pueblo grievances? (Spanish records, archaeological evidence, oral histories)
+- How did Popé unite different Pueblo communities?
+- What did this successful resistance reveal about colonial tensions?
+- How does this challenge narratives of inevitable European dominance?
+
+**Initial Post Requirements** (300-350 words):
+- Choose ONE option and clearly state your choice
+- Cite at least 2 specific primary sources or historical documents
+- Analyze the evidence - don't roleplay or speak "as" historical figures
+- Connect to Module 2 theme: "Can shared resentment create common cause?"
+- Explain how this analysis might inform your Portfolio Piece #2
+
+**Peer Response Requirements** (150-200 words each, respond to 2 classmates):
+- Engage with classmates who chose DIFFERENT options than you
+- Compare tensions: What similarities/differences do you see?
+- Offer additional evidence or context
+- Ask analytical questions that deepen understanding`,
     rubric: "RUBRIC_2_Discussion_Boards",
     pointsBreakdown: {
-        initialPost: 10,
-        peerEngagement: 10,
-        historicalAccuracy: 10
+        initialPost: 40,
+        peerResponses: 40,
+        portfolioConnection: 20
     }
 };
 
