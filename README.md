@@ -10,7 +10,7 @@ This dashboard provides interactive course certification hubs for all History co
 
 ### American History Sequence
 - **[HIS-131: American History I](courses/HIS-131/)** - Pre-Columbian times through 1865
-- **HIS-132: American History II** - 1865 to Present *(Coming Soon)*
+- **[HIS-132: American History II](courses/HIS-132/)** - 1865 to Present
 
 ### World Civilizations Sequence
 - **HIS-111: World Civilizations I** - To 1500 *(Coming Soon)*
@@ -32,6 +32,8 @@ Each course dashboard includes:
 
 ### View Dashboards
 - **HIS-131**: Open `courses/HIS-131/index.html` in browser
+- **HIS-132**: Open `courses/HIS-132/index.html` in browser
+- **Landing Page**: Open `index.html` in browser
 - Additional courses will be added to `courses/` directory
 
 ### Deploy to GitHub Pages
@@ -41,16 +43,24 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for step-by-step instructions.
 
 ```
 history-dashboard/
-├── index.html                 # Program-level landing page (coming soon)
+├── index.html                 # Program-level landing page
 ├── README.md                  # This file
 ├── DEPLOYMENT.md              # GitHub Pages setup guide
-├── program-data.json          # Program-level scaffolding (coming soon)
 └── courses/
     ├── HIS-131/
     │   ├── index.html         # HIS-131 course dashboard
     │   ├── course-data.json   # Complete course data
-    │   └── course-data-complete.json
-    ├── HIS-132/               # (Coming soon)
+    │   ├── app.js             # Interactive JavaScript
+    │   ├── styles.css         # Parchment design
+    │   └── module*.js         # Activity data files
+    ├── HIS-132/
+    │   ├── index.html         # HIS-132 course dashboard
+    │   ├── course-data.json   # Complete course data
+    │   ├── app.js             # Interactive JavaScript
+    │   ├── styles.css         # Parchment design
+    │   ├── rubrics.js         # Assessment rubrics
+    │   ├── resources.js       # Course resources
+    │   └── module*.js         # Activity data files
     ├── HIS-111/               # (Coming soon)
     └── HIS-112/               # (Coming soon)
 ```
@@ -60,7 +70,7 @@ history-dashboard/
 | Course | Status | QM Certified | Auto-Graded | Activities |
 |--------|--------|--------------|-------------|------------|
 | **HIS-131** | ✅ Complete | 22/22 | 67% | 26 |
-| HIS-132 | 🚧 Planned | - | - | - |
+| **HIS-132** | ✅ Complete | Pending Audit | 49% | 26 |
 | HIS-111 | 🚧 Planned | - | - | - |
 | HIS-112 | 🚧 Planned | - | - | - |
 
@@ -114,9 +124,10 @@ To add a new course:
 ## Status
 
 ✅ **HIS-131 Ready for Deployment**
+✅ **HIS-132 Ready for Deployment**
 
 ---
 
-**Last Updated**: 2026-01-14
-**Version**: 1.0
+**Last Updated**: 2026-01-15
+**Version**: 2.0
 **Institution**: FTCC / NCCCS
