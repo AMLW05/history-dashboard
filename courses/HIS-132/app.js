@@ -296,7 +296,7 @@ function buildActivity(a, mn, idx) {
 }
 
 function buildAssessment(a, mn) {
-    const id = 'm' + mn + '-assess-' + (a.type === 'Discussion Board' ? 'disc' : a.type === 'Project Checkpoint' ? 'checkpoint' : a.type === 'Midterm Exam' ? 'midterm' : a.type === 'Final Exam' ? 'final' : 'quiz');
+    const id = 'm' + mn + '-assess-' + (a.type === 'Discussion Board' ? 'disc' : a.type === 'Project Checkpoint' ? 'checkpoint' : a.type === 'Midterm Exam' ? 'midterm' : a.type === 'Final Exam' ? 'final' : a.type === 'Final Project' ? 'finalproject' : 'quiz');
     let details = '';
 
     // Get module-specific data (discussions, checkpoints, projects, quizzes, exams)
