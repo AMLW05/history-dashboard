@@ -178,43 +178,89 @@ const module1Quiz = {
     ]
 };
 
-// What is America? Part 1-A: Baseline Response
+// Module 1 Project Checkpoint: "What is America?" Initial Definition + Piece #1 (50 points GRADED)
 const module1Project = {
-    title: "What is America? Part 1-A: Your Baseline Response",
-    instructions: `**Purpose**: Before we explore American history, establish YOUR starting point. This baseline becomes important when you revisit this question at semester's end.
+    title: "Module 1 Project Checkpoint: Initial Definition + Origins Piece (50 points)",
+    instructions: `**Module Theme**: Collision (Prehistory-1620)
+**Inquiry Question**: Is contact the beginning—or the end?
 
-**Assignment** (Submit 1 PowerPoint slide):
+**This checkpoint is GRADED and submitted to Canvas**
 
-Create a single slide answering: **"What is America?"**
+---
+
+## **PART A: Pre-Course "What is America?" Definition (10 points)**
+
+Before beginning our historical journey, we need YOUR current understanding of American identity.
+
+**Write 150-200 words answering**: What is America?
+
+**Consider**:
+- What values, ideals, or characteristics define America?
+- What experiences, family history, or influences shape your understanding?
+- What questions do you have about American identity?
 
 **Requirements**:
-- Title: "What is America?"
-- Your name
-- Your personal answer (3-5 sentences minimum)
-- At least 1 image representing your perspective
-- Simple, clear design
+- 150-200 words
+- YOUR personal perspective (no research required or wanted)
+- Thoughtful and specific (not generic)
 
-**This is NOT graded on "correctness"** - there's no wrong answer! This is YOUR current understanding before we dive into history.
+**IMPORTANT**: Save a copy for yourself. You'll return to this definition in Module 7 to compare how your understanding evolved.
 
-**Submission**:
-- Save as: LastName_FirstName_WhatIsAmerica_Part1A.pptx
-- Upload to Canvas Module 1
+**How to Submit Part A**:
+- Type directly into Canvas text box, OR upload as Word/PDF document
 
-**What Happens Next** - Building Your Portfolio:
-- Module 2: Colonial Character (persona + visual)
-- Module 3: Revolutionary Voice (primary source analysis)
-- Module 5: Map Moment (territorial expansion)
-- Module 6: Movement Voice (reform movement analysis)
-- Module 7: Final Portfolio (compile everything + revisit this question)
+---
 
-**Tips**:
-✅ Be honest - this is your genuine current perspective
-✅ Keep it simple - one clear slide
-✅ Think about: government, culture, values, people, history, identity
-✅ SAVE THIS FILE - you'll need it for the final portfolio!
+## **PART B: Piece #1 - Origins (40 points)**
 
-**Grading**: 10 points for completion and effort (not correctness)`,
-    rubric: "Portfolio completion and effort"
+Create a piece exploring how the "collision" of worlds (Indigenous, European, and African) shaped early American identity.
+
+### **CHOOSE ONE OPTION**:
+
+**OPTION 1: Artifact Gallery**
+
+Create a 3-5 slide digital exhibit showcasing artifacts from first contact (1400-1620)
+
+**Requirements**:
+- 3-5 artifacts total
+- Mix of Indigenous and European artifacts (examples: tools, documents, maps, artwork, religious items)
+- Each artifact includes:
+  * Image (from YAWP Reader, Library of Congress, or public domain)
+  * Caption (2-3 sentences explaining significance)
+- Brief introduction slide explaining your exhibit theme
+- **Final reflection (100-150 words)**: How does this "collision" complicate the simple story of American "founding"? What does this reveal about "What is America?"
+
+**Tools**: PowerPoint, Google Slides, Canva, or any presentation software
+
+---
+
+**OPTION 2: Comparative Timeline**
+
+Create a side-by-side timeline showing Indigenous and European societies (1400-1620)
+
+**Requirements**:
+- 5-7 moments from Indigenous societies (examples: Cahokia, Three Sisters agriculture, Haudenosaunee Confederacy, etc.)
+- 5-7 moments from European societies (examples: Renaissance, Reformation, exploration, colonization)
+- Each moment includes:
+  * Date and event
+  * Visual element (image, symbol, or color coding)
+  * 2-3 sentence explanation of significance
+- **Final reflection (100-150 words)**: How does comparing these societies challenge the "discovery" narrative? What does this reveal about "What is America?"
+
+**Tools**: PowerPoint, Google Slides, timeline generator, hand-drawn (photographed), or any visual format
+
+---
+
+**How to Submit Part B**:
+- Upload file (PDF, PowerPoint, image, etc.)
+- If using Google Slides/Docs: Share link with "Anyone with link can view" OR download as PDF
+
+**Grading**: 50 points total (Part A: 10 pts | Part B: 40 pts)
+
+**Due**: End of Module 1
+
+**Save both parts - you'll need them for your Module 7 Final Portfolio!**`,
+    rubric: "Project Pieces Rubric (see course rubrics)"
 };
 
 const rubricData = {

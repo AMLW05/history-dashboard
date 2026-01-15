@@ -489,45 +489,71 @@ const module4Midterm = {
     ]
 };
 
-// Module 4 Project: Freedom - Defining Liberty (100 points, SEPARATE from portfolio)
+// Module 4 Portfolio Piece #4: Symbol or Document (UNGRADED - Keep for Module 7)
 const module4Project = {
-    title: "Module 4 Project: Freedom - Defining Liberty",
-    instructions: `**Purpose**: Explore competing definitions of "freedom" in the early republic (1800-1848).
+    title: "Piece #4: Symbol or Document (UNGRADED - Save for Module 7 Portfolio)",
+    instructions: `**Module Theme**: Freedom (1800-1815)
+**Inquiry Question**: Liberty and justice—now what?
 
-**Assignment** (1-3 PowerPoint slides, 100 points):
+**This piece is NOT submitted now - you'll include it in your Module 7 Final Portfolio**
 
-**Module Theme**: Freedom
-**Inquiry Question**: "Liberty and justice—now what?"
+---
 
-**Your Task**: Explore how different groups defined, pursued, and experienced freedom.
+Create a piece exploring how different groups defined "freedom" and whose vision shaped early America.
 
-**Choose ONE Format Option**:
+### **CHOOSE ONE OPTION**:
 
-**Option 1: Competing Visions of Freedom**
-- Present 3+ groups' definitions of freedom (Indigenous peoples, enslaved people, women, workers, white settlers, slaveholders)
-- Show how each pursued freedom
-- Explain why definitions conflicted
-- Address: Can all these freedoms coexist?
+**OPTION 1: National Symbol Analysis**
 
-**Option 2: Freedom's Paradoxes Timeline**
-- Identify 4-6 moments showing freedom expanding AND contracting simultaneously (1800-1848)
-- For each moment: Who gained freedom? Who lost it?
-- Show how one group's freedom often came at another's expense
-- Examples: Louisiana Purchase, Indian Removal, Market Revolution, cotton expansion
+Create 2-3 slides analyzing a symbol, monument, or document from 1800-1815
 
-**Option 3: "Freedom" in Documents**
-- Analyze 3-4 primary sources defining "freedom" differently
-- Compare definitions: Whose freedom? From what? To do what?
-- Explain conflicts between definitions
-- Sources: Jefferson, Tecumseh, Frederick Douglass, Seneca Falls, slaveholder defenses
+**Choose ONE to Analyze**:
+- Louisiana Purchase map/documents (whose freedom? whose land?)
+- National symbols created in this era (Great Seal, Uncle Sam, Columbia, etc.)
+- State constitutions (who could vote? who counted as citizen?)
+- Early monuments or memorials (who is commemorated? who is erased?)
+- Bill of Rights applications (whose rights protected?)
 
-**Submission**:
-- Save as: LastName_FirstName_Freedom.pptx
-- 1-3 slides with evidence
-- Upload to Canvas Module 4
+**Requirements**:
+- Show the symbol/document with images
+- Analyze: What vision of "freedom" does this represent?
+- Whose definition of liberty? (Elite? Common people? Enslaved? Indigenous? Women?)
+- Who is included vs. excluded?
+- What does this reveal about "America" in this period?
+- 100-150 word reflection connecting to "Liberty and justice—now what?"
 
-**Grading**: 100 points - Analysis, evidence, competing perspectives
+**Tools**: PowerPoint, Google Slides, Word/PDF with images
 
-**NOTE**: This is SEPARATE from the "What is America?" portfolio project!`,
-    rubric: "Freedom Project Rubric (100 points)"
+---
+
+**OPTION 2: "What We Stand For" Declaration**
+
+Create 1-page illustrated document showing 3-4 different groups' visions of "freedom" (1800-1815)
+
+**Show Competing Definitions** (choose 3-4 groups to analyze):
+- Jeffersonian Republicans (agrarian democracy)
+- Federalists (commercial republic)
+- Indigenous nations (sovereignty, land rights)
+- Enslaved people (use primary sources - petitions, freedom suits)
+- Free Black Americans (citizenship, rights)
+- Women (property rights, education, legal status)
+- Western settlers (land ownership, expansion)
+
+**Requirements**:
+- Visual document with 3-4 sections
+- Each section: One group's definition of "freedom" with PRIMARY SOURCE EVIDENCE
+- Show conflicts: Can all these freedoms coexist?
+- Visual elements: symbols, images, color coding
+- Brief explanation: Whose vision won? Whose was suppressed?
+
+**Tools**: PowerPoint, Canva, Word/PDF, hand-created (photographed)
+
+---
+
+**How to Keep This Piece**:
+- Save your work! You'll include it in your Module 7 Final Portfolio
+- File naming: LastName_FirstName_Piece4_Symbol
+
+**This work will be graded as part of your Module 7 Final Portfolio (200 points total)**`,
+    rubric: "Graded as part of Module 7 Final Portfolio"
 };

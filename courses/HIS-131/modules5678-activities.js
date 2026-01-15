@@ -1241,123 +1241,259 @@ const finalExam = {
     ]
 };
 
-// What is America? Part 5: Map Moment (Module 5)
+// Module 5 Project Checkpoint: Piece #5 - Map of Ambition (100 points GRADED)
 const module5Project = {
-    title: "What is America? Part 5: Map Moment - Territorial Expansion",
-    instructions: `**Purpose**: Add territorial expansion component to your portfolio.
+    title: "Module 5 Project Checkpoint: Piece #5 - Map of Ambition (100 points)",
+    instructions: `**Module Theme**: Ambition (1815-1850)
+**Inquiry Question**: Whose America is this?
 
-**Assignment** (1 slide with annotated map):
+**This checkpoint is GRADED and submitted to Canvas**
 
-**Theme**: Manifest Destiny & Expansion (1800-1861)
+---
 
-**Your Task**: Create an annotated map showing territorial growth AND its human costs.
+### **CHOOSE ONE OPTION**:
+
+**OPTION 1: Territorial Change Map**
+
+Create an annotated map showing ONE major territorial acquisition/change and its impacts
+
+**Choose ONE Event to Map**:
+- Missouri Compromise (1820) - slave vs. free territories
+- Indian Removal (1830s) - Trail of Tears, Cherokee Nation, etc.
+- Texas Annexation (1845)
+- Mexican-American War/Mexican Cession (1846-1848)
+- Oregon Territory settlement (1846)
 
 **Requirements**:
-- Base map showing U.S. territorial acquisitions (Louisiana Purchase, Texas Annexation, Mexican Cession, etc.)
-- Annotations for each acquisition showing:
-  • What was gained
-  • Who was displaced or affected
-  • Competing definitions of "expansion" (progress? theft? destiny?)
-- Brief caption: How did expansion shape "America"?
+- Show the territory/boundaries before and after
+- Annotate: What changed? Who gained? Who lost?
+- Mark Indigenous nations affected/displaced
+- Show connections to slavery debate (if applicable)
+- Include 3-5 specific annotations with details
+- **Reflection (150-200 words)**: Whose ambitions shaped this change? Who was included vs. excluded from "America"? Reference YOUR map.
 
-**Submission**:
-- Save as: LastName_FirstName_MapMoment.pptx (1 slide)
-- Upload to Canvas Module 5
+**Tools**: Hand-drawn (photographed), PowerPoint, Google Slides, online map tools
 
-**Tips**:
-✅ Show Indigenous nations displaced
-✅ Mark slave vs. free territories
-✅ Include dates and names of acquisitions
-✅ Visual clarity matters!
+---
 
-**Grading**: 10 points - Historical accuracy, visual quality, critical analysis`,
-    rubric: "Portfolio completion and accuracy"
-};
+**OPTION 2: Movement Timeline**
 
-// What is America? Part 6: Movement Voice (Module 6)
-const module6Project = {
-    title: "What is America? Part 6: Movement Voice - Reform Movements",
-    instructions: `**Purpose**: Add reform movement analysis to your portfolio.
-
-**Assignment** (1-2 slides analyzing a reform movement):
-
-**Theme**: Reform & Social Movements (1830s-1850s)
-
-**Your Task**: Analyze ONE reform movement and its vision of "America."
+Create a visual timeline of ONE reform movement showing expansion or restriction of belonging (1815-1850)
 
 **Choose ONE Movement**:
-- Abolitionism (immediate or gradual)
-- Women's Rights (Seneca Falls, suffrage)
-- Temperance
-- Education Reform
-- Utopian Communities
-- Labor Reform
+- Abolition movement (immediate vs. gradual, American Colonization Society)
+- Women's rights (Seneca Falls, suffrage, property rights)
+- Nativist movement (anti-immigrant, anti-Catholic)
+- Jacksonian democracy (expansion of white male suffrage, Indian Removal)
 
 **Requirements**:
-- Movement's goals: What did they want to reform?
-- Their vision of "America": What should America be?
-- Who supported it? Who opposed it?
-- Success/failure: Did they achieve their vision?
-- Include primary source quote or image
+- Show 5-7 key moments in the movement's development
+- For each moment: What happened? Who gained/lost? What vision of "America"?
+- Include visual elements: images, symbols, color coding
+- Show competing visions within the movement
+- **Reflection (150-200 words)**: Whose ambitions drove this movement? Did it expand or restrict belonging? Reference YOUR timeline.
+
+**Tools**: PowerPoint, Google Slides, timeline generator, any visual format
+
+---
 
 **Submission**:
-- Save as: LastName_FirstName_MovementVoice.pptx
-- 1-2 slides
-- Upload to Canvas Module 6
+- Save as: LastName_FirstName_Piece5_MapAmbition.pptx (or PDF)
+- Upload to Canvas Module 5
+- Due: End of Module 5
 
-**Tips**:
-✅ Use specific leaders/documents (Douglass, Stanton, Garrison)
-✅ Show conflicting visions (gradual vs. immediate abolition)
-✅ Connect to "What is America?" theme
+**Grading**: 100 points - Historical accuracy, analysis, visual quality, reflection depth
 
-**Grading**: 10 points - Analysis, evidence, connection to course themes`,
-    rubric: "Portfolio completion and analysis"
+**Save your work - you'll include it in your Module 7 Final Portfolio!**`,
+    rubric: "Project Checkpoint Rubric (100 points)"
 };
 
-// What is America? Final Portfolio (Module 7) - 400 POINTS!
+// Module 6 Portfolio Piece #6: Breaking Point (UNGRADED - Keep for Module 7)
+const module6Project = {
+    title: "Piece #6: Breaking Point (UNGRADED - Save for Module 7 Portfolio)",
+    instructions: `**Module Theme**: Awakening (1850-1860)
+**Inquiry Question**: Union or freedom—which comes first?
+
+**This piece is NOT submitted now - you'll include it in your Module 7 Final Portfolio**
+
+---
+
+Create a piece exploring the escalating crisis of the 1850s and the "awakening" to irreconcilable conflict.
+
+### **CHOOSE ONE OPTION**:
+
+**OPTION 1: Crisis Escalation Chart**
+
+Create a visual showing 5-7 events as rising tension/escalation toward Civil War (1850-1860)
+
+**Include 5-7 Key Events**:
+- Compromise of 1850 (especially Fugitive Slave Act)
+- Kansas-Nebraska Act (1854)
+- "Bleeding Kansas" violence
+- Dred Scott decision (1857)
+- Lincoln-Douglas debates (1858)
+- John Brown's Raid (1859)
+- Lincoln's election & secession (1860-1861)
+
+**Requirements**:
+- Visual showing escalation (rising line, staircase, thermometer, etc.)
+- For each event: What happened? Why did it increase tension? Who gained/lost?
+- Show how each event made compromise harder
+- Visual elements: images, color intensity, dramatic presentation
+- Brief explanation (100-150 words): When did "awakening" occur - when did people realize war was inevitable?
+
+**Tools**: PowerPoint, Google Slides, Canva, hand-drawn (photographed), any visual format
+
+---
+
+**OPTION 2: Awakening Moment Analysis**
+
+Create 2-3 slides analyzing ONE moment when Americans "awoke" to the crisis (1850-1860)
+
+**Choose ONE Awakening Moment**:
+- Fugitive Slave Act enforcement (Anthony Burns case, etc.)
+- "Bleeding Kansas" violence reaching national news
+- Dred Scott decision's impact
+- John Brown's raid and trial
+- Lincoln's election triggering secession
+
+**Requirements**:
+- Describe the event with visual evidence
+- Multiple perspectives: How did different groups "awaken"? (North? South? Enslaved people? Politicians?)
+- What made this a "breaking point"?
+- Show primary source evidence (newspaper headlines, quotes, images from the time)
+- Reflection (100-150 words): Union or freedom—which came first for different Americans? Could both be preserved?
+
+**Tools**: PowerPoint, Google Slides, Word/PDF with images
+
+---
+
+**How to Keep This Piece**:
+- Save your work! You'll include it in your Module 7 Final Portfolio
+- File naming: LastName_FirstName_Piece6_BreakingPoint
+
+**This work will be graded as part of your Module 7 Final Portfolio (200 points total)**`,
+    rubric: "Graded as part of Module 7 Final Portfolio"
+};
+
+// Module 7 Final Portfolio: "What is America?" Complete Journey (200 POINTS)
 const module7FinalPortfolio = {
-    title: "What is America? FINAL PORTFOLIO (400 points)",
-    instructions: `**Purpose**: Compile your semester's work and provide your FINAL answer to "What is America?"
+    title: "Module 7 Final Portfolio: 'What is America?' Complete Journey (200 points)",
+    instructions: `**Module Theme**: Fracture (1861-1865)
+**Inquiry Question**: How do you repair a fracture?
 
-**Assignment** (Submit complete portfolio):
+**This is your FINAL PROJECT - worth 200 points**
 
-**This is 40% of your final grade!**
+---
 
-**Portfolio Components** (compile ALL previous work):
-1. Part 1-A: Your ORIGINAL baseline answer (Module 1)
-2. Part 2: Colonial Character & Visual (Module 2)
-3. Part 3: Revolutionary Transformation (Module 3) - 100 points
-4. Part 5: Map Moment (Module 5)
-5. Part 6: Movement Voice (Module 6)
+## **Assignment: 8-10 Slide PowerPoint Presentation**
 
-**NEW Component - Part 7: Your Final Answer** (2-3 slides):
-- Revisit "What is America?"
-- How has your answer changed since Module 1?
-- What historical moments/themes most shaped your understanding?
-- Synthesize: Whose America? Competing visions? Can they coexist?
-- Use evidence from across the semester
+Create a "museum gallery" presentation assembling ALL six pieces from Modules 1-6 into your complete "What is America?" journey through HIS-131.
 
-**Submission**:
-- Save as: LastName_FirstName_WhatIsAmerica_FINAL.pptx
-- Include ALL components (Parts 1A, 2, 3, 5, 6, and NEW Part 7)
-- Upload to Canvas Module 7
+This is the culmination of your semester's work - showing how your understanding evolved by studying history.
 
-**Grading Breakdown** (400 points total):
-- Part 1-A: 10 points (original baseline)
-- Part 2: 10 points (Colonial Character)
-- Part 3: 100 points (Revolutionary Transformation)
-- Part 5: 10 points (Map Moment)
-- Part 6: 10 points (Movement Voice)
-- Part 7: 200 points (Final Answer & Synthesis)
-- Portfolio Completeness: 60 points (all components included, organized, professional)
+---
 
-**Tips for Part 7 (Final Answer)**:
-✅ Show intellectual growth - how you've changed
-✅ Reference specific historical content
-✅ Address complexity - multiple Americas, competing visions
-✅ Be thoughtful and personal - YOUR conclusion
-✅ This is your capstone - make it count!
+## **REQUIRED SLIDES**:
 
-**This is your FINAL EXAM equivalent!**`,
-    rubric: "Final Portfolio Rubric (400 points - see detailed breakdown above)"
+**SLIDE 1: Title Slide**
+- Your name
+- Course: HIS-131
+- Semester/Year
+- Title: "What is America? A Historical Journey"
+
+**SLIDE 2: Initial Definition**
+- Copy your Module 1 Part A definition (your pre-course answer to "What is America?")
+- Add note: "This was my understanding BEFORE studying U.S. history"
+- Optional: brief visual element
+
+**SLIDE 3: Piece #1 - Origins (Module 1: Collision)**
+- Show your Piece #1 (artifact gallery OR timeline)
+- Module theme: "Is contact the beginning—or the end?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 4: Piece #2 - Colonial Character (Module 2: Tension)**
+- Show your Piece #2 (figure profile OR tension map)
+- Module theme: "Can shared resentment create common cause?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 5: Piece #3 - Revolutionary Voice (Module 3: Tipping Point)**
+- Show your Piece #3 (competing visions poster OR timeline)
+- Module theme: "What makes something revolutionary?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 6: Piece #4 - Symbol/Document (Module 4: Freedom)**
+- Show your Piece #4 (symbol analysis OR declaration)
+- Module theme: "Liberty and justice—now what?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 7: Piece #5 - Map of Ambition (Module 5: Ambition)**
+- Show your Piece #5 (territorial map OR movement timeline)
+- Module theme: "Whose America is this?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 8: Piece #6 - Breaking Point (Module 6: Awakening)**
+- Show your Piece #6 (crisis escalation OR awakening moment)
+- Module theme: "Union or freedom—which comes first?"
+- Add 2-3 sentences: What did this piece teach you about American identity?
+
+**SLIDE 9: Civil War Analysis - NEW CONTENT (200-250 words)**
+
+This is NEW analysis, not from previous pieces.
+
+**PROMPT**: How does the Civil War (Module 7: Fracture) represent the culmination of all the tensions, conflicts, and contradictions you explored in Pieces #1-6?
+
+**REQUIREMENTS**:
+- Connect Civil War to at least 3 of your previous pieces
+  * Be specific: "As I showed in my Piece #2 tension map..."
+  * Explain how earlier tensions led to Civil War
+- Address Module 7 inquiry question: "How do you repair a fracture?"
+- Use specific evidence from course materials (YAWP, primary sources)
+- 200-250 words (can be on slide or in presenter notes)
+
+**SLIDE 10: Final Definition (200-300 words)**
+
+Your NEW answer to "What is America?" after completing HIS-131.
+
+**REQUIREMENTS**:
+- Write 200-300 words showing your evolved understanding
+- Reference at least 3 specific pieces from your portfolio
+  * Be specific about what each piece taught you
+  * Show connections between pieces
+- Explain how studying history changed your perspective
+  * Compare to your Slide 2 initial definition
+  * Identify the biggest change in your thinking
+- Address: Can the fractures you studied be repaired?
+- Connect to course themes and inquiry questions
+
+---
+
+## **HOW TO SUBMIT**:
+- PowerPoint file (.pptx)
+- PDF (if images don't transfer well)
+- Google Slides: Share link with "Anyone with link can view" setting OR download as PDF/PowerPoint
+
+**FILE NAMING**: LastName_FirstName_M7FinalPortfolio
+
+---
+
+## **GRADING** (200 points total):
+
+- Slides 1-2: Completeness and presentation (10 pts)
+- Slides 3-8: Six pieces included with reflections (90 pts = 15 pts each)
+- Slide 9: Civil War analysis (50 pts)
+- Slide 10: Final definition (50 pts)
+
+---
+
+## **TIPS FOR SUCCESS**:
+1. Gather all six pieces before starting
+2. Keep text concise on slides (use presenter notes for longer content)
+3. Ensure images are clear and readable
+4. Proofread all text
+5. Check that Slide 9 SPECIFICALLY references your pieces ("In my Piece #3...")
+6. Make sure Slide 10 compares to YOUR Slide 2 definition
+
+**Due**: End of Module 7`,
+    rubric: "Final Portfolio Rubric (200 points - see breakdown above)"
 };

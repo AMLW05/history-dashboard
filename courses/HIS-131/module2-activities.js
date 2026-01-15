@@ -207,37 +207,71 @@ const module2Quiz = {
     ]
 };
 
-// What is America? Part 2: Colonial Character
+// Module 2 Portfolio Piece #2: Colonial Character (UNGRADED - Keep for Module 7)
 const module2Project = {
-    title: "What is America? Part 2: Colonial Character & Visual",
-    instructions: `**Purpose**: Build your portfolio by creating a colonial-era character and visual representation.
+    title: "Piece #2: Colonial Character (UNGRADED - Save for Module 7 Portfolio)",
+    instructions: `**Module Theme**: Tension (1620-1763)
+**Inquiry Question**: Can shared resentment create common cause?
 
-**Assignment** (2 components):
+**This piece is NOT submitted now - you'll include it in your Module 7 Final Portfolio**
 
-**Part A: Character Profile** (1 page written)
-- Create a fictional but historically accurate colonial character (1700s)
-- Include: name, location, occupation, social status, daily life
-- Address: How does your character experience "America"? What freedoms/restrictions do they face?
-- Use Module 2 content to ensure historical accuracy
+---
 
-**Part B: Visual Representation** (1 image/drawing/collage)
-- Create or find a visual representing your character's world
-- Could be: portrait, scene from daily life, map of their community, symbolic image
-- Add brief caption explaining the visual
+Create a piece exploring colonial tensions and how different groups experienced the "tension" theme.
 
-**Submission**:
-- Save as: LastName_FirstName_ColonialCharacter.pptx or .docx
-- Include both written profile and visual
+### **CHOOSE ONE OPTION**:
 
-**Historical Accuracy Matters**:
-✅ Consider: race, gender, class, region (New England vs. Southern vs. Middle colonies)
-✅ Reflect colonial realities: slavery, indentured servitude, religious restrictions, economic systems
-✅ Use specific details from readings and activities
+**OPTION 1: Historical Figure Profile**
 
-**Tips**:
-- Enslaved African? Indentured servant? Free colonist? Plantation owner? Merchant? Indigenous person?
-- What does "America" mean to YOUR character? (Very different answers!)
+Create a 2-page profile of someone embodying colonial "tension"
 
-**Grading**: 10 points - Historical accuracy, creativity, effort`,
-    rubric: "Portfolio completion and historical accuracy"
+**Who to Profile** (choose someone whose experience shows colonial conflicts):
+- Participant in Bacon's Rebellion (shows class/race tensions)
+- Colonial woman navigating restrictive roles
+- Indigenous leader responding to colonial encroachment
+- Free or enslaved African American resisting systems
+- Colonial merchant dealing with mercantilism
+- Religious dissenter (Quaker, Baptist, etc.)
+
+**Requirements**:
+- Name, background, and context (real or realistic composite based on historical examples)
+- Describe their daily life and challenges
+- **Explain the "tension"**: What conflicts did they face? Between whom?
+- Show how their experience connects to "Can shared resentment create common cause?"
+- Include 1-2 images or visual elements
+- Use specific historical details from Module 2 content
+
+**Tools**: Word, PDF, Google Docs, or PowerPoint
+
+---
+
+**OPTION 2: Tension Visual Map**
+
+Create a visual showing 3-4 interconnected colonial tensions with examples
+
+**Show Interconnected Tensions** (choose 3-4):
+- Economic: mercantilism, trade restrictions, debt
+- Social: class divisions, indentured servitude, race-based slavery
+- Political: colonial vs. British authority, representative government
+- Religious: established churches vs. dissenters, Great Awakening
+- Geographic: coastal elites vs. backcountry settlers
+- Racial: hardening of racial categories post-Bacon's Rebellion
+
+**Requirements**:
+- Visual diagram/web/flowchart showing how tensions connect
+- For each tension: Provide 2-3 specific examples from 1620-1763
+- Show how tensions overlap and reinforce each other
+- Brief explanation (100-150 words): How did these tensions create conditions for "shared resentment"?
+- Include images, symbols, or color coding
+
+**Tools**: PowerPoint, Google Slides, Canva, hand-drawn (photographed), or any visual format
+
+---
+
+**How to Keep This Piece**:
+- Save your work! You'll include it in your Module 7 Final Portfolio
+- File naming: LastName_FirstName_Piece2_ColonialCharacter
+
+**This work will be graded as part of your Module 7 Final Portfolio (200 points total)**`,
+    rubric: "Graded as part of Module 7 Final Portfolio"
 };

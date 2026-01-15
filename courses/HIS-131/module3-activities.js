@@ -276,46 +276,73 @@ const module3Quiz = {
     ]
 };
 
-// What is America? Part 3: Revolutionary Voice (100 points)
+// Module 3 Project Checkpoint: Piece #3 - Revolutionary Voice (100 points GRADED)
 const module3Project = {
-    title: "What is America? Part 3: Revolutionary Transformation",
-    instructions: `**Purpose**: Explore what "revolutionary" means and when change becomes irreversible.
-
-**Assignment** (1-3 PowerPoint slides, 100 points):
-
-**Module Theme**: Tipping Point
+    title: "Module 3 Project Checkpoint: Piece #3 - Revolutionary Voice (100 points)",
+    instructions: `**Module Theme**: Tipping Point (1763-1800)
 **Inquiry Question**: What makes something revolutionary?
 
-**Your Task**: Create a project piece exploring revolutionary change and "tipping point" moments (1763-1800).
+**This checkpoint is GRADED and submitted to Canvas**
 
-**Choose ONE Format Option**:
+---
 
-**Option 1: Revolutionary Tipping Points Timeline**
-- Identify 3-5 tipping point moments (1763-1800)
-- Show what changed at each moment
-- Explain why each was irreversible
-- Include competing visions at each point
-- Examples: When did protest become rebellion? When did rebellion become revolution?
+Create a piece exploring revolutionary change and "tipping point" moments when change became irreversible.
 
-**Option 2: Competing Revolutionary Visions**
-- Present 3+ perspectives (Patriots, Loyalists, enslaved people, women, Indigenous peoples)
-- Show how each defined "revolutionary change" differently
-- What was revolutionary for each group? (liberation? disaster? broken promises?)
-- Did revolution create ONE America or competing Americas?
+### **CHOOSE ONE OPTION**:
 
-**Option 3: Revolutionary Change Then & Now**
-- Identify what made American Revolution "revolutionary" (not just rebellion)
-- Apply criteria to a modern social/political movement
-- Explain when modern movement reached "tipping point"
-- Show competing definitions of "revolutionary" today
+**OPTION 1: Competing Visions Poster**
+
+Create a visual showing 3-4 different groups' visions of "revolutionary America" with evidence
+
+**Choose 3-4 Different Perspectives** (analyze, don't roleplay):
+- Patriots (which type? Elite merchants? Small farmers? Urban artisans?)
+- Loyalists (why did ~20% remain loyal?)
+- Indigenous nations (Haudenosaunee, Cherokee, etc. - how did Revolution affect them?)
+- Women (Abigail Adams, Republican Motherhood - what changes did they seek?)
+- Free Black Americans (petitions for freedom, military service)
+- Analysis of enslaved people's experiences using PRIMARY SOURCES (letters, petitions, freedom suits)
+
+**Requirements**:
+- Present 3-4 perspectives using PRIMARY SOURCE EVIDENCE (quotes from documents, petitions, letters)
+- For each perspective: What was "revolutionary"? (liberation? threat? opportunity? broken promise?)
+- Show competing visions: Did Revolution create ONE America or multiple Americas?
+- Include images, symbols, visual elements
+- **Reflection (150-200 words)**: Did the Revolution create one vision or competing visions? Reference YOUR poster evidence.
+
+**Tools**: PowerPoint, Google Slides, Canva, poster format (digital or photographed)
+
+**CULTURALLY SENSITIVE APPROACH**: Use actual historical documents and evidence to analyze experiences, rather than roleplaying marginalized identities.
+
+---
+
+**OPTION 2: Revolutionary Tipping Points Timeline**
+
+Create a visual timeline showing when revolutionary change became irreversible
+
+**Identify 3-5 Tipping Point Moments** (1763-1800):
+- When did protest become rebellion? (Lexington & Concord?)
+- When did rebellion become revolution? (Common Sense? Declaration?)
+- When did revolution become government? (Constitutional ratification?)
+- When did competing visions get institutionalized? (Bill of Rights? Hamilton's financial plan?)
+
+**Requirements**:
+- Show 3-5 key "tipping points" where there was no turning back
+- For each: What changed? Why irreversible? Who gained? Who lost?
+- Include competing visions at each turning point
+- Visual elements: timeline format, images, color coding
+- **Reflection (150-200 words)**: What makes change "revolutionary" vs. just change? When does a tipping point occur? Reference YOUR timeline.
+
+**Tools**: PowerPoint, Google Slides, timeline generator, any visual format
+
+---
 
 **Submission**:
-- Save as: LastName_FirstName_RevolutionaryVoice.pptx
-- 1-3 slides, include visuals and evidence
+- Save as: LastName_FirstName_Piece3_RevolutionaryVoice.pptx (or PDF)
 - Upload to Canvas Module 3
+- Due: End of Module 3
 
-**Grading**: 100 points - Historical accuracy, analysis depth, evidence use, creativity
+**Grading**: 100 points - Historical accuracy, analysis depth, use of evidence, creativity
 
-**This is a MAJOR portfolio piece!**`,
-    rubric: "Revolutionary Transformation Project Rubric (100 points)"
+**Save your work - you'll include it in your Module 7 Final Portfolio!**`,
+    rubric: "Project Checkpoint Rubric (100 points)"
 };
