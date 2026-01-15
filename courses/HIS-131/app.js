@@ -28,7 +28,15 @@ function showTab(id) {
 
 function toggleModule(n) {
     const c = document.getElementById('module-content-' + n);
+    if (!c) {
+        console.error('Module content not found for module', n);
+        return;
+    }
     const h = c.previousElementSibling;
+    if (!h) {
+        console.error('Module header not found for module', n);
+        return;
+    }
     c.classList.toggle('active');
     h.classList.toggle('active');
 }
