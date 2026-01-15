@@ -1,0 +1,1132 @@
+{
+  "course": {
+    "code": "HIS-132",
+    "title": "American History II",
+    "subtitle": "1865 to Present",
+    "credits": 3,
+    "term": "Spring 2026",
+    "institution": "FTCC / NCCCS",
+    "textbook": "The American Yawp",
+    "textbookURL": "https://www.americanyawp.com",
+    "description": "Survey of American history from Reconstruction to the present, emphasizing social, political, economic development, and America's emergence as a global power.",
+    "status": "ready-for-review",
+    "completionPercent": 100,
+    "qmStandardsMet": 0,
+    "qmStandardsTotal": 22,
+    "totalPoints": 1680,
+    "autoGradedPercent": 49,
+    "totalActivities": 26
+  },
+  "statistics": {
+    "modules": 8,
+    "learningActivities": 26,
+    "quizzes": 8,
+    "checkpoints": 3,
+    "discussions": 4,
+    "finalProject": 1,
+    "dataAnalysisActivities": 2,
+    "autoGradedPoints": 830,
+    "manualGradedPoints": 850
+  },
+  "clos": [
+    {
+      "id": "CLO1",
+      "number": 1,
+      "text": "Analyze the transformation of American society from agricultural to industrial to post-industrial economy (1865-present)",
+      "bloomsLevel": "Analyze",
+      "category": "Historical Knowledge"
+    },
+    {
+      "id": "CLO2",
+      "number": 2,
+      "text": "Evaluate how diverse groups (African Americans, immigrants, women, workers, LGBTQ+ communities) struggled for civil rights and inclusion",
+      "bloomsLevel": "Evaluate",
+      "category": "Multiple Perspectives"
+    },
+    {
+      "id": "CLO3",
+      "number": 3,
+      "text": "Apply historical thinking skills to interpret primary and secondary sources about modern America",
+      "bloomsLevel": "Apply",
+      "category": "Source Analysis"
+    },
+    {
+      "id": "CLO4",
+      "number": 4,
+      "text": "Communicate historical arguments about contemporary issues through historical analysis",
+      "bloomsLevel": "Create",
+      "category": "Communication"
+    }
+  ],
+  "historicalThinkingSkills": [
+    {
+      "id": "HTS1",
+      "name": "Source Analysis",
+      "description": "Distinguish primary from secondary sources, evaluate credibility, identify bias",
+      "progression": ["Module 1: Identify", "Module 3: Analyze", "Module 5: Evaluate", "Module 7: Synthesize"]
+    },
+    {
+      "id": "HTS2",
+      "name": "Chronological Reasoning",
+      "description": "Sequence events, identify cause-effect relationships, understand periodization",
+      "progression": ["Module 1: Timeline", "Module 3: Causation", "Module 5: Change over time", "Module 7: Turning points"]
+    },
+    {
+      "id": "HTS3",
+      "name": "Contextualization",
+      "description": "Situate events within broader historical, geographic, and cultural contexts",
+      "progression": ["Module 2: National context", "Module 4: Global context", "Module 6: Social movements", "Module 8: Contemporary context"]
+    },
+    {
+      "id": "HTS4",
+      "name": "Comparison",
+      "description": "Compare historical developments across time, space, and groups",
+      "progression": ["Module 2: Classes", "Module 4: Eras", "Module 6: Movements", "Module 8: Ideologies"]
+    },
+    {
+      "id": "HTS5",
+      "name": "Argumentation",
+      "description": "Construct historical arguments using evidence",
+      "progression": ["Module 1: Thesis", "Module 3: Evidence", "Module 5: Synthesis", "Module 7: Final Project"]
+    },
+    {
+      "id": "HTS6",
+      "name": "Data Literacy",
+      "description": "Interpret quantitative historical evidence (charts, graphs, maps, statistics)",
+      "progression": ["Module 3: Progressive Era reform data analysis", "Module 6: Civil Rights movement data analysis"]
+    }
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Reconstruction & Its Failure",
+      "dates": "1865-1877",
+      "yawpChapters": ["15"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/15-reconstruction/"
+      ],
+      "inquiryQuestions": [
+        "Can a nation be repaired after fracture, or must it be remade?",
+        "What happens when revolutionary promises are abandoned for political compromise?",
+        "Who defines freedom, and who has the power to take it away?"
+      ],
+      "theme": "Repair or Replace?",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze competing visions of Reconstruction (Presidential, Congressional, Radical) and their outcomes",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate how African Americans exercised freedom during Reconstruction and resisted its rollback",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the political, economic, and social factors that led to Reconstruction's collapse",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Presidential & Congressional Reconstruction",
+          "yawpChapter": "15",
+          "description": "Lincoln's & Johnson's plans, Congressional opposition, 13th/14th/15th Amendments",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Radical Reconstruction & Black Political Power",
+          "yawpChapter": "15",
+          "description": "Military Reconstruction, Freedmen's Bureau, Black elected officials, land and labor",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Redemption & Reconstruction's End",
+          "yawpChapter": "15",
+          "description": "Southern resistance, KKK violence, Compromise of 1877, Jim Crow begins",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 key historical terms with their correct definitions. Terms include Reconstruction, Black Codes, Freedmen's Bureau, Sharecropping, and more. You have 2 attempts and 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Answer 10 multiple-choice questions about key people and events from Reconstruction. You have 2 attempts and 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose between Timeline Builder (sort Reconstruction events 1865-1877) or Comparison Activity (analyze Presidential vs Congressional Reconstruction approaches). You have 2 attempts and 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 1 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 1 Project Checkpoint: Initial Definition + Piece #1",
+          "points": 50,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 3],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Gilded Age & Industrialization",
+      "dates": "1877-1900",
+      "yawpChapters": ["16", "17", "18"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/16-capital-and-labor/",
+        "https://www.americanyawp.com/text/17-conquering-the-west/",
+        "https://www.americanyawp.com/text/18-life-in-industrial-america/"
+      ],
+      "inquiryQuestions": [
+        "Is industrial growth worth the human cost it demands?",
+        "How did capitalism reshape American identity and values?",
+        "Who benefited from the Gilded Age, and who was left behind?"
+      ],
+      "theme": "Progress for Whom?",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the rise of industrial capitalism and its impact on workers, communities, and the environment",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS4"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate labor movements, Populism, and working-class resistance to corporate power",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how immigration and westward expansion transformed American society and culture",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Industrial Capitalism & Robber Barons",
+          "yawpChapter": "16",
+          "description": "Railroad expansion, Andrew Carnegie, John D. Rockefeller, Social Darwinism, monopolies",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Labor Struggles & Populism",
+          "yawpChapter": "16, 18",
+          "description": "Haymarket Affair, Homestead Strike, Pullman Strike, Knights of Labor, Populist movement",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Immigration & Urban Life",
+          "yawpChapter": "17, 18",
+          "description": "New immigration, urban growth, tenements, political machines, Jim Crow solidifies",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 key terms including Gilded Age, Robber Barons, Social Darwinism, Populism, Haymarket Affair, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about key people (Andrew Carnegie, Eugene Debs, Jane Addams) and Gilded Age events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose Timeline (sort events 1877-1900) or Comparison (analyze winners vs losers of industrialization). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 2 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 1: Industrial Capitalism & Portfolio Piece #2",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Progressive Era & Empire",
+      "dates": "1890-1920",
+      "yawpChapters": ["19", "20", "21"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/19-american-empire/",
+        "https://www.americanyawp.com/text/20-the-progressive-era/",
+        "https://www.americanyawp.com/text/21-world-war-i/"
+      ],
+      "inquiryQuestions": [
+        "Can America reform at home while expanding abroad?",
+        "What makes reform 'progressive,' and who gets left behind?",
+        "How did reformers both challenge and reinforce existing hierarchies?"
+      ],
+      "theme": "Reform & Expansion",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze Progressive Era reforms and their impact on democracy, labor, and social justice",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS6"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate American imperialism and its consequences for the Philippines, Puerto Rico, Cuba, and Hawaii",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain women's suffrage movement strategies and the 19th Amendment's limitations",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["HTS3", "HTS5"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Progressive Reforms",
+          "yawpChapter": "20",
+          "description": "Muckrakers, Triangle Shirtwaist Fire, child labor laws, women's suffrage, limits of reform",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: American Empire",
+          "yawpChapter": "19",
+          "description": "Spanish-American War, Philippine-American War, Panama Canal, Roosevelt Corollary",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: World War I Begins",
+          "yawpChapter": "21",
+          "description": "European war origins, American neutrality, preparedness debates, path to intervention",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Progressivism, Muckrakers, Triangle Fire, Women's Suffrage, Spanish-American War, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Theodore Roosevelt, Jane Addams, Ida B. Wells, and Progressive Era events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence Progressive Era events 1890-1920) or Comparison (analyze different Progressive reform strategies). 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M3-LA4",
+          "title": "LA4: Analyzing Progressive Era Reform Data",
+          "format": "Mixed Question Types (Categorization, Hotspot, Matching, Multiple Answer, Numeric)",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [1, 3],
+          "linkedSkills": ["HTS6"],
+          "studentInstructions": "Analyze historical data from the Progressive Era including immigration trends, labor strikes, women's suffrage timeline, and child labor statistics. View 4 detailed charts and answer 10 questions using various question types. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 3 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 3 Project Checkpoint: Piece #3 - Progressive Reforms Map",
+          "points": 100,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "World War I & 1920s",
+      "dates": "1914-1929",
+      "yawpChapters": ["21", "22"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/21-world-war-i/",
+        "https://www.americanyawp.com/text/22-the-new-era/"
+      ],
+      "inquiryQuestions": [
+        "How did World War I transform America's role in the world?",
+        "What tensions defined the 1920s, and why did they remain unresolved?",
+        "Can prosperity mask inequality, and for how long?"
+      ],
+      "theme": "Modern America Emerges",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze World War I's impact on American society, civil liberties, and global power",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate cultural conflicts of the 1920s (Red Scare, immigration restriction, Prohibition, Scopes Trial)",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["HTS4", "HTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how the Harlem Renaissance and Great Migration transformed African American life and culture",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: World War I & Homefront",
+          "yawpChapter": "21",
+          "description": "U.S. entry, mobilization, Espionage Act, African American soldiers, Treaty of Versailles",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Red Scare & Cultural Conflicts",
+          "yawpChapter": "22",
+          "description": "Palmer Raids, immigration restriction, KKK revival, Prohibition, Scopes Trial",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Jazz Age & Consumer Culture",
+          "yawpChapter": "22",
+          "description": "Great Migration, Harlem Renaissance, consumerism, new woman, mass culture",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including WWI, Treaty of Versailles, Red Scare, Great Migration, Harlem Renaissance, Prohibition. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Woodrow Wilson, Langston Hughes, Marcus Garvey, and 1920s events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Choose Timeline (sort WWI and 1920s events 1914-1929) or Comparison (analyze cultural conflicts of the 1920s). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 4 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Midterm Exam",
+          "title": "Module 4 Midterm Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 1-4"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 2: Modern America & Portfolio Piece #4",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [3],
+          "linkedCLOs": ["CLO1", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Depression & World War II",
+      "dates": "1929-1945",
+      "yawpChapters": ["23", "24"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/23-the-great-depression/",
+        "https://www.americanyawp.com/text/24-world-war-ii/"
+      ],
+      "inquiryQuestions": [
+        "How do crises reshape government's role and citizens' expectations?",
+        "What does 'total war' mean for democracy and civil liberties?",
+        "Who sacrificed most during the Depression and World War II?"
+      ],
+      "theme": "Crisis & Transformation",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the causes and consequences of the Great Depression and New Deal programs",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate World War II's impact on American society, civil liberties, and the home front",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how WWII positioned the United States as a global superpower",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Great Depression & New Deal",
+          "yawpChapter": "23",
+          "description": "Stock market crash, Hoover's response, FDR's New Deal, labor unions, critics left and right",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: World War II & Homefront",
+          "yawpChapter": "24",
+          "description": "U.S. entry, mobilization, Japanese internment, women and African Americans in war effort",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Allied Victory & America's New Role",
+          "yawpChapter": "24",
+          "description": "D-Day, Pacific Theater, atomic bomb, Holocaust, United Nations, postwar planning",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Great Depression, New Deal, Pearl Harbor, Japanese Internment, D-Day, atomic bomb. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Franklin D. Roosevelt, Eleanor Roosevelt, and WWII events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence Depression and WWII events 1929-1945) or Comparison (analyze New Deal vs wartime government expansion). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 5 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 5 Project Checkpoint: Piece #5 - Government & Citizen Sacrifice",
+          "points": 100,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Cold War & Civil Rights",
+      "dates": "1945-1968",
+      "yawpChapters": ["25", "26", "27"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/25-the-cold-war/",
+        "https://www.americanyawp.com/text/26-the-affluent-society/",
+        "https://www.americanyawp.com/text/27-the-sixties/"
+      ],
+      "inquiryQuestions": [
+        "Can America promote democracy abroad while denying it at home?",
+        "What makes a social movement successful, and who defines success?",
+        "Who gets to decide what is 'un-American'?"
+      ],
+      "theme": "Freedom Abroad, Justice at Home?",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the origins, strategies, and global impact of the Cold War",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate the strategies and achievements of the Civil Rights Movement",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4", "HTS6"]
+        },
+        {
+          "number": 3,
+          "text": "Explain how the Vietnam War divided American society and eroded Cold War consensus",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS5"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Cold War Origins & Containment",
+          "yawpChapter": "25",
+          "description": "Truman Doctrine, Marshall Plan, Korean War, McCarthyism, nuclear arms race",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Civil Rights Movement",
+          "yawpChapter": "26, 27",
+          "description": "Brown v Board, Montgomery Bus Boycott, sit-ins, Freedom Riders, March on Washington, Civil Rights Act 1964, Voting Rights Act 1965",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Vietnam War & Social Upheaval",
+          "yawpChapter": "27",
+          "description": "Vietnam escalation, antiwar movement, counterculture, 1968 turning point",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Cold War, Containment, McCarthyism, Brown v Board, Civil Rights Act 1964, Vietnam War. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Martin Luther King Jr., Malcolm X, Rosa Parks, and Cold War events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence Cold War and Civil Rights events 1945-1968) or Comparison (analyze different Civil Rights strategies). 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M6-LA4",
+          "title": "LA4: Analyzing Civil Rights Movement Data",
+          "format": "Mixed Question Types (Ordering, Multiple Answer, Categorization, Numeric, Matching)",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [2],
+          "linkedSkills": ["HTS6"],
+          "studentInstructions": "Analyze historical data about Civil Rights movement including voting rights registration, desegregation timeline, legislative victories, and protest participation. View 4 detailed charts and answer 10 questions. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 6 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 3: Civil Rights Strategies & Portfolio Piece #6",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Rights Revolutions & Conservative Turn",
+      "dates": "1968-1992",
+      "yawpChapters": ["28", "29"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/28-the-unraveling/",
+        "https://www.americanyawp.com/text/29-the-triumph-of-the-right/"
+      ],
+      "inquiryQuestions": [
+        "Why did rights movements expand while political culture shifted right?",
+        "What is a 'culture war,' and why does it persist?",
+        "Whose vision of America won, and at what cost?"
+      ],
+      "theme": "Contested Visions",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze the expansion of rights movements (women, LGBTQ+, Chicano, American Indian) and conservative backlash",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS4", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate the Reagan Revolution and conservative movement's impact on government, economy, and culture",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["HTS2", "HTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the Watergate crisis and the erosion of trust in government institutions",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS1"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Rights Revolutions & Backlash",
+          "yawpChapter": "28",
+          "description": "Women's liberation, Roe v Wade, Chicano movement, AIM, Stonewall, conservative reaction",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Crisis of Confidence",
+          "yawpChapter": "28",
+          "description": "Watergate, Nixon resignation, Carter and malaise, Iran hostage crisis, economic stagflation",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Reagan Revolution & Conservative Ascendance",
+          "yawpChapter": "29",
+          "description": "Reaganomics, New Right, AIDS crisis, end of Cold War, Gulf War",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Roe v Wade, Watergate, Reagan Revolution, AIDS Crisis, Conservative Movement, End of Cold War. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Richard Nixon, Ronald Reagan, Gloria Steinem, and late 20th century events. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence events 1968-1992) or Comparison (analyze liberal vs conservative visions of America). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 7 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Final Project",
+          "title": "Module 7 Final Portfolio: 'What is America?' Complete Journey",
+          "points": 200,
+          "rubric": "RUBRIC_3_Final_Project",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO1", "CLO2", "CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Contemporary America",
+      "dates": "1992-Present",
+      "yawpChapters": ["30"],
+      "yawpLinks": [
+        "https://www.americanyawp.com/text/30-the-recent-past/"
+      ],
+      "inquiryQuestions": [
+        "What problems remain unresolved from earlier eras of American history?",
+        "How does history explain our present political and social divisions?",
+        "What is America becoming, and who gets to decide?"
+      ],
+      "theme": "Unfinished Business",
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze 9/11's impact on American foreign policy, civil liberties, and national identity",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["HTS2", "HTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Evaluate contemporary social movements (Black Lives Matter, #MeToo, LGBTQ+ rights) in historical context",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["HTS1", "HTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Explain the Great Recession, political polarization, and challenges of the 21st century",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["HTS3", "HTS4"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Post-Cold War & 9/11",
+          "yawpChapter": "30",
+          "description": "Globalization, Clinton era, 9/11 attacks, War on Terror, Afghanistan and Iraq Wars",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Great Recession & Obama Era",
+          "yawpChapter": "30",
+          "description": "2008 financial crisis, first Black president, Tea Party, Affordable Care Act, marriage equality",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Contemporary Challenges",
+          "yawpChapter": "30",
+          "description": "Political polarization, Black Lives Matter, Trump era, COVID-19 pandemic, climate change, democracy under strain",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including 9/11, Iraq War, Great Recession, Obama, Trump, COVID-19, Black Lives Matter, Climate Change. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA2",
+          "title": "LA2: People & Events",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about contemporary leaders and events from 1992 to present. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA3",
+          "title": "LA3: Timeline Builder OR Comparison Activity",
+          "format": "Categorization OR Multiple Answer (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose Timeline (sequence contemporary events 1992-present) or Comparison (analyze continuity and change from 1865 to today). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 8 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Final Exam",
+          "title": "Module 8 Final Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 5-8"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 4: Contemporary America & Final Reflection",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO1", "CLO2", "CLO4"]
+        }
+      ]
+    }
+  ]
+}
