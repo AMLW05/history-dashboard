@@ -40,36 +40,67 @@ function copyModuleContent(n, event) {
 
     if (!content || !moduleData) return;
 
-    // Build Canvas-ready text format
-    let canvasText = `MODULE ${n}: ${moduleData.title}\n`;
-    canvasText += `Dates: ${moduleData.dates}\n`;
-    canvasText += `Theme: ${moduleData.theme}\n\n`;
+    // Create modal overlay with content display (like CSC-113)
+    const modal = document.createElement('div');
+    modal.className = 'modal-container';
+    modal.style.cssText = 'position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px;';
 
-    canvasText += `INQUIRY QUESTIONS:\n`;
-    moduleData.inquiryQuestions.forEach((q, i) => canvasText += `${i + 1}. ${q}\n`);
+    const modalHTML = `
+        <div style="background: var(--parchment); border-radius: 12px; max-width: 1200px; width: 100%; max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 20px 60px rgba(0,0,0,0.5); border: 3px solid var(--accent);">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; padding: 25px; border-bottom: 3px solid var(--accent); background: var(--gray-light);">
+                <h3 style="margin: 0; color: var(--ink); font-size: 1.5em;">📄 Module ${n}: ${moduleData.title}</h3>
+                <div style="display: flex; gap: 10px;">
+                    <button onclick="copyModalContent()" style="background: var(--accent); color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif; font-size: 14px;">📋 Copy</button>
+                    <button onclick="window.print()" style="background: var(--success); color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif; font-size: 14px;">🖨️ Print</button>
+                    <button onclick="this.closest('.modal-container').remove()" style="background: #d63031; color: white; border: none; padding: 12px 24px; border-radius: 6px; cursor: pointer; font-weight: bold; font-family: Georgia, serif; font-size: 14px;">✕ Close</button>
+                </div>
+            </div>
+            <div class="modal-content-display" id="modal-content-${n}" style="padding: 30px; overflow-y: auto; flex: 1; background: white; line-height: 1.8;">
+                ${content.innerHTML}
+            </div>
+        </div>
+    `;
 
-    canvasText += `\nMODULE LEARNING OBJECTIVES:\n`;
-    moduleData.mlos.forEach(mlo => canvasText += `MLO ${mlo.number}: ${mlo.text}\n`);
+    modal.innerHTML = modalHTML;
+    document.body.appendChild(modal);
 
-    canvasText += `\nLEARNING ACTIVITIES:\n`;
-    moduleData.activities.forEach((act, i) => canvasText += `Activity ${i + 1}: ${act.title} (${act.points} points)\n`);
+    // Close on background click
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.remove();
+        }
+    });
 
-    canvasText += `\nASSESSMENTS:\n`;
-    moduleData.assessments.forEach(assess => canvasText += `- ${assess.title} (${assess.points} points${assess.autoGraded ? ' - Auto-Graded' : ''})\n`);
+    // Add print styles
+    const printStyle = document.createElement('style');
+    printStyle.textContent = `
+        @media print {
+            body * { visibility: hidden; }
+            .modal-container, .modal-container * { visibility: visible; }
+            .modal-container { position: absolute; left: 0; top: 0; width: 100%; background: white !important; }
+            .modal-header button { display: none !important; }
+        }
+    `;
+    document.head.appendChild(printStyle);
+}
 
-    // Copy to clipboard
-    navigator.clipboard.writeText(canvasText).then(() => {
-        // Show success notification
+// Copy function for modal content
+function copyModalContent() {
+    const modalContent = document.querySelector('.modal-content-display');
+    if (!modalContent) return;
+
+    const text = modalContent.innerText;
+    navigator.clipboard.writeText(text).then(() => {
         const btn = event.target;
         const originalText = btn.innerHTML;
         btn.innerHTML = '✅ Copied!';
-        btn.style.background = 'var(--success)';
+        btn.style.background = '#00b894';
         setTimeout(() => {
             btn.innerHTML = originalText;
-            btn.style.background = '';
+            btn.style.background = 'var(--accent)';
         }, 2000);
     }).catch(err => {
-        alert('Failed to copy. Please try selecting and copying manually.');
+        alert('Failed to copy. Please select text manually and copy.');
         console.error('Copy failed:', err);
     });
 }
@@ -127,7 +158,7 @@ function renderModules() {
     courseData.modules.forEach(m => {
         const card = document.createElement('div');
         card.className = 'module-card';
-        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><button class="copy-btn" onclick="copyModuleContent(' + m.number + ', event)" title="Copy module content for Canvas">📋 Copy</button><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
+        card.innerHTML = '<div class="module-header" onclick="toggleModule(' + m.number + ')"><div class="module-number">' + m.number + '</div><div class="module-title-wrapper"><div class="module-title">' + m.title + '</div><div class="module-meta">' + m.dates + '</div></div><button class="copy-btn" onclick="copyModuleContent(' + m.number + ', event)" title="View module content - Copy or Print">🖨️ Print/Copy</button><span class="toggle-icon">▼</span></div><div id="module-content-' + m.number + '" class="module-content">' + buildModuleContent(m) + '</div>';
         container.appendChild(card);
     });
 }
