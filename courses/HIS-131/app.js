@@ -172,19 +172,38 @@ function renderModules() {
 }
 
 function buildModuleContent(m) {
-    let html = '<div class="subsection"><h3 class="subsection-title">Inquiry Questions</h3><ul class="inquiry-list">';
-    m.inquiryQuestions.forEach(q => html += '<li>' + q + '</li>');
-    html += '</ul></div><div class="subsection"><h3 class="subsection-title">Module Learning Objectives</h3><ol class="mlo-list">';
-    m.mlos.forEach(mlo => {
-        const cloLinks = mlo.linkedCLOs && mlo.linkedCLOs.length > 0 ? ' <em class="clo-alignment">(Aligns with: ' + mlo.linkedCLOs.join(', ') + ')</em>' : '';
-        html += '<li><strong>MLO' + mlo.number + ':</strong> ' + mlo.text + cloLinks + '</li>';
-    });
-    html += '</ol></div><div class="subsection"><h3 class="subsection-title">Learning Activities</h3>';
-    m.activities.forEach((a, i) => html += buildActivity(a, m.number, i));
-    html += '</div><div class="subsection"><h3 class="subsection-title">Assessments</h3>';
-    m.assessments.forEach(a => html += buildAssessment(a, m.number));
-    html += '</div>';
-    return html;
+    try {
+        let html = '<div class="subsection"><h3 class="subsection-title">Inquiry Questions</h3><ul class="inquiry-list">';
+        m.inquiryQuestions.forEach(q => html += '<li>' + q + '</li>');
+        html += '</ul></div><div class="subsection"><h3 class="subsection-title">Module Learning Objectives</h3><ol class="mlo-list">';
+        m.mlos.forEach(mlo => {
+            const cloLinks = mlo.linkedCLOs && mlo.linkedCLOs.length > 0 ? ' <em class="clo-alignment">(Aligns with: ' + mlo.linkedCLOs.join(', ') + ')</em>' : '';
+            html += '<li><strong>MLO' + mlo.number + ':</strong> ' + mlo.text + cloLinks + '</li>';
+        });
+        html += '</ol></div><div class="subsection"><h3 class="subsection-title">Learning Activities</h3>';
+        m.activities.forEach((a, i) => {
+            try {
+                html += buildActivity(a, m.number, i);
+            } catch (err) {
+                console.error('Error building activity', i, 'for module', m.number, err);
+                html += '<div class="activity-card"><div class="activity-header"><span class="activity-title">Error loading activity</span></div></div>';
+            }
+        });
+        html += '</div><div class="subsection"><h3 class="subsection-title">Assessments</h3>';
+        m.assessments.forEach(a => {
+            try {
+                html += buildAssessment(a, m.number);
+            } catch (err) {
+                console.error('Error building assessment for module', m.number, err);
+                html += '<div class="activity-card"><div class="activity-header"><span class="activity-title">Error loading assessment</span></div></div>';
+            }
+        });
+        html += '</div>';
+        return html;
+    } catch (err) {
+        console.error('Error building module content for module', m.number, err);
+        return '<div style="padding:20px;color:red;">Error loading module content. Check console for details.</div>';
+    }
 }
 
 function buildActivity(a, mn, idx) {
@@ -259,7 +278,7 @@ function buildActivity(a, mn, idx) {
             modAct.la3.dataAnalysis.questions.forEach(q => {
                 details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
             });
-            details += '</ol></div>';
+            details += '</ol>';
         }
     }
     // LA4: Additional activities (Module 3 has LA4)
