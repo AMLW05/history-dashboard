@@ -178,51 +178,43 @@ const module1Quiz = {
     ]
 };
 
-// Module 1 Project Checkpoint 1: Topic Selection
-const module1Checkpoint = {
-    title: "Project Checkpoint 1: Topic Selection",
-    instructions: `**Purpose**: Begin your semester-long research project by selecting a topic or primary source from Module 1 (Indigenous America & First Contact, Prehistory-1675).
+// What is America? Part 1-A: Baseline Response
+const module1Project = {
+    title: "What is America? Part 1-A: Your Baseline Response",
+    instructions: `**Purpose**: Before we explore American history, establish YOUR starting point. This baseline becomes important when you revisit this question at semester's end.
 
-**Assignment** (Submit 300-400 words):
-1. **Topic Selection**: Choose ONE of the following approaches:
-   - A specific Indigenous society or leader (e.g., Cahokia, Haudenosaunee Confederacy, Popé and the Pueblo Revolt)
-   - An aspect of the Columbian Exchange (e.g., spread of specific diseases, introduction of horses to Plains societies)
-   - Spanish colonialism and its impacts (e.g., encomienda system, racial hierarchies, religious conversion)
-   - A specific primary source from the era (e.g., Columbus's letters, Las Casas's writings, Indigenous oral histories)
+**Assignment** (Submit 1 PowerPoint slide):
 
-2. **Why This Topic?**: Explain why this topic interests you and why it's historically significant
+Create a single slide answering: **"What is America?"**
 
-3. **Initial Research Questions**: List 2-3 specific questions you want to investigate
+**Requirements**:
+- Title: "What is America?"
+- Your name
+- Your personal answer (3-5 sentences minimum)
+- At least 1 image representing your perspective
+- Simple, clear design
 
-4. **Preliminary Sources**: Identify at least 2 sources you plan to use:
-   - At least 1 must be a primary source (document, artifact, oral history from the period)
-   - At least 1 must be a credible secondary source (scholarly article, academic book, museum resource)
-   - Provide full citations in Chicago/Turabian format
+**This is NOT graded on "correctness"** - there's no wrong answer! This is YOUR current understanding before we dive into history.
 
-**Example Topics**:
-- "The Great Law of Peace: How the Haudenosaunee Confederacy influenced American democratic ideals"
-- "Cahokia's Collapse: Environmental and social factors in Mississippian decline"
-- "Smallpox as a Weapon: Disease and conquest in the Spanish invasion of the Aztec Empire"
-- "Bartolomé de Las Casas: A Spanish priest's eyewitness account of Indigenous suffering"
+**Submission**:
+- Save as: LastName_FirstName_WhatIsAmerica_Part1A.pptx
+- Upload to Canvas Module 1
 
-**What You'll Do Next**:
-- Checkpoint 2 (Module 3): Develop your thesis and expand your research
-- Checkpoint 3 (Module 5): Analyze your sources and refine your argument
-- Final Project (Module 7): Present your complete research`,
-    rubric: "RUBRIC_1_Project_Checkpoints",
-    scaffolding: {
-        tips: [
-            "✅ Choose a topic that genuinely interests you - you'll work with it all semester",
-            "✅ Be specific - 'Spanish colonialism' is too broad, but 'the encomienda system in New Mexico' works",
-            "✅ Start with American Yawp chapters 1-2 for background, then find more specialized sources",
-            "✅ Primary sources from this era: Columbus's diary, Spanish colonial records, Indigenous oral histories, archaeological findings"
-        ],
-        commonMistakes: [
-            "❌ Topic too broad: 'Native Americans' → ✅ 'The Three Sisters agricultural system and its nutritional benefits'",
-            "❌ Only using textbook → ✅ Finding primary sources and scholarly articles",
-            "❌ Just summarizing facts → ✅ Asking analytical questions about causes, effects, and significance"
-        ]
-    }
+**What Happens Next** - Building Your Portfolio:
+- Module 2: Colonial Character (persona + visual)
+- Module 3: Revolutionary Voice (primary source analysis)
+- Module 5: Map Moment (territorial expansion)
+- Module 6: Movement Voice (reform movement analysis)
+- Module 7: Final Portfolio (compile everything + revisit this question)
+
+**Tips**:
+✅ Be honest - this is your genuine current perspective
+✅ Keep it simple - one clear slide
+✅ Think about: government, culture, values, people, history, identity
+✅ SAVE THIS FILE - you'll need it for the final portfolio!
+
+**Grading**: 10 points for completion and effort (not correctness)`,
+    rubric: "Portfolio completion and effort"
 };
 
 const rubricData = {

@@ -488,3 +488,46 @@ const module4Midterm = {
         }
     ]
 };
+
+// Module 4 Project: Freedom - Defining Liberty (100 points, SEPARATE from portfolio)
+const module4Project = {
+    title: "Module 4 Project: Freedom - Defining Liberty",
+    instructions: `**Purpose**: Explore competing definitions of "freedom" in the early republic (1800-1848).
+
+**Assignment** (1-3 PowerPoint slides, 100 points):
+
+**Module Theme**: Freedom
+**Inquiry Question**: "Liberty and justice—now what?"
+
+**Your Task**: Explore how different groups defined, pursued, and experienced freedom.
+
+**Choose ONE Format Option**:
+
+**Option 1: Competing Visions of Freedom**
+- Present 3+ groups' definitions of freedom (Indigenous peoples, enslaved people, women, workers, white settlers, slaveholders)
+- Show how each pursued freedom
+- Explain why definitions conflicted
+- Address: Can all these freedoms coexist?
+
+**Option 2: Freedom's Paradoxes Timeline**
+- Identify 4-6 moments showing freedom expanding AND contracting simultaneously (1800-1848)
+- For each moment: Who gained freedom? Who lost it?
+- Show how one group's freedom often came at another's expense
+- Examples: Louisiana Purchase, Indian Removal, Market Revolution, cotton expansion
+
+**Option 3: "Freedom" in Documents**
+- Analyze 3-4 primary sources defining "freedom" differently
+- Compare definitions: Whose freedom? From what? To do what?
+- Explain conflicts between definitions
+- Sources: Jefferson, Tecumseh, Frederick Douglass, Seneca Falls, slaveholder defenses
+
+**Submission**:
+- Save as: LastName_FirstName_Freedom.pptx
+- 1-3 slides with evidence
+- Upload to Canvas Module 4
+
+**Grading**: 100 points - Analysis, evidence, competing perspectives
+
+**NOTE**: This is SEPARATE from the "What is America?" portfolio project!`,
+    rubric: "Freedom Project Rubric (100 points)"
+};

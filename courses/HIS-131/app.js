@@ -234,13 +234,13 @@ function buildAssessment(a, mn) {
 
     // Get module-specific data (discussions, checkpoints, projects, quizzes, exams)
     const moduleData = {
-        1: { checkpoint: typeof module1Checkpoint !== 'undefined' ? module1Checkpoint : null, quiz: typeof module1Quiz !== 'undefined' ? module1Quiz : null },
-        2: { discussion: typeof module2Discussion !== 'undefined' ? module2Discussion : null, quiz: typeof module2Quiz !== 'undefined' ? module2Quiz : null },
-        3: { checkpoint: typeof module3Checkpoint !== 'undefined' ? module3Checkpoint : null, quiz: typeof module3Quiz !== 'undefined' ? module3Quiz : null },
-        4: { discussion: typeof module4Discussion !== 'undefined' ? module4Discussion : null, quiz: typeof module4Quiz !== 'undefined' ? module4Quiz : null, midterm: typeof module4Midterm !== 'undefined' ? module4Midterm : null },
-        5: { checkpoint: typeof module5Checkpoint !== 'undefined' ? module5Checkpoint : null, quiz: typeof module5Quiz !== 'undefined' ? module5Quiz : null },
-        6: { discussion: typeof module6Discussion !== 'undefined' ? module6Discussion : null, quiz: typeof module6Quiz !== 'undefined' ? module6Quiz : null },
-        7: { finalProject: typeof module7FinalProject !== 'undefined' ? module7FinalProject : null, quiz: typeof module7Quiz !== 'undefined' ? module7Quiz : null },
+        1: { project: typeof module1Project !== 'undefined' ? module1Project : null, quiz: typeof module1Quiz !== 'undefined' ? module1Quiz : null },
+        2: { discussion: typeof module2Discussion !== 'undefined' ? module2Discussion : null, project: typeof module2Project !== 'undefined' ? module2Project : null, quiz: typeof module2Quiz !== 'undefined' ? module2Quiz : null },
+        3: { project: typeof module3Project !== 'undefined' ? module3Project : null, quiz: typeof module3Quiz !== 'undefined' ? module3Quiz : null },
+        4: { discussion: typeof module4Discussion !== 'undefined' ? module4Discussion : null, project: typeof module4Project !== 'undefined' ? module4Project : null, quiz: typeof module4Quiz !== 'undefined' ? module4Quiz : null, midterm: typeof module4Midterm !== 'undefined' ? module4Midterm : null },
+        5: { project: typeof module5Project !== 'undefined' ? module5Project : null, quiz: typeof module5Quiz !== 'undefined' ? module5Quiz : null },
+        6: { discussion: typeof module6Discussion !== 'undefined' ? module6Discussion : null, project: typeof module6Project !== 'undefined' ? module6Project : null, quiz: typeof module6Quiz !== 'undefined' ? module6Quiz : null },
+        7: { finalPortfolio: typeof module7FinalPortfolio !== 'undefined' ? module7FinalPortfolio : null, quiz: typeof module7Quiz !== 'undefined' ? module7Quiz : null },
         8: { discussion: typeof module8Discussion !== 'undefined' ? module8Discussion : null, quiz: typeof module8Quiz !== 'undefined' ? module8Quiz : null, finalExam: typeof finalExam !== 'undefined' ? finalExam : null }
     };
 
@@ -261,42 +261,42 @@ function buildAssessment(a, mn) {
         }
         details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + disc.rubric + '</p></div>';
     }
-    // Project Checkpoint
-    else if (a.type === 'Project Checkpoint' && modData && modData.checkpoint) {
-        const check = modData.checkpoint;
-        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
-        details += '<div style="white-space:pre-wrap;line-height:1.8">' + check.instructions + '</div>';
-        if (check.scaffolding) {
-            details += '<h4 style="margin-top:20px;color:var(--accent)">Scaffolding & Tips</h4>';
-            if (check.scaffolding.thesisTemplates) {
-                details += '<h5>Thesis Templates:</h5><ul>';
-                check.scaffolding.thesisTemplates.forEach(t => details += '<li>' + t + '</li>');
-                details += '</ul>';
-            }
-            if (check.scaffolding.commonMistakes) {
-                details += '<h5 style="margin-top:15px">Common Mistakes:</h5><ul>';
-                check.scaffolding.commonMistakes.forEach(m => details += '<li>' + m + '</li>');
-                details += '</ul>';
-            }
-            if (check.scaffolding.primarySourceQuestions) {
-                details += '<h5 style="margin-top:15px">Primary Source Analysis Questions:</h5><ul>';
-                check.scaffolding.primarySourceQuestions.forEach(q => details += '<li>' + q + '</li>');
-                details += '</ul>';
-            }
-        }
-        details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + check.rubric + '</p></div>';
-    }
-    // Final Project
-    else if (a.title && a.title.includes('Final Project') && modData && modData.finalProject) {
-        const proj = modData.finalProject;
+    // Portfolio Project Component (What is America?)
+    else if (a.type === 'Project Checkpoint' && modData && modData.project) {
+        const proj = modData.project;
         details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
         details += '<div style="white-space:pre-wrap;line-height:1.8">' + proj.instructions + '</div>';
-        if (proj.exampleTopics) {
-            details += '<h4 style="margin-top:20px;color:var(--accent)">Example Topics</h4><ul>';
-            proj.exampleTopics.forEach(t => details += '<li>' + t + '</li>');
-            details += '</ul>';
+        if (proj.scaffolding) {
+            details += '<h4 style="margin-top:20px;color:var(--accent)">Scaffolding & Tips</h4>';
+            if (proj.scaffolding.thesisTemplates) {
+                details += '<h5>Thesis Templates:</h5><ul>';
+                proj.scaffolding.thesisTemplates.forEach(t => details += '<li>' + t + '</li>');
+                details += '</ul>';
+            }
+            if (proj.scaffolding.commonMistakes) {
+                details += '<h5 style="margin-top:15px">Common Mistakes:</h5><ul>';
+                proj.scaffolding.commonMistakes.forEach(m => details += '<li>' + m + '</li>');
+                details += '</ul>';
+            }
+            if (proj.scaffolding.primarySourceQuestions) {
+                details += '<h5 style="margin-top:15px">Primary Source Analysis Questions:</h5><ul>';
+                proj.scaffolding.primarySourceQuestions.forEach(q => details += '<li>' + q + '</li>');
+                details += '</ul>';
+            }
         }
         details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + proj.rubric + '</p></div>';
+    }
+    // Final Portfolio (Module 7)
+    else if (a.title && a.title.includes('Final Portfolio') && modData && modData.finalPortfolio) {
+        const portfolio = modData.finalPortfolio;
+        details = '<div style="padding:15px;background:#f8f9fa;border-radius:6px;margin:15px 0">';
+        details += '<div style="white-space:pre-wrap;line-height:1.8">' + portfolio.instructions + '</div>';
+        if (portfolio.exampleTopics) {
+            details += '<h4 style="margin-top:20px;color:var(--accent)">Example Topics</h4><ul>';
+            portfolio.exampleTopics.forEach(t => details += '<li>' + t + '</li>');
+            details += '</ul>';
+        }
+        details += '<p style="margin-top:15px"><strong>Rubric:</strong> ' + portfolio.rubric + '</p></div>';
     }
     // Module Quiz
     else if (a.type === 'Module Quiz' && modData && modData.quiz) {

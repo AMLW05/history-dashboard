@@ -206,3 +206,38 @@ const module2Quiz = {
         }
     ]
 };
+
+// What is America? Part 2: Colonial Character
+const module2Project = {
+    title: "What is America? Part 2: Colonial Character & Visual",
+    instructions: `**Purpose**: Build your portfolio by creating a colonial-era character and visual representation.
+
+**Assignment** (2 components):
+
+**Part A: Character Profile** (1 page written)
+- Create a fictional but historically accurate colonial character (1700s)
+- Include: name, location, occupation, social status, daily life
+- Address: How does your character experience "America"? What freedoms/restrictions do they face?
+- Use Module 2 content to ensure historical accuracy
+
+**Part B: Visual Representation** (1 image/drawing/collage)
+- Create or find a visual representing your character's world
+- Could be: portrait, scene from daily life, map of their community, symbolic image
+- Add brief caption explaining the visual
+
+**Submission**:
+- Save as: LastName_FirstName_ColonialCharacter.pptx or .docx
+- Include both written profile and visual
+
+**Historical Accuracy Matters**:
+✅ Consider: race, gender, class, region (New England vs. Southern vs. Middle colonies)
+✅ Reflect colonial realities: slavery, indentured servitude, religious restrictions, economic systems
+✅ Use specific details from readings and activities
+
+**Tips**:
+- Enslaved African? Indentured servant? Free colonist? Plantation owner? Merchant? Indigenous person?
+- What does "America" mean to YOUR character? (Very different answers!)
+
+**Grading**: 10 points - Historical accuracy, creativity, effort`,
+    rubric: "Portfolio completion and historical accuracy"
+};

@@ -1240,3 +1240,124 @@ const finalExam = {
         }
     ]
 };
+
+// What is America? Part 5: Map Moment (Module 5)
+const module5Project = {
+    title: "What is America? Part 5: Map Moment - Territorial Expansion",
+    instructions: `**Purpose**: Add territorial expansion component to your portfolio.
+
+**Assignment** (1 slide with annotated map):
+
+**Theme**: Manifest Destiny & Expansion (1800-1861)
+
+**Your Task**: Create an annotated map showing territorial growth AND its human costs.
+
+**Requirements**:
+- Base map showing U.S. territorial acquisitions (Louisiana Purchase, Texas Annexation, Mexican Cession, etc.)
+- Annotations for each acquisition showing:
+  • What was gained
+  • Who was displaced or affected
+  • Competing definitions of "expansion" (progress? theft? destiny?)
+- Brief caption: How did expansion shape "America"?
+
+**Submission**:
+- Save as: LastName_FirstName_MapMoment.pptx (1 slide)
+- Upload to Canvas Module 5
+
+**Tips**:
+✅ Show Indigenous nations displaced
+✅ Mark slave vs. free territories
+✅ Include dates and names of acquisitions
+✅ Visual clarity matters!
+
+**Grading**: 10 points - Historical accuracy, visual quality, critical analysis`,
+    rubric: "Portfolio completion and accuracy"
+};
+
+// What is America? Part 6: Movement Voice (Module 6)
+const module6Project = {
+    title: "What is America? Part 6: Movement Voice - Reform Movements",
+    instructions: `**Purpose**: Add reform movement analysis to your portfolio.
+
+**Assignment** (1-2 slides analyzing a reform movement):
+
+**Theme**: Reform & Social Movements (1830s-1850s)
+
+**Your Task**: Analyze ONE reform movement and its vision of "America."
+
+**Choose ONE Movement**:
+- Abolitionism (immediate or gradual)
+- Women's Rights (Seneca Falls, suffrage)
+- Temperance
+- Education Reform
+- Utopian Communities
+- Labor Reform
+
+**Requirements**:
+- Movement's goals: What did they want to reform?
+- Their vision of "America": What should America be?
+- Who supported it? Who opposed it?
+- Success/failure: Did they achieve their vision?
+- Include primary source quote or image
+
+**Submission**:
+- Save as: LastName_FirstName_MovementVoice.pptx
+- 1-2 slides
+- Upload to Canvas Module 6
+
+**Tips**:
+✅ Use specific leaders/documents (Douglass, Stanton, Garrison)
+✅ Show conflicting visions (gradual vs. immediate abolition)
+✅ Connect to "What is America?" theme
+
+**Grading**: 10 points - Analysis, evidence, connection to course themes`,
+    rubric: "Portfolio completion and analysis"
+};
+
+// What is America? Final Portfolio (Module 7) - 400 POINTS!
+const module7FinalPortfolio = {
+    title: "What is America? FINAL PORTFOLIO (400 points)",
+    instructions: `**Purpose**: Compile your semester's work and provide your FINAL answer to "What is America?"
+
+**Assignment** (Submit complete portfolio):
+
+**This is 40% of your final grade!**
+
+**Portfolio Components** (compile ALL previous work):
+1. Part 1-A: Your ORIGINAL baseline answer (Module 1)
+2. Part 2: Colonial Character & Visual (Module 2)
+3. Part 3: Revolutionary Transformation (Module 3) - 100 points
+4. Part 5: Map Moment (Module 5)
+5. Part 6: Movement Voice (Module 6)
+
+**NEW Component - Part 7: Your Final Answer** (2-3 slides):
+- Revisit "What is America?"
+- How has your answer changed since Module 1?
+- What historical moments/themes most shaped your understanding?
+- Synthesize: Whose America? Competing visions? Can they coexist?
+- Use evidence from across the semester
+
+**Submission**:
+- Save as: LastName_FirstName_WhatIsAmerica_FINAL.pptx
+- Include ALL components (Parts 1A, 2, 3, 5, 6, and NEW Part 7)
+- Upload to Canvas Module 7
+
+**Grading Breakdown** (400 points total):
+- Part 1-A: 10 points (original baseline)
+- Part 2: 10 points (Colonial Character)
+- Part 3: 100 points (Revolutionary Transformation)
+- Part 5: 10 points (Map Moment)
+- Part 6: 10 points (Movement Voice)
+- Part 7: 200 points (Final Answer & Synthesis)
+- Portfolio Completeness: 60 points (all components included, organized, professional)
+
+**Tips for Part 7 (Final Answer)**:
+✅ Show intellectual growth - how you've changed
+✅ Reference specific historical content
+✅ Address complexity - multiple Americas, competing visions
+✅ Be thoughtful and personal - YOUR conclusion
+✅ This is your capstone - make it count!
+
+**This is your FINAL EXAM equivalent!**`,
+    rubric: "Final Portfolio Rubric (400 points - see detailed breakdown above)"
+};

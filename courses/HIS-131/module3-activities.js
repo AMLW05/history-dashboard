@@ -275,3 +275,47 @@ const module3Quiz = {
         }
     ]
 };
+
+// What is America? Part 3: Revolutionary Voice (100 points)
+const module3Project = {
+    title: "What is America? Part 3: Revolutionary Transformation",
+    instructions: `**Purpose**: Explore what "revolutionary" means and when change becomes irreversible.
+
+**Assignment** (1-3 PowerPoint slides, 100 points):
+
+**Module Theme**: Tipping Point
+**Inquiry Question**: What makes something revolutionary?
+
+**Your Task**: Create a project piece exploring revolutionary change and "tipping point" moments (1763-1800).
+
+**Choose ONE Format Option**:
+
+**Option 1: Revolutionary Tipping Points Timeline**
+- Identify 3-5 tipping point moments (1763-1800)
+- Show what changed at each moment
+- Explain why each was irreversible
+- Include competing visions at each point
+- Examples: When did protest become rebellion? When did rebellion become revolution?
+
+**Option 2: Competing Revolutionary Visions**
+- Present 3+ perspectives (Patriots, Loyalists, enslaved people, women, Indigenous peoples)
+- Show how each defined "revolutionary change" differently
+- What was revolutionary for each group? (liberation? disaster? broken promises?)
+- Did revolution create ONE America or competing Americas?
+
+**Option 3: Revolutionary Change Then & Now**
+- Identify what made American Revolution "revolutionary" (not just rebellion)
+- Apply criteria to a modern social/political movement
+- Explain when modern movement reached "tipping point"
+- Show competing definitions of "revolutionary" today
+
+**Submission**:
+- Save as: LastName_FirstName_RevolutionaryVoice.pptx
+- 1-3 slides, include visuals and evidence
+- Upload to Canvas Module 3
+
+**Grading**: 100 points - Historical accuracy, analysis depth, evidence use, creativity
+
+**This is a MAJOR portfolio piece!**`,
+    rubric: "Revolutionary Transformation Project Rubric (100 points)"
+};
