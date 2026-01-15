@@ -118,7 +118,7 @@ const module3Activities = {
         q: "What limitation did Progressive Era reforms have?",
         answers: [
           "They were all immediately successful",
-          "They often excluded or discriminated against African Americans, immigrants, and other marginalized groups",
+          "They often excluded or discriminated against marginalized groups",
           "They eliminated all corruption",
           "They ended imperialism"
         ],

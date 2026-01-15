@@ -476,7 +476,7 @@ const module4Midterm = {
       q: "Progressive Era reforms often:",
       answers: [
         "Benefited all groups equally",
-        "Excluded or discriminated against African Americans, immigrants, and marginalized groups",
+        "Excluded or discriminated against marginalized groups",
         "Achieved perfect equality",
         "Ended all corruption"
       ],
