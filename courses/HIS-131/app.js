@@ -176,7 +176,7 @@ function buildModuleContent(m) {
     m.inquiryQuestions.forEach(q => html += '<li>' + q + '</li>');
     html += '</ul></div><div class="subsection"><h3 class="subsection-title">Module Learning Objectives</h3><ol class="mlo-list">';
     m.mlos.forEach(mlo => {
-        const cloLinks = mlo.linkedCLOs && mlo.linkedCLOs.length > 0 ? ' <em>(' + mlo.linkedCLOs.join(', ') + ')</em>' : '';
+        const cloLinks = mlo.linkedCLOs && mlo.linkedCLOs.length > 0 ? ' <em class="clo-alignment">(Aligns with: ' + mlo.linkedCLOs.join(', ') + ')</em>' : '';
         html += '<li><strong>MLO' + mlo.number + ':</strong> ' + mlo.text + cloLinks + '</li>';
     });
     html += '</ol></div><div class="subsection"><h3 class="subsection-title">Learning Activities</h3>';

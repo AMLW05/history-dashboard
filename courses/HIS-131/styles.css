@@ -279,6 +279,15 @@ body {
     padding-left: 20px;
 }
 
+.clo-alignment {
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 0.9em;
+    color: var(--accent);
+    font-style: italic;
+    font-weight: 600;
+}
+
 .activity-card {
     background: white;
     border: 2px solid var(--accent-light);
