@@ -264,8 +264,9 @@ function buildActivity(a, mn, idx) {
             details += '</div>';
         });
     }
-    // LA3: Timeline + Comparison OR Data Analysis
+    // LA3: Multiple activity types (Timeline, Comparison, Data Analysis, Categorization, Sequencing, Mapping, Matching)
     else if (idx === 2 && modAct.la3) {
+        // HIS-131/132 types
         if (modAct.la3.timelineBuilder) {
             details += '<h4 style="margin-top:20px">Option A: Timeline Builder</h4>';
             details += '<p style="margin:10px 0"><strong>' + modAct.la3.timelineBuilder.instructions + '</strong></p>';
@@ -298,6 +299,60 @@ function buildActivity(a, mn, idx) {
                 details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
             });
             details += '</ol>';
+        }
+
+        // HUM-130 types
+        if (modAct.la3.categorization) {
+            details += '<h4 style="margin-top:20px">' + modAct.la3.categorization.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.categorization.instructions + '</strong></p>';
+            details += '<p style="margin:10px 0;padding:10px;background:var(--gray-light);border-radius:4px"><strong>Categories:</strong> ' + modAct.la3.categorization.categories.join(' | ') + '</p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:25%">Category</th></tr></thead><tbody>';
+            modAct.la3.categorization.items.forEach((item, i) => {
+                // Handle both {item, category} and {text, answer} formats
+                const itemText = item.item || item.text;
+                const categoryText = item.category || item.answer;
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + itemText + '</td><td><span class="badge badge-auto" style="display:inline-block">' + categoryText + '</span></td></tr>';
+            });
+            details += '</tbody></table>';
+        }
+
+        if (modAct.la3.sequencing) {
+            details += '<h4 style="margin-top:20px">' + modAct.la3.sequencing.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.sequencing.instructions + '</strong></p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">Order</th><th>Stage</th></tr></thead><tbody>';
+            modAct.la3.sequencing.stages.forEach((s) => {
+                details += '<tr><td><strong>' + s.order + '</strong></td><td>' + s.stage + '</td></tr>';
+            });
+            details += '</tbody></table>';
+        }
+
+        if (modAct.la3.mapping) {
+            details += '<h4 style="margin-top:20px">' + modAct.la3.mapping.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.mapping.instructions + '</strong></p>';
+            details += '<h5 style="margin-top:15px">Hero\'s Journey Stages:</h5>';
+            details += '<div style="margin:10px 0;padding:15px;background:var(--gray-light);border-radius:4px;line-height:2">' + modAct.la3.mapping.stages.join('<br>') + '</div>';
+            details += '<h5 style="margin-top:20px">Mapping Answers:</h5>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th style="width:40%">Luke\'s Journey Event</th><th style="width:50%">Hero\'s Journey Stage</th></tr></thead><tbody>';
+            modAct.la3.mapping.items.forEach((item, i) => {
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.event + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.stage + '</span></td></tr>';
+            });
+            details += '</tbody></table>';
+        }
+
+        if (modAct.la3.matching) {
+            details += '<h4 style="margin-top:20px">' + modAct.la3.matching.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la3.matching.instructions + '</strong></p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th>';
+            // Determine column headers based on item properties
+            const firstItem = modAct.la3.matching.items[0];
+            const keys = Object.keys(firstItem);
+            details += '<th style="width:35%">' + keys[0].charAt(0).toUpperCase() + keys[0].slice(1) + '</th>';
+            details += '<th style="width:55%">' + keys[1].charAt(0).toUpperCase() + keys[1].slice(1) + '</th>';
+            details += '</tr></thead><tbody>';
+            modAct.la3.matching.items.forEach((item, i) => {
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item[keys[0]] + '</td><td>' + item[keys[1]] + '</td></tr>';
+            });
+            details += '</tbody></table>';
         }
     }
     // LA4: Additional activities (Module 3 has LA4)
