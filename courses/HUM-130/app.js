@@ -355,13 +355,17 @@ function buildActivity(a, mn, idx) {
             details += '</tbody></table>';
         }
     }
-    // LA4: Additional activities (Module 3 has LA4)
+    // LA4: Additional activities (Module 3, Module 6 have LA4)
     else if (idx === 3 && modAct.la4) {
         details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
         details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
-        details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
-        modAct.la4.items.forEach((item, i) => {
-            details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
+        details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Question</th><th style="width:40%">Answer</th></tr></thead><tbody>';
+        // Handle both {text, answer} and {q, a} formats
+        const dataArray = modAct.la4.items || modAct.la4.questions;
+        dataArray.forEach((item, i) => {
+            const questionText = item.text || item.q;
+            const answerText = item.answer || item.a;
+            details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + questionText + '</td><td><span class="badge badge-auto" style="display:inline-block">' + answerText + '</span></td></tr>';
         });
         details += '</tbody></table>';
     }
