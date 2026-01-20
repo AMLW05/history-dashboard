@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HUM-130: Myth in Human Culture - Course Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>📖 HUM-130: Myth in Human Culture</h1>
+            <p>From Ancient Legends to Modern Storytelling | Spring 2026</p>
+        </div>
+
+        <!-- Statistics Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">8</div>
+                <div class="stat-label">Modules</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">26</div>
+                <div class="stat-label">Activities</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">1,580</div>
+                <div class="stat-label">Total Points</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">52%</div>
+                <div class="stat-label">Auto-Graded</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">CLOs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">Building</div>
+                <div class="stat-label">Status</div>
+            </div>
+        </div>
+
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('tab-modules')">📚 Modules</button>
+            <button class="nav-tab" onclick="showTab('tab-clos')">🎯 Learning Outcomes</button>
+            <button class="nav-tab" onclick="showTab('tab-skills')">🧩 Skills</button>
+            <button class="nav-tab" onclick="showTab('tab-resources')">📖 Resources</button>
+            <button class="nav-tab" onclick="showTab('tab-rubrics')">📊 Rubrics</button>
+        </div>
+
+        <!-- Tab: Modules -->
+        <div id="tab-modules" class="tab-content active">
+            <h2 class="section-title">📚 Course Modules</h2>
+            <p class="instruction-text">Click on any module to expand and view content, activities, and assessments. Use the Print/Copy button to export module content.</p>
+            <div id="modules-container"></div>
+        </div>
+
+        <!-- Tab: CLOs -->
+        <div id="tab-clos" class="tab-content">
+            <h2 class="section-title">🎯 Course Learning Outcomes (CLOs)</h2>
+            <p class="instruction-text">These are the key competencies you'll develop throughout HUM-130</p>
+            <div id="clos-container"></div>
+        </div>
+
+        <!-- Tab: Skills -->
+        <div id="tab-skills" class="tab-content">
+            <h2 class="section-title">🧩 Mythological Thinking Skills</h2>
+            <p class="instruction-text">Skills that scaffold across modules, building your ability to analyze and create mythological narratives</p>
+            <div id="skills-container"></div>
+        </div>
+
+        <!-- Tab: Resources -->
+        <div id="tab-resources" class="tab-content">
+            <div id="resources-container"></div>
+        </div>
+
+        <!-- Tab: Rubrics -->
+        <div id="tab-rubrics" class="tab-content">
+            <h2 class="section-title">📊 Assessment Rubrics</h2>
+            <p class="instruction-text">Grading criteria for major assignments</p>
+            <div id="rubrics-container"></div>
+        </div>
+    </div>
+
+    <!-- Load JavaScript -->
+    <script src="course-data.json" type="application/json"></script>
+    <script src="module1-activities.js"></script>
+    <script src="module3-activities.js"></script>
+    <script src="modules-all-activities.js"></script>
+    <script src="resources.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

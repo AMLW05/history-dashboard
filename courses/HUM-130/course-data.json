@@ -1,0 +1,1051 @@
+{
+  "course": {
+    "code": "HUM-130",
+    "title": "Myth in Human Culture",
+    "subtitle": "From Ancient Legends to Modern Storytelling",
+    "credits": 3,
+    "term": "Spring 2026",
+    "institution": "FTCC / NCCCS",
+    "textbook": "Free Online Resources & Course Materials",
+    "textbookURL": "",
+    "description": "This course provides an in-depth study of myths and legends. Topics include the varied sources of myths and their influence on the individual and society within diverse cultural contexts. Upon completion, students should be able to demonstrate a general familiarity with myths and a broad-based understanding of the influence of myths and legends on modern culture.",
+    "status": "building",
+    "completionPercent": 50,
+    "qmStandardsMet": 0,
+    "qmStandardsTotal": 22,
+    "totalPoints": 1580,
+    "autoGradedPercent": 52,
+    "totalActivities": 26
+  },
+  "statistics": {
+    "modules": 8,
+    "learningActivities": 26,
+    "quizzes": 8,
+    "checkpoints": 3,
+    "discussions": 4,
+    "finalProject": 1,
+    "dataAnalysisActivities": 2,
+    "autoGradedPoints": 820,
+    "manualGradedPoints": 760
+  },
+  "clos": [
+    {
+      "id": "CLO1",
+      "number": 1,
+      "text": "Analyze the structure, function, and significance of myths across diverse cultures",
+      "bloomsLevel": "Analyze",
+      "category": "Mythological Knowledge"
+    },
+    {
+      "id": "CLO2",
+      "number": 2,
+      "text": "Evaluate how myths reflect and shape cultural values, beliefs, and identities",
+      "bloomsLevel": "Evaluate",
+      "category": "Cultural Impact"
+    },
+    {
+      "id": "CLO3",
+      "number": 3,
+      "text": "Apply mythological archetypes and patterns to interpret modern narratives",
+      "bloomsLevel": "Apply",
+      "category": "Contemporary Analysis"
+    },
+    {
+      "id": "CLO4",
+      "number": 4,
+      "text": "Create original analysis demonstrating understanding of mythological influence on modern culture",
+      "bloomsLevel": "Create",
+      "category": "Creative Application"
+    }
+  ],
+  "mythologicalThinkingSkills": [
+    {
+      "id": "MTS1",
+      "name": "Pattern Recognition",
+      "description": "Identify recurring themes, archetypes, and structures across mythological traditions",
+      "progression": ["Module 1: Creation patterns", "Module 3: Hero's journey", "Module 5: Transformation", "Module 7: Synthesis"]
+    },
+    {
+      "id": "MTS2",
+      "name": "Cultural Contextualization",
+      "description": "Situate myths within their cultural, historical, and social contexts",
+      "progression": ["Module 1: Ancient contexts", "Module 2: Classical contexts", "Module 4: Medieval contexts", "Module 6: Modern contexts"]
+    },
+    {
+      "id": "MTS3",
+      "name": "Comparative Analysis",
+      "description": "Compare mythological elements across cultures and time periods",
+      "progression": ["Module 2: Cross-cultural heroes", "Module 4: Creation myths", "Module 6: Trickster figures", "Module 8: Universal themes"]
+    },
+    {
+      "id": "MTS4",
+      "name": "Symbolic Interpretation",
+      "description": "Decode symbolic meanings and metaphorical content in mythological narratives",
+      "progression": ["Module 1: Symbols", "Module 3: Metaphors", "Module 5: Allegory", "Module 7: Modern symbols"]
+    },
+    {
+      "id": "MTS5",
+      "name": "Contemporary Application",
+      "description": "Connect ancient myths to modern storytelling and cultural phenomena",
+      "progression": ["Module 3: Star Wars", "Module 4: Lord of the Rings", "Module 5: Harry Potter", "Module 6: Superheroes"]
+    },
+    {
+      "id": "MTS6",
+      "name": "Critical Analysis",
+      "description": "Evaluate the function and impact of mythological narratives in society",
+      "progression": ["Module 2: Social functions", "Module 7: Popular culture analysis"]
+    }
+  ],
+  "modules": [
+    {
+      "number": 1,
+      "title": "Introduction to Mythology & Creation Myths",
+      "dates": "Week 1-2",
+      "theme": "Origins of Everything",
+      "inquiryQuestions": [
+        "What defines a myth, and how do myths differ from other forms of storytelling?",
+        "Why do diverse cultures develop similar creation stories despite geographic separation?",
+        "How do creation myths establish cultural values and worldviews?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Define mythology and distinguish myths from legends, folktales, and fairy tales",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["MTS1"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze common patterns in creation myths from different cultures",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["MTS1", "MTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate how creation myths reflect cultural values and worldviews",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["MTS2", "MTS4"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: What is Mythology?",
+          "description": "Definition of myth, functions of mythology, myth vs. other narrative forms",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Creation Myths Across Cultures",
+          "description": "Ex nihilo creation, emergence myths, world parent myths, cosmic egg myths",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Cultural Functions of Mythology",
+          "description": "Social cohesion, moral instruction, explaining natural phenomena, establishing authority",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 key mythological terms with their correct definitions. Terms include archetype, cosmogony, theogony, pantheon, and more. You have 2 attempts and 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA2",
+          "title": "LA2: Mythology Traditions & Figures",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Answer 10 multiple-choice questions about creation myths from various cultures including Greek, Norse, Egyptian, and Indigenous American traditions. You have 2 attempts and 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M1-LA3",
+          "title": "LA3: Creation Myth Patterns",
+          "format": "Categorization Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2, 3],
+          "studentInstructions": "Categorize 12 creation myths by type: Ex Nihilo (from nothing), Emergence (from underworld), World Parent (separation), or Cosmic Egg. You have 2 attempts and 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 1 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 1 Project Checkpoint: Choosing Your Modern Myth",
+          "points": 50,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Hero's Journey & Epic Tales",
+      "dates": "Week 3-4",
+      "theme": "The Monomyth",
+      "inquiryQuestions": [
+        "What makes a character a mythological hero versus an ordinary protagonist?",
+        "Why does the Hero's Journey pattern appear in stories across all cultures and time periods?",
+        "How do cultural values shape the specific challenges and trials heroes face?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Explain Joseph Campbell's Hero's Journey framework and its stages",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["MTS1"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze how classical heroes from different cultures embody their society's values",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO2"],
+          "linkedSkills": ["MTS2", "MTS3"]
+        },
+        {
+          "number": 3,
+          "text": "Compare heroic journeys across Greek, Norse, Mesopotamian, and other mythological traditions",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1"],
+          "linkedSkills": ["MTS3"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: The Hero's Journey Framework",
+          "description": "Campbell's monomyth, departure-initiation-return structure, threshold guardians, mentors",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Classical Heroes",
+          "description": "Gilgamesh, Odysseus, Beowulf, Rama, characteristics of mythological heroes",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Cultural Heroic Ideals",
+          "description": "Greek arete, Norse honor, Eastern duty, heroic codes across cultures",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including monomyth, arete, threshold guardian, call to adventure, apotheosis, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA2",
+          "title": "LA2: Heroes & Their Journeys",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Gilgamesh, Odysseus, Beowulf, and the stages of the Hero's Journey. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M2-LA3",
+          "title": "LA3: Hero's Journey Stages",
+          "format": "Sequencing Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Sequence the 12 stages of Campbell's Hero's Journey in correct order and match examples from classical myths. 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 2 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 1: Heroic Ideals & Portfolio Piece #2",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "Modern Mythology: Star Wars Universe",
+      "dates": "Week 5-6",
+      "theme": "A Galaxy Far, Far Away",
+      "inquiryQuestions": [
+        "How does Star Wars consciously recreate the Hero's Journey for modern audiences?",
+        "What ancient mythological elements does George Lucas adapt in the Star Wars saga?",
+        "How does the Force function as a modern mythological belief system?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze how Star Wars embodies Campbell's Hero's Journey structure",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO3"],
+          "linkedSkills": ["MTS1", "MTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Identify classical mythological archetypes in Star Wars characters and themes",
+          "bloomsLevel": "Apply",
+          "linkedCLOs": ["CLO3"],
+          "linkedSkills": ["MTS4", "MTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate how Star Wars creates a modern mythology that resonates with contemporary audiences",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["MTS5", "MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Luke Skywalker's Hero's Journey",
+          "description": "Call to adventure, mentors (Obi-Wan, Yoda), trials, abyss, transformation, return",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Mythological Archetypes in Star Wars",
+          "description": "Wise old man (Yoda), shadow (Vader), trickster (Han Solo), maiden (Leia), divine twins",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: The Force as Modern Mythology",
+          "description": "Dualism (light/dark), Eastern philosophy influences, Jedi as mythic warrior-monks",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including archetypes, the Force, threshold guardian, apotheosis, shadow self, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA2",
+          "title": "LA2: Star Wars Characters & Archetypes",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Star Wars characters, their mythological parallels, and Hero's Journey stages. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M3-LA3",
+          "title": "LA3: Mapping Luke's Journey",
+          "format": "Categorization OR Sequencing (Student Choice)",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Choose between mapping Luke's journey to Campbell's stages OR categorizing Star Wars elements by mythological tradition. 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M3-LA4",
+          "title": "LA4: Star Wars Mythology Analysis",
+          "format": "Mixed Question Types",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "linkedSkills": ["MTS6"],
+          "studentInstructions": "Analyze narrative structure data, character archetype patterns, and thematic elements across the Star Wars saga. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 3 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 3 Project Checkpoint: Analyzing Your Modern Myth",
+          "points": 100,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2, 3],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Modern Mythology: Tolkien's Legendarium",
+      "dates": "Week 7-8",
+      "theme": "Middle-earth's Mythic Foundation",
+      "inquiryQuestions": [
+        "How did Tolkien deliberately create a complete mythology for England?",
+        "What elements from Norse, Finnish, Celtic, and Christian mythology appear in Middle-earth?",
+        "How does The Lord of the Rings function as a modern epic in the classical tradition?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Explain Tolkien's Legendarium as a constructed mythology with creation myth, pantheon, and cosmology",
+          "bloomsLevel": "Understand",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["MTS1", "MTS2"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze mythological influences from Norse, Finnish, Celtic, and Christian traditions in Middle-earth",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["MTS3", "MTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate how Tolkien's work bridges ancient mythology and modern fantasy literature",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["MTS5", "MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: The Ainulindalë - Tolkien's Creation Myth",
+          "description": "Eru Ilúvatar, Ainur, Music of Creation, Melkor's discord, Valar and Maiar",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Mythological Influences in Middle-earth",
+          "description": "Norse (dwarves, cursed rings), Finnish (Kalevala), Celtic (elves), Greek (Atlantis/Númenor)",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Frodo's Quest as Epic Journey",
+          "description": "Fellowship structure, ring as cursed object, themes of sacrifice and mercy",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including Ainulindalë, Valar, Legendarium, Andvaranaut, Middle-earth, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA2",
+          "title": "LA2: Characters & Mythological Parallels",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Middle-earth mythology, characters, and their classical parallels. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M4-LA3",
+          "title": "LA3: Mythological Sources Identification",
+          "format": "Categorization Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2],
+          "studentInstructions": "Categorize 12 Middle-earth elements by their mythological source: Norse, Finnish, Celtic, Greek, or Christian. 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Midterm Exam",
+          "title": "Module 4 Midterm Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 1-4"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 2: Creating Modern Mythology & Portfolio Piece #4",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "Modern Mythology: Harry Potter & Wizarding World",
+      "dates": "Week 9-10",
+      "theme": "The Chosen One",
+      "inquiryQuestions": [
+        "How does Harry Potter adapt classical hero myths for contemporary young adult audiences?",
+        "What mythological creatures and magical traditions does Rowling draw from world mythology?",
+        "How does the wizarding world function as a hidden mythological realm alongside ordinary reality?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze Harry Potter's journey using the Hero's Journey framework",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO3"],
+          "linkedSkills": ["MTS1", "MTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Identify mythological creatures, symbols, and traditions from diverse world mythologies in the series",
+          "bloomsLevel": "Apply",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["MTS3", "MTS4"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate how the series addresses themes of death, sacrifice, and immortality common in mythology",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Harry as the Chosen One",
+          "description": "Prophesied hero, orphan archetype, mentor figures (Dumbledore), trials across seven books",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Mythological Creatures & Magical Traditions",
+          "description": "Greek (basilisk, centaur), Celtic (banshee), Egyptian (sphinx), alchemical traditions",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Death, Sacrifice, and the Deathly Hallows",
+          "description": "Tale of Three Brothers, sacrifice as transformative power, Horcruxes and immortality",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including chosen one, Horcrux, basilisk, prophecy, Deathly Hallows, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA2",
+          "title": "LA2: Characters & Mythological Roles",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about Harry Potter characters, magical creatures, and their mythological origins. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M5-LA3",
+          "title": "LA3: Creature Origins Matching",
+          "format": "Matching Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2],
+          "studentInstructions": "Match 12 magical creatures from Harry Potter to their mythological tradition of origin (Greek, Celtic, Norse, Egyptian, etc.). 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 5 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Project Checkpoint",
+          "title": "Module 5 Project Checkpoint: Comparative Mythology Analysis",
+          "points": 100,
+          "rubric": "RUBRIC_1_Project_Checkpoints",
+          "linkedMLOs": [1, 2, 3],
+          "linkedCLOs": ["CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Superhero Mythology & Comic Book Universes",
+      "dates": "Week 11-12",
+      "theme": "Modern Pantheons",
+      "inquiryQuestions": [
+        "How do superhero origin stories mirror classical divine and heroic myths?",
+        "What makes the Marvel and DC universes function as modern pantheons?",
+        "How do superheroes address contemporary moral questions through mythological frameworks?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Analyze superhero origin stories as modern versions of divine birth and transformation myths",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO3"],
+          "linkedSkills": ["MTS1", "MTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Compare superhero teams and rivalries to classical pantheon structures and divine conflicts",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO1", "CLO3"],
+          "linkedSkills": ["MTS3", "MTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate how superhero narratives reflect and shape contemporary cultural values",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Superhero Origins as Transformation Myths",
+          "description": "Spider-Man (bite), Superman (divine alien), Batman (trauma), X-Men (mutation as difference)",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Marvel & DC as Modern Pantheons",
+          "description": "Avengers as Olympians, Justice League hierarchy, Thor's actual Norse mythology, god-tier characters",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Superhero Ethics & Contemporary Values",
+          "description": "Power and responsibility, vigilante justice, Civil War as mythic conflict, diversity and representation",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including origin story, pantheon, alter ego, multiverse, cosmic entity, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA2",
+          "title": "LA2: Superheroes & Mythological Parallels",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about superheroes, their origins, and parallels to classical mythology. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M6-LA3",
+          "title": "LA3: Superhero-God Comparisons",
+          "format": "Matching Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [2],
+          "studentInstructions": "Match 12 superheroes to their closest classical mythological parallel based on powers, personality, and role. 2 attempts, 25 minutes."
+        },
+        {
+          "type": "Data Analysis Activity",
+          "id": "M6-LA4",
+          "title": "LA4: Analyzing Superhero Mythology Impact",
+          "format": "Mixed Question Types",
+          "points": 25,
+          "attempts": 2,
+          "timeLimit": 35,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "linkedSkills": ["MTS6"],
+          "studentInstructions": "Analyze data on superhero origin patterns, character archetype distribution, and cultural impact across comic book history. 2 attempts, 35 minutes.",
+          "featured": true
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 6 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 3: Modern Myths & Cultural Values",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "Mythology in Popular Culture",
+      "dates": "Week 13-14",
+      "theme": "Myths All Around Us",
+      "inquiryQuestions": [
+        "How do video games, anime, and streaming series adapt mythological narratives?",
+        "What role does mythology play in brand storytelling and advertising?",
+        "How do internet memes and viral stories function as modern folklore?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Identify mythological elements in diverse media including games, television, and digital culture",
+          "bloomsLevel": "Apply",
+          "linkedCLOs": ["CLO3"],
+          "linkedSkills": ["MTS5"]
+        },
+        {
+          "number": 2,
+          "text": "Analyze how brands and corporations use mythological storytelling for cultural impact",
+          "bloomsLevel": "Analyze",
+          "linkedCLOs": ["CLO2", "CLO3"],
+          "linkedSkills": ["MTS5", "MTS6"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate the creation and spread of modern myths through digital and social media",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2"],
+          "linkedSkills": ["MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Mythology in Video Games & Anime",
+          "description": "God of War, Zelda mythology, Studio Ghibli, anime mythological adaptations",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Brand Mythology & Corporate Storytelling",
+          "description": "Apple's creation myth, Nike and goddess of victory, mythic archetypes in advertising",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Digital Folklore & Internet Mythology",
+          "description": "Urban legends, creepypasta, memes as modern myths, viral storytelling",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including brand mythology, digital folklore, transmedia, archetype marketing, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA2",
+          "title": "LA2: Pop Culture Mythology",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about mythology in games, media, branding, and digital culture. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M7-LA3",
+          "title": "LA3: Mythological Elements Identification",
+          "format": "Categorization Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Categorize 12 popular culture examples by the type of mythology they employ or reference. 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Module Quiz",
+          "title": "Module 7 Quiz",
+          "points": 25,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3]
+        },
+        {
+          "type": "Final Project",
+          "title": "Module 7 Final Portfolio: 'Modern Myth Analysis' Complete Journey",
+          "points": 200,
+          "rubric": "RUBRIC_3_Final_Project",
+          "linkedMLOs": [1, 2, 3],
+          "linkedCLOs": ["CLO1", "CLO2", "CLO3", "CLO4"]
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Creating Your Own Modern Myth",
+      "dates": "Week 15-16",
+      "theme": "Becoming a Mythmaker",
+      "inquiryQuestions": [
+        "What essential elements must a story have to function as a modern myth?",
+        "How can you consciously incorporate mythological patterns while creating original narratives?",
+        "What makes a story resonate across cultures and generations?"
+      ],
+      "mlos": [
+        {
+          "number": 1,
+          "text": "Apply mythological structures and archetypes to create original narratives",
+          "bloomsLevel": "Apply",
+          "linkedCLOs": ["CLO4"],
+          "linkedSkills": ["MTS1", "MTS4"]
+        },
+        {
+          "number": 2,
+          "text": "Synthesize elements from diverse mythological traditions into cohesive new stories",
+          "bloomsLevel": "Create",
+          "linkedCLOs": ["CLO4"],
+          "linkedSkills": ["MTS3", "MTS5"]
+        },
+        {
+          "number": 3,
+          "text": "Evaluate the effectiveness of mythological storytelling in contemporary contexts",
+          "bloomsLevel": "Evaluate",
+          "linkedCLOs": ["CLO2", "CLO4"],
+          "linkedSkills": ["MTS6"]
+        }
+      ],
+      "content": [
+        {
+          "type": "Instructional Content",
+          "title": "IC1: Building Mythological Worlds",
+          "description": "Cosmology, pantheon structure, magic systems, world-building fundamentals",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC2: Character Archetypes & Development",
+          "description": "Hero variants, mentor figures, shadow antagonists, tricksters, creating memorable characters",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        },
+        {
+          "type": "Instructional Content",
+          "title": "IC3: Thematic Depth & Cultural Resonance",
+          "description": "Universal themes, cultural specificity, moral complexity, contemporary relevance",
+          "guidedNotes": true,
+          "knowledgeCheck": true
+        }
+      ],
+      "activities": [
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA1",
+          "title": "LA1: Key Terms & Concepts",
+          "format": "Matching Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 20,
+          "questionCount": 15,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Match 15 terms including world-building, cosmology, character arc, thematic unity, and more. 2 attempts, 20 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA2",
+          "title": "LA2: Mythmaking Techniques",
+          "format": "Multiple Choice Quiz",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 30,
+          "questionCount": 10,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "studentInstructions": "Answer 10 questions about narrative construction, archetype usage, and effective mythological storytelling. 2 attempts, 30 minutes."
+        },
+        {
+          "type": "Learning Activity",
+          "id": "M8-LA3",
+          "title": "LA3: Story Element Analysis",
+          "format": "Matching Activity",
+          "points": 20,
+          "attempts": 2,
+          "timeLimit": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2],
+          "studentInstructions": "Match 12 story elements to their mythological function or archetype category. 2 attempts, 25 minutes."
+        }
+      ],
+      "assessments": [
+        {
+          "type": "Final Exam",
+          "title": "Module 8 Final Exam",
+          "points": 50,
+          "questionCount": 25,
+          "autoGraded": true,
+          "linkedMLOs": [1, 2, 3],
+          "coverage": "Modules 1-8"
+        },
+        {
+          "type": "Discussion Board",
+          "title": "Discussion Board 4: Mythology's Future & Final Reflection",
+          "points": 100,
+          "rubric": "RUBRIC_2_Discussion_Boards",
+          "linkedMLOs": [2, 3],
+          "linkedCLOs": ["CLO2", "CLO4"]
+        }
+      ]
+    }
+  ]
+}
