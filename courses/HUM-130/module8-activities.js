@@ -209,3 +209,36 @@ const module8Quiz = {
         }
     ]
 };
+
+// Module 8 Final Exam
+const finalExam = {
+    title: "Final Exam: Mythology from Ancient Times to Modern Pop Culture",
+    instructions: "Comprehensive final exam covering ALL course content. 25 questions, 120 minutes.",
+    questions: [
+        { q: "Joseph Campbell's 'Hero's Journey' is also called:", answers: ["Polytheism", "Monomyth ✓", "Archetype", "Katabasis"], correct: 1 },
+        { q: "Which archetype represents the hero's dark potential?", answers: ["Mentor", "Shadow ✓", "Anima", "Trickster"], correct: 1 },
+        { q: "The One Ring is inspired by which Norse object?", answers: ["Mjolnir", "Gungnir", "Andvaranaut ✓", "Gram"], correct: 2 },
+        { q: "Harry Potter parallels which Greek hero?", answers: ["Odysseus", "Hercules", "Perseus ✓", "Theseus"], correct: 2 },
+        { q: "Spider-Man's motto reflects:", answers: ["Greek hubris", "Modern ethical heroism ✓", "Norse fatalism", "Hindu karma"], correct: 1 },
+        { q: "Ainulindalë describes creation through:", answers: ["Battle", "Music ✓", "Speech", "Sacrifice"], correct: 1 },
+        { q: "Dumbledore's death serves which function?", answers: ["Call to Adventure", "Death of Mentor ✓", "Ordeal", "Return with Elixir"], correct: 1 },
+        { q: "Wonder Woman draws from which culture?", answers: ["Spartans", "Vikings", "Amazons ✓", "Samurai"], correct: 2 },
+        { q: "Thanos believes his plan will:", answers: ["Destroy universe", "Save universe through balance ✓", "Rule universe", "Remake universe"], correct: 1 },
+        { q: "What is Sanderson's First Law?", answers: ["Magic must be scientific", "Ability to solve problems with magic proportional to reader understanding ✓", "Avoid magic", "Magic must be rare"], correct: 1 },
+        { q: "Ex nihilo creation means:", answers: ["From nothing ✓", "From chaos", "From parent gods", "From cosmic egg"], correct: 0 },
+        { q: "Which is NOT Campbell's stage?", answers: ["Ordinary World", "Meeting Mentor", "Political debate ✓", "Ordeal"], correct: 2 },
+        { q: "Jung's 'collective unconscious' contains:", answers: ["Personal memories", "Universal archetypes ✓", "Cultural beliefs only", "Scientific facts"], correct: 1 },
+        { q: "Katabasis means:", answers: ["Ascension", "Descent to underworld ✓", "Homecoming", "Battle"], correct: 1 },
+        { q: "Which modern myth uses Hero's Journey?", answers: ["All of these ✓", "Star Wars", "Harry Potter", "MCU"], correct: 0 },
+        { q: "Trickster figures like Loki serve to:", answers: ["Only cause harm", "Challenge norms and catalyze change ✓", "Provide comedy only", "Defeat heroes"], correct: 1 },
+        { q: "Myth's primary function is:", answers: ["Entertainment only", "Explain world and teach values ✓", "Historical record", "Scientific explanation"], correct: 1 },
+        { q: "The Force in Star Wars parallels:", answers: ["Science", "Taoist universal energy ✓", "Technology", "Political system"], correct: 1 },
+        { q: "Chosen One archetype appears in:", answers: ["Harry Potter", "Neo (Matrix)", "Luke Skywalker", "All of these ✓"], correct: 3 },
+        { q: "Sacrifice in mythology represents:", answers: ["Weakness", "Transformation and rebirth ✓", "Defeat", "Accident"], correct: 1 },
+        { q: "Modern superhero myths serve:", answers: ["Same functions as ancient myths ✓", "No cultural purpose", "Only profit", "Pure entertainment"], correct: 0 },
+        { q: "Campbell studied myths from:", answers: ["Only Greek", "Only Western", "Worldwide cultures ✓", "Only modern"], correct: 2 },
+        { q: "Archetypes are:", answers: ["Clichés to avoid", "Universal patterns in stories ✓", "Outdated concepts", "Modern inventions"], correct: 1 },
+        { q: "Why do myths persist?", answers: ["Address fundamental human questions ✓", "No new stories", "Laziness", "Coincidence"], correct: 0 },
+        { q: "Contemporary culture creates myths through:", answers: ["Film, TV, games, comics ✓", "Nothing - myths are dead", "Academic study only", "Religious texts only"], correct: 0 }
+    ]
+};

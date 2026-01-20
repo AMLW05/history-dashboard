@@ -213,3 +213,36 @@ Visual analysis of the One Ring as mythological symbol
 **Tools**: Canva, PowerPoint, hand-drawn, poster, digital collage`,
     rubric: "Project Checkpoint Rubric (see Rubrics tab)"
 };
+
+// Module 4 Midterm Exam
+const module4Midterm = {
+    title: "Midterm Exam: Mythology Foundations (Modules 1-4)",
+    instructions: "Comprehensive exam covering creation myths, hero's journey, Star Wars, and Tolkien. 25 questions, 90 minutes.",
+    questions: [
+        { q: "Which Egyptian deity created the world through speech/thought?", answers: ["Osiris", "Atum/Ra ✓", "Set", "Anubis"], correct: 1 },
+        { q: "The Hero's Journey has how many stages according to Joseph Campbell?", answers: ["10", "12 ✓", "15", "8"], correct: 1 },
+        { q: "In Star Wars, who serves as Luke's primary mentor in A New Hope?", answers: ["Yoda", "Obi-Wan Kenobi ✓", "Han Solo", "Leia"], correct: 1 },
+        { q: "Tolkien's supreme deity is called:", answers: ["Manwë", "Melkor", "Eru Ilúvatar ✓", "Sauron"], correct: 2 },
+        { q: "Which creation myth involves cosmic eggs?", answers: ["Egyptian", "Greek", "Chinese (Pangu) ✓", "Norse"], correct: 2 },
+        { q: "The 'Ordeal' stage represents:", answers: ["Call to adventure", "Hero's greatest test/death-rebirth ✓", "Meeting mentor", "Returning home"], correct: 1 },
+        { q: "Darth Vader functions as which archetype for Luke?", answers: ["Mentor", "Trickster", "Shadow ✓", "Anima"], correct: 2 },
+        { q: "Which epic influenced Tolkien's work?", answers: ["Edda", "Beowulf", "Kalevala ✓", "Nibelungenlied"], correct: 2 },
+        { q: "In Popol Vuh, Maya gods create humans from:", answers: ["Clay", "Maize/corn ✓", "Wood", "Stone"], correct: 1 },
+        { q: "Gilgamesh seeks immortality after whose death?", answers: ["His father", "Enkidu ✓", "His wife", "Humbaba"], correct: 1 },
+        { q: "What is Campbell's 'monomyth'?", answers: ["Single myth theory", "Universal Hero's Journey pattern ✓", "Greek mythology only", "Creation myths"], correct: 1 },
+        { q: "Star Wars drew from which samurai filmmaker?", answers: ["Ozu", "Kurosawa ✓", "Mizoguchi", "Kitano"], correct: 1 },
+        { q: "The One Ring parallels which Norse object?", answers: ["Mjolnir", "Gungnir", "Andvaranaut ✓", "Gram"], correct: 2 },
+        { q: "Which stage: hero refuses the adventure?", answers: ["Ordinary World", "Call to Adventure", "Refusal of Call ✓", "Meeting Mentor"], correct: 2 },
+        { q: "Yoda represents which archetype?", answers: ["Mentor ✓", "Shadow", "Trickster", "Herald"], correct: 0 },
+        { q: "Tolkien's creation through music appears in:", answers: ["Silmarillion ✓", "Hobbit", "LOTR only", "Unfinished Tales"], correct: 0 },
+        { q: "Greek 'hubris' means:", answers: ["Fate", "Excessive pride ✓", "Glory", "Homecoming"], correct: 1 },
+        { q: "Luke's journey mirrors which classical hero?", answers: ["Odysseus ✓", "Achilles", "Hector", "Ajax"], correct: 0 },
+        { q: "Middle-earth derives from Norse:", answers: ["Asgard", "Valhalla", "Midgard ✓", "Jotunheim"], correct: 2 },
+        { q: "The 'elixir' is:", answers: ["Magic potion", "Knowledge/gift hero brings back ✓", "Treasure only", "Weapon"], correct: 1 },
+        { q: "Force in Star Wars parallels:", answers: ["Technology", "Universal spiritual energy/Tao ✓", "Magic spells", "Political power"], correct: 1 },
+        { q: "Tolkien's eucatastrophe means:", answers: ["Disaster", "Sudden joyous turn ✓", "Evil victory", "Character death"], correct: 1 },
+        { q: "Which is NOT a creation type?", answers: ["Ex nihilo", "Emergence", "World parent", "Hero's journey ✓"], correct: 3 },
+        { q: "Han Solo sometimes acts as:", answers: ["Mentor", "Shadow", "Trickster ✓", "Threshold guardian"], correct: 2 },
+        { q: "Gandalf is a:", answers: ["Vala", "Maiar ✓", "Elf", "Human wizard"], correct: 1 }
+    ]
+};
