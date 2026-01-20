@@ -9,24 +9,25 @@
     "textbook": "Free Online Resources & Course Materials",
     "textbookURL": "",
     "description": "This course provides an in-depth study of myths and legends. Topics include the varied sources of myths and their influence on the individual and society within diverse cultural contexts. Upon completion, students should be able to demonstrate a general familiarity with myths and a broad-based understanding of the influence of myths and legends on modern culture.",
-    "status": "building",
-    "completionPercent": 50,
+    "status": "ready-for-review",
+    "completionPercent": 100,
     "qmStandardsMet": 0,
     "qmStandardsTotal": 22,
-    "totalPoints": 1580,
-    "autoGradedPercent": 52,
+    "totalPoints": 1630,
+    "autoGradedPercent": 48,
     "totalActivities": 26
   },
   "statistics": {
     "modules": 8,
     "learningActivities": 26,
-    "quizzes": 8,
+    "quizzes": 6,
+    "exams": 2,
     "checkpoints": 3,
     "discussions": 4,
     "finalProject": 1,
     "dataAnalysisActivities": 2,
-    "autoGradedPoints": 820,
-    "manualGradedPoints": 760
+    "autoGradedPoints": 780,
+    "manualGradedPoints": 850
   },
   "clos": [
     {
@@ -53,7 +54,7 @@
     {
       "id": "CLO4",
       "number": 4,
-      "text": "Create original analysis demonstrating understanding of mythological influence on modern culture",
+      "text": "Construct original analysis that synthesizes mythological patterns and evaluates their influence on modern culture",
       "bloomsLevel": "Create",
       "category": "Creative Application"
     }
