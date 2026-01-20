@@ -14,9 +14,30 @@ fetch('course-data.json')
 
 function renderAll() {
     renderModules();
-    renderRubrics();
+    renderCLOs();
     renderSkills();
+    renderOERResources();
     renderResources();
+    renderRubrics();
+}
+
+function renderCLOs() {
+    const container = document.getElementById('clos-container');
+    if (!container || !courseData) return;
+
+    let html = '<div class="clo-grid">';
+    courseData.clos.forEach(clo => {
+        html += `<div class="clo-card">
+            <div class="clo-number">${clo.number}</div>
+            <div class="clo-text"><strong>${clo.text}</strong></div>
+            <div style="margin-top:10px; font-size:0.9em; color:var(--ink-light)">
+                <strong>Level:</strong> ${clo.bloomsLevel}<br>
+                <strong>Category:</strong> ${clo.category}
+            </div>
+        </div>`;
+    });
+    html += '</div>';
+    container.innerHTML = html;
 }
 
 function showTab(id) {
