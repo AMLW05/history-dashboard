@@ -352,11 +352,3 @@ const module8Activities = {
         }
     }
 };
-
-// Quizzes for remaining modules (simplified structure)
-const module2Quiz = { questions: [/* 10 questions similar to module1Quiz */] };
-const module4Quiz = { questions: [/* 10 questions */] };
-const module5Quiz = { questions: [/* 10 questions */] };
-const module6Quiz = { questions: [/* 10 questions */] };
-const module7Quiz = { questions: [/* 10 questions */] };
-const module8Quiz = { questions: [/* 10 questions */] };
