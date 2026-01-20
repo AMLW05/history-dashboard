@@ -10,8 +10,9 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>📖 HUM-130: Myth in Human Culture</h1>
-            <p>From Ancient Legends to Modern Storytelling | Spring 2026</p>
+            <a href="../../index.html" style="position:absolute;top:20px;left:20px;color:var(--parchment);text-decoration:none;font-weight:bold;padding:10px 20px;background:rgba(255,255,255,0.1);border-radius:6px;border:2px solid var(--parchment);">← Dashboard</a>
+            <h1>HUM-130: Myth in Human Culture</h1>
+            <p>From Ancient Legends to Modern Storytelling • Spring 2026 • FTCC</p>
         </div>
 
         <!-- Statistics Grid -->
@@ -37,57 +38,69 @@
                 <div class="stat-label">CLOs</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">✅ Ready</div>
-                <div class="stat-label">Status</div>
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Complete</div>
             </div>
         </div>
 
         <!-- Navigation Tabs -->
         <div class="nav-tabs">
-            <button class="nav-tab active" onclick="showTab('tab-modules')">📚 Modules</button>
-            <button class="nav-tab" onclick="showTab('tab-clos')">🎯 Learning Outcomes</button>
-            <button class="nav-tab" onclick="showTab('tab-skills')">🧩 Skills</button>
-            <button class="nav-tab" onclick="showTab('tab-oer')">📖 Free Textbooks</button>
-            <button class="nav-tab" onclick="showTab('tab-resources')">📋 Course Resources</button>
-            <button class="nav-tab" onclick="showTab('tab-rubrics')">📊 Rubrics</button>
+            <button class="nav-tab active" onclick="showTab('overview')">Overview</button>
+            <button class="nav-tab" onclick="showTab('modules')">Modules</button>
+            <button class="nav-tab" onclick="showTab('rubrics')">Rubrics</button>
+            <button class="nav-tab" onclick="showTab('skills')">Skills</button>
+            <button class="nav-tab" onclick="window.open('../../skills-matrix.html', '_blank')">Skills Matrix</button>
+            <button class="nav-tab" onclick="showTab('resources')">Resources</button>
+        </div>
+
+        <!-- Tab: Overview -->
+        <div id="overview" class="tab-content active">
+            <h2 class="section-title">Course Overview</h2>
+            <p class="instruction-text">This course provides an in-depth study of myths and legends from ancient times through modern pop culture. Topics include the varied sources of myths and their influence on the individual and society within diverse cultural contexts.</p>
+            <div class="clo-grid">
+                <div class="clo-card">
+                    <div class="clo-number">1</div>
+                    <p>Analyze the structure, function, and significance of myths across diverse cultures</p>
+                </div>
+                <div class="clo-card">
+                    <div class="clo-number">2</div>
+                    <p>Evaluate how myths reflect and shape cultural values, beliefs, and identities</p>
+                </div>
+                <div class="clo-card">
+                    <div class="clo-number">3</div>
+                    <p>Apply mythological archetypes and patterns to interpret modern narratives</p>
+                </div>
+                <div class="clo-card">
+                    <div class="clo-number">4</div>
+                    <p>Demonstrate understanding of mythological influence on contemporary culture</p>
+                </div>
+            </div>
         </div>
 
         <!-- Tab: Modules -->
-        <div id="tab-modules" class="tab-content active">
-            <h2 class="section-title">📚 Course Modules</h2>
-            <p class="instruction-text">Click on any module to expand and view content, activities, and assessments. Use the Print/Copy button to export module content.</p>
+        <div id="modules" class="tab-content">
+            <h2 class="section-title">Course Modules</h2>
+            <p class="instruction-text">Click any module to expand and view activities, questions, and assessments.</p>
             <div id="modules-container"></div>
         </div>
 
-        <!-- Tab: CLOs -->
-        <div id="tab-clos" class="tab-content">
-            <h2 class="section-title">🎯 Course Learning Outcomes (CLOs)</h2>
-            <p class="instruction-text">These are the key competencies you'll develop throughout HUM-130</p>
-            <div id="clos-container"></div>
+        <!-- Tab: Rubrics -->
+        <div id="rubrics" class="tab-content">
+            <h2 class="section-title">Course Rubrics</h2>
+            <div id="rubrics-container"></div>
         </div>
 
         <!-- Tab: Skills -->
-        <div id="tab-skills" class="tab-content">
-            <h2 class="section-title">🧩 Mythological Thinking Skills</h2>
-            <p class="instruction-text">Skills that scaffold across modules, building your ability to analyze and create mythological narratives</p>
+        <div id="skills" class="tab-content">
+            <h2 class="section-title">Mythological Thinking Skills</h2>
             <div id="skills-container"></div>
         </div>
 
-        <!-- Tab: OER -->
-        <div id="tab-oer" class="tab-content">
-            <div id="oer-container"></div>
-        </div>
-
         <!-- Tab: Resources -->
-        <div id="tab-resources" class="tab-content">
+        <div id="resources" class="tab-content">
+            <h2 class="section-title">Course Resources</h2>
+            <p class="instruction-text">Essential materials, guides, and tools to support your learning throughout the semester.</p>
             <div id="resources-container"></div>
-        </div>
-
-        <!-- Tab: Rubrics -->
-        <div id="tab-rubrics" class="tab-content">
-            <h2 class="section-title">📊 Assessment Rubrics</h2>
-            <p class="instruction-text">Grading criteria for major assignments</p>
-            <div id="rubrics-container"></div>
         </div>
     </div>
 

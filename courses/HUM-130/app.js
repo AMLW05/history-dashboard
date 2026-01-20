@@ -14,11 +14,9 @@ fetch('course-data.json')
 
 function renderAll() {
     renderModules();
-    renderCLOs();
-    renderSkills();
-    renderOERResources();
-    renderResources();
     renderRubrics();
+    renderSkills();
+    renderResources();
 }
 
 function renderCLOs() {
