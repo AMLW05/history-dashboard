@@ -54,99 +54,107 @@ Analyze how the Hero's Journey appears in ONE classical epic tale (Gilgamesh, Th
 
 // MODULE 1 - Project Checkpoint 1
 const module1Project = {
-    title: "Portfolio Checkpoint 1: Creation Myth Analysis",
-    instructions: `**Portfolio Project Overview**: Throughout this course, you'll build a portfolio analyzing mythological patterns from ancient times through modern pop culture. Each checkpoint develops one piece of your final portfolio.
+    title: "Portfolio Checkpoint 1: Creation Myths",
+    instructions: `**Checkpoint 1: Creation Myths - Ancient & Modern** (100 points)
 
-**Checkpoint 1: Creation Myth Analysis** (100 points)
+**CHOOSE ONE OPTION**:
 
-**Assignment**: Create a detailed analysis comparing ONE ancient creation myth to ONE modern creation story (film, TV series, comic, novel, game).
+**OPTION 1: Creation Myth Comparison Poster**
+Compare ONE ancient creation myth to ONE modern creation story
+- Ancient: Egyptian, Greek, Norse, Mesopotamian, Hindu, Maya, Chinese
+- Modern: MCU Infinity Stones, Star Wars Force, LOTR Ainulindalë, Matrix, DC multiverse
+- Visual side-by-side showing: chaos→creation, divine beings, cosmic order, origin of evil
+- 150-200 word reflection on shared patterns
 
-**Ancient Options**: Egyptian (Atum/Ra), Greek (Chaos), Norse (Ymir), Mesopotamian (Enuma Elish), Hindu (Brahma), Maya (Popol Vuh), Yoruba (Olodumare), Chinese (Pangu)
+**OPTION 2: Creation Myth Comic Strip / Storyboard**
+Illustrate ONE creation myth (ancient or modern) as 6-8 panel visual story
+- Show key stages: void/chaos, divine action, world-shaping, humanity's origin, introduction of conflict/death
+- Can be hand-drawn, digital, or collage
+- 100-150 word caption explaining mythological significance
 
-**Modern Options**: MCU (Big Bang/Infinity Stones), DC (Source/Anti-Life), Star Wars (Force origins), Matrix (Machine War), Dune (Bene Gesserit/Fremen mythology), Lord of the Rings (Ainulindalë)
+**OPTION 3: World Creation Infographic**
+Create infographic comparing 3-4 different creation myths from different cultures
+- Show what each culture valued through their creation story
+- Visual elements: gods/forces, creation method, human origin, purpose
+- 150-200 word analysis of patterns across cultures
 
-**Requirements**:
-1. **Summary** (150-200 words): Summarize BOTH creation stories
-2. **Pattern Analysis** (300-400 words): Identify shared mythological patterns:
-   - Creation from chaos/void
-   - Role of sacrifice or conflict in creation
-   - Establishment of cosmic order
-   - Creation of humanity/life
-   - Origin of death, suffering, or evil
-3. **Cultural Function** (200-300 words): Explain what each story reveals about its culture's values, fears, and worldview
-4. **Visual Component**: Create a comparative diagram showing parallels between ancient and modern myths
-5. **Bibliography**: Cite at least 3 scholarly sources (OER resources provided in Free Textbooks tab)
+**OPTION 4: "My Culture's Creation Story" Project**
+Research and present YOUR family's or community's creation myth/origin story
+- Could be religious, cultural, or family immigration/founding narrative
+- Visual presentation with images
+- 200-250 word reflection connecting personal myth to universal patterns
 
-**Submission Format**:
-- Google Doc OR Word document (800-1,000 words total)
-- Include your visual diagram
-- Use MLA or APA citation format`,
-    rubric: "Project Checkpoint Rubric (see Rubrics tab)",
-    scaffolding: {
-        thesisTemplates: [
-            "[Modern work] reimagines the [ancient myth] creation pattern by transforming [specific element] to address contemporary concerns about [theme].",
-            "While [ancient myth] uses creation mythology to establish [cultural value], [modern work] adapts this pattern to explore [modern issue]."
-        ],
-        commonMistakes: [
-            "Simply summarizing both stories without analyzing patterns",
-            "Treating myths as primitive vs. modern stories as sophisticated",
-            "Ignoring cultural context and function of myths",
-            "Focusing only on superficial similarities"
-        ],
-        analysisQuestions: [
-            "What role does chaos/void play in each creation story?",
-            "How do divine or cosmic forces establish order?",
-            "What explains the origin of evil, suffering, or mortality?",
-            "What makes creation meaningful in each narrative?",
-            "How does the story justify or explain the world as it exists today?"
-        ]
-    }
+**Tools**: Poster board, Canva, PowerPoint, hand-drawn, digital art`,
+    rubric: "Project Checkpoint Rubric (see Rubrics tab)"
 };
 
-// MODULE 3 - Project Checkpoint 2
+// MODULE 2 - Project Checkpoint 2
+const module2Project = {
+    title: "Portfolio Checkpoint 2: Hero's Journey Analysis",
+    instructions: `**Checkpoint 2: Hero's Journey in Epic Tales or Modern Media** (100 points)
+
+**CHOOSE ONE OPTION**:
+
+**OPTION 1: Hero's Journey Wheel - Star Wars**
+Create a visual 12-stage Hero's Journey wheel/diagram for Luke Skywalker (Original Trilogy)
+- Map all 12 Campbell stages to specific scenes
+- Include images from the films for each stage
+- 100-150 word reflection on Luke as modern mythological hero
+
+**OPTION 2: Hero's Journey Wheel - Classical Epic**
+Create visual Hero's Journey wheel for Gilgamesh, Odysseus, Beowulf, or Rama
+- Map all 12 stages to the ancient epic
+- Include relevant artwork or imagery
+- 100-150 word reflection on ancient vs. modern heroism
+
+**OPTION 3: Comparative Hero Chart**
+Create side-by-side comparison of TWO heroes (one ancient, one modern)
+- Show how both follow the Hero's Journey pattern
+- Visual chart or infographic format
+- 150-200 word analysis of similarities and differences
+
+**OPTION 4: Personal Hero's Journey Map**
+Map a challenge YOU faced using Campbell's Hero's Journey
+- Identify your 12 stages in visual format
+- Explain your mentors, allies, ordeal, and elixir
+- 200-250 word reflection on how myth helps understand personal growth
+
+**Tools**: PowerPoint, Canva, hand-drawn (photographed), poster, digital art`,
+    rubric: "Project Checkpoint Rubric (see Rubrics tab)"
+};
+
+// MODULE 3 - Project Checkpoint 3 (Star Wars focus)
 const module3Project = {
-    title: "Portfolio Checkpoint 2: Star Wars Hero's Journey Mapping",
-    instructions: `**Checkpoint 2: Hero's Journey in Star Wars** (100 points)
+    title: "Portfolio Checkpoint 3: Star Wars Mythology Analysis",
+    instructions: `**Checkpoint 3: Star Wars & Mythology** (100 points)
 
-**Assignment**: Create a comprehensive Hero's Journey analysis of Luke Skywalker's journey in the Original Trilogy (A New Hope, Empire Strikes Back, Return of the Jedi).
+**CHOOSE ONE OPTION**:
 
-**Requirements**:
+**OPTION 1: Archetype Character Posters**
+Create 5 character posters showing Jungian archetypes in Star Wars
+- Hero (Luke), Shadow (Vader), Mentor (Obi-Wan/Yoda), Trickster (Han/R2), Anima (Leia)
+- Each poster: character image + 2-3 sentences explaining archetype
+- 150-200 word reflection: Why do these archetypes resonate?
 
-1. **12-Stage Mapping** (400-500 words):
-   Map ALL 12 stages of Campbell's Hero's Journey to specific scenes in the OT:
-   - Ordinary World (Tatooine farm life)
-   - Call to Adventure (Leia's message)
-   - Refusal of the Call ("I can't get involved")
-   - Meeting the Mentor (Obi-Wan)
-   - Crossing the Threshold (Leaving Tatooine)
-   - Tests, Allies, Enemies (Cantina, rescuing Leia, Death Star escape)
-   - Approach to Inmost Cave (Death Star assault planning)
-   - Ordeal (Trench run / confronting Vader on Bespin / facing Emperor)
-   - Reward (Destroying Death Star / learning truth / redeeming Vader)
-   - Road Back (Escaping / fleeing Cloud City / escaping Death Star II)
-   - Resurrection (Final confrontation, choosing light)
-   - Return with Elixir (Bringing hope to galaxy, restoring Jedi)
+**OPTION 2: Star Wars vs. Classical Myth Comparison Chart**
+Visual chart comparing Star Wars to ONE classical source (King Arthur, Odyssey, samurai films, Flash Gordon)
+- Identify 8-10 parallel elements
+- Include images from both
+- 150-200 word analysis of how Lucas transformed ancient patterns
 
-2. **Archetype Analysis** (300-400 words):
-   Identify and analyze key Jungian archetypes:
-   - Mentor (Obi-Wan, Yoda)
-   - Shadow (Vader as Luke's potential dark future)
-   - Anima (Leia representing Luke's emotional/relational growth)
-   - Trickster (R2-D2, Han Solo moments)
-   - Threshold Guardians (Stormtroopers, Jabba's palace)
+**OPTION 3: Force Philosophy Infographic**
+Create infographic exploring Force as modern mythology/religion
+- Compare Jedi Code to real philosophical traditions (Buddhism, Stoicism, Taoism, chivalry)
+- Visual representations of Light vs. Dark Side
+- 150-200 word reflection on why the Force resonates spiritually
 
-3. **Mythological Sources** (200-300 words):
-   Connect Star Wars to classical mythology:
-   - How does Luke's journey mirror classical heroes (Odysseus, Parsifal, King Arthur)?
-   - What elements draw from Arthurian legend, samurai films, or Flash Gordon?
-   - How does Lucas adapt ancient patterns for modern audiences?
+**OPTION 4: Empire vs. Rebellion Visual Essay**
+Create visual essay (poster, slides, infographic) analyzing political mythology
+- How does Star Wars use mythological good vs. evil for political storytelling?
+- Symbolism analysis (Empire = fascism, Rebellion = resistance movements)
+- 150-200 word reflection on myths and political identity
 
-4. **Visual Component**: Create a visual Hero's Journey wheel or diagram showing all 12 stages with corresponding Star Wars scenes
-
-**Submission Format**:
-- Google Doc OR Word document (900-1,200 words total)
-- Include visual Hero's Journey diagram
-- Cite Joseph Campbell's "Hero with a Thousand Faces" and 2+ other scholarly sources`,
+**Tools**: Canva, PowerPoint, poster board, digital art, collage`,
     rubric: "Project Checkpoint Rubric (see Rubrics tab)"
 };
 
@@ -194,48 +202,76 @@ Analyze how J.R.R. Tolkien synthesized real-world mythologies to create Middle-e
     }
 };
 
-// MODULE 5 - Project Checkpoint 3
+// MODULE 4 - Project Checkpoint 4 (Tolkien)
+const module4Project = {
+    title: "Portfolio Checkpoint 4: Tolkien's Middle-earth Mythology",
+    instructions: `**Checkpoint 4: Exploring Tolkien's Legendarium** (100 points)
+
+**CHOOSE ONE OPTION**:
+
+**OPTION 1: Middle-earth Mythology Map**
+Create visual map showing how real-world myths influenced Middle-earth
+- Norse sources (dwarves, runes, Andvaranaut → One Ring)
+- Finnish sources (Kalevala → Silmarillion, Quenya language)
+- Celtic/Arthurian (elves, broken sword, returning king)
+- Christian themes (Eru, eucatastrophe, sacrifice)
+- Include images and connecting lines
+- 150-200 word reflection
+
+**OPTION 2: Comparative Creation Myth Poster**
+Compare Ainulindalë (Tolkien's creation) to ONE real creation myth
+- Visual side-by-side comparison
+- Show: chaos→creation, divine beings, introduction of evil, world-shaping
+- 150-200 word analysis of how Tolkien synthesized myths
+
+**OPTION 3: Character Archetype Gallery**
+Create character cards for 6-8 LOTR characters showing their mythological archetypes
+- Gandalf (Mentor/Odin), Aragorn (Arthur), Gollum (Trickster/Shadow), etc.
+- Each card: image + archetype + real myth parallel
+- 150-200 word reflection on universal patterns
+
+**OPTION 4: Ring Symbolism Infographic**
+Visual analysis of the One Ring as mythological symbol
+- Connect to Norse Andvaranaut, Greek hubris, power/corruption themes
+- Show ring's journey through LOTR
+- 150-200 word reflection on why cursed objects resonate in mythology
+
+**Tools**: Canva, PowerPoint, hand-drawn, poster, digital collage`,
+    rubric: "Project Checkpoint Rubric (see Rubrics tab)"
+};
+
+// MODULE 5 - Project Checkpoint 5 (Harry Potter)
 const module5Project = {
-    title: "Portfolio Checkpoint 3: Harry Potter Archetype Analysis",
-    instructions: `**Checkpoint 3: Jungian Archetypes in Harry Potter** (100 points)
+    title: "Portfolio Checkpoint 5: Harry Potter Mythology Analysis",
+    instructions: `**Checkpoint 5: Harry Potter & Mythological Patterns** (100 points)
 
-**Assignment**: Create a comprehensive archetype analysis of the Harry Potter series using Jungian psychology and mythological patterns.
+**CHOOSE ONE OPTION**:
 
-**Requirements**:
+**OPTION 1: Archetype Character Web**
+Create visual web connecting Harry Potter characters to Jungian archetypes
+- Hero (Harry), Shadow (Voldemort), Mentor (Dumbledore), Trickster (Weasley twins), etc.
+- Show connections between characters and archetypes with images
+- 150-200 word reflection on why these archetypes are universal
 
-1. **Core Archetypes** (400-500 words):
-   Analyze 5 major Jungian archetypes in Harry Potter:
+**OPTION 2: Harry vs. Classical Hero Comparison**
+Visual comparison of Harry Potter to ONE classical hero (Perseus, King Arthur, Odysseus)
+- Side-by-side chart showing parallel elements
+- Orphan origins, prophecy, magical objects, mentors, final battles
+- 150-200 word analysis of ancient patterns in modern storytelling
 
-   **The Hero** (Harry): Analyze the Chosen One motif and Harry's psychological journey
+**OPTION 3: Deathly Hallows = Holy Grail Infographic**
+Create infographic comparing Deathly Hallows quest to Grail mythology
+- Show parallels: three sacred objects, quest structure, accepting death vs. immortality
+- Visual representation of both quests
+- 150-200 word reflection on why quest myths persist
 
-   **The Shadow** (Voldemort): Examine how Voldemort represents Harry's dark potential (Parseltongue, orphan, Half-Blood, horcrux connection)
+**OPTION 4: Death & Resurrection Visual Essay**
+Analyze King's Cross limbo scene as mythological katabasis (underworld journey)
+- Compare to Orpheus, Gilgamesh, Odysseus underworld journeys
+- Visual timeline or poster format
+- 150-200 word reflection on death/rebirth in mythology
 
-   **The Mentor** (Dumbledore, later Sirius/Lupin): Track the mentor's evolving role and eventual "death of the mentor" necessity
-
-   **The Anima/Animus** (Ginny, later Ron/Hermione for different aspects): Examine how relationships reflect psychological integration
-
-   **The Trickster** (Fred & George, Peeves): Analyze how rule-breaking and chaos serve necessary functions
-
-2. **Secondary Archetypes** (200-300 words):
-   Briefly identify:
-   - Threshold Guardians (Filch, Snape initially, Sorting Hat)
-   - Herald (Hagrid bringing the call to adventure)
-   - Shapeshifter (Snape's ultimate loyalty, Peter Pettigrew)
-
-3. **Mythological Pattern Analysis** (300-400 words):
-   Connect Harry Potter to classical mythology:
-   - How does Harry's story follow Perseus (orphan, prophecy, defeating monster)?
-   - What elements echo King Arthur (pulling sword from stone = pulling sword from Sorting Hat)?
-   - How does the Deathly Hallows quest mirror grail mythology?
-   - What role does blood magic and sacrifice play (ancient myth pattern)?
-
-4. **Death and Resurrection** (200-300 words):
-   Analyze King's Cross station limbo scene as katabasis (underworld descent) and resurrection mythology
-
-**Submission Format**:
-- 1,100-1,500 words total
-- Include character archetype diagram
-- Cite Jung's "Archetypes and the Collective Unconscious" and 2+ other sources`,
+**Tools**: Canva, PowerPoint, hand-drawn web, poster, digital collage`,
     rubric: "Project Checkpoint Rubric (see Rubrics tab)"
 };
 
@@ -281,6 +317,40 @@ Analyze how superhero mythology reflects and shapes contemporary cultural values
         peerResponses: 40,
         culturalAnalysis: 20
     }
+};
+
+// MODULE 6 - Project Checkpoint 6 (Superheroes)
+const module6Project = {
+    title: "Portfolio Checkpoint 6: Superhero Mythology Analysis",
+    instructions: `**Checkpoint 6: Superheroes as Modern Myths** (100 points)
+
+**CHOOSE ONE OPTION**:
+
+**OPTION 1: Superhero Archetype Poster Series**
+Create 4-6 posters analyzing superheroes as mythological archetypes
+- Batman (Shadow/Hades), Wonder Woman (Warrior Goddess), Spider-Man (Reluctant Hero), etc.
+- Each poster: hero image + mythological parallel + 2-3 sentences
+- 150-200 word reflection on why superhero myths resonate today
+
+**OPTION 2: Ancient God vs. Modern Hero Comparison**
+Visual comparison showing how superheroes mirror ancient gods
+- Thor/Thor, Wonder Woman/Athena, Aquaman/Poseidon, etc.
+- Chart showing powers, domains, symbolism, cultural function
+- 150-200 word analysis of gods evolving into superheroes
+
+**OPTION 3: Hero's Journey in MCU Infographic**
+Map ONE MCU character's journey (Iron Man, Black Panther, Captain Marvel, etc.) to Campbell's 12 stages
+- Visual journey wheel with film scenes/images
+- 150-200 word reflection on why audiences need hero journeys
+
+**OPTION 4: Superhero Values Timeline**
+Create timeline showing how superhero mythology reflects changing cultural values (1940s-2020s)
+- Golden Age heroes (patriotism, strength) → Modern heroes (diversity, trauma, moral complexity)
+- Include representative heroes from each era with images
+- 150-200 word analysis of myths reflecting culture
+
+**Tools**: Canva, PowerPoint, poster, digital art, timeline tool`,
+    rubric: "Project Checkpoint Rubric (see Rubrics tab)"
 };
 
 // MODULE 7 - Final Portfolio Project
