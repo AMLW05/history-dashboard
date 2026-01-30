@@ -39,6 +39,11 @@ function toggleModule(n) {
     }
     c.classList.toggle('active');
     h.classList.toggle('active');
+
+    // Render any pending charts when module is opened
+    if (c.classList.contains('active') && window.pendingCharts && window.pendingCharts.length > 0) {
+        setTimeout(() => renderPendingCharts(), 100);
+    }
 }
 
 function copyModuleContent(n, event) {
@@ -156,7 +161,135 @@ function copyAssessment(id, event) {
 }
 
 function toggleActivity(id) {
-    document.getElementById('activity-details-' + id).classList.toggle('active');
+    const details = document.getElementById('activity-details-' + id);
+    details.classList.toggle('active');
+
+    // Render any pending charts when activity is opened
+    if (details.classList.contains('active') && window.pendingCharts && window.pendingCharts.length > 0) {
+        setTimeout(() => renderPendingCharts(), 100);
+    }
+}
+
+function renderPendingCharts() {
+    if (!window.pendingCharts || window.pendingCharts.length === 0) {
+        console.log('No pending charts to render');
+        return;
+    }
+
+    if (typeof Chart === 'undefined') {
+        console.error('Chart.js library not loaded!');
+        return;
+    }
+
+    console.log('Rendering', window.pendingCharts.length, 'pending charts');
+
+    window.pendingCharts.forEach(chartInfo => {
+        const canvas = document.getElementById(chartInfo.chartId);
+        if (!canvas) {
+            console.log('Canvas not found for', chartInfo.chartId);
+            return;
+        }
+        if (canvas.chartInstance) {
+            console.log('Chart already rendered for', chartInfo.chartId);
+            return; // Already rendered
+        }
+
+        console.log('Rendering chart:', chartInfo.chartId);
+
+        const chartData = chartInfo.chartData;
+        const moduleNum = chartInfo.moduleNum;
+
+        // Render based on chart type
+        if (chartData.type === 'bar') {
+            // Module 3 HIS-131: Election of 1800 Bar Chart
+            const ctx = canvas.getContext('2d');
+            canvas.chartInstance = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: chartData.candidates.map(c => c.name),
+                    datasets: [{
+                        label: 'Electoral Votes',
+                        data: chartData.candidates.map(c => c.votes),
+                        backgroundColor: chartData.candidates.map(c => c.color),
+                        borderColor: chartData.candidates.map(c => c.color),
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: chartData.title,
+                            font: { size: 18, weight: 'bold' }
+                        },
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.raw + ' electoral votes';
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Electoral Votes' }
+                        },
+                        x: {
+                            ticks: {
+                                autoSkip: false,
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+        } else if (chartData.type === 'line') {
+            // Module 6 HIS-131: Reform Movement Growth Line Chart
+            const ctx = canvas.getContext('2d');
+            const datasets = chartData.datasets.map(ds => ({
+                label: ds.label,
+                data: ds.years.map((year, idx) => ({ x: year, y: ds.data[idx] })),
+                borderColor: ds.color,
+                backgroundColor: ds.color + '33',
+                borderWidth: 3,
+                tension: 0.4,
+                fill: false
+            }));
+
+            canvas.chartInstance = new Chart(ctx, {
+                type: 'line',
+                data: { datasets: datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: chartData.title,
+                            font: { size: 18, weight: 'bold' }
+                        },
+                        legend: { display: true, position: 'bottom' }
+                    },
+                    scales: {
+                        x: {
+                            type: 'linear',
+                            title: { display: true, text: 'Year' },
+                            ticks: { stepSize: 5 }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: { display: true, text: 'Count/Members (thousands or total societies)' }
+                        }
+                    }
+                }
+            });
+        }
+    });
 }
 
 function renderModules() {
@@ -271,14 +404,38 @@ function buildActivity(a, mn, idx) {
         }
 
         if (modAct.la3.dataAnalysis) {
+            const chartId = 'chart-m' + mn + '-la3';
             details += '<h4 style="margin-top:30px">📊 Data Analysis Activity</h4>';
             details += '<p style="margin:10px 0"><strong>' + modAct.la3.dataAnalysis.instructions + '</strong></p>';
-            details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)"><h5>' + modAct.la3.dataAnalysis.chartData.title + '</h5><p style="margin-top:10px;font-style:italic">Chart would be displayed here in Canvas using Chart.js or similar visualization</p></div>';
+            details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)">';
+            details += '<h5 style="margin-bottom:20px">' + modAct.la3.dataAnalysis.chartData.title + '</h5>';
+            details += '<canvas id="' + chartId + '" style="max-width:800px;max-height:500px;margin:20px auto;display:block"></canvas>';
+
+            // Add regional data table if present (Module 3 Election of 1800)
+            if (modAct.la3.dataAnalysis.regionalData) {
+                const regData = modAct.la3.dataAnalysis.regionalData;
+                details += '<h5 style="margin-top:30px">' + regData.title + '</h5>';
+                details += '<table style="margin-top:15px"><thead><tr><th>Region</th><th>Federalist Support</th><th>Republican Support</th></tr></thead><tbody>';
+                regData.regions.forEach(r => {
+                    details += '<tr><td><strong>' + r.region + '</strong></td><td>' + r.federalist + '</td><td>' + r.republican + '</td></tr>';
+                });
+                details += '</tbody></table>';
+            }
+
+            details += '</div>';
             details += '<h5 style="margin-top:20px">Analysis Questions:</h5><ol style="margin-left:20px;line-height:2">';
             modAct.la3.dataAnalysis.questions.forEach(q => {
                 details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
             });
             details += '</ol>';
+
+            // Store chart data to render after DOM insertion
+            if (!window.pendingCharts) window.pendingCharts = [];
+            window.pendingCharts.push({
+                chartId: chartId,
+                moduleNum: mn,
+                chartData: modAct.la3.dataAnalysis.chartData
+            });
         }
     }
     // LA4: Additional activities (Module 3 has LA4)

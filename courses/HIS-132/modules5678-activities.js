@@ -535,6 +535,30 @@ const module6Activities = {
         }
       ]
     }
+  },
+
+  la4: {
+    title: "LA4: Cold War & Civil Rights Strategies - Categorization",
+    format: "Categorization Activity",
+    instructions: "Categorize each event, policy, or strategy as representing: Cold War Containment, Civil Rights Legal Strategy, Civil Rights Direct Action, or Cold War/Civil Rights Contradiction.",
+    items: [
+      { text: "Truman Doctrine pledging support for nations resisting communism", answer: "Cold War Containment" },
+      { text: "NAACP lawsuits challenging segregation (Brown v. Board)", answer: "Civil Rights Legal Strategy" },
+      { text: "Montgomery Bus Boycott using economic pressure", answer: "Civil Rights Direct Action" },
+      { text: "Marshall Plan rebuilding Western Europe to prevent communist influence", answer: "Cold War Containment" },
+      { text: "Thurgood Marshall arguing cases before Supreme Court", answer: "Civil Rights Legal Strategy" },
+      { text: "Greensboro sit-ins at segregated lunch counters", answer: "Civil Rights Direct Action" },
+      { text: "Korean War fighting communist expansion", answer: "Cold War Containment" },
+      { text: "Promoting democracy abroad while enforcing Jim Crow at home", answer: "Cold War/Civil Rights Contradiction" },
+      { text: "Freedom Rides challenging interstate segregation", answer: "Civil Rights Direct Action" },
+      { text: "McCarthyism suppressing dissent in name of anti-communism", answer: "Cold War/Civil Rights Contradiction" },
+      { text: "Voting Rights Act litigation and federal enforcement", answer: "Civil Rights Legal Strategy" },
+      { text: "March on Washington (1963) demanding civil rights legislation", answer: "Civil Rights Direct Action" },
+      { text: "Vietnam War based on Domino Theory", answer: "Cold War Containment" },
+      { text: "FBI surveillance of Civil Rights leaders as 'communist threats'", answer: "Cold War/Civil Rights Contradiction" },
+      { text: "Selma to Montgomery marches for voting rights", answer: "Civil Rights Direct Action" },
+      { text: "Using Cold War rhetoric to pressure government on civil rights", answer: "Cold War/Civil Rights Contradiction" }
+    ]
   }
 };
 

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIS-132 Module 6 LA3: Civil Rights Movement Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: white;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            color: #2c3e50;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
+        }
+        .header h1 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-style: italic;
+        }
+        .chart-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #8B4513;
+        }
+        canvas {
+            max-width: 100%;
+            max-height: 400px;
+            margin: 20px 0;
+        }
+        .questions {
+            margin-top: 40px;
+        }
+        .questions h3 {
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        .question {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #8B4513;
+            border-radius: 4px;
+        }
+        .question strong {
+            color: #8B4513;
+        }
+        .answer {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        .print-btn {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Georgia, serif;
+            margin: 20px auto;
+            display: block;
+        }
+        .print-btn:hover {
+            background: #6d3710;
+        }
+        .timeline {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-left: 4px solid #00b894;
+        }
+        .timeline h4 {
+            color: #00b894;
+            margin-bottom: 10px;
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Data Analysis: Civil Rights Movement (1945-1968)</h1>
+        <p>HIS-132 Module 6 Learning Activity 3</p>
+        <p><strong>Instructions:</strong> Analyze Civil Rights movement data including voter registration, desegregation timeline, legislative victories, and protest participation.</p>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Black Voter Registration in the South</h2>
+        <p style="text-align:center; font-style:italic; color:#666;">Registration rising from 3% (1940) to 29% (1960) to 62% (1968) after Voting Rights Act</p>
+        <canvas id="voterChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">School Desegregation Progress</h2>
+        <p style="text-align:center; font-style:italic; color:#666;">Only 2% of Black students in integrated schools by 1964, rising to 32% by 1968</p>
+        <canvas id="schoolChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Major Civil Rights Legislation</h2>
+        <div class="timeline">
+            <h4>Civil Rights Act of 1964</h4>
+            <p>Banned discrimination in employment and public accommodations</p>
+        </div>
+        <div class="timeline">
+            <h4>Voting Rights Act of 1965</h4>
+            <p>Protected voting rights; banned literacy tests</p>
+        </div>
+        <div class="timeline">
+            <h4>Fair Housing Act of 1968</h4>
+            <p>Banned housing discrimination</p>
+        </div>
+    </div>
+
+    <div class="questions">
+        <h3>Analysis Questions</h3>
+
+        <div class="question">
+            <strong>Q1:</strong> How did Black voter registration in the South change after the Voting Rights Act of 1965?
+            <div class="answer"><strong>Answer:</strong> Registration jumped from 29% (1960) to 62% (1968), demonstrating the law's effectiveness in protecting voting rights</div>
+        </div>
+
+        <div class="question">
+            <strong>Q2:</strong> What does school desegregation data reveal about Southern resistance to Brown v. Board?
+            <div class="answer"><strong>Answer:</strong> Only 2% of Black students attended integrated schools by 1964 (10 years after Brown), showing massive resistance to court orders</div>
+        </div>
+
+        <div class="question">
+            <strong>Q3:</strong> Which Civil Rights law had the most immediate measurable impact on voting?
+            <div class="answer"><strong>Answer:</strong> Voting Rights Act of 1965, which banned literacy tests and led to dramatic increase in Black voter registration</div>
+        </div>
+
+        <div class="question">
+            <strong>Q4:</strong> What pattern do you see in protest participation over time?
+            <div class="answer"><strong>Answer:</strong> Participation grew massively from local (Montgomery) to national (March on Washington with 250,000), showing movement's expanding reach</div>
+        </div>
+
+        <div class="question">
+            <strong>Q5:</strong> Why might school desegregation have occurred more slowly than voter registration?
+            <div class="answer"><strong>Answer:</strong> School integration required overcoming local resistance, white flight, and lack of federal enforcement, while Voting Rights Act had federal oversight</div>
+        </div>
+
+        <div class="question">
+            <strong>Q6:</strong> What do the three major civil rights laws (1964, 1965, 1968) collectively address?
+            <div class="answer"><strong>Answer:</strong> They comprehensively banned discrimination in public accommodations, voting, employment, and housing</div>
+        </div>
+
+        <div class="question">
+            <strong>Q7:</strong> How do protest numbers demonstrate the movement's power?
+            <div class="answer"><strong>Answer:</strong> Massive participation (250,000 at March on Washington) created political pressure forcing federal action on civil rights</div>
+        </div>
+
+        <div class="question">
+            <strong>Q8:</strong> What does the 10-year gap between Brown v. Board (1954) and Civil Rights Act (1964) suggest?
+            <div class="answer"><strong>Answer:</strong> Legal victories alone were insufficient; grassroots protests and direct action were necessary to force federal legislation</div>
+        </div>
+
+        <div class="question">
+            <strong>Q9:</strong> Which data source best demonstrates the effectiveness of federal enforcement?
+            <div class="answer"><strong>Answer:</strong> Voter registration data after 1965, showing that federal protection under Voting Rights Act produced immediate, measurable results</div>
+        </div>
+
+        <div class="question">
+            <strong>Q10:</strong> How do these data help historians understand the Civil Rights Movement's success?
+            <div class="answer"><strong>Answer:</strong> They reveal that legal changes required grassroots mobilization, federal enforcement, and persistence over decades to achieve measurable impact</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        // Voter Registration Chart
+        const voterCtx = document.getElementById('voterChart').getContext('2d');
+        new Chart(voterCtx, {
+            type: 'line',
+            data: {
+                labels: [1940, 1950, 1960, 1965, 1968],
+                datasets: [{
+                    label: 'Black Voter Registration (%)',
+                    data: [3, 12, 29, 45, 62],
+                    borderColor: '#00b894',
+                    backgroundColor: '#00b89433',
+                    borderWidth: 4,
+                    tension: 0.4,
+                    fill: true,
+                    pointRadius: 6,
+                    pointHoverRadius: 8
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false },
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                xMin: '1965',
+                                xMax: '1965',
+                                borderColor: 'red',
+                                borderWidth: 2,
+                                borderDash: [6, 6],
+                                label: {
+                                    content: 'Voting Rights Act',
+                                    enabled: true,
+                                    position: 'top'
+                                }
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 70,
+                        title: { display: true, text: 'Percentage Registered to Vote' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Year' }
+                    }
+                }
+            }
+        });
+
+        // School Desegregation Chart
+        const schoolCtx = document.getElementById('schoolChart').getContext('2d');
+        new Chart(schoolCtx, {
+            type: 'bar',
+            data: {
+                labels: ['1954\n(Brown v. Board)', '1960', '1964\n(Civil Rights Act)', '1968'],
+                datasets: [{
+                    label: 'Black Students in Integrated Schools (%)',
+                    data: [0, 1, 2, 32],
+                    backgroundColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'],
+                    borderColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 35,
+                        title: { display: true, text: 'Percentage in Integrated Schools' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Year' }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

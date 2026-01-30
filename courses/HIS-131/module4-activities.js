@@ -236,281 +236,291 @@ const module4Midterm = {
         {
             q: "The Columbian Exchange refers to:",
             answers: [
-                "Trade agreements between European nations",
-                "The transfer of plants, animals, diseases, and people between Americas and Europe/Africa ✓",
-                "Christopher Columbus's navigation routes",
-                "The exchange of diplomatic envoys"
+                "Trade agreements establishing diplomatic relations between European nations and Indigenous peoples",
+                "The transfer of plants, animals, diseases, and people between Americas, Europe, and Africa ✓",
+                "Christopher Columbus's navigation routes and mapping of Atlantic Ocean currents",
+                "The exchange of diplomatic envoys and cultural ambassadors across the Atlantic"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "What was the PRIMARY demographic impact of European contact on Indigenous populations?",
             answers: [
-                "Forced migration to western territories",
-                "Disease epidemics killing up to 90% in some areas ✓",
-                "Assimilation into European culture",
-                "Immediate enslavement"
+                "Forced migration to western territories through organized removal policies",
+                "Disease epidemics causing population decline of up to 90% in some regions ✓",
+                "Cultural assimilation into European society through mission systems and intermarriage",
+                "Large-scale enslavement and forced labor in mining and agricultural operations"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The encomienda system granted Spanish colonists:",
             answers: [
-                "Land ownership rights",
-                "Control over Indigenous labor in exchange for Christianization ✓",
-                "Exclusive trading privileges",
-                "Military authority"
+                "Permanent land ownership rights and hereditary titles in conquered territories",
+                "Control over Indigenous labor in exchange for providing Christian instruction ✓",
+                "Exclusive trading privileges and monopoly rights in colonial commerce",
+                "Military authority to establish fortifications and command Indigenous auxiliary forces"
             ],
             correct: 1,
-            type: "Multiple Choice"
-        },
-        {
-            q: "True or False: The Haudenosaunee (Iroquois) Confederacy's Great Law of Peace influenced American colonial ideas about federation.",
-            answers: [
-                "True ✓",
-                "False"
-            ],
-            correct: 0,
-            type: "True/False"
+            type: "multiple_choice_question"
         },
         {
             q: "Which Indigenous city near modern St. Louis had 10,000-30,000 inhabitants at its peak?",
             answers: [
-                "Tenochtitlan",
-                "Cahokia ✓",
-                "Cuzco",
-                "Chaco Canyon"
+                "Tenochtitlan, capital of the Aztec Empire",
+                "Cahokia, largest Mississippian urban center ✓",
+                "Cuzco, ceremonial center of the Inca Empire",
+                "Chaco Canyon, Ancestral Puebloan trade hub"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The 'Three Sisters' agricultural system involved growing:",
             answers: [
-                "Wheat, barley, and oats",
-                "Corn, beans, and squash ✓",
-                "Rice, tobacco, and cotton",
-                "Potatoes, tomatoes, and peppers"
+                "Wheat, barley, and oats in rotation to maintain soil fertility",
+                "Corn, beans, and squash in complementary ecological relationships ✓",
+                "Rice, tobacco, and cotton as commercial cash crops for trade",
+                "Potatoes, tomatoes, and peppers in raised-bed intensive cultivation"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
+        },
+        {
+            q: "The Haudenosaunee (Iroquois) Confederacy's Great Law of Peace:",
+            answers: [
+                "Had no influence on European colonial political thought or institutions",
+                "Influenced American colonial ideas about federation and representative government ✓",
+                "Was created after contact with Europeans as a response to colonization",
+                "Applied only to internal tribal governance without broader political implications"
+            ],
+            correct: 1,
+            type: "multiple_choice_question"
         },
         // Module 2 questions (6 questions)
         {
             q: "Bacon's Rebellion (1676) led Virginia elites to:",
             answers: [
-                "Abolish indentured servitude immediately",
-                "Harden racial categories to prevent poor whites and Blacks from uniting ✓",
-                "Grant more rights to all colonists",
-                "End all forms of slavery"
+                "Abolish indentured servitude and transition immediately to free wage labor systems",
+                "Harden racial categories and shift to race-based slavery to prevent cross-racial alliances ✓",
+                "Grant expanded political rights to all colonists regardless of property ownership",
+                "End all forms of unfree labor and establish a society based on small farms"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The Middle Passage specifically refers to:",
             answers: [
-                "The route between northern and southern colonies",
-                "The transatlantic voyage enslaving Africans from Africa to Americas ✓",
-                "The journey from England to America",
-                "Trade routes through the Caribbean"
+                "The overland route used to transport enslaved people between northern and southern colonies",
+                "The transatlantic voyage of slave ships carrying enslaved Africans to the Americas ✓",
+                "The ocean journey of indentured servants and colonists from England to America",
+                "The Caribbean trade routes connecting islands to mainland colonial markets"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
-            q: "True or False: The Pueblo Revolt of 1680 successfully expelled Spanish colonizers from New Mexico for 12 years.",
+            q: "The Pueblo Revolt of 1680:",
             answers: [
-                "True ✓",
-                "False"
+                "Failed immediately and resulted in harsher Spanish control over Indigenous peoples",
+                "Successfully expelled Spanish colonizers from New Mexico for twelve years ✓",
+                "Led to permanent Spanish abandonment of all territories in the Southwest",
+                "Was quickly suppressed with no lasting impact on Spanish colonial authority"
             ],
-            correct: 0,
-            type: "True/False"
+            correct: 1,
+            type: "multiple_choice_question"
         },
         {
             q: "The Great Awakening (1730s-1740s) challenged traditional authority by:",
             answers: [
-                "Promoting rational philosophy",
-                "Emphasizing personal faith and emotional religious experience ✓",
-                "Supporting established church hierarchies",
-                "Opposing all forms of religion"
+                "Promoting Enlightenment rationalism and scientific inquiry over religious faith",
+                "Emphasizing personal conversion experiences and emotional faith over formal church authority ✓",
+                "Supporting established church hierarchies and reinforcing clerical power structures",
+                "Advocating for the complete separation of religious practice from daily colonial life"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "Mercantilism was an economic system where:",
             answers: [
-                "Colonies existed to enrich the mother country through trade ✓",
-                "Free trade was encouraged between all nations",
-                "Colonies were economically independent",
-                "Religious groups controlled commerce"
+                "Colonies existed primarily to provide wealth to the mother country through regulated trade ✓",
+                "Free market competition was encouraged between all nations to maximize prosperity",
+                "Colonial economies operated independently with minimal interference from European powers",
+                "Religious institutions controlled commercial activity and regulated international trade"
             ],
             correct: 0,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The Seven Years' War (1754-1763) resulted in:",
             answers: [
-                "French control of North America",
-                "British acquisition of French Canada ✓",
-                "Spanish dominance in the Caribbean",
-                "Colonial independence from Europe"
+                "French expansion and consolidation of control throughout the North American interior",
+                "British acquisition of French Canada and territorial dominance in North America ✓",
+                "Spanish hegemony in the Caribbean and control of major Atlantic trade routes",
+                "Colonial independence from European powers and establishment of self-governing territories"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         // Module 3 questions (7 questions)
         {
             q: "The slogan 'No taxation without representation' emerged in response to:",
             answers: [
-                "The Boston Massacre",
-                "The Stamp Act of 1765 ✓",
-                "The Declaration of Independence",
-                "The Constitutional Convention"
+                "The Boston Massacre and subsequent trials of British soldiers in colonial courts",
+                "The Stamp Act of 1765 imposing direct taxes on colonists without colonial consent ✓",
+                "The Declaration of Independence and its assertion of natural rights and self-governance",
+                "The Constitutional Convention debates over representation in the new federal legislature"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "Thomas Paine's Common Sense (1776) was influential because it:",
             answers: [
-                "Defended British rule",
-                "Convinced many colonists to support independence ✓",
-                "Criticized the Constitution",
-                "Advocated for monarchy"
+                "Defended British constitutional monarchy as the best form of government for colonists",
+                "Convinced many colonists to support independence through accessible arguments against monarchy ✓",
+                "Criticized the proposed Constitution as giving too much power to the federal government",
+                "Advocated for constitutional monarchy with George Washington as an American king"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
-            q: "True or False: The Articles of Confederation created a strong central government with extensive powers.",
+            q: "The Articles of Confederation:",
             answers: [
-                "True",
-                "False ✓"
+                "Created a strong central government with extensive powers including taxation and commerce regulation",
+                "Established a weak central government with limited powers, reflecting fears of tyranny ✓",
+                "Granted the federal government authority to raise armies and enforce laws in the states",
+                "Provided for a powerful executive branch and national judiciary to enforce federal law"
             ],
             correct: 1,
-            type: "True/False"
+            type: "multiple_choice_question"
         },
         {
             q: "Shays' Rebellion (1786-1787) was significant because it:",
             answers: [
-                "Successfully overthrew the federal government",
-                "Demonstrated weaknesses of the Articles and prompted Constitutional Convention ✓",
-                "Led to immediate abolition of slavery",
-                "Ended the Revolutionary War"
+                "Successfully overthrew the Massachusetts government and established farmer control",
+                "Demonstrated weaknesses of the Articles of Confederation and prompted the Constitutional Convention ✓",
+                "Led to immediate federal abolition of slavery in response to economic grievances",
+                "Ended the Revolutionary War by forcing British withdrawal from western forts"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "Anti-Federalists opposed the Constitution because they:",
             answers: [
-                "Wanted stronger federal government",
-                "Feared it gave too much power to central government and lacked bill of rights ✓",
-                "Supported British monarchy",
-                "Opposed all taxation"
+                "Believed it did not create a sufficiently strong central government to manage the nation",
+                "Feared it gave too much power to the central government and lacked a bill of rights ✓",
+                "Supported restoration of British constitutional monarchy in the former colonies",
+                "Wanted to eliminate all forms of taxation and government regulation of commerce"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The Bill of Rights consists of:",
             answers: [
-                "The Declaration of Independence",
-                "The first 10 amendments to the Constitution ✓",
-                "The Articles of Confederation",
-                "The Federalist Papers"
+                "The Declaration of Independence and its enumeration of colonists' grievances against Britain",
+                "The first ten amendments to the Constitution protecting individual liberties ✓",
+                "The Articles of Confederation establishing the structure of the first national government",
+                "The Federalist Papers explaining the philosophical foundations of the new Constitution"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "Alexander Hamilton's financial plan included:",
             answers: [
-                "Eliminating all federal debt",
-                "Creating a national bank and assuming state debts ✓",
-                "Abolishing federal taxes",
-                "Returning to British currency"
+                "Eliminating all federal debt through rapid repayment and rejection of foreign loans",
+                "Creating a national bank, assuming state debts, and establishing federal credit ✓",
+                "Abolishing all federal taxes and relying entirely on tariffs for government revenue",
+                "Returning to British currency standards and rejoining the imperial economic system"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         // Module 4 questions (6 questions)
         {
             q: "The Louisiana Purchase (1803):",
             answers: [
-                "Tripled the size of the United States",
-                "Doubled the size of the United States ✓",
-                "Added only Florida to the U.S.",
-                "Resulted in war with France"
+                "Tripled the territorial size of the United States and extended its reach to the Pacific",
+                "Doubled the territorial size of the United States for fifteen million dollars ✓",
+                "Added only the territory of Florida to the existing boundaries of the United States",
+                "Resulted in a protracted military conflict between the United States and France"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
-            q: "True or False: Eli Whitney's cotton gin made slavery less profitable and helped lead to its decline.",
+            q: "Eli Whitney's cotton gin:",
             answers: [
-                "True",
-                "False ✓"
+                "Made slavery economically obsolete and contributed to gradual emancipation in the South",
+                "Made cotton production highly profitable and entrenched the institution of slavery ✓",
+                "Was rejected by southern planters who preferred traditional methods of cotton processing",
+                "Primarily benefited small farmers rather than large plantation owners with enslaved labor"
             ],
             correct: 1,
-            type: "True/False"
+            type: "multiple_choice_question"
         },
         {
             q: "Tecumseh's pan-Indian confederacy sought to:",
             answers: [
-                "Ally with American settlers",
-                "Resist American territorial expansion ✓",
-                "Establish trade monopolies",
-                "Convert tribes to Christianity"
+                "Form permanent military and economic alliances with American settlers moving westward",
+                "Unite Native nations to resist American territorial expansion and preserve Indigenous lands ✓",
+                "Establish exclusive trade monopolies between Indigenous nations and European powers",
+                "Convert diverse Indigenous peoples to Christianity and adopt Euro-American agricultural practices"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The War of 1812 was fought primarily between:",
             answers: [
-                "U.S. and France",
-                "U.S. and Spain",
-                "U.S. and Britain ✓",
-                "U.S. and Mexico"
+                "The United States and France over commercial disputes and Caribbean territories",
+                "The United States and Spain over control of Florida and southwestern territories",
+                "The United States and Britain over impressment, trade, and territorial expansion ✓",
+                "The United States and Mexico over Texas independence and western boundary disputes"
             ],
             correct: 2,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The Missouri Compromise (1820) addressed:",
             answers: [
-                "Tariff regulations",
-                "The expansion of slavery into western territories ✓",
-                "Native American rights",
-                "Banking policies"
+                "Federal tariff regulations and their impact on manufacturing versus agricultural states",
+                "The expansion of slavery into western territories and maintaining sectional balance ✓",
+                "Native American treaty rights and policies regarding forced removal from eastern lands",
+                "National banking policies and federal assumption of state debts from the War of 1812"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
             q: "The Market Revolution transformed the American economy by:",
             answers: [
-                "Eliminating all farming",
-                "Shifting from subsistence farming to commercial agriculture and wage labor ✓",
-                "Ending all international trade",
-                "Making everyone equally wealthy"
+                "Eliminating agricultural production in favor of concentrated industrial manufacturing",
+                "Shifting from subsistence farming to commercial agriculture and wage labor systems ✓",
+                "Ending all international trade relationships and creating a self-sufficient national economy",
+                "Distributing wealth equally across all social classes and eliminating economic inequality"
             ],
             correct: 1,
-            type: "Multiple Choice"
+            type: "multiple_choice_question"
         },
         {
-            q: "True or False: The Erie Canal connected the Great Lakes to the Atlantic Ocean via the Hudson River.",
+            q: "The Erie Canal:",
             answers: [
-                "True ✓",
-                "False"
+                "Connected the Great Lakes region to the Atlantic Ocean via the Hudson River ✓",
+                "Linked the Mississippi River system directly to the Gulf of Mexico ports",
+                "Provided irrigation for southern cotton plantations throughout the Deep South",
+                "Created a water route from the Ohio River to the Chesapeake Bay"
             ],
             correct: 0,
-            type: "True/False"
+            type: "multiple_choice_question"
         }
     ]
 };

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIS-131 Module 3 LA3: Election of 1800 Data Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: white;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            color: #2c3e50;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
+        }
+        .header h1 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-style: italic;
+        }
+        .chart-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #8B4513;
+        }
+        canvas {
+            max-width: 100%;
+            height: auto !important;
+        }
+        table {
+            width: 100%;
+            margin: 20px 0;
+            border-collapse: collapse;
+        }
+        table th {
+            background: #8B4513;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        table td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+        }
+        table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        .questions {
+            margin-top: 40px;
+        }
+        .questions h3 {
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        .question {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #8B4513;
+            border-radius: 4px;
+        }
+        .question strong {
+            color: #8B4513;
+        }
+        .answer {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        .print-btn {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Georgia, serif;
+            margin: 20px auto;
+            display: block;
+        }
+        .print-btn:hover {
+            background: #6d3710;
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Data Analysis: Election of 1800</h1>
+        <p>HIS-131 Module 3 Learning Activity 3</p>
+        <p><strong>Instructions:</strong> Analyze the electoral map and vote data to answer questions about the first peaceful transfer of power between parties.</p>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:30px">Electoral Votes: Election of 1800</h2>
+        <canvas id="electoralChart"></canvas>
+    </div>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Regional Voting Patterns</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Region</th>
+                    <th>Federalist Support</th>
+                    <th>Democratic-Republican Support</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>New England</strong></td>
+                    <td>Strong</td>
+                    <td>Weak</td>
+                </tr>
+                <tr>
+                    <td><strong>Middle States</strong></td>
+                    <td>Mixed</td>
+                    <td>Mixed</td>
+                </tr>
+                <tr>
+                    <td><strong>South</strong></td>
+                    <td>Weak</td>
+                    <td>Strong</td>
+                </tr>
+                <tr>
+                    <td><strong>West (KY, TN)</strong></td>
+                    <td>Very Weak</td>
+                    <td>Very Strong</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="questions">
+        <h3>Analysis Questions</h3>
+
+        <div class="question">
+            <strong>Q1:</strong> Why did Jefferson and Burr receive the same number of electoral votes?
+            <div class="answer"><strong>Answer:</strong> Constitution didn't distinguish between President and VP; electors voted for two people</div>
+        </div>
+
+        <div class="question">
+            <strong>Q2:</strong> Which region gave strongest support to Federalists?
+            <div class="answer"><strong>Answer:</strong> New England</div>
+        </div>
+
+        <div class="question">
+            <strong>Q3:</strong> Which region gave strongest support to Democratic-Republicans?
+            <div class="answer"><strong>Answer:</strong> South and Western states (KY, TN)</div>
+        </div>
+
+        <div class="question">
+            <strong>Q4:</strong> What constitutional problem did this election expose?
+            <div class="answer"><strong>Answer:</strong> Need to separate President and VP voting (led to 12th Amendment in 1804)</div>
+        </div>
+
+        <div class="question">
+            <strong>Q5:</strong> How was the tie between Jefferson and Burr resolved?
+            <div class="answer"><strong>Answer:</strong> House of Representatives chose Jefferson after 36 ballots; Hamilton's influence helped</div>
+        </div>
+
+        <div class="question">
+            <strong>Q6:</strong> Why is this election called the 'Revolution of 1800'?
+            <div class="answer"><strong>Answer:</strong> First peaceful transfer of power between opposing political parties in U.S. history</div>
+        </div>
+
+        <div class="question">
+            <strong>Q7:</strong> What does the regional pattern reveal about political divisions?
+            <div class="answer"><strong>Answer:</strong> North-South divide with commercial North supporting Federalists, agrarian South supporting Republicans</div>
+        </div>
+
+        <div class="question">
+            <strong>Q8:</strong> How many total electoral votes were cast?
+            <div class="answer"><strong>Answer:</strong> 276 total (138 electors × 2 votes each)</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const ctx = document.getElementById('electoralChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Thomas Jefferson\n(Democratic-Republican)',
+                    'Aaron Burr\n(Democratic-Republican)',
+                    'John Adams\n(Federalist)',
+                    'Charles C. Pinckney\n(Federalist)',
+                    'John Jay\n(Federalist)'
+                ],
+                datasets: [{
+                    label: 'Electoral Votes',
+                    data: [73, 73, 65, 64, 1],
+                    backgroundColor: ['#d63031', '#e17055', '#0984e3', '#74b9ff', '#dfe6e9'],
+                    borderColor: ['#d63031', '#e17055', '#0984e3', '#74b9ff', '#dfe6e9'],
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    title: {
+                        display: false
+                    },
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.raw + ' electoral votes';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 80,
+                        title: {
+                            display: true,
+                            text: 'Electoral Votes',
+                            font: { size: 14, weight: 'bold' }
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            autoSkip: false,
+                            maxRotation: 0,
+                            minRotation: 0,
+                            font: { size: 11 }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

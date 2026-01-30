@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIS-131 Module 6 LA3: Reform Movements Growth Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background: white;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            color: #2c3e50;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
+        }
+        .header h1 {
+            color: #8B4513;
+            margin-bottom: 10px;
+        }
+        .header p {
+            color: #666;
+            font-style: italic;
+        }
+        .chart-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #8B4513;
+        }
+        canvas {
+            max-width: 100%;
+            height: 400px !important;
+        }
+        .questions {
+            margin-top: 40px;
+        }
+        .questions h3 {
+            color: #8B4513;
+            margin-bottom: 20px;
+        }
+        .question {
+            background: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 4px solid #8B4513;
+            border-radius: 4px;
+        }
+        .question strong {
+            color: #8B4513;
+        }
+        .answer {
+            margin-top: 10px;
+            padding: 10px;
+            background: white;
+            border-radius: 4px;
+            font-style: italic;
+        }
+        .print-btn {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Georgia, serif;
+            margin: 20px auto;
+            display: block;
+        }
+        .print-btn:hover {
+            background: #6d3710;
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>📊 Data Analysis: Reform Movement Growth (1830-1860)</h1>
+        <p>HIS-131 Module 6 Learning Activity 3</p>
+        <p><strong>Instructions:</strong> Analyze the chart showing membership/circulation growth of major reform movements 1830-1860 to answer questions about reform's expansion and sectional tensions.</p>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:30px">Reform Movement Growth (1830-1860)</h2>
+        <canvas id="reformChart"></canvas>
+    </div>
+
+    <div class="questions">
+        <h3>Analysis Questions</h3>
+
+        <div class="question">
+            <strong>Q1:</strong> Which reform movement had the most members/circulation by 1855?
+            <div class="answer"><strong>Answer:</strong> Temperance Movement with 1.7 million members</div>
+        </div>
+
+        <div class="question">
+            <strong>Q2:</strong> When did abolitionist societies experience most rapid growth?
+            <div class="answer"><strong>Answer:</strong> 1835-1840 (grew from 200 to 1000 societies)</div>
+        </div>
+
+        <div class="question">
+            <strong>Q3:</strong> What event in 1848 corresponds with spike in women's rights petition signatures?
+            <div class="answer"><strong>Answer:</strong> Seneca Falls Convention launched organized women's rights movement</div>
+        </div>
+
+        <div class="question">
+            <strong>Q4:</strong> Why did anti-slavery newspaper circulation grow steadily throughout period?
+            <div class="answer"><strong>Answer:</strong> Growing Northern opposition to slavery expansion; improved printing technology; postal system growth</div>
+        </div>
+
+        <div class="question">
+            <strong>Q5:</strong> What does temperance movement's large membership reveal?
+            <div class="answer"><strong>Answer:</strong> Moral reform attracted broader support than more radical causes; women's activism in 'acceptable' sphere</div>
+        </div>
+
+        <div class="question">
+            <strong>Q6:</strong> How might these growth trends have increased sectional tensions?
+            <div class="answer"><strong>Answer:</strong> Abolition's growth alarmed South; Northern reform challenged Southern society; cultural divide widened</div>
+        </div>
+
+        <div class="question">
+            <strong>Q7:</strong> What role did women play across these movements?
+            <div class="answer"><strong>Answer:</strong> Women dominated temperance, increasingly involved in abolition and women's rights; challenged separate spheres ideology</div>
+        </div>
+
+        <div class="question">
+            <strong>Q8:</strong> How did Second Great Awakening fuel this reform growth?
+            <div class="answer"><strong>Answer:</strong> Religious revival emphasized moral responsibility to perfect society; created activist networks</div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script>
+        const ctx = document.getElementById('reformChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                datasets: [
+                    {
+                        label: 'Abolitionist Societies (# of societies)',
+                        data: [
+                            {x: 1830, y: 50},
+                            {x: 1835, y: 200},
+                            {x: 1838, y: 400},
+                            {x: 1840, y: 1000},
+                            {x: 1845, y: 1350},
+                            {x: 1850, y: 2000}
+                        ],
+                        borderColor: '#d63031',
+                        backgroundColor: '#d6303133',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false
+                    },
+                    {
+                        label: 'Anti-Slavery Newspaper Circulation (thousands)',
+                        data: [
+                            {x: 1830, y: 5},
+                            {x: 1835, y: 20},
+                            {x: 1840, y: 50},
+                            {x: 1845, y: 100},
+                            {x: 1850, y: 150},
+                            {x: 1855, y: 300}
+                        ],
+                        borderColor: '#0984e3',
+                        backgroundColor: '#0984e333',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false
+                    },
+                    {
+                        label: "Women's Rights Petition Signatures (thousands)",
+                        data: [
+                            {x: 1835, y: 0},
+                            {x: 1840, y: 5},
+                            {x: 1845, y: 15},
+                            {x: 1848, y: 40},
+                            {x: 1852, y: 90},
+                            {x: 1855, y: 200}
+                        ],
+                        borderColor: '#00b894',
+                        backgroundColor: '#00b89433',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false
+                    },
+                    {
+                        label: 'Temperance Society Members (thousands)',
+                        data: [
+                            {x: 1830, y: 100},
+                            {x: 1835, y: 500},
+                            {x: 1840, y: 1000},
+                            {x: 1845, y: 1200},
+                            {x: 1850, y: 1500},
+                            {x: 1855, y: 1700}
+                        ],
+                        borderColor: '#fdcb6e',
+                        backgroundColor: '#fdcb6e33',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    title: {
+                        display: false
+                    },
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: {
+                            padding: 15,
+                            font: { size: 12 }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        type: 'linear',
+                        min: 1830,
+                        max: 1855,
+                        title: {
+                            display: true,
+                            text: 'Year',
+                            font: { size: 14, weight: 'bold' }
+                        },
+                        ticks: {
+                            stepSize: 5
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Count/Members (thousands or total societies)',
+                            font: { size: 14, weight: 'bold' }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

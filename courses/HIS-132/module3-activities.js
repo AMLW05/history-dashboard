@@ -231,6 +231,30 @@ const module3Activities = {
         }
       ]
     }
+  },
+
+  la4: {
+    title: "LA4: Progressive Era Perspectives - Categorization",
+    format: "Categorization Activity",
+    instructions: "Categorize each reform, policy, or perspective as representing: Progressive Social Reform, Progressive Political Reform, Imperialist Expansion, or Exclusionary Reform.",
+    items: [
+      { text: "Settlement houses providing education and services to immigrants", answer: "Progressive Social Reform" },
+      { text: "Direct election of senators (17th Amendment)", answer: "Progressive Political Reform" },
+      { text: "Philippine-American War suppressing Filipino independence", answer: "Imperialist Expansion" },
+      { text: "Pure Food and Drug Act regulating safety", answer: "Progressive Social Reform" },
+      { text: "Initiative, referendum, and recall expanding democracy", answer: "Progressive Political Reform" },
+      { text: "Roosevelt Corollary claiming U.S. 'police power' in Latin America", answer: "Imperialist Expansion" },
+      { text: "Triangle Shirtwaist Fire leading to workplace safety laws", answer: "Progressive Social Reform" },
+      { text: "Women's suffrage (19th Amendment)", answer: "Progressive Political Reform" },
+      { text: "Panama Canal construction after supporting Panama's independence", answer: "Imperialist Expansion" },
+      { text: "Americanization programs pressuring immigrants to abandon native cultures", answer: "Exclusionary Reform" },
+      { text: "Muckraking journalism exposing corruption", answer: "Progressive Social Reform" },
+      { text: "Primary elections allowing voters to choose candidates", answer: "Progressive Political Reform" },
+      { text: "Eugenics movement promoting forced sterilization", answer: "Exclusionary Reform" },
+      { text: "Prohibition targeting immigrant drinking culture", answer: "Exclusionary Reform" },
+      { text: "NAACP organizing against lynching and discrimination", answer: "Progressive Social Reform" },
+      { text: "City manager and commission forms of government", answer: "Progressive Political Reform" }
+    ]
   }
 };
 
