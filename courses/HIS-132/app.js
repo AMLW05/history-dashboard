@@ -405,13 +405,33 @@ function buildActivity(a, mn, idx) {
 
         if (modAct.la3.dataAnalysis) {
             const chartId = 'chart-m' + mn + '-la3';
+
+            // Determine the standalone page URL based on module
+            let standaloneUrl = '';
+            if (mn === 3) {
+                standaloneUrl = 'module3-progressive-era.html';
+            } else if (mn === 6) {
+                standaloneUrl = 'module6-civil-rights.html';
+            }
+
             details += '<h4 style="margin-top:30px">📊 Data Analysis Activity</h4>';
             details += '<p style="margin:10px 0"><strong>' + modAct.la3.dataAnalysis.instructions + '</strong></p>';
+
+            // Add prominent link to standalone page
+            if (standaloneUrl) {
+                details += '<div style="margin:20px 0;padding:20px;background:#fff3cd;border-left:5px solid #ffc107;border-radius:6px">';
+                details += '<h4 style="margin:0 0 10px 0;color:#856404">📊 Interactive Charts & Questions</h4>';
+                details += '<p style="margin:0 0 15px 0;color:#856404">View the full interactive data analysis page with charts, data tables, and all questions:</p>';
+                details += '<a href="' + standaloneUrl + '" target="_blank" style="display:inline-block;background:#8B4513;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px">🔗 Open Interactive Chart Page</a>';
+                details += '<p style="margin:15px 0 0 0;font-size:13px;color:#856404"><em>Opens in new tab • Perfect for Canvas linking • Print-friendly</em></p>';
+                details += '</div>';
+            }
+
             details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)">';
             details += '<h5 style="margin-bottom:20px">' + modAct.la3.dataAnalysis.chartData.title + '</h5>';
             details += '<canvas id="' + chartId + '" style="max-width:800px;max-height:500px;margin:20px auto;display:block"></canvas>';
 
-            // Add regional data table if present (Module 3 Election of 1800)
+            // Add regional data table if present
             if (modAct.la3.dataAnalysis.regionalData) {
                 const regData = modAct.la3.dataAnalysis.regionalData;
                 details += '<h5 style="margin-top:30px">' + regData.title + '</h5>';
