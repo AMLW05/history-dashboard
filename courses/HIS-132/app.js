@@ -410,8 +410,8 @@ function buildActivity(a, mn, idx) {
             let standaloneUrl = '';
             if (mn === 3) {
                 standaloneUrl = 'module3-election-1800.html';
-            } else if (mn === 6) {
-                standaloneUrl = 'module6-reform-movements.html';
+            } else if (mn === 5) {
+                standaloneUrl = 'module5-reform-movements.html';
             }
 
             details += '<h4 style="margin-top:30px">📊 Data Analysis Activity</h4>';

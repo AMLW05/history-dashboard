@@ -68,6 +68,50 @@ const module5Activities = {
                 { text: "Horace Mann promoted public schools for all children", answer: "Education Reform" },
                 { text: "Connected to cult of domesticity - women as moral guardians", answer: "Temperance / Women's Rights" }
             ]
+        },
+        dataAnalysis: {
+            title: "Data Analysis: Reform Movements Membership Growth",
+            instructions: "Analyze the chart showing membership/circulation growth of major reform movements 1830-1860 to answer questions about reform's expansion and sectional tensions.",
+            chartData: {
+                type: "line",
+                title: "Reform Movement Growth (1830-1860)",
+                datasets: [
+                    {
+                        label: "Abolitionist Societies (# of societies)",
+                        data: [50, 200, 400, 1000, 1350, 2000],
+                        years: [1830, 1835, 1838, 1840, 1845, 1850],
+                        color: "#d63031"
+                    },
+                    {
+                        label: "Anti-Slavery Newspaper Circulation (thousands)",
+                        data: [5, 20, 50, 100, 150, 300],
+                        years: [1830, 1835, 1840, 1845, 1850, 1855],
+                        color: "#0984e3"
+                    },
+                    {
+                        label: "Women's Rights Petition Signatures (thousands)",
+                        data: [0, 5, 15, 40, 90, 200],
+                        years: [1835, 1840, 1845, 1848, 1852, 1855],
+                        color: "#00b894"
+                    },
+                    {
+                        label: "Temperance Society Members (thousands)",
+                        data: [100, 500, 1000, 1200, 1500, 1700],
+                        years: [1830, 1835, 1840, 1845, 1850, 1855],
+                        color: "#fdcb6e"
+                    }
+                ]
+            },
+            questions: [
+                { q: "Which reform movement had the most members/circulation by 1855?", a: "Temperance Movement with 1.7 million members" },
+                { q: "When did abolitionist societies experience most rapid growth?", a: "1835-1840 (grew from 200 to 1000 societies)" },
+                { q: "What event in 1848 corresponds with spike in women's rights petition signatures?", a: "Seneca Falls Convention launched organized women's rights movement" },
+                { q: "Why did anti-slavery newspaper circulation grow steadily throughout period?", a: "Growing Northern opposition to slavery expansion; improved printing technology; postal system growth" },
+                { q: "What does temperance movement's large membership reveal?", a: "Moral reform attracted broader support than more radical causes; women's activism in 'acceptable' sphere" },
+                { q: "How might these growth trends have increased sectional tensions?", a: "Abolition's growth alarmed South; Northern reform challenged Southern society; cultural divide widened" },
+                { q: "What role did women play across these movements?", a: "Women dominated temperance, increasingly involved in abolition and women's rights; challenged separate spheres ideology" },
+                { q: "How did Second Great Awakening fuel this reform growth?", a: "Religious revival emphasized moral responsibility to perfect society; created activist networks" }
+            ]
         }
     }
 };
@@ -160,48 +204,20 @@ const module6Activities = {
                 { event: "Abraham Lincoln elected president with no Southern support", date: "November 1860", order: 12 }
             ]
         },
-        dataAnalysis: {
-            title: "Data Analysis: Reform Movements Membership Growth",
-            instructions: "Analyze the chart showing membership/circulation growth of major reform movements 1830-1860 to answer questions about reform's expansion and sectional tensions.",
-            chartData: {
-                type: "line",
-                title: "Reform Movement Growth (1830-1860)",
-                datasets: [
-                    {
-                        label: "Abolitionist Societies (# of societies)",
-                        data: [50, 200, 400, 1000, 1350, 2000],
-                        years: [1830, 1835, 1838, 1840, 1845, 1850],
-                        color: "#d63031"
-                    },
-                    {
-                        label: "Anti-Slavery Newspaper Circulation (thousands)",
-                        data: [5, 20, 50, 100, 150, 300],
-                        years: [1830, 1835, 1840, 1845, 1850, 1855],
-                        color: "#0984e3"
-                    },
-                    {
-                        label: "Women's Rights Petition Signatures (thousands)",
-                        data: [0, 5, 15, 40, 90, 200],
-                        years: [1835, 1840, 1845, 1848, 1852, 1855],
-                        color: "#00b894"
-                    },
-                    {
-                        label: "Temperance Society Members (thousands)",
-                        data: [100, 500, 1000, 1200, 1500, 1700],
-                        years: [1830, 1835, 1840, 1845, 1850, 1855],
-                        color: "#fdcb6e"
-                    }
-                ]
-            },
-            questions: [
-                { q: "Which reform movement had the most members/circulation by 1855?", a: "Temperance Movement with 1.7 million members" },
-                { q: "When did abolitionist societies experience most rapid growth?", a: "1835-1840 (grew from 200 to 1000 societies)" },
-                { q: "What event in 1848 corresponds with spike in women's rights petition signatures?", a: "Seneca Falls Convention launched organized women's rights movement" },
-                { q: "Why did anti-slavery newspaper circulation grow steadily throughout period?", a: "Growing Northern opposition to slavery expansion; improved printing technology; postal system growth" },
-                { q: "What does temperance movement's large membership reveal?", a: "Moral reform attracted broader support than more radical causes; women's activism in 'acceptable' sphere" },
-                { q: "How might these growth trends have increased sectional tensions?", a: "Abolition's growth alarmed South; Northern reform challenged Southern society; cultural divide widened" },
-                { q: "What role did women play across these movements?", a: "Women dominated temperance, increasingly involved in abolition and women's rights; challenged separate spheres ideology" },
-                { q: "How did Second Great Awakening fuel this reform growth?", a: "Religious revival emphasized moral responsibility to perfect society; created activist networks" }
+        comparisonActivity: {
+            instructions: "Compare Northern vs. Southern perspectives on the sectional crisis:",
+            regions: ["Northern Free States", "Southern Slave States", "Both"],
+            characteristics: [
+                { text: "Believed slavery was morally wrong", answer: "Northern Free States" },
+                { text: "Argued slavery was protected by Constitution", answer: "Southern Slave States" },
+                { text: "Feared other section's growing power", answer: "Both" },
+                { text: "Supported popular sovereignty in territories", answer: "Both" },
+                { text: "Opposed expansion of slavery into territories", answer: "Northern Free States" },
+                { text: "Defended slavery as 'positive good' for society", answer: "Southern Slave States" },
+                { text: "Used sectional political parties to advance interests", answer: "Both" },
+                { text: "Founded Republican Party to stop slavery's expansion", answer: "Northern Free States" },
+                { text: "Threatened secession if Lincoln won presidency", answer: "Southern Slave States" },
+                { text: "Believed their economic system was superior", answer: "Both" }
             ]
         }
     }
