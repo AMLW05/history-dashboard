@@ -458,15 +458,72 @@ function buildActivity(a, mn, idx) {
             });
         }
     }
-    // LA4: Additional activities (Module 3 has LA4)
+    // LA4: Data Analysis or other activities
     else if (idx === 3 && modAct.la4) {
-        details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
-        details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
-        details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
-        modAct.la4.items.forEach((item, i) => {
-            details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
-        });
-        details += '</tbody></table>';
+        // Check if LA4 has data analysis (Module 3)
+        if (modAct.la4.dataAnalysis) {
+            const chartId = 'chart-m' + mn + '-la4';
+            const dataAnalysis = modAct.la4.dataAnalysis;
+
+            // Determine the standalone page URL
+            let standaloneUrl = '';
+            if (mn === 3) {
+                standaloneUrl = 'module3-election-1800.html';
+            }
+
+            details += '<h4 style="margin-top:20px">📊 ' + dataAnalysis.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + dataAnalysis.instructions + '</strong></p>';
+
+            // Add prominent link to standalone page
+            if (standaloneUrl) {
+                details += '<div style="margin:20px 0;padding:20px;background:#fff3cd;border-left:5px solid #ffc107;border-radius:6px">';
+                details += '<h4 style="margin:0 0 10px 0;color:#856404">📊 Interactive Charts & Questions</h4>';
+                details += '<p style="margin:0 0 15px 0;color:#856404">View the full interactive data analysis page with charts, data tables, and all questions:</p>';
+                details += '<a href="' + standaloneUrl + '" target="_blank" style="display:inline-block;background:#8B4513;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px">🔗 Open Interactive Chart Page</a>';
+                details += '<p style="margin:15px 0 0 0;font-size:13px;color:#856404"><em>Opens in new tab • Perfect for Canvas linking • Print-friendly</em></p>';
+                details += '</div>';
+            }
+
+            details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)">';
+            details += '<h5 style="margin-bottom:20px">' + dataAnalysis.chartData.title + '</h5>';
+            details += '<canvas id="' + chartId + '" style="max-width:800px;max-height:500px;margin:20px auto;display:block"></canvas>';
+
+            // Add regional data table if present
+            if (dataAnalysis.regionalData) {
+                const regData = dataAnalysis.regionalData;
+                details += '<h5 style="margin-top:30px">' + regData.title + '</h5>';
+                details += '<table style="margin-top:15px"><thead><tr><th>Region</th><th>Federalist Support</th><th>Republican Support</th></tr></thead><tbody>';
+                regData.regions.forEach(r => {
+                    details += '<tr><td><strong>' + r.region + '</strong></td><td>' + r.federalist + '</td><td>' + r.republican + '</td></tr>';
+                });
+                details += '</tbody></table>';
+            }
+
+            details += '</div>';
+            details += '<h5 style="margin-top:20px">Analysis Questions:</h5><ol style="margin-left:20px;line-height:2">';
+            dataAnalysis.questions.forEach(q => {
+                details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
+            });
+            details += '</ol>';
+
+            // Store chart data to render after DOM insertion
+            if (!window.pendingCharts) window.pendingCharts = [];
+            window.pendingCharts.push({
+                chartId: chartId,
+                moduleNum: mn,
+                chartData: dataAnalysis.chartData
+            });
+        }
+        // Standard categorization activity
+        else if (modAct.la4.items) {
+            details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
+            details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
+            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
+            modAct.la4.items.forEach((item, i) => {
+                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
+            });
+            details += '</tbody></table>';
+        }
     }
 
     return '<div class="activity-card' + feat + '" onclick="toggleActivity(\'' + id + '\')"><div class="activity-header"><div><span class="activity-title">' + a.title + '</span>' + (a.autoGraded ? '<span class="badge badge-auto">Auto-Graded</span>' : '') + '<span class="badge badge-points">' + a.points + ' pts</span>' + (a.featured ? '<span class="badge badge-featured">Featured</span>' : '') + '</div><div><button class="copy-btn" onclick="copyActivity(' + mn + ',' + idx + ', event)" title="Copy to clipboard for Canvas">📋 Copy</button><span class="toggle-icon">▼</span></div></div><div class="activity-meta">' + a.format + ' • ' + a.timeLimit + ' min • ' + a.attempts + ' attempts</div><div id="activity-details-' + id + '" class="activity-details">' + details + '</div></div>';

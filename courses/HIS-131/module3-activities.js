@@ -52,6 +52,24 @@ const module3Activities = {
                 { event: "Whiskey Rebellion tests federal power under Constitution", date: "1794", order: 12 }
             ]
         },
+        comparisonActivity: {
+            instructions: "Compare Federalist vs. Anti-Federalist positions on the Constitution:",
+            regions: ["Federalist Position", "Anti-Federalist Position"],
+            characteristics: [
+                { text: "Supported strong central government", answer: "Federalist Position" },
+                { text: "Feared tyranny from centralized power", answer: "Anti-Federalist Position" },
+                { text: "Believed large republic could protect liberty", answer: "Federalist Position" },
+                { text: "Wanted Bill of Rights to protect individual liberties", answer: "Anti-Federalist Position" },
+                { text: "Thought Constitution gave too much power to President", answer: "Anti-Federalist Position" },
+                { text: "Argued Constitution needed to replace weak Articles", answer: "Federalist Position" },
+                { text: "Preferred state sovereignty over federal power", answer: "Anti-Federalist Position" },
+                { text: "Wrote The Federalist Papers defending Constitution", answer: "Federalist Position" },
+                { text: "Opposed Constitution without individual rights protections", answer: "Anti-Federalist Position" },
+                { text: "Believed Constitution balanced state and federal power", answer: "Federalist Position" }
+            ]
+        }
+    },
+    la4: {
         dataAnalysis: {
             title: "Data Analysis: Election of 1800",
             instructions: "Analyze the electoral map and vote data to answer questions about the first peaceful transfer of power between parties.",
@@ -86,29 +104,6 @@ const module3Activities = {
                 { q: "How many total electoral votes were cast?", a: "276 total (138 electors × 2 votes each)" }
             ]
         }
-    },
-    la4: {
-        title: "LA4: Constitutional Categorization",
-        format: "Categorization Activity",
-        instructions: "Categorize each power or feature as belonging to: Articles of Confederation, U.S. Constitution, or Both.",
-        items: [
-            { text: "Unicameral (one-house) legislature", answer: "Articles of Confederation" },
-            { text: "Bicameral (two-house) legislature", answer: "U.S. Constitution" },
-            { text: "No executive branch", answer: "Articles of Confederation" },
-            { text: "President as chief executive", answer: "U.S. Constitution" },
-            { text: "No federal court system", answer: "Articles of Confederation" },
-            { text: "Supreme Court and federal judiciary", answer: "U.S. Constitution" },
-            { text: "Each state has one vote", answer: "Articles of Confederation" },
-            { text: "Representation based on population (House)", answer: "U.S. Constitution" },
-            { text: "Cannot tax citizens directly", answer: "Articles of Confederation" },
-            { text: "Federal government can levy taxes", answer: "U.S. Constitution" },
-            { text: "Cannot regulate interstate commerce", answer: "Articles of Confederation" },
-            { text: "Congress regulates interstate commerce", answer: "U.S. Constitution" },
-            { text: "Requires unanimous consent to amend", answer: "Articles of Confederation" },
-            { text: "Requires 2/3 Congress + 3/4 states to amend", answer: "U.S. Constitution" },
-            { text: "Created during Revolutionary War era", answer: "Both" },
-            { text: "Aimed to balance state and federal power", answer: "Both" }
-        ]
     }
 };
 
