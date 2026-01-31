@@ -69,7 +69,7 @@ history-dashboard/
 
 | Course | Status | QM Certified | Auto-Graded | Activities |
 |--------|--------|--------------|-------------|------------|
-| **HIS-131** | ✅ Complete | 22/22 | 67% | 26 |
+| **HIS-131** | ✅ Complete | 22/22 | 49% | 26 |
 | **HIS-132** | ✅ Complete | Pending Audit | 49% | 26 |
 | HIS-111 | 🚧 Planned | - | - | - |
 | HIS-112 | 🚧 Planned | - | - | - |

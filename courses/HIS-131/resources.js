@@ -26,22 +26,24 @@ const courseResources = {
 - Midterm (Module 4) and Final Exam (Module 8)
 
 **Point Distribution**:
-- Learning Activities (LA1-LA3): 60 points × 8 = 480 points
-- Module Quizzes: 25 points × 8 = 200 points
-- Discussions: 30 points × 4 = 120 points
-- Project Checkpoints: 50 points × 3 = 150 points
-- Final Project: 100 points
+- Learning Activities (LA1-LA4): 530 points
+  - LA1-LA3: 20 points × 3 × 8 modules = 480 points
+  - LA4 Data Analysis: 25 points × 2 = 50 points
+- Module Quizzes: 25 points × 6 = 150 points
 - Midterm Exam: 50 points
 - Final Exam: 50 points
-**Total**: 1,120 points`
+- Discussions: 100 points × 4 = 400 points
+- Project Checkpoints: 250 points (50 + 100 + 100)
+- Final Project: 200 points
+**Total**: 1,680 points`
             },
             {
                 heading: "Grading Scale",
-                content: `A: 90-100% (1,008-1,120 points)
-B: 80-89% (896-1,007 points)
-C: 70-79% (784-895 points)
-D: 60-69% (672-783 points)
-F: Below 60% (0-671 points)`
+                content: `A: 90-100% (1,512-1,680 points)
+B: 80-89% (1,344-1,511 points)
+C: 70-79% (1,176-1,343 points)
+D: 60-69% (1,008-1,175 points)
+F: Below 60% (0-1,007 points)`
             },
             {
                 heading: "Course Policies",
