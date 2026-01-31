@@ -1,0 +1,199 @@
+{
+  "quiz": {
+    "title": "LA4: Analyzing Antebellum Reform Movements",
+    "description": "Data Analysis Activity - Analyze historical data about reform movement growth from 1830-1860, including membership trends, petition campaigns, and regional patterns. This assessment develops your data literacy skills (HTS6) while reinforcing understanding of reform movements and sectional tensions.",
+    "quiz_type": "assignment",
+    "points_possible": 25,
+    "time_limit": 35,
+    "allowed_attempts": 2,
+    "shuffle_answers": true,
+    "show_correct_answers": true,
+    "show_correct_answers_at": "after_due_date",
+    "scoring_policy": "keep_highest",
+    "module": "Module 6: Reform & Social Movements",
+    "linkedMLOs": ["MLO 1: Analyze connections between religious revival and reform", "MLO 2: Evaluate strategies/divisions within abolitionism", "MLO 3: Explain how women's reform led to women's rights"],
+    "linkedCLOs": ["CLO1: Analyze social/political/economic development", "CLO2: Evaluate how diverse groups shaped American society", "CLO3: Apply historical thinking skills to interpret sources"],
+    "linkedSkills": ["HTS6: Data Literacy", "HTS4: Comparison"],
+    "qmStandards": ["3.1: Assessments measure stated learning objectives", "3.3: Specific and descriptive criteria for evaluation", "4.4: Instructional materials are current", "5.1: Learning activities promote achievement of objectives"]
+  },
+  "stimulus": {
+    "type": "data_charts",
+    "description": "Students view reform movement growth chart showing four trends from 1830-1860",
+    "charts": [
+      {
+        "title": "Reform Movement Growth (1830-1860)",
+        "type": "line_chart",
+        "data_series": [
+          {
+            "name": "Abolitionist Societies (number of societies)",
+            "data": {"1830": 50, "1835": 200, "1838": 400, "1840": 1000, "1845": 1350, "1850": 2000}
+          },
+          {
+            "name": "Anti-Slavery Newspaper Circulation (thousands)",
+            "data": {"1830": 5, "1835": 20, "1840": 50, "1845": 100, "1850": 150, "1855": 300}
+          },
+          {
+            "name": "Women's Rights Petition Signatures (thousands)",
+            "data": {"1835": 0, "1840": 5, "1845": 15, "1848": 40, "1852": 90, "1855": 200}
+          },
+          {
+            "name": "Temperance Society Members (thousands)",
+            "data": {"1830": 100, "1835": 500, "1840": 1000, "1845": 1200, "1850": 1500, "1855": 1700}
+          }
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "According to the data, which reform movement had the LARGEST membership/participation by 1855?",
+      "answers": [
+        {"text": "Temperance Movement (1.7 million members)", "correct": true},
+        {"text": "Abolitionist Societies (2,000 societies)", "correct": false},
+        {"text": "Anti-Slavery Newspaper Circulation (300,000)", "correct": false},
+        {"text": "Women's Rights Petition Signatures (200,000)", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Temperance had 1.7 million members by 1855 - far exceeding other movements. This reflects temperance's broader social acceptability compared to more 'radical' causes like abolition.",
+        "incorrect": "Compare the raw numbers across all four data series at 1855. Which movement shows the highest participation number?"
+      }
+    },
+    {
+      "id": 2,
+      "type": "ordering",
+      "points": 2.5,
+      "question": "Based on the data, place these reform movements in order from MOST to LEAST members/participants by 1855.",
+      "items": [
+        {"text": "Temperance Movement (1,700,000 members)", "order": 1},
+        {"text": "Anti-Slavery Newspaper Circulation (300,000)", "order": 2},
+        {"text": "Women's Rights Petition Signatures (200,000)", "order": 3},
+        {"text": "Abolitionist Societies (2,000 societies - representing smaller total members)", "order": 4}
+      ],
+      "feedback": "Temperance's massive membership reflects its mainstream appeal. Note that 2,000 abolitionist societies represented perhaps 150,000-200,000 total members, making it the smallest of the four movements by individual participation."
+    },
+    {
+      "id": 3,
+      "type": "numeric",
+      "points": 2.5,
+      "question": "According to the data, abolitionist societies grew from 50 in 1830 to 1,000 in 1840. By what percentage did the number of abolitionist societies increase during this decade? (Enter a whole number without the % symbol)",
+      "correct_answer": 1900,
+      "tolerance": 100,
+      "feedback": {
+        "correct": "Correct! (1000-50)/50 × 100 = 1900% increase. This explosive growth occurred during the 1830s when immediatism (demanding immediate abolition) replaced gradualism.",
+        "incorrect": "Calculate: (New Value - Old Value) / Old Value × 100 = (1000-50)/50 × 100 = 1900%"
+      }
+    },
+    {
+      "id": 4,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "The data shows women's rights petition signatures spiked dramatically around 1848. Select ALL factors that explain this increase. (Select all that apply)",
+      "answers": [
+        {"text": "The Seneca Falls Convention (1848) launched the organized women's rights movement", "correct": true},
+        {"text": "Women gained experience organizing through abolition and temperance campaigns", "correct": true},
+        {"text": "The Declaration of Sentiments demanded women's suffrage and equal rights", "correct": true},
+        {"text": "The 19th Amendment was ratified in 1848 giving women the vote", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The Seneca Falls Convention (1848) was a watershed moment. Women like Elizabeth Cady Stanton and Lucretia Mott applied organizing skills from other reform movements to demand their own rights.",
+        "incorrect": "The 19th Amendment wasn't ratified until 1920. Focus on what happened in 1848 that catalyzed the women's rights movement."
+      }
+    },
+    {
+      "id": 5,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "Categorize each factor as explaining why TEMPERANCE attracted more members OR why ABOLITION remained smaller despite rapid growth.",
+      "categories": ["Why Temperance Had More Members", "Why Abolition Remained Smaller"],
+      "items": [
+        {"text": "Seen as 'respectable' reform acceptable for women's public participation", "category": "Why Temperance Had More Members"},
+        {"text": "Directly threatened Southern economic and social system", "category": "Why Abolition Remained Smaller"},
+        {"text": "Did not challenge fundamental property rights or regional interests", "category": "Why Temperance Had More Members"},
+        {"text": "Faced violent opposition including mob attacks and gag rules", "category": "Why Abolition Remained Smaller"},
+        {"text": "Could be framed as protecting families from male drunkenness", "category": "Why Temperance Had More Members"},
+        {"text": "Divided even Northern communities over race and immediate vs. gradual approaches", "category": "Why Abolition Remained Smaller"}
+      ],
+      "feedback": "Temperance was 'safe' reform - it didn't threaten sectional interests or require confronting racism. Abolition's radical implications limited its appeal even in the North."
+    },
+    {
+      "id": 6,
+      "type": "matching",
+      "points": 2.5,
+      "question": "Match each reform movement with its PRIMARY connection to the Second Great Awakening's religious revival.",
+      "items": [
+        {"left": "Temperance Movement", "right": "Alcohol as sin preventing moral perfection and family harmony"},
+        {"left": "Abolitionism", "right": "Slavery as national sin requiring immediate repentance"},
+        {"left": "Women's Rights", "right": "Women's moral authority to reform society and protect families"},
+        {"left": "Education Reform", "right": "Universal education to create moral, informed citizens"}
+      ],
+      "feedback": "The Second Great Awakening (1790s-1840s) taught that individuals could achieve salvation through moral action and that society could be perfected. Each reform movement drew on this religious energy."
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "The anti-slavery newspaper circulation data shows steady growth from 5,000 (1830) to 300,000 (1855). Which factor BEST explains this consistent upward trend?",
+      "answers": [
+        {"text": "Improvements in printing technology, postal systems, and literacy rates expanded reach", "correct": true},
+        {"text": "The federal government subsidized anti-slavery publications", "correct": false},
+        {"text": "Southern states encouraged distribution of abolitionist materials", "correct": false},
+        {"text": "Most newspapers in this era were dedicated to abolition", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Technological changes (steam-powered printing, cheaper paper, expanded postal routes) combined with rising Northern literacy enabled mass distribution of papers like The Liberator and Frederick Douglass' North Star.",
+        "incorrect": "The federal government actually restricted abolitionist mail in the South. Consider what technological and social changes enabled mass print media in this era."
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "Based on the growth patterns in the data, select ALL ways these reform trends likely INCREASED sectional tensions between North and South. (Select all that apply)",
+      "answers": [
+        {"text": "Growing abolition movement threatened Southern slavery and way of life", "correct": true},
+        {"text": "Northern reform culture contrasted with Southern resistance to social change", "correct": true},
+        {"text": "Petition campaigns pressured Congress to address slavery, angering Southern representatives", "correct": true},
+        {"text": "Southern states embraced temperance reform enthusiastically", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Northern reform energy - especially abolition's explosive growth - directly challenged Southern institutions and widened the cultural divide that would lead to Civil War.",
+        "incorrect": "Consider how Southern slaveholders would view the growth of abolitionist societies from 50 to 2,000 and anti-slavery newspapers reaching 300,000 circulation."
+      }
+    },
+    {
+      "id": 9,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "The data shows women participated across multiple reform movements. Categorize each statement about women's reform participation as ACCURATE or INACCURATE based on the historical context.",
+      "categories": ["Accurate Statement", "Inaccurate Statement"],
+      "items": [
+        {"text": "Women dominated temperance movement membership and leadership", "category": "Accurate Statement"},
+        {"text": "Women were completely excluded from abolitionist organizations", "category": "Inaccurate Statement"},
+        {"text": "Women's reform work led them to recognize their own lack of rights", "category": "Accurate Statement"},
+        {"text": "The women's rights movement emerged independently without connection to other reforms", "category": "Inaccurate Statement"},
+        {"text": "Women faced criticism for speaking publicly even in reform movements", "category": "Accurate Statement"},
+        {"text": "Men universally supported women's participation in all reform movements", "category": "Inaccurate Statement"}
+      ],
+      "feedback": "Women's reform participation was complex: they were welcomed in temperance but faced restrictions in abolition (leading to the 1840 split). Their reform experience revealed their own subordinate status, sparking the women's rights movement."
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "Analyzing all four data trends together, what do the patterns reveal about the relationship between reform movements in antebellum America?",
+      "answers": [
+        {"text": "Reform movements were interconnected, with activists often participating in multiple causes and using similar organizing strategies", "correct": true},
+        {"text": "Each reform movement operated completely independently with no overlap in membership or methods", "correct": false},
+        {"text": "The government coordinated all reform movements through a central agency", "correct": false},
+        {"text": "Reform movements declined steadily throughout the period", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The data shows parallel growth patterns suggesting interconnection. Many reformers (like the Grimké sisters) worked across movements, and tactics like petition campaigns were shared. This 'reform network' created a culture of activism.",
+        "incorrect": "Notice how all four movements show growth during the same period. What might explain these parallel patterns? Consider whether reformers might have participated in multiple movements."
+      }
+    }
+  ]
+}

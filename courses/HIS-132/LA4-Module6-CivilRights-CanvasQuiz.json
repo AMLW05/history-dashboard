@@ -1,0 +1,208 @@
+{
+  "quiz": {
+    "title": "LA4: Analyzing Civil Rights Movement Data",
+    "description": "Data Analysis Activity - Analyze historical data about the Civil Rights Movement (1945-1968) including voter registration trends, school desegregation progress, legislative victories, and protest participation. This assessment develops your data literacy skills (HTS6) while reinforcing understanding of Civil Rights strategies and achievements.",
+    "quiz_type": "assignment",
+    "points_possible": 25,
+    "time_limit": 35,
+    "allowed_attempts": 2,
+    "shuffle_answers": true,
+    "show_correct_answers": true,
+    "show_correct_answers_at": "after_due_date",
+    "scoring_policy": "keep_highest",
+    "module": "Module 6: Cold War & Civil Rights",
+    "linkedMLOs": ["MLO 2: Evaluate the strategies and achievements of the Civil Rights Movement"],
+    "linkedCLOs": ["CLO2: Evaluate how diverse groups struggled for civil rights and inclusion", "CLO3: Apply historical thinking skills to interpret sources about modern America"],
+    "linkedSkills": ["HTS6: Data Literacy", "HTS4: Comparison", "HTS1: Source Analysis"],
+    "qmStandards": ["3.1: Assessments measure stated learning objectives", "3.3: Specific and descriptive criteria for evaluation", "4.4: Instructional materials are current", "5.1: Learning activities promote achievement of objectives"]
+  },
+  "stimulus": {
+    "type": "data_charts",
+    "description": "Students view voter registration data, school desegregation data, and legislative timeline before answering questions",
+    "charts": [
+      {
+        "title": "Black Voter Registration in the South",
+        "type": "line_chart",
+        "data": {"1940": 3, "1950": 12, "1960": 29, "1965": 45, "1968": 62},
+        "unit": "percentage registered to vote",
+        "note": "Voting Rights Act passed in 1965"
+      },
+      {
+        "title": "School Desegregation Progress (Black Students in Integrated Schools)",
+        "type": "bar_chart",
+        "data": {"1954": 0, "1960": 1, "1964": 2, "1968": 32},
+        "unit": "percentage in integrated schools",
+        "note": "Brown v. Board decided in 1954; Civil Rights Act passed in 1964"
+      },
+      {
+        "title": "Major Civil Rights Legislation",
+        "type": "timeline",
+        "data": [
+          {"year": 1964, "law": "Civil Rights Act", "impact": "Banned discrimination in employment and public accommodations"},
+          {"year": 1965, "law": "Voting Rights Act", "impact": "Protected voting rights; banned literacy tests"},
+          {"year": 1968, "law": "Fair Housing Act", "impact": "Banned housing discrimination"}
+        ]
+      },
+      {
+        "title": "Major Protest Participation",
+        "type": "statistics",
+        "data": [
+          {"event": "Montgomery Bus Boycott (1955-56)", "participants": "50,000 (local)"},
+          {"event": "March on Washington (1963)", "participants": "250,000 (national)"},
+          {"event": "Selma to Montgomery March (1965)", "participants": "25,000 (regional)"}
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "According to the voter registration data, how did Black voter registration in the South change after the Voting Rights Act of 1965?",
+      "answers": [
+        {"text": "It increased dramatically from 29% (1960) to 62% (1968), demonstrating the law's effectiveness", "correct": true},
+        {"text": "It declined because the law was not enforced", "correct": false},
+        {"text": "It remained unchanged at 29%", "correct": false},
+        {"text": "It decreased to 3% as in 1940", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The Voting Rights Act's federal oversight and ban on literacy tests produced immediate, measurable results - registration more than doubled in just 3 years (29% to 62%).",
+        "incorrect": "Compare voter registration rates before (1960: 29%) and after (1968: 62%) the Voting Rights Act of 1965. What direction did the numbers move?"
+      }
+    },
+    {
+      "id": 2,
+      "type": "numeric",
+      "points": 2.5,
+      "question": "Based on the voter registration data, calculate the percentage point increase in Black voter registration from 1940 to 1968. (Enter a whole number)",
+      "correct_answer": 59,
+      "tolerance": 1,
+      "feedback": {
+        "correct": "Correct! 62% - 3% = 59 percentage points increase over 28 years. Most of this gain came after the Voting Rights Act (1965).",
+        "incorrect": "Calculate: 1968 registration (62%) minus 1940 registration (3%) = 59 percentage points"
+      }
+    },
+    {
+      "id": 3,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "The school desegregation data shows only 2% of Black students attended integrated schools by 1964 - TEN years after Brown v. Board. Select ALL factors that explain this slow progress. (Select all that apply)",
+      "answers": [
+        {"text": "Southern states engaged in 'massive resistance' to court orders", "correct": true},
+        {"text": "The federal government initially lacked enforcement mechanisms", "correct": true},
+        {"text": "White flight and neighborhood segregation limited integration", "correct": true},
+        {"text": "The Supreme Court immediately enforced desegregation nationwide", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Brown v. Board declared segregation unconstitutional but provided no enforcement timeline. Southern resistance (closing schools, 'freedom of choice' plans) combined with federal reluctance to intervene slowed progress dramatically.",
+        "incorrect": "The Supreme Court's Brown II decision (1955) called for desegregation 'with all deliberate speed' but provided no specific timeline or enforcement mechanism."
+      }
+    },
+    {
+      "id": 4,
+      "type": "ordering",
+      "points": 2.5,
+      "question": "Place the following Civil Rights legislation in chronological order (earliest to latest).",
+      "items": [
+        {"text": "Civil Rights Act - banned discrimination in employment and public accommodations", "order": 1},
+        {"text": "Voting Rights Act - protected voting rights and banned literacy tests", "order": 2},
+        {"text": "Fair Housing Act - banned housing discrimination", "order": 3}
+      ],
+      "feedback": "The three major Civil Rights laws were passed in quick succession: 1964 (public accommodations/employment), 1965 (voting), 1968 (housing). Together they addressed the major areas of legal discrimination."
+    },
+    {
+      "id": 5,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "Compare the voter registration and school desegregation data. Categorize each statement about the difference in progress rates.",
+      "categories": ["Why Voter Registration Increased Faster", "Why School Desegregation Was Slower"],
+      "items": [
+        {"text": "Voting Rights Act included federal oversight and enforcement provisions", "category": "Why Voter Registration Increased Faster"},
+        {"text": "Integration required changing local school systems and overcoming white flight", "category": "Why School Desegregation Was Slower"},
+        {"text": "Federal registrars could be sent to counties with low Black registration", "category": "Why Voter Registration Increased Faster"},
+        {"text": "Residential segregation meant neighborhood schools remained segregated", "category": "Why School Desegregation Was Slower"},
+        {"text": "Clear metric (registration percentage) made progress measurable and enforceable", "category": "Why Voter Registration Increased Faster"},
+        {"text": "Local control of education allowed continued resistance to integration", "category": "Why School Desegregation Was Slower"}
+      ],
+      "feedback": "The Voting Rights Act succeeded partly because it included strong federal enforcement mechanisms. School desegregation faced more structural obstacles: residential patterns, local control, and the challenge of changing entire systems rather than registering individuals."
+    },
+    {
+      "id": 6,
+      "type": "matching",
+      "points": 2.5,
+      "question": "Match each Civil Rights law with the specific barrier to equality it addressed.",
+      "items": [
+        {"left": "Civil Rights Act of 1964", "right": "Segregated lunch counters, hotels, and employment discrimination"},
+        {"left": "Voting Rights Act of 1965", "right": "Literacy tests, poll taxes, and registration barriers"},
+        {"left": "Fair Housing Act of 1968", "right": "Discriminatory practices by realtors, banks, and landlords"},
+        {"left": "Brown v. Board of Education (1954)", "right": "Legally mandated separate schools for Black and white children"}
+      ],
+      "feedback": "Each law targeted specific mechanisms of discrimination: Jim Crow public accommodations (1964), voting restrictions (1965), housing discrimination (1968). Together with Brown (1954), they dismantled legal segregation."
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "The protest participation data shows growth from 50,000 (Montgomery, local) to 250,000 (March on Washington, national). What does this pattern reveal about the Civil Rights Movement's development?",
+      "answers": [
+        {"text": "The movement expanded from local protests to massive national demonstrations, creating political pressure for federal action", "correct": true},
+        {"text": "Protest participation declined over time as people lost interest", "correct": false},
+        {"text": "All protests remained small and local throughout the period", "correct": false},
+        {"text": "The federal government organized and funded all protests", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The movement's growth from local (Montgomery) to national (March on Washington) demonstrated its expanding reach and created irresistible pressure for federal legislation. Media coverage of massive protests shaped public opinion.",
+        "incorrect": "Compare the participation numbers: Montgomery (50,000 local) vs. March on Washington (250,000 national). What trend do you see?"
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "Based on ALL the data, select ALL conclusions about what made the Voting Rights Act of 1965 particularly effective. (Select all that apply)",
+      "answers": [
+        {"text": "It banned literacy tests that had been used to prevent Black registration", "correct": true},
+        {"text": "It allowed federal oversight in states with histories of discrimination", "correct": true},
+        {"text": "Registration numbers show immediate, dramatic improvement after passage", "correct": true},
+        {"text": "It relied entirely on Southern states to enforce their own compliance", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The Voting Rights Act's effectiveness came from its specific provisions: banning discriminatory tests, requiring federal preclearance for voting law changes, and sending federal registrars to enforce compliance.",
+        "incorrect": "The Act's success came precisely because it did NOT rely on states to enforce compliance themselves - it provided federal oversight mechanisms."
+      }
+    },
+    {
+      "id": 9,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "The data reveals a 10-year gap between Brown v. Board (1954) and the Civil Rights Act (1964). Categorize each factor as explaining why LEGAL VICTORIES ALONE were insufficient OR why GRASSROOTS PROTESTS were necessary.",
+      "categories": ["Why Legal Victories Alone Were Insufficient", "Why Grassroots Protests Were Necessary"],
+      "items": [
+        {"text": "Courts could declare laws unconstitutional but couldn't force compliance", "category": "Why Legal Victories Alone Were Insufficient"},
+        {"text": "Mass demonstrations created political pressure and media attention", "category": "Why Grassroots Protests Were Necessary"},
+        {"text": "Southern states found ways to resist or circumvent court orders", "category": "Why Legal Victories Alone Were Insufficient"},
+        {"text": "Direct action (sit-ins, marches) exposed injustice to national audience", "category": "Why Grassroots Protests Were Necessary"},
+        {"text": "Federal government was reluctant to intervene without public pressure", "category": "Why Legal Victories Alone Were Insufficient"},
+        {"text": "Protests in Birmingham (1963) shocked nation and spurred legislation", "category": "Why Grassroots Protests Were Necessary"}
+      ],
+      "feedback": "The 10-year gap between Brown and the Civil Rights Act shows that legal victories required grassroots mobilization to become reality. Protests created the political will for federal enforcement that courts alone could not provide."
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "Analyzing all the data together, which statement BEST describes what the evidence reveals about Civil Rights Movement success?",
+      "answers": [
+        {"text": "Success required the combination of legal challenges, grassroots protests, and federal legislation with enforcement mechanisms", "correct": true},
+        {"text": "A single Supreme Court decision immediately ended all discrimination", "correct": false},
+        {"text": "Progress occurred automatically without organized resistance", "correct": false},
+        {"text": "The data shows no measurable progress was made during this period", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The data reveals that multiple strategies working together produced change: Brown provided legal foundation, protests created pressure, legislation provided tools, and enforcement made laws effective. No single approach alone was sufficient.",
+        "incorrect": "Consider all the data: slow school desegregation despite Brown (1954), dramatic voting gains after enforceable legislation (1965), growing protests creating political pressure. What pattern emerges about what combination of factors produced change?"
+      }
+    }
+  ]
+}

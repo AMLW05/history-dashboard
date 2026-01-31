@@ -1,0 +1,199 @@
+{
+  "quiz": {
+    "title": "LA4: Analyzing the Election of 1800",
+    "description": "Data Analysis Activity - Analyze historical data from the Election of 1800 including voting eligibility, electoral votes, and regional patterns. This assessment develops your data literacy skills (HTS6) while reinforcing understanding of early republic politics.",
+    "quiz_type": "assignment",
+    "points_possible": 25,
+    "time_limit": 35,
+    "allowed_attempts": 2,
+    "shuffle_answers": true,
+    "show_correct_answers": true,
+    "show_correct_answers_at": "after_due_date",
+    "scoring_policy": "keep_highest",
+    "module": "Module 3: Revolution & New Nation",
+    "linkedMLOs": ["MLO 2: Evaluate revolutionary rhetoric vs slavery/limited rights", "MLO 3: Explain debates over Constitution and federal power"],
+    "linkedCLOs": ["CLO1: Analyze social/political/economic development", "CLO2: Evaluate how diverse groups shaped American society"],
+    "linkedSkills": ["HTS6: Data Literacy"],
+    "qmStandards": ["3.1: Assessments measure stated learning objectives", "3.3: Specific and descriptive criteria for evaluation", "4.4: Instructional materials are current", "5.1: Learning activities promote achievement of objectives"]
+  },
+  "stimulus": {
+    "type": "data_charts",
+    "description": "Students view electoral vote data and regional voting pattern table before answering questions",
+    "charts": [
+      {
+        "title": "Electoral Votes: Election of 1800",
+        "type": "bar_chart",
+        "data": {
+          "Thomas Jefferson (Democratic-Republican)": 73,
+          "Aaron Burr (Democratic-Republican)": 73,
+          "John Adams (Federalist)": 65,
+          "Charles C. Pinckney (Federalist)": 64,
+          "John Jay (Federalist)": 1
+        }
+      },
+      {
+        "title": "Regional Voting Patterns",
+        "type": "table",
+        "data": [
+          {"Region": "New England", "Federalist Support": "Strong", "Democratic-Republican Support": "Weak"},
+          {"Region": "Middle States", "Federalist Support": "Mixed", "Democratic-Republican Support": "Mixed"},
+          {"Region": "South", "Federalist Support": "Weak", "Democratic-Republican Support": "Strong"},
+          {"Region": "West (KY, TN)", "Federalist Support": "Very Weak", "Democratic-Republican Support": "Very Strong"}
+        ]
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "According to the electoral vote data, why did Jefferson and Burr receive the same number of electoral votes (73 each)?",
+      "answers": [
+        {"text": "The original Constitution did not distinguish between presidential and vice-presidential votes; each elector cast two votes for president", "correct": true},
+        {"text": "There was a tie in the popular vote between the two candidates", "correct": false},
+        {"text": "The Federalists deliberately created a tie to prevent Jefferson from winning", "correct": false},
+        {"text": "Each state was required to split its electoral votes equally between party nominees", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Under the original Constitution, electors voted for two people without distinguishing president from vice president. The person with the most votes became president, second-most became VP. This flaw led to the 12th Amendment (1804).",
+        "incorrect": "Review the original electoral system under the Constitution. Before the 12th Amendment, electors voted for two people without specifying which office each vote was for."
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "Based on the regional voting patterns table, select ALL regions that showed strong support for the Democratic-Republicans. (Select all that apply)",
+      "answers": [
+        {"text": "New England", "correct": false},
+        {"text": "Middle States", "correct": false},
+        {"text": "South", "correct": true},
+        {"text": "West (KY, TN)", "correct": true}
+      ],
+      "feedback": {
+        "correct": "Correct! The South showed 'Strong' support and the West showed 'Very Strong' support for Democratic-Republicans, reflecting the agrarian interests of these regions.",
+        "incorrect": "Look carefully at the 'Democratic-Republican Support' column. Which regions are listed as 'Strong' or 'Very Strong'?"
+      }
+    },
+    {
+      "id": 3,
+      "type": "matching",
+      "points": 2.5,
+      "question": "Match each region with its PRIMARY economic interest that influenced party alignment in 1800.",
+      "items": [
+        {"left": "New England (Federalist)", "right": "Commerce, shipping, and manufacturing"},
+        {"left": "South (Democratic-Republican)", "right": "Plantation agriculture and export crops"},
+        {"left": "West (Democratic-Republican)", "right": "Small farming and frontier expansion"},
+        {"left": "Middle States (Mixed)", "right": "Diverse economy with both commercial and agricultural interests"}
+      ],
+      "feedback": "Regional economic differences shaped political alignments: commercial Northeast supported Federalist policies (national bank, tariffs), while agrarian South and West supported Democratic-Republican opposition to centralized power."
+    },
+    {
+      "id": 4,
+      "type": "ordering",
+      "points": 2.5,
+      "question": "Place the following events of the Election of 1800 crisis in chronological order, from first to last.",
+      "items": [
+        {"text": "Electoral votes counted, revealing Jefferson-Burr tie at 73 votes each", "order": 1},
+        {"text": "Election moved to House of Representatives as required by Constitution", "order": 2},
+        {"text": "House deadlocked through 35 ballots over multiple days", "order": 3},
+        {"text": "Hamilton's influence helps break deadlock in favor of Jefferson", "order": 4},
+        {"text": "Jefferson elected president on 36th ballot", "order": 5}
+      ],
+      "feedback": "The constitutional crisis unfolded over several weeks. Hamilton, despite opposing Jefferson's politics, believed Burr was more dangerous and privately urged Federalists to support Jefferson."
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "points": 2.5,
+      "question": "Based on the electoral vote data, calculate the total number of electoral votes cast in the Election of 1800. (Each elector cast 2 votes; enter only the total votes shown in the data)",
+      "correct_answer": 276,
+      "tolerance": 0,
+      "feedback": {
+        "correct": "Correct! 73 + 73 + 65 + 64 + 1 = 276 total electoral votes cast.",
+        "incorrect": "Add all the electoral votes shown: Jefferson (73) + Burr (73) + Adams (65) + Pinckney (64) + Jay (1) = 276"
+      }
+    },
+    {
+      "id": 6,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "Categorize each of the following positions as belonging to the FEDERALIST or DEMOCRATIC-REPUBLICAN party platform in 1800.",
+      "categories": ["Federalist Position", "Democratic-Republican Position"],
+      "items": [
+        {"text": "Supported strong national bank and federal economic power", "category": "Federalist Position"},
+        {"text": "Favored states' rights and limited federal government", "category": "Democratic-Republican Position"},
+        {"text": "Advocated for closer ties with Britain", "category": "Federalist Position"},
+        {"text": "Sympathized with French Revolution's democratic ideals", "category": "Democratic-Republican Position"},
+        {"text": "Supported Alien and Sedition Acts to suppress opposition", "category": "Federalist Position"},
+        {"text": "Opposed standing army as threat to liberty", "category": "Democratic-Republican Position"}
+      ],
+      "feedback": "The two parties represented fundamentally different visions: Federalists favored strong central government, commercial interests, and British alliance; Democratic-Republicans favored limited government, agrarian interests, and French sympathy."
+    },
+    {
+      "id": 7,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "The Election of 1800 is often called the 'Revolution of 1800.' Based on the electoral data showing a Federalist defeat, which statement BEST explains why historians use this term?",
+      "answers": [
+        {"text": "It marked the first peaceful transfer of power between opposing political parties in American history", "correct": true},
+        {"text": "It resulted in violent protests that nearly overthrew the government", "correct": false},
+        {"text": "It was the first election where women were allowed to vote", "correct": false},
+        {"text": "It eliminated the Electoral College system", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Jefferson called it a 'revolution' because power transferred peacefully from Federalists to Democratic-Republicans - proving the Constitution could handle political change without violence.",
+        "incorrect": "The 'revolution' was not violent but political. Consider what was unprecedented about the Federalists accepting defeat and yielding power to their opponents."
+      }
+    },
+    {
+      "id": 8,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "The regional voting pattern data reveals a North-South divide. Select ALL factors that contributed to Southern support for Democratic-Republicans. (Select all that apply)",
+      "answers": [
+        {"text": "Democratic-Republicans opposed federal interference with slavery", "correct": true},
+        {"text": "Southern planters opposed Federalist tariffs that raised prices on imported goods", "correct": true},
+        {"text": "Democratic-Republican leaders like Jefferson and Madison were Virginians", "correct": true},
+        {"text": "The South had more factories that benefited from Democratic-Republican trade policies", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The South's support was driven by: protection of slavery from federal interference, opposition to tariffs harming agricultural exports, and identification with Virginia-based party leadership.",
+        "incorrect": "Consider the South's economic and social interests. The South was agricultural (not industrial) and had specific concerns about federal power over slavery."
+      }
+    },
+    {
+      "id": 9,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "Examining Adams's 65 electoral votes compared to Jefferson's 73, what does this relatively close margin suggest about the Election of 1800?",
+      "answers": [
+        {"text": "The nation was deeply divided, with the outcome determined by a few swing states in the Middle region", "correct": true},
+        {"text": "Adams was universally unpopular and barely received any support", "correct": false},
+        {"text": "The Federalist Party had completely collapsed by 1800", "correct": false},
+        {"text": "Most Americans preferred monarchy to democracy", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The close margin (8 votes) shows deep division. The Middle States' 'Mixed' support was decisive - New York's switch to Jefferson (partly due to Burr's political organization) proved crucial.",
+        "incorrect": "The margin between Adams (65) and Jefferson (73) was only 8 electoral votes. What does this narrow difference suggest about national political division?"
+      }
+    },
+    {
+      "id": 10,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "The Election of 1800 exposed constitutional problems. Categorize each outcome as either a PROBLEM EXPOSED or a SOLUTION IMPLEMENTED after the election.",
+      "categories": ["Problem Exposed by 1800 Election", "Solution Implemented After 1800"],
+      "items": [
+        {"text": "No distinction between presidential and vice-presidential electoral votes", "category": "Problem Exposed by 1800 Election"},
+        {"text": "12th Amendment requiring separate ballots for president and vice president", "category": "Solution Implemented After 1800"},
+        {"text": "House of Representatives deadlock when no candidate had majority", "category": "Problem Exposed by 1800 Election"},
+        {"text": "Peaceful transfer of power between opposing parties", "category": "Solution Implemented After 1800"},
+        {"text": "Running mates from same party could tie each other", "category": "Problem Exposed by 1800 Election"},
+        {"text": "Precedent established for accepting electoral defeat gracefully", "category": "Solution Implemented After 1800"}
+      ],
+      "feedback": "The 1800 election revealed serious flaws in the original Constitution's electoral system. The 12th Amendment (1804) fixed the voting procedure, while the peaceful transfer established crucial democratic precedents."
+    }
+  ]
+}

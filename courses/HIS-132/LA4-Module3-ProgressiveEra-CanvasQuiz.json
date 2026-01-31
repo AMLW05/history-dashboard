@@ -1,0 +1,210 @@
+{
+  "quiz": {
+    "title": "LA4: Analyzing Progressive Era Reform Data",
+    "description": "Data Analysis Activity - Analyze historical data from the Progressive Era (1890-1920) including immigration trends, labor strikes, women's suffrage timeline, and child labor statistics. This assessment develops your data literacy skills (HTS6) while reinforcing understanding of Progressive reforms and their limitations.",
+    "quiz_type": "assignment",
+    "points_possible": 25,
+    "time_limit": 35,
+    "allowed_attempts": 2,
+    "shuffle_answers": true,
+    "show_correct_answers": true,
+    "show_correct_answers_at": "after_due_date",
+    "scoring_policy": "keep_highest",
+    "module": "Module 3: Progressive Era & Empire",
+    "linkedMLOs": ["MLO 1: Analyze Progressive Era reforms and their impact on democracy, labor, and social justice", "MLO 3: Explain women's suffrage movement strategies and the 19th Amendment's limitations"],
+    "linkedCLOs": ["CLO1: Analyze transformation of American society", "CLO2: Evaluate how diverse groups struggled for civil rights", "CLO3: Apply historical thinking skills to interpret sources"],
+    "linkedSkills": ["HTS6: Data Literacy", "HTS2: Chronological Reasoning"],
+    "qmStandards": ["3.1: Assessments measure stated learning objectives", "3.3: Specific and descriptive criteria for evaluation", "4.4: Instructional materials are current", "5.1: Learning activities promote achievement of objectives"]
+  },
+  "stimulus": {
+    "type": "data_charts",
+    "description": "Students view immigration data, labor strike data, and suffrage timeline before answering questions",
+    "charts": [
+      {
+        "title": "Immigration to the United States (1890-1915)",
+        "type": "line_chart",
+        "data": {"1890": 455, "1895": 600, "1900": 800, "1905": 1100, "1907": 1285, "1910": 1050, "1915": 430},
+        "unit": "thousands of immigrants"
+      },
+      {
+        "title": "Labor Strikes & Work Stoppages (1890-1904)",
+        "type": "bar_chart",
+        "data": {"1890": 1900, "1894": 2800, "1898": 3200, "1901": 3900, "1904": 4450},
+        "unit": "number of strikes"
+      },
+      {
+        "title": "Women's Suffrage by State (Before 19th Amendment)",
+        "type": "timeline",
+        "data": [
+          {"state": "Wyoming", "year": 1890},
+          {"state": "Colorado", "year": 1893},
+          {"state": "Utah", "year": 1896},
+          {"state": "Idaho", "year": 1896},
+          {"state": "Washington", "year": 1910},
+          {"state": "California", "year": 1911},
+          {"state": "Arizona, Kansas, Oregon", "year": 1912},
+          {"state": "19th Amendment (nationwide)", "year": 1920}
+        ],
+        "note": "Southern and Eastern states did not grant suffrage until federal amendment"
+      },
+      {
+        "title": "Child Labor Statistics",
+        "type": "statistic",
+        "data": {"1900": "1.75 million children under 16 employed in industrial work"}
+      }
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "According to the immigration data, what year saw PEAK immigration to the United States before World War I?",
+      "answers": [
+        {"text": "1907, with 1,285,000 immigrants", "correct": true},
+        {"text": "1890, with 455,000 immigrants", "correct": false},
+        {"text": "1915, with 430,000 immigrants", "correct": false},
+        {"text": "1900, with 800,000 immigrants", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! 1907 marked peak immigration at 1,285,000 - nearly triple the 1890 level. The Panic of 1907 and later WWI (1914) caused sharp declines.",
+        "incorrect": "Look at the immigration data line chart. Find the highest point on the graph and its corresponding year."
+      }
+    },
+    {
+      "id": 2,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "Based on the immigration data, immigration declined sharply after 1907. Select ALL factors that contributed to this decline. (Select all that apply)",
+      "answers": [
+        {"text": "The Panic of 1907 (economic recession) reduced job opportunities", "correct": true},
+        {"text": "Growing restrictions on immigration through legislation", "correct": true},
+        {"text": "World War I disrupted Atlantic travel beginning in 1914", "correct": true},
+        {"text": "Immigration was completely banned by federal law in 1908", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Multiple factors converged: economic recession (1907), increasing restrictions (literacy tests, head taxes), and WWI (1914) disrupting ocean travel all contributed to declining immigration.",
+        "incorrect": "Immigration was not completely banned in 1908. Consider economic, legislative, and international factors that might have reduced immigration after 1907."
+      }
+    },
+    {
+      "id": 3,
+      "type": "ordering",
+      "points": 2.5,
+      "question": "Based on the suffrage timeline, place these states/events in chronological order by when women gained voting rights (earliest to latest).",
+      "items": [
+        {"text": "Wyoming grants women's suffrage", "order": 1},
+        {"text": "Colorado grants women's suffrage", "order": 2},
+        {"text": "Utah and Idaho grant women's suffrage", "order": 3},
+        {"text": "Washington and California grant women's suffrage", "order": 4},
+        {"text": "19th Amendment ratified (nationwide suffrage)", "order": 5}
+      ],
+      "feedback": "Western states led the suffrage movement: Wyoming (1890), Colorado (1893), Utah/Idaho (1896). Eastern and especially Southern states resisted until forced by the 19th Amendment (1920)."
+    },
+    {
+      "id": 4,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "The suffrage data shows Western states granted women's suffrage decades before Eastern and Southern states. Categorize each factor as explaining WESTERN SUPPORT or EASTERN/SOUTHERN RESISTANCE to women's suffrage.",
+      "categories": ["Why Western States Supported Suffrage", "Why Eastern/Southern States Resisted"],
+      "items": [
+        {"text": "Frontier societies had fewer established gender hierarchies", "category": "Why Western States Supported Suffrage"},
+        {"text": "Entrenched political machines opposed new voters they couldn't control", "category": "Why Eastern/Southern States Resisted"},
+        {"text": "Suffrage seen as way to attract female settlers and promote 'civilization'", "category": "Why Western States Supported Suffrage"},
+        {"text": "Fear that women's suffrage would lead to Black women voting in the South", "category": "Why Eastern/Southern States Resisted"},
+        {"text": "Smaller populations made it easier to experiment with reforms", "category": "Why Western States Supported Suffrage"},
+        {"text": "Traditional gender roles more deeply embedded in established society", "category": "Why Eastern/Southern States Resisted"}
+      ],
+      "feedback": "Regional differences in suffrage reflected broader patterns: Western progressivism and experimentation vs. Eastern machine politics and Southern racial anxieties about expanding the electorate."
+    },
+    {
+      "id": 5,
+      "type": "numeric",
+      "points": 2.5,
+      "question": "According to the labor strike data, how many MORE strikes occurred in 1904 compared to 1890? (Enter a whole number)",
+      "correct_answer": 2550,
+      "tolerance": 50,
+      "feedback": {
+        "correct": "Correct! 4,450 - 1,900 = 2,550 more strikes. This represents a 134% increase, demonstrating growing worker militancy during the Progressive Era.",
+        "incorrect": "Calculate: Strikes in 1904 (4,450) minus Strikes in 1890 (1,900) = 2,550"
+      }
+    },
+    {
+      "id": 6,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "The labor strike data shows strikes more than doubled from 1,900 (1890) to 4,450 (1904). What does this pattern suggest about worker conditions during industrialization?",
+      "answers": [
+        {"text": "Workers were increasingly dissatisfied with wages, hours, and conditions, leading to more organized resistance", "correct": true},
+        {"text": "Workers were completely satisfied but struck to support their employers", "correct": false},
+        {"text": "The government encouraged strikes as official policy", "correct": false},
+        {"text": "Strike numbers declined as conditions improved", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! Rising strikes reflected worker discontent with industrial conditions: long hours (10-12 hour days), dangerous workplaces, low wages, and lack of job security. Unions like the AFL organized this resistance.",
+        "incorrect": "More strikes generally indicate more worker grievances, not satisfaction. Consider what conditions might motivate workers to strike."
+      }
+    },
+    {
+      "id": 7,
+      "type": "matching",
+      "points": 2.5,
+      "question": "Match each Progressive Era reform issue with the data point that BEST illustrates the need for that reform.",
+      "items": [
+        {"left": "Immigration restriction legislation", "right": "1.28 million immigrants in peak year 1907"},
+        {"left": "Labor protection laws (hours, wages, safety)", "right": "4,450 strikes by 1904 showing worker grievances"},
+        {"left": "Child labor laws", "right": "1.75 million children under 16 working in industry (1900)"},
+        {"left": "Women's suffrage movement", "right": "30-year gap between first state (1890) and federal amendment (1920)"}
+      ],
+      "feedback": "Progressives used data and statistics to document social problems and build support for reforms. Muckraking journalists and reformers gathered evidence like these statistics to advocate for change."
+    },
+    {
+      "id": 8,
+      "type": "multiple_answer",
+      "points": 2.5,
+      "question": "The child labor data shows 1.75 million children working in 1900. Select ALL conclusions historians can draw from this statistic about Progressive Era reform. (Select all that apply)",
+      "answers": [
+        {"text": "Despite reform efforts, child labor remained widespread at the turn of the century", "correct": true},
+        {"text": "Industrial capitalism relied heavily on cheap child labor", "correct": true},
+        {"text": "Progressive child labor laws had limited success in the early period", "correct": true},
+        {"text": "Child labor was completely eliminated by 1900", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The 1.75 million figure shows child labor's persistence despite early reform efforts. Effective federal child labor regulation didn't come until the 1930s (Fair Labor Standards Act).",
+        "incorrect": "The data shows 1.75 million children WERE working in 1900, not that child labor had been eliminated. What does this high number suggest about the effectiveness of early reforms?"
+      }
+    },
+    {
+      "id": 9,
+      "type": "categorization",
+      "points": 2.5,
+      "question": "Analyzing the immigration and strike data together reveals connections. Categorize each statement as SUPPORTED or NOT SUPPORTED by the data.",
+      "categories": ["Supported by the Data", "Not Supported by the Data"],
+      "items": [
+        {"text": "Immigration and strike numbers both increased during the same period (1890-1904)", "category": "Supported by the Data"},
+        {"text": "Immigrant workers often participated in labor strikes", "category": "Supported by the Data"},
+        {"text": "Immigration caused strikes to decrease", "category": "Not Supported by the Data"},
+        {"text": "Rising immigration coincided with industrial expansion and worker unrest", "category": "Supported by the Data"},
+        {"text": "Native-born workers never participated in strikes", "category": "Not Supported by the Data"},
+        {"text": "Both trends reflect the rapid industrialization transforming American society", "category": "Supported by the Data"}
+      ],
+      "feedback": "Immigration and strikes both increased during industrial expansion. Many immigrant workers (despite facing nativism) participated in labor movements, though they also sometimes served as strikebreakers."
+    },
+    {
+      "id": 10,
+      "type": "multiple_choice",
+      "points": 2.5,
+      "question": "Considering all the data together, what does the evidence reveal about the LIMITATIONS of Progressive Era reforms?",
+      "answers": [
+        {"text": "Reforms were often incomplete, regionally uneven, and slow to address root causes of social problems", "correct": true},
+        {"text": "Progressive reforms solved all social problems by 1920", "correct": false},
+        {"text": "The data shows no reforms were attempted during this period", "correct": false},
+        {"text": "Southern states led the nation in implementing Progressive reforms", "correct": false}
+      ],
+      "feedback": {
+        "correct": "Correct! The data shows reforms' limits: suffrage took 30 years and excluded many women of color; 1.75 million children still worked; strikes increased as underlying conditions persisted. Progress was real but uneven and incomplete.",
+        "incorrect": "Consider what the data reveals about the pace and completeness of reform. Did all regions embrace reform equally? Were problems solved quickly or did they persist?"
+      }
+    }
+  ]
+}
