@@ -220,6 +220,16 @@ const module6Activities = {
                 { text: "Believed their economic system was superior", answer: "Both" }
             ]
         }
+    },
+    la4: {
+        dataAnalysis: {
+            title: "LA4: Analyzing Antebellum Reform Movements Data",
+            instructions: "Analyze historical data about reform movement growth, antislavery petitions, and women's participation. View 4 detailed charts and answer 10 questions. 2 attempts, 35 minutes.",
+            chartData: {
+                type: "line",
+                title: "Reform Movement Growth (1830-1860)"
+            }
+        }
     }
 };
 

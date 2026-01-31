@@ -410,8 +410,8 @@ function buildActivity(a, mn, idx) {
             let standaloneUrl = '';
             if (mn === 3) {
                 standaloneUrl = 'module3-election-1800.html';
-            } else if (mn === 5) {
-                standaloneUrl = 'module5-reform-movements.html';
+            } else if (mn === 6) {
+                standaloneUrl = 'module6-reform-movements.html';
             }
 
             details += '<h4 style="margin-top:30px">📊 Data Analysis Activity</h4>';
@@ -462,51 +462,41 @@ function buildActivity(a, mn, idx) {
     else if (idx === 3 && modAct.la4) {
         // Determine Canvas Entry Guide URL for LA4
         let canvasGuideUrl = '';
+        let canvasGuideTitle = '';
         if (mn === 3) {
             canvasGuideUrl = 'module3-election-1800.html';
-        } else if (mn === 5) {
-            canvasGuideUrl = 'module5-reform-movements.html';
+            canvasGuideTitle = 'LA4: Analyzing Election of 1800 Data';
+        } else if (mn === 6) {
+            canvasGuideUrl = 'module6-reform-movements.html';
+            canvasGuideTitle = 'LA4: Analyzing Antebellum Reform Movements';
         }
 
-        // Add prominent link to Canvas Entry Guide page
+        // Embed the full Canvas Entry Guide directly
         if (canvasGuideUrl) {
-            details += '<div style="margin:20px 0;padding:20px;background:#d4edda;border-left:5px solid #28a745;border-radius:6px">';
-            details += '<h4 style="margin:0 0 10px 0;color:#155724">📋 Canvas New Quizzes Entry Guide</h4>';
-            details += '<p style="margin:0 0 15px 0;color:#155724">View the <strong>complete Canvas Entry Guide</strong> with all question types, charts, answer options, and distractors for course reps to enter into Canvas:</p>';
-            details += '<a href="' + canvasGuideUrl + '" target="_blank" style="display:inline-block;background:#28a745;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px">🔗 Open Canvas Entry Guide</a>';
-            details += '<p style="margin:15px 0 0 0;font-size:13px;color:#155724"><em>Contains: Multiple Choice, Multiple Answer, Ordering, Matching, Categorization questions with ALL distractors visible</em></p>';
+            details += '<div style="margin:20px 0;padding:15px;background:#d4edda;border:2px solid #28a745;border-radius:8px">';
+            details += '<h4 style="margin:0 0 10px 0;color:#155724">📋 ' + canvasGuideTitle + ' - Canvas Entry Guide</h4>';
+            details += '<p style="margin:0 0 10px 0;color:#155724">Complete quiz with <strong>all question types</strong> (Multiple Choice, Multiple Answer, Ordering, Matching, Categorization) and <strong>all answer options/distractors</strong> visible below:</p>';
+            details += '<div style="display:flex;gap:10px;margin-bottom:15px">';
+            details += '<a href="' + canvasGuideUrl + '" target="_blank" style="display:inline-block;background:#28a745;color:white;padding:8px 16px;text-decoration:none;border-radius:4px;font-weight:bold;font-size:13px">🔗 Open in New Tab</a>';
+            details += '<a href="' + canvasGuideUrl + '" target="_blank" onclick="window.print()" style="display:inline-block;background:#0984e3;color:white;padding:8px 16px;text-decoration:none;border-radius:4px;font-weight:bold;font-size:13px">🖨️ Print Guide</a>';
+            details += '</div>';
+            details += '</div>';
+
+            // Embed the full Canvas Entry Guide as iframe
+            details += '<div style="margin:20px 0;border:3px solid #8B4513;border-radius:8px;overflow:hidden">';
+            details += '<iframe src="' + canvasGuideUrl + '" style="width:100%;height:800px;border:none;" title="Canvas Entry Guide"></iframe>';
+            details += '</div>';
+
+            // Add expand button for larger view
+            details += '<div style="text-align:center;margin:10px 0">';
+            details += '<button onclick="document.querySelector(\'#activity-details-m' + mn + '-a' + idx + ' iframe\').style.height = document.querySelector(\'#activity-details-m' + mn + '-a' + idx + ' iframe\').style.height === \'800px\' ? \'2000px\' : \'800px\'" style="background:#8B4513;color:white;border:none;padding:10px 20px;border-radius:4px;cursor:pointer;font-family:Georgia,serif">↕️ Toggle View Height</button>';
             details += '</div>';
         }
 
-        // Check if LA4 has data analysis (Module 3)
+        // Also show data analysis chart if present
         if (modAct.la4.dataAnalysis) {
             const chartId = 'chart-m' + mn + '-la4';
             const dataAnalysis = modAct.la4.dataAnalysis;
-
-            details += '<h4 style="margin-top:20px">📊 ' + dataAnalysis.title + '</h4>';
-            details += '<p style="margin:10px 0"><strong>' + dataAnalysis.instructions + '</strong></p>';
-
-            details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)">';
-            details += '<h5 style="margin-bottom:20px">' + dataAnalysis.chartData.title + '</h5>';
-            details += '<canvas id="' + chartId + '" style="max-width:800px;max-height:500px;margin:20px auto;display:block"></canvas>';
-
-            // Add regional data table if present
-            if (dataAnalysis.regionalData) {
-                const regData = dataAnalysis.regionalData;
-                details += '<h5 style="margin-top:30px">' + regData.title + '</h5>';
-                details += '<table style="margin-top:15px"><thead><tr><th>Region</th><th>Federalist Support</th><th>Republican Support</th></tr></thead><tbody>';
-                regData.regions.forEach(r => {
-                    details += '<tr><td><strong>' + r.region + '</strong></td><td>' + r.federalist + '</td><td>' + r.republican + '</td></tr>';
-                });
-                details += '</tbody></table>';
-            }
-
-            details += '</div>';
-            details += '<h5 style="margin-top:20px">Analysis Questions:</h5><ol style="margin-left:20px;line-height:2">';
-            dataAnalysis.questions.forEach(q => {
-                details += '<li><strong>Q:</strong> ' + q.q + '<br><em>A:</em> ' + q.a + '</li>';
-            });
-            details += '</ol>';
 
             // Store chart data to render after DOM insertion
             if (!window.pendingCharts) window.pendingCharts = [];
@@ -515,17 +505,6 @@ function buildActivity(a, mn, idx) {
                 moduleNum: mn,
                 chartData: dataAnalysis.chartData
             });
-        }
-        // Standard categorization activity (show summary, full details in Canvas Guide)
-        else if (modAct.la4.items) {
-            details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
-            details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
-            details += '<p style="margin:10px 0;padding:10px;background:#e9ecef;border-radius:4px;font-style:italic">📌 <strong>Note:</strong> This is a summary view. For the complete Canvas Entry Guide with all question types (Multiple Choice, Ordering, Matching, etc.) and all answer options, click the green button above.</p>';
-            details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
-            modAct.la4.items.forEach((item, i) => {
-                details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
-            });
-            details += '</tbody></table>';
         }
     }
 
