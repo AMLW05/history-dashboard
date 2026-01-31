@@ -3,241 +3,839 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIS-131 Module 6 LA4: Antebellum Reform Movements Data Analysis</title>
+    <title>HIS-131 Module 6 LA4: Antebellum Reform Movements - Canvas Entry Guide</title>
     <style>
-        body { background: white; padding: 40px 20px; font-family: Georgia, serif; color: #2c3e50; max-width: 1000px; margin: 0 auto; }
-        .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #8B4513; }
+        body {
+            background: white;
+            padding: 40px 20px;
+            font-family: Georgia, serif;
+            color: #2c3e50;
+            max-width: 1100px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #8B4513;
+        }
         .header h1 { color: #8B4513; margin-bottom: 10px; }
         .header p { color: #666; font-style: italic; }
-        .quiz-info { background: #e8f4f8; border-left: 4px solid #0984e3; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
-        .quiz-info strong { color: #0984e3; }
-        .chart-container { background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0; border: 2px solid #8B4513; }
-        canvas { max-width: 100%; height: 400px !important; }
-        .questions { margin-top: 40px; }
-        .questions h3 { color: #8B4513; margin-bottom: 20px; border-bottom: 2px solid #8B4513; padding-bottom: 10px; }
-        .question { background: #f8f9fa; padding: 20px; margin: 20px 0; border-left: 4px solid #8B4513; border-radius: 4px; }
-        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .question-num { background: #8B4513; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; }
-        .question-type { background: #0984e3; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
-        .question-text { font-weight: bold; color: #2c3e50; margin-bottom: 15px; line-height: 1.5; }
-        .options { margin-left: 20px; }
-        .option { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
-        .option-letter { background: #e0e0e0; padding: 3px 8px; border-radius: 3px; font-weight: bold; font-size: 12px; }
-        .correct { background: #d4edda; border-color: #28a745; }
-        .correct .option-letter { background: #28a745; color: white; }
-        .ordering-list { counter-reset: item; list-style: none; padding: 0; }
-        .ordering-list li { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
-        .ordering-list li::before { counter-increment: item; content: counter(item); background: #8B4513; color: white; padding: 3px 10px; border-radius: 50%; font-weight: bold; }
-        .category-section { margin: 15px 0; }
-        .category-title { background: #8B4513; color: white; padding: 8px 15px; border-radius: 4px 4px 0 0; font-weight: bold; }
-        .category-items { border: 1px solid #8B4513; border-top: none; padding: 10px; border-radius: 0 0 4px 4px; }
-        .category-item { padding: 8px 12px; margin: 5px 0; background: #f8f9fa; border-radius: 4px; }
-        .matching-table { width: 100%; }
-        .matching-table td { padding: 8px; vertical-align: top; }
-        .matching-left { font-weight: bold; background: #f0f0f0; width: 45%; }
-        .matching-right { background: #e8f4f8; }
-        .numeric-answer { background: #d4edda; padding: 10px 15px; border-radius: 4px; font-weight: bold; }
-        .feedback { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px 15px; margin-top: 10px; border-radius: 4px; font-style: italic; font-size: 14px; }
-        .print-btn { background: #8B4513; color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; font-size: 16px; font-family: Georgia, serif; margin: 20px auto; display: block; }
+
+        .canvas-notice {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .canvas-notice h3 { color: #856404; margin-top: 0; }
+        .canvas-notice ul { margin-bottom: 0; }
+
+        .quiz-settings {
+            background: #e8f4f8;
+            border-left: 4px solid #0984e3;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .quiz-settings h3 { color: #0984e3; margin-top: 0; }
+        .settings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .setting-item { background: white; padding: 10px; border-radius: 4px; }
+        .setting-label { font-weight: bold; color: #0984e3; font-size: 12px; text-transform: uppercase; }
+        .setting-value { font-size: 16px; margin-top: 5px; }
+
+        .chart-container {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 30px 0;
+            border: 2px solid #8B4513;
+        }
+        canvas { max-width: 100%; height: auto !important; }
+        table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+        table th { background: #8B4513; color: white; padding: 12px; text-align: left; }
+        table td { padding: 12px; border-bottom: 1px solid #ddd; }
+
+        .question {
+            background: #f8f9fa;
+            border: 2px solid #8B4513;
+            border-radius: 8px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+        .question-header {
+            background: #8B4513;
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .question-num { font-weight: bold; font-size: 18px; }
+        .question-meta { text-align: right; }
+        .canvas-type {
+            background: rgba(255,255,255,0.2);
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+        .points { font-size: 14px; opacity: 0.9; }
+
+        .question-body { padding: 20px; }
+        .question-text {
+            font-weight: bold;
+            font-size: 16px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #8B4513;
+        }
+
+        .section-label {
+            font-weight: bold;
+            color: #8B4513;
+            font-size: 14px;
+            text-transform: uppercase;
+            margin: 20px 0 10px 0;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #8B4513;
+        }
+
+        .answer-option {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+        .answer-option.correct {
+            border-color: #28a745;
+            background: #d4edda;
+        }
+        .answer-option.incorrect {
+            border-color: #dc3545;
+            background: #fff;
+        }
+        .option-marker {
+            min-width: 30px;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+        }
+        .correct .option-marker { background: #28a745; color: white; }
+        .incorrect .option-marker { background: #e0e0e0; color: #666; }
+        .correct-label { color: #28a745; font-weight: bold; font-size: 12px; margin-left: auto; }
+
+        .feedback-section {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+        }
+        .feedback-correct {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+        }
+        .feedback-incorrect {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            margin-top: 10px;
+        }
+        .feedback-label {
+            font-weight: bold;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+        .feedback-correct .feedback-label { color: #28a745; }
+        .feedback-incorrect .feedback-label { color: #dc3545; }
+
+        .matching-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        .matching-column {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .matching-column h4 {
+            color: #8B4513;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #8B4513;
+        }
+        .matching-item {
+            padding: 10px;
+            margin: 8px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .match-num {
+            background: #8B4513;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .correct-matches {
+            background: #d4edda;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+        .correct-matches h4 { color: #28a745; margin-top: 0; }
+
+        .ordering-items { list-style: none; padding: 0; }
+        .ordering-items li {
+            padding: 12px 15px;
+            margin: 8px 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .order-num {
+            background: #8B4513;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .ordering-note {
+            background: #fff3cd;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .category-entry {
+            margin: 15px 0;
+        }
+        .category-box {
+            border: 2px solid #8B4513;
+            border-radius: 4px;
+            margin: 10px 0;
+            overflow: hidden;
+        }
+        .category-header {
+            background: #8B4513;
+            color: white;
+            padding: 10px 15px;
+            font-weight: bold;
+        }
+        .category-items-list {
+            padding: 15px;
+            background: white;
+        }
+        .cat-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
+            border-left: 3px solid #28a745;
+        }
+
+        .numeric-entry {
+            background: white;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .numeric-answer {
+            font-size: 24px;
+            font-weight: bold;
+            color: #28a745;
+            margin: 10px 0;
+        }
+        .numeric-tolerance { color: #666; font-size: 14px; }
+
+        .print-btn {
+            background: #8B4513;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-family: Georgia, serif;
+            margin: 10px 5px;
+        }
         .print-btn:hover { background: #6d3710; }
-        @media print { .print-btn { display: none; } body { padding: 20px; } .question { break-inside: avoid; } }
+        .btn-group { text-align: center; margin: 20px 0; }
+
+        @media print {
+            .print-btn, .btn-group { display: none; }
+            body { padding: 20px; font-size: 12px; }
+            .question { break-inside: avoid; page-break-inside: avoid; }
+        }
     </style>
 </head>
 <body>
     <div class="header">
         <h1>LA4: Analyzing Antebellum Reform Movements</h1>
-        <p>HIS-131 Module 6 | Data Analysis Activity</p>
+        <p>HIS-131 Module 6 | Canvas New Quiz Entry Guide</p>
     </div>
 
-    <div class="quiz-info">
-        <strong>Canvas New Quiz Format</strong><br>
-        <strong>Points:</strong> 25 | <strong>Time:</strong> 35 minutes | <strong>Attempts:</strong> 2 (highest score kept)<br>
-        <strong>Question Types:</strong> Multiple Choice, Multiple Answer, Matching, Ordering, Categorization, Numeric<br>
-        <strong>Skills:</strong> Data Literacy (HTS6), Comparison (HTS4)
+    <div class="canvas-notice">
+        <h3>Canvas Entry Instructions</h3>
+        <ul>
+            <li><strong>Create a New Quiz</strong> in Canvas (use New Quizzes, not Classic Quizzes)</li>
+            <li>Configure quiz settings as shown below</li>
+            <li>Add the stimulus charts as quiz instructions or embed as images</li>
+            <li>Add each question using the specified Canvas question type</li>
+            <li>Enter all answer options exactly as shown - correct answers are highlighted in green</li>
+            <li>Copy feedback text into the appropriate feedback fields</li>
+        </ul>
     </div>
 
-    <button class="print-btn" onclick="window.print()">Print This Page</button>
+    <div class="quiz-settings">
+        <h3>Quiz Settings for Canvas</h3>
+        <div class="settings-grid">
+            <div class="setting-item">
+                <div class="setting-label">Quiz Title</div>
+                <div class="setting-value">LA4: Analyzing Antebellum Reform Movements</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Points Possible</div>
+                <div class="setting-value">25 points</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Time Limit</div>
+                <div class="setting-value">35 minutes</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Allowed Attempts</div>
+                <div class="setting-value">2</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Scoring Policy</div>
+                <div class="setting-value">Keep Highest Score</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Shuffle Answers</div>
+                <div class="setting-value">Yes</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Show Correct Answers</div>
+                <div class="setting-value">After Due Date</div>
+            </div>
+            <div class="setting-item">
+                <div class="setting-label">Question Count</div>
+                <div class="setting-value">10 questions</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="btn-group">
+        <button class="print-btn" onclick="window.print()">Print This Guide</button>
+        <a href="LA4-Module6-ReformMovements-CanvasQuiz.json" download class="print-btn" style="text-decoration:none; display:inline-block;">Download JSON Data</a>
+    </div>
 
     <div class="chart-container">
-        <h2 style="text-align:center; color:#8B4513; margin-bottom:30px">Reform Movement Growth (1830-1860)</h2>
-        <canvas id="reformChart"></canvas>
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:10px">STIMULUS: Reform Movement Growth (1830-1860)</h2>
+        <p style="text-align:center; color:#666; font-style:italic; margin-bottom:20px">Add this chart as quiz instructions or embed as an image</p>
+        <canvas id="reformChart" style="height:400px !important;"></canvas>
     </div>
 
-    <div class="questions">
-        <h3>Quiz Questions (10 Questions, 25 Points Total)</h3>
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:10px">STIMULUS: Reform Movement Data Table</h2>
+        <p style="text-align:center; color:#666; font-style:italic; margin-bottom:20px">Reference data for the line chart above</p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Year</th>
+                    <th>Abolitionist Societies</th>
+                    <th>Anti-Slavery Papers (thousands)</th>
+                    <th>Women's Rights Petitions (thousands)</th>
+                    <th>Temperance Members (thousands)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1830</td><td>50</td><td>5</td><td>-</td><td>100</td></tr>
+                <tr><td>1835</td><td>200</td><td>20</td><td>0</td><td>500</td></tr>
+                <tr><td>1840</td><td>1,000</td><td>50</td><td>5</td><td>1,000</td></tr>
+                <tr><td>1845</td><td>1,350</td><td>100</td><td>15</td><td>1,200</td></tr>
+                <tr><td>1848</td><td>-</td><td>-</td><td>40</td><td>-</td></tr>
+                <tr><td>1850</td><td>2,000</td><td>150</td><td>90</td><td>1,500</td></tr>
+                <tr><td>1855</td><td>-</td><td>300</td><td>200</td><td>1,700</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-        <!-- Q1 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q1</span>
-                <span class="question-type">Multiple Choice (2.5 pts)</span>
+    <h2 style="color:#8B4513; border-bottom:3px solid #8B4513; padding-bottom:10px; margin-top:40px;">Quiz Questions</h2>
+
+    <!-- QUESTION 1 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 1</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Multiple Choice</div>
+                <div class="points">2.5 points</div>
             </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">According to the data, which reform movement had the LARGEST membership/participation by 1855?</div>
-            <div class="options">
-                <div class="option correct"><span class="option-letter">A</span> Temperance Movement (1.7 million members)</div>
-                <div class="option"><span class="option-letter">B</span> Abolitionist Societies (2,000 societies)</div>
-                <div class="option"><span class="option-letter">C</span> Anti-Slavery Newspaper Circulation (300,000)</div>
-                <div class="option"><span class="option-letter">D</span> Women's Rights Petition Signatures (200,000)</div>
-            </div>
-            <div class="feedback">Temperance had 1.7 million members by 1855 - far exceeding other movements. This reflects temperance's broader social acceptability compared to more "radical" causes like abolition.</div>
-        </div>
 
-        <!-- Q2 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q2</span>
-                <span class="question-type">Ordering (2.5 pts)</span>
+            <div class="section-label">Answer Options (Enter all 4 in Canvas)</div>
+            <div class="answer-option correct">
+                <span class="option-marker">A</span>
+                <span>Temperance Movement (1.7 million members)</span>
+                <span class="correct-label">CORRECT</span>
             </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">B</span>
+                <span>Abolitionist Societies (2,000 societies)</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">C</span>
+                <span>Anti-Slavery Newspaper Circulation (300,000)</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">D</span>
+                <span>Women's Rights Petition Signatures (200,000)</span>
+            </div>
+
+            <div class="section-label">Feedback (Enter in Canvas feedback fields)</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! Temperance had 1.7 million members by 1855 - far exceeding other movements. This reflects temperance's broader social acceptability compared to more "radical" causes like abolition.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                Compare the raw numbers across all four data series at 1855. Which movement shows the highest participation number?
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 2 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 2</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Ordering</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">Based on the data, place these reform movements in order from MOST to LEAST members/participants by 1855.</div>
-            <ol class="ordering-list">
-                <li>Temperance Movement (1,700,000 members)</li>
-                <li>Anti-Slavery Newspaper Circulation (300,000)</li>
-                <li>Women's Rights Petition Signatures (200,000)</li>
-                <li>Abolitionist Societies (2,000 societies - representing smaller total members)</li>
+
+            <div class="ordering-note">
+                <strong>Note:</strong> Canvas will shuffle these items. Enter them in the correct order below; Canvas will randomize for students.
+            </div>
+
+            <div class="section-label">Items in Correct Order (1 = Most, 4 = Least)</div>
+            <ol class="ordering-items">
+                <li><span class="order-num">1</span> Temperance Movement (1,700,000 members)</li>
+                <li><span class="order-num">2</span> Anti-Slavery Newspaper Circulation (300,000)</li>
+                <li><span class="order-num">3</span> Women's Rights Petition Signatures (200,000)</li>
+                <li><span class="order-num">4</span> Abolitionist Societies (2,000 societies - representing smaller total members)</li>
             </ol>
-            <div class="feedback">Temperance's massive membership reflects its mainstream appeal. Note that 2,000 abolitionist societies represented perhaps 150,000-200,000 total members.</div>
-        </div>
 
-        <!-- Q3 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q3</span>
-                <span class="question-type">Numeric (2.5 pts)</span>
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">General Feedback</div>
+                Temperance's massive membership reflects its mainstream appeal. Note that 2,000 abolitionist societies represented perhaps 150,000-200,000 total members, making it the smallest of the four movements by individual participation.
             </div>
-            <div class="question-text">According to the data, abolitionist societies grew from 50 in 1830 to 1,000 in 1840. By what percentage did the number of abolitionist societies increase during this decade?</div>
-            <div class="numeric-answer">Answer: 1900% [(1000-50)/50 x 100 = 1900%]</div>
-            <div class="feedback">This explosive growth occurred during the 1830s when immediatism (demanding immediate abolition) replaced gradualism.</div>
         </div>
+    </div>
 
-        <!-- Q4 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q4</span>
-                <span class="question-type">Multiple Answer (2.5 pts)</span>
+    <!-- QUESTION 3 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 3</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Numeric / Fill in the Blank (Number)</div>
+                <div class="points">2.5 points</div>
             </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
+            <div class="question-text">According to the data, abolitionist societies grew from 50 in 1830 to 1,000 in 1840. By what percentage did the number of abolitionist societies increase during this decade? (Enter a whole number without the % symbol)</div>
+
+            <div class="section-label">Correct Answer Settings</div>
+            <div class="numeric-entry">
+                <div class="numeric-answer">1900</div>
+                <div class="numeric-tolerance">Tolerance/Margin: 100 (accept 1800-2000)</div>
+                <div style="margin-top:10px; color:#666;">Calculation: (1000-50)/50 x 100 = 1900%</div>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! (1000-50)/50 x 100 = 1900% increase. This explosive growth occurred during the 1830s when immediatism (demanding immediate abolition) replaced gradualism.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                Calculate: (New Value - Old Value) / Old Value x 100 = (1000-50)/50 x 100 = 1900%
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 4 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 4</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Multiple Answer</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">The data shows women's rights petition signatures spiked dramatically around 1848. Select ALL factors that explain this increase. (Select all that apply)</div>
-            <div class="options">
-                <div class="option correct"><span class="option-letter">A</span> The Seneca Falls Convention (1848) launched the organized women's rights movement</div>
-                <div class="option correct"><span class="option-letter">B</span> Women gained experience organizing through abolition and temperance campaigns</div>
-                <div class="option correct"><span class="option-letter">C</span> The Declaration of Sentiments demanded women's suffrage and equal rights</div>
-                <div class="option"><span class="option-letter">D</span> The 19th Amendment was ratified in 1848 giving women the vote</div>
-            </div>
-            <div class="feedback">The Seneca Falls Convention (1848) was a watershed moment. The 19th Amendment wasn't ratified until 1920.</div>
-        </div>
 
-        <!-- Q5 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q5</span>
-                <span class="question-type">Categorization (2.5 pts)</span>
+            <div class="section-label">Answer Options (Mark multiple correct in Canvas)</div>
+            <div class="answer-option correct">
+                <span class="option-marker">A</span>
+                <span>The Seneca Falls Convention (1848) launched the organized women's rights movement</span>
+                <span class="correct-label">CORRECT</span>
             </div>
+            <div class="answer-option correct">
+                <span class="option-marker">B</span>
+                <span>Women gained experience organizing through abolition and temperance campaigns</span>
+                <span class="correct-label">CORRECT</span>
+            </div>
+            <div class="answer-option correct">
+                <span class="option-marker">C</span>
+                <span>The Declaration of Sentiments demanded women's suffrage and equal rights</span>
+                <span class="correct-label">CORRECT</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">D</span>
+                <span>The 19th Amendment was ratified in 1848 giving women the vote</span>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! The Seneca Falls Convention (1848) was a watershed moment. Women like Elizabeth Cady Stanton and Lucretia Mott applied organizing skills from other reform movements to demand their own rights.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                The 19th Amendment wasn't ratified until 1920. Focus on what happened in 1848 that catalyzed the women's rights movement.
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 5 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 5</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Categorization</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">Categorize each factor as explaining why TEMPERANCE attracted more members OR why ABOLITION remained smaller despite rapid growth.</div>
-            <div class="category-section">
-                <div class="category-title">Why Temperance Had More Members</div>
-                <div class="category-items">
-                    <div class="category-item">Seen as "respectable" reform acceptable for women's public participation</div>
-                    <div class="category-item">Did not challenge fundamental property rights or regional interests</div>
-                    <div class="category-item">Could be framed as protecting families from male drunkenness</div>
+
+            <div class="section-label">Categories to Create in Canvas</div>
+            <div style="display:flex; gap:20px; margin:15px 0;">
+                <div style="flex:1; background:#e8f4f8; padding:10px 15px; border-radius:4px; text-align:center; font-weight:bold;">Category 1: Why Temperance Had More Members</div>
+                <div style="flex:1; background:#e8f4f8; padding:10px 15px; border-radius:4px; text-align:center; font-weight:bold;">Category 2: Why Abolition Remained Smaller</div>
+            </div>
+
+            <div class="section-label">Items to Categorize (with correct category)</div>
+            <div class="category-entry">
+                <div class="category-box">
+                    <div class="category-header">Why Temperance Had More Members (Category 1)</div>
+                    <div class="category-items-list">
+                        <div class="cat-item">Seen as "respectable" reform acceptable for women's public participation</div>
+                        <div class="cat-item">Did not challenge fundamental property rights or regional interests</div>
+                        <div class="cat-item">Could be framed as protecting families from male drunkenness</div>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <div class="category-header">Why Abolition Remained Smaller (Category 2)</div>
+                    <div class="category-items-list">
+                        <div class="cat-item">Directly threatened Southern economic and social system</div>
+                        <div class="cat-item">Faced violent opposition including mob attacks and gag rules</div>
+                        <div class="cat-item">Divided even Northern communities over race and immediate vs. gradual approaches</div>
+                    </div>
                 </div>
             </div>
-            <div class="category-section">
-                <div class="category-title">Why Abolition Remained Smaller</div>
-                <div class="category-items">
-                    <div class="category-item">Directly threatened Southern economic and social system</div>
-                    <div class="category-item">Faced violent opposition including mob attacks and gag rules</div>
-                    <div class="category-item">Divided even Northern communities over race and immediate vs. gradual approaches</div>
-                </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">General Feedback</div>
+                Temperance was "safe" reform - it didn't threaten sectional interests or require confronting racism. Abolition's radical implications limited its appeal even in the North.
             </div>
         </div>
+    </div>
 
-        <!-- Q6 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q6</span>
-                <span class="question-type">Matching (2.5 pts)</span>
+    <!-- QUESTION 6 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 6</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Matching</div>
+                <div class="points">2.5 points</div>
             </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">Match each reform movement with its PRIMARY connection to the Second Great Awakening's religious revival.</div>
-            <table class="matching-table">
-                <tr><td class="matching-left">Temperance Movement</td><td class="matching-right">Alcohol as sin preventing moral perfection and family harmony</td></tr>
-                <tr><td class="matching-left">Abolitionism</td><td class="matching-right">Slavery as national sin requiring immediate repentance</td></tr>
-                <tr><td class="matching-left">Women's Rights</td><td class="matching-right">Women's moral authority to reform society and protect families</td></tr>
-                <tr><td class="matching-left">Education Reform</td><td class="matching-right">Universal education to create moral, informed citizens</td></tr>
-            </table>
-            <div class="feedback">The Second Great Awakening (1790s-1840s) taught that individuals could achieve salvation through moral action and that society could be perfected.</div>
-        </div>
 
-        <!-- Q7 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q7</span>
-                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            <div class="section-label">Items to Enter in Canvas (Left Column / Right Column)</div>
+            <div class="matching-section">
+                <div class="matching-column">
+                    <h4>LEFT COLUMN - Reform Movements (Prompts)</h4>
+                    <div class="matching-item"><span class="match-num">1</span> Temperance Movement</div>
+                    <div class="matching-item"><span class="match-num">2</span> Abolitionism</div>
+                    <div class="matching-item"><span class="match-num">3</span> Women's Rights</div>
+                    <div class="matching-item"><span class="match-num">4</span> Education Reform</div>
+                </div>
+                <div class="matching-column">
+                    <h4>RIGHT COLUMN - Religious Connections (Answers)</h4>
+                    <div class="matching-item"><span class="match-num">A</span> Alcohol as sin preventing moral perfection and family harmony</div>
+                    <div class="matching-item"><span class="match-num">B</span> Slavery as national sin requiring immediate repentance</div>
+                    <div class="matching-item"><span class="match-num">C</span> Women's moral authority to reform society and protect families</div>
+                    <div class="matching-item"><span class="match-num">D</span> Universal education to create moral, informed citizens</div>
+                </div>
             </div>
+
+            <div class="correct-matches">
+                <h4>Correct Matches (for grading key)</h4>
+                <ul>
+                    <li><strong>1 - A:</strong> Temperance Movement = Alcohol as sin preventing moral perfection and family harmony</li>
+                    <li><strong>2 - B:</strong> Abolitionism = Slavery as national sin requiring immediate repentance</li>
+                    <li><strong>3 - C:</strong> Women's Rights = Women's moral authority to reform society and protect families</li>
+                    <li><strong>4 - D:</strong> Education Reform = Universal education to create moral, informed citizens</li>
+                </ul>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">General Feedback</div>
+                The Second Great Awakening (1790s-1840s) taught that individuals could achieve salvation through moral action and that society could be perfected. Each reform movement drew on this religious energy.
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 7 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 7</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Multiple Choice</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">The anti-slavery newspaper circulation data shows steady growth from 5,000 (1830) to 300,000 (1855). Which factor BEST explains this consistent upward trend?</div>
-            <div class="options">
-                <div class="option correct"><span class="option-letter">A</span> Improvements in printing technology, postal systems, and literacy rates expanded reach</div>
-                <div class="option"><span class="option-letter">B</span> The federal government subsidized anti-slavery publications</div>
-                <div class="option"><span class="option-letter">C</span> Southern states encouraged distribution of abolitionist materials</div>
-                <div class="option"><span class="option-letter">D</span> Most newspapers in this era were dedicated to abolition</div>
-            </div>
-            <div class="feedback">Technological changes (steam-powered printing, cheaper paper, expanded postal routes) combined with rising Northern literacy enabled mass distribution of papers like The Liberator.</div>
-        </div>
 
-        <!-- Q8 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q8</span>
-                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            <div class="section-label">Answer Options (Enter all 4 in Canvas)</div>
+            <div class="answer-option correct">
+                <span class="option-marker">A</span>
+                <span>Improvements in printing technology, postal systems, and literacy rates expanded reach</span>
+                <span class="correct-label">CORRECT</span>
             </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">B</span>
+                <span>The federal government subsidized anti-slavery publications</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">C</span>
+                <span>Southern states encouraged distribution of abolitionist materials</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">D</span>
+                <span>Most newspapers in this era were dedicated to abolition</span>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! Technological changes (steam-powered printing, cheaper paper, expanded postal routes) combined with rising Northern literacy enabled mass distribution of papers like The Liberator and Frederick Douglass' North Star.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                The federal government actually restricted abolitionist mail in the South. Consider what technological and social changes enabled mass print media in this era.
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 8 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 8</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Multiple Answer</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">Based on the growth patterns in the data, select ALL ways these reform trends likely INCREASED sectional tensions between North and South. (Select all that apply)</div>
-            <div class="options">
-                <div class="option correct"><span class="option-letter">A</span> Growing abolition movement threatened Southern slavery and way of life</div>
-                <div class="option correct"><span class="option-letter">B</span> Northern reform culture contrasted with Southern resistance to social change</div>
-                <div class="option correct"><span class="option-letter">C</span> Petition campaigns pressured Congress to address slavery, angering Southern representatives</div>
-                <div class="option"><span class="option-letter">D</span> Southern states embraced temperance reform enthusiastically</div>
-            </div>
-            <div class="feedback">Northern reform energy - especially abolition's explosive growth - directly challenged Southern institutions and widened the cultural divide that would lead to Civil War.</div>
-        </div>
 
-        <!-- Q9 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q9</span>
-                <span class="question-type">Categorization (2.5 pts)</span>
+            <div class="section-label">Answer Options (Mark multiple correct in Canvas)</div>
+            <div class="answer-option correct">
+                <span class="option-marker">A</span>
+                <span>Growing abolition movement threatened Southern slavery and way of life</span>
+                <span class="correct-label">CORRECT</span>
             </div>
-            <div class="question-text">The data shows women participated across multiple reform movements. Categorize each statement about women's reform participation as ACCURATE or INACCURATE.</div>
-            <div class="category-section">
-                <div class="category-title">Accurate Statement</div>
-                <div class="category-items">
-                    <div class="category-item">Women dominated temperance movement membership and leadership</div>
-                    <div class="category-item">Women's reform work led them to recognize their own lack of rights</div>
-                    <div class="category-item">Women faced criticism for speaking publicly even in reform movements</div>
+            <div class="answer-option correct">
+                <span class="option-marker">B</span>
+                <span>Northern reform culture contrasted with Southern resistance to social change</span>
+                <span class="correct-label">CORRECT</span>
+            </div>
+            <div class="answer-option correct">
+                <span class="option-marker">C</span>
+                <span>Petition campaigns pressured Congress to address slavery, angering Southern representatives</span>
+                <span class="correct-label">CORRECT</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">D</span>
+                <span>Southern states embraced temperance reform enthusiastically</span>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! Northern reform energy - especially abolition's explosive growth - directly challenged Southern institutions and widened the cultural divide that would lead to Civil War.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                Consider how Southern slaveholders would view the growth of abolitionist societies from 50 to 2,000 and anti-slavery newspapers reaching 300,000 circulation.
+            </div>
+        </div>
+    </div>
+
+    <!-- QUESTION 9 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 9</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Categorization</div>
+                <div class="points">2.5 points</div>
+            </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
+            <div class="question-text">The data shows women participated across multiple reform movements. Categorize each statement about women's reform participation as ACCURATE or INACCURATE based on the historical context.</div>
+
+            <div class="section-label">Categories to Create in Canvas</div>
+            <div style="display:flex; gap:20px; margin:15px 0;">
+                <div style="flex:1; background:#d4edda; padding:10px 15px; border-radius:4px; text-align:center; font-weight:bold;">Category 1: Accurate Statement</div>
+                <div style="flex:1; background:#f8d7da; padding:10px 15px; border-radius:4px; text-align:center; font-weight:bold;">Category 2: Inaccurate Statement</div>
+            </div>
+
+            <div class="section-label">Items to Categorize (with correct category)</div>
+            <div class="category-entry">
+                <div class="category-box">
+                    <div class="category-header" style="background:#28a745;">Accurate Statement (Category 1)</div>
+                    <div class="category-items-list">
+                        <div class="cat-item">Women dominated temperance movement membership and leadership</div>
+                        <div class="cat-item">Women's reform work led them to recognize their own lack of rights</div>
+                        <div class="cat-item">Women faced criticism for speaking publicly even in reform movements</div>
+                    </div>
+                </div>
+                <div class="category-box">
+                    <div class="category-header" style="background:#dc3545;">Inaccurate Statement (Category 2)</div>
+                    <div class="category-items-list">
+                        <div class="cat-item" style="border-left-color:#dc3545;">Women were completely excluded from abolitionist organizations</div>
+                        <div class="cat-item" style="border-left-color:#dc3545;">The women's rights movement emerged independently without connection to other reforms</div>
+                        <div class="cat-item" style="border-left-color:#dc3545;">Men universally supported women's participation in all reform movements</div>
+                    </div>
                 </div>
             </div>
-            <div class="category-section">
-                <div class="category-title">Inaccurate Statement</div>
-                <div class="category-items">
-                    <div class="category-item">Women were completely excluded from abolitionist organizations</div>
-                    <div class="category-item">The women's rights movement emerged independently without connection to other reforms</div>
-                    <div class="category-item">Men universally supported women's participation in all reform movements</div>
-                </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">General Feedback</div>
+                Women's reform participation was complex: they were welcomed in temperance but faced restrictions in abolition (leading to the 1840 split). Their reform experience revealed their own subordinate status, sparking the women's rights movement.
             </div>
         </div>
+    </div>
 
-        <!-- Q10 -->
-        <div class="question">
-            <div class="question-header">
-                <span class="question-num">Q10</span>
-                <span class="question-type">Multiple Choice (2.5 pts)</span>
+    <!-- QUESTION 10 -->
+    <div class="question">
+        <div class="question-header">
+            <span class="question-num">Question 10</span>
+            <div class="question-meta">
+                <div class="canvas-type">Canvas Type: Multiple Choice</div>
+                <div class="points">2.5 points</div>
             </div>
+        </div>
+        <div class="question-body">
+            <div class="section-label">Question Text</div>
             <div class="question-text">Analyzing all four data trends together, what do the patterns reveal about the relationship between reform movements in antebellum America?</div>
-            <div class="options">
-                <div class="option correct"><span class="option-letter">A</span> Reform movements were interconnected, with activists often participating in multiple causes and using similar organizing strategies</div>
-                <div class="option"><span class="option-letter">B</span> Each reform movement operated completely independently with no overlap in membership or methods</div>
-                <div class="option"><span class="option-letter">C</span> The government coordinated all reform movements through a central agency</div>
-                <div class="option"><span class="option-letter">D</span> Reform movements declined steadily throughout the period</div>
+
+            <div class="section-label">Answer Options (Enter all 4 in Canvas)</div>
+            <div class="answer-option correct">
+                <span class="option-marker">A</span>
+                <span>Reform movements were interconnected, with activists often participating in multiple causes and using similar organizing strategies</span>
+                <span class="correct-label">CORRECT</span>
             </div>
-            <div class="feedback">The parallel growth patterns suggest interconnection. Many reformers worked across movements, and tactics like petition campaigns were shared.</div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">B</span>
+                <span>Each reform movement operated completely independently with no overlap in membership or methods</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">C</span>
+                <span>The government coordinated all reform movements through a central agency</span>
+            </div>
+            <div class="answer-option incorrect">
+                <span class="option-marker">D</span>
+                <span>Reform movements declined steadily throughout the period</span>
+            </div>
+
+            <div class="section-label">Feedback</div>
+            <div class="feedback-section feedback-correct">
+                <div class="feedback-label">Correct Answer Feedback</div>
+                Correct! The data shows parallel growth patterns suggesting interconnection. Many reformers (like the Grimke sisters) worked across movements, and tactics like petition campaigns were shared. This "reform network" created a culture of activism.
+            </div>
+            <div class="feedback-section feedback-incorrect">
+                <div class="feedback-label">Incorrect Answer Feedback</div>
+                Notice how all four movements show growth during the same period. What might explain these parallel patterns? Consider whether reformers might have participated in multiple movements.
+            </div>
         </div>
+    </div>
+
+    <div class="quiz-settings" style="margin-top:40px; background:#f0f0f0; border-left-color:#8B4513;">
+        <h3 style="color:#8B4513;">Learning Outcome Alignment</h3>
+        <p><strong>Module Learning Outcomes:</strong></p>
+        <ul>
+            <li>MLO 1: Analyze connections between religious revival and reform</li>
+            <li>MLO 2: Evaluate strategies/divisions within abolitionism</li>
+            <li>MLO 3: Explain how women's reform led to women's rights</li>
+        </ul>
+        <p><strong>Course Learning Outcomes:</strong></p>
+        <ul>
+            <li>CLO1: Analyze social/political/economic development</li>
+            <li>CLO2: Evaluate how diverse groups shaped American society</li>
+            <li>CLO3: Apply historical thinking skills to interpret sources</li>
+        </ul>
+        <p><strong>Historical Thinking Skills:</strong> HTS6 (Data Literacy), HTS4 (Comparison)</p>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
@@ -247,18 +845,74 @@
             type: 'line',
             data: {
                 datasets: [
-                    { label: 'Abolitionist Societies (#)', data: [{x:1830,y:50},{x:1835,y:200},{x:1838,y:400},{x:1840,y:1000},{x:1845,y:1350},{x:1850,y:2000}], borderColor: '#d63031', backgroundColor: '#d6303133', borderWidth: 3, tension: 0.4, fill: false },
-                    { label: 'Anti-Slavery Papers (thousands)', data: [{x:1830,y:5},{x:1835,y:20},{x:1840,y:50},{x:1845,y:100},{x:1850,y:150},{x:1855,y:300}], borderColor: '#0984e3', backgroundColor: '#0984e333', borderWidth: 3, tension: 0.4, fill: false },
-                    { label: "Women's Rights Petitions (thousands)", data: [{x:1835,y:0},{x:1840,y:5},{x:1845,y:15},{x:1848,y:40},{x:1852,y:90},{x:1855,y:200}], borderColor: '#00b894', backgroundColor: '#00b89433', borderWidth: 3, tension: 0.4, fill: false },
-                    { label: 'Temperance Members (thousands)', data: [{x:1830,y:100},{x:1835,y:500},{x:1840,y:1000},{x:1845,y:1200},{x:1850,y:1500},{x:1855,y:1700}], borderColor: '#fdcb6e', backgroundColor: '#fdcb6e33', borderWidth: 3, tension: 0.4, fill: false }
+                    {
+                        label: 'Abolitionist Societies (#)',
+                        data: [{x:1830,y:50},{x:1835,y:200},{x:1838,y:400},{x:1840,y:1000},{x:1845,y:1350},{x:1850,y:2000}],
+                        borderColor: '#d63031',
+                        backgroundColor: '#d6303133',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    },
+                    {
+                        label: 'Anti-Slavery Papers (thousands)',
+                        data: [{x:1830,y:5},{x:1835,y:20},{x:1840,y:50},{x:1845,y:100},{x:1850,y:150},{x:1855,y:300}],
+                        borderColor: '#0984e3',
+                        backgroundColor: '#0984e333',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    },
+                    {
+                        label: "Women's Rights Petitions (thousands)",
+                        data: [{x:1835,y:0},{x:1840,y:5},{x:1845,y:15},{x:1848,y:40},{x:1852,y:90},{x:1855,y:200}],
+                        borderColor: '#00b894',
+                        backgroundColor: '#00b89433',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    },
+                    {
+                        label: 'Temperance Members (thousands)',
+                        data: [{x:1830,y:100},{x:1835,y:500},{x:1840,y:1000},{x:1845,y:1200},{x:1850,y:1500},{x:1855,y:1700}],
+                        borderColor: '#fdcb6e',
+                        backgroundColor: '#fdcb6e33',
+                        borderWidth: 3,
+                        tension: 0.4,
+                        fill: false,
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }
                 ]
             },
             options: {
-                responsive: true, maintainAspectRatio: true,
-                plugins: { legend: { display: true, position: 'bottom', labels: { padding: 15, font: { size: 12 } } } },
+                responsive: true,
+                maintainAspectRatio: true,
+                plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom',
+                        labels: { padding: 15, font: { size: 12 } }
+                    }
+                },
                 scales: {
-                    x: { type: 'linear', min: 1830, max: 1855, title: { display: true, text: 'Year', font: { size: 14, weight: 'bold' } }, ticks: { stepSize: 5 } },
-                    y: { beginAtZero: true, title: { display: true, text: 'Count (thousands or total societies)', font: { size: 14, weight: 'bold' } } }
+                    x: {
+                        type: 'linear',
+                        min: 1830,
+                        max: 1855,
+                        title: { display: true, text: 'Year', font: { size: 14, weight: 'bold' } },
+                        ticks: { stepSize: 5 }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Count (thousands or total societies)', font: { size: 14, weight: 'bold' } }
+                    }
                 }
             }
         });
