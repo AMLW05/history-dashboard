@@ -460,29 +460,31 @@ function buildActivity(a, mn, idx) {
     }
     // LA4: Data Analysis or other activities
     else if (idx === 3 && modAct.la4) {
+        // Determine Canvas Entry Guide URL for LA4
+        let canvasGuideUrl = '';
+        if (mn === 3) {
+            canvasGuideUrl = 'module3-election-1800.html';
+        } else if (mn === 5) {
+            canvasGuideUrl = 'module5-reform-movements.html';
+        }
+
+        // Add prominent link to Canvas Entry Guide page
+        if (canvasGuideUrl) {
+            details += '<div style="margin:20px 0;padding:20px;background:#d4edda;border-left:5px solid #28a745;border-radius:6px">';
+            details += '<h4 style="margin:0 0 10px 0;color:#155724">📋 Canvas New Quizzes Entry Guide</h4>';
+            details += '<p style="margin:0 0 15px 0;color:#155724">View the <strong>complete Canvas Entry Guide</strong> with all question types, charts, answer options, and distractors for course reps to enter into Canvas:</p>';
+            details += '<a href="' + canvasGuideUrl + '" target="_blank" style="display:inline-block;background:#28a745;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px">🔗 Open Canvas Entry Guide</a>';
+            details += '<p style="margin:15px 0 0 0;font-size:13px;color:#155724"><em>Contains: Multiple Choice, Multiple Answer, Ordering, Matching, Categorization questions with ALL distractors visible</em></p>';
+            details += '</div>';
+        }
+
         // Check if LA4 has data analysis (Module 3)
         if (modAct.la4.dataAnalysis) {
             const chartId = 'chart-m' + mn + '-la4';
             const dataAnalysis = modAct.la4.dataAnalysis;
 
-            // Determine the standalone page URL
-            let standaloneUrl = '';
-            if (mn === 3) {
-                standaloneUrl = 'module3-election-1800.html';
-            }
-
             details += '<h4 style="margin-top:20px">📊 ' + dataAnalysis.title + '</h4>';
             details += '<p style="margin:10px 0"><strong>' + dataAnalysis.instructions + '</strong></p>';
-
-            // Add prominent link to standalone page
-            if (standaloneUrl) {
-                details += '<div style="margin:20px 0;padding:20px;background:#fff3cd;border-left:5px solid #ffc107;border-radius:6px">';
-                details += '<h4 style="margin:0 0 10px 0;color:#856404">📊 Interactive Charts & Questions</h4>';
-                details += '<p style="margin:0 0 15px 0;color:#856404">View the full interactive data analysis page with charts, data tables, and all questions:</p>';
-                details += '<a href="' + standaloneUrl + '" target="_blank" style="display:inline-block;background:#8B4513;color:white;padding:12px 24px;text-decoration:none;border-radius:6px;font-weight:bold;font-size:15px">🔗 Open Interactive Chart Page</a>';
-                details += '<p style="margin:15px 0 0 0;font-size:13px;color:#856404"><em>Opens in new tab • Perfect for Canvas linking • Print-friendly</em></p>';
-                details += '</div>';
-            }
 
             details += '<div style="margin:20px 0;padding:20px;background:#f8f9fa;border-radius:8px;border:2px solid var(--accent-light)">';
             details += '<h5 style="margin-bottom:20px">' + dataAnalysis.chartData.title + '</h5>';
@@ -514,10 +516,11 @@ function buildActivity(a, mn, idx) {
                 chartData: dataAnalysis.chartData
             });
         }
-        // Standard categorization activity
+        // Standard categorization activity (show summary, full details in Canvas Guide)
         else if (modAct.la4.items) {
             details += '<h4 style="margin-top:20px">' + modAct.la4.title + '</h4>';
             details += '<p style="margin:10px 0"><strong>' + modAct.la4.instructions + '</strong></p>';
+            details += '<p style="margin:10px 0;padding:10px;background:#e9ecef;border-radius:4px;font-style:italic">📌 <strong>Note:</strong> This is a summary view. For the complete Canvas Entry Guide with all question types (Multiple Choice, Ordering, Matching, etc.) and all answer options, click the green button above.</p>';
             details += '<table style="margin-top:10px"><thead><tr><th style="width:10%">#</th><th>Item</th><th style="width:30%">Answer</th></tr></thead><tbody>';
             modAct.la4.items.forEach((item, i) => {
                 details += '<tr><td><strong>' + (i+1) + '</strong></td><td>' + item.text + '</td><td><span class="badge badge-auto" style="display:inline-block">' + item.answer + '</span></td></tr>';
