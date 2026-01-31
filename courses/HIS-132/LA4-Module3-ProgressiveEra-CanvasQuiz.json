@@ -119,11 +119,15 @@
     },
     {
       "id": 5,
-      "type": "numeric",
+      "type": "multiple_choice",
       "points": 2.5,
-      "question": "According to the labor strike data, how many MORE strikes occurred in 1904 compared to 1890? (Enter a whole number)",
-      "correct_answer": 2550,
-      "tolerance": 50,
+      "question": "According to the labor strike data, how many MORE strikes occurred in 1904 compared to 1890?",
+      "answers": [
+        {"text": "2,550 more strikes", "correct": true},
+        {"text": "1,900 more strikes", "correct": false},
+        {"text": "4,450 more strikes", "correct": false},
+        {"text": "3,200 more strikes", "correct": false}
+      ],
       "feedback": {
         "correct": "Correct! 4,450 - 1,900 = 2,550 more strikes. This represents a 134% increase, demonstrating growing worker militancy during the Progressive Era.",
         "incorrect": "Calculate: Strikes in 1904 (4,450) minus Strikes in 1890 (1,900) = 2,550"

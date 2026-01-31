@@ -73,11 +73,15 @@
     },
     {
       "id": 2,
-      "type": "numeric",
+      "type": "multiple_choice",
       "points": 2.5,
-      "question": "Based on the voter registration data, calculate the percentage point increase in Black voter registration from 1940 to 1968. (Enter a whole number)",
-      "correct_answer": 59,
-      "tolerance": 1,
+      "question": "Based on the voter registration data, what was the percentage point increase in Black voter registration from 1940 to 1968?",
+      "answers": [
+        {"text": "59 percentage points", "correct": true},
+        {"text": "29 percentage points", "correct": false},
+        {"text": "62 percentage points", "correct": false},
+        {"text": "45 percentage points", "correct": false}
+      ],
       "feedback": {
         "correct": "Correct! 62% - 3% = 59 percentage points increase over 28 years. Most of this gain came after the Voting Rights Act (1965).",
         "incorrect": "Calculate: 1968 registration (62%) minus 1940 registration (3%) = 59 percentage points"

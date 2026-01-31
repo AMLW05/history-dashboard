@@ -105,11 +105,15 @@
     },
     {
       "id": 5,
-      "type": "numeric",
+      "type": "multiple_choice",
       "points": 2.5,
-      "question": "Based on the electoral vote data, calculate the total number of electoral votes cast in the Election of 1800. (Each elector cast 2 votes; enter only the total votes shown in the data)",
-      "correct_answer": 276,
-      "tolerance": 0,
+      "question": "Based on the electoral vote data, what was the total number of electoral votes cast in the Election of 1800?",
+      "answers": [
+        {"text": "276 electoral votes", "correct": true},
+        {"text": "138 electoral votes", "correct": false},
+        {"text": "146 electoral votes", "correct": false},
+        {"text": "265 electoral votes", "correct": false}
+      ],
       "feedback": {
         "correct": "Correct! 73 + 73 + 65 + 64 + 1 = 276 total electoral votes cast.",
         "incorrect": "Add all the electoral votes shown: Jefferson (73) + Burr (73) + Adams (65) + Pinckney (64) + Jay (1) = 276"
