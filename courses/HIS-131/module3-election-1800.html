@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIS-131 Module 3 LA3: Election of 1800 Data Analysis</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HIS-131 Module 3 LA4: Election of 1800 Data Analysis</title>
     <style>
         body {
             background: white;
@@ -20,14 +19,16 @@
             padding-bottom: 20px;
             border-bottom: 3px solid #8B4513;
         }
-        .header h1 {
-            color: #8B4513;
-            margin-bottom: 10px;
+        .header h1 { color: #8B4513; margin-bottom: 10px; }
+        .header p { color: #666; font-style: italic; }
+        .quiz-info {
+            background: #e8f4f8;
+            border-left: 4px solid #0984e3;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
         }
-        .header p {
-            color: #666;
-            font-style: italic;
-        }
+        .quiz-info strong { color: #0984e3; }
         .chart-container {
             background: #f8f9fa;
             padding: 30px;
@@ -35,51 +36,104 @@
             margin: 30px 0;
             border: 2px solid #8B4513;
         }
-        canvas {
-            max-width: 100%;
-            height: auto !important;
-        }
-        table {
-            width: 100%;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        table th {
-            background: #8B4513;
-            color: white;
-            padding: 12px;
-            text-align: left;
-        }
-        table td {
-            padding: 12px;
-            border-bottom: 1px solid #ddd;
-        }
-        table tbody tr:hover {
-            background: #f8f9fa;
-        }
-        .questions {
-            margin-top: 40px;
-        }
-        .questions h3 {
-            color: #8B4513;
-            margin-bottom: 20px;
-        }
+        canvas { max-width: 100%; height: auto !important; }
+        table { width: 100%; margin: 20px 0; border-collapse: collapse; }
+        table th { background: #8B4513; color: white; padding: 12px; text-align: left; }
+        table td { padding: 12px; border-bottom: 1px solid #ddd; }
+        table tbody tr:hover { background: #f8f9fa; }
+        .questions { margin-top: 40px; }
+        .questions h3 { color: #8B4513; margin-bottom: 20px; border-bottom: 2px solid #8B4513; padding-bottom: 10px; }
         .question {
             background: #f8f9fa;
             padding: 20px;
-            margin: 15px 0;
+            margin: 20px 0;
             border-left: 4px solid #8B4513;
             border-radius: 4px;
         }
-        .question strong {
-            color: #8B4513;
+        .question-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
-        .answer {
-            margin-top: 10px;
-            padding: 10px;
-            background: white;
+        .question-num {
+            background: #8B4513;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .question-type {
+            background: #0984e3;
+            color: white;
+            padding: 4px 10px;
             border-radius: 4px;
-            font-style: italic;
+            font-size: 12px;
+        }
+        .question-text { font-weight: bold; color: #2c3e50; margin-bottom: 15px; line-height: 1.5; }
+        .options { margin-left: 20px; }
+        .option {
+            padding: 10px 15px;
+            margin: 8px 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .option-letter {
+            background: #e0e0e0;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .correct { background: #d4edda; border-color: #28a745; }
+        .correct .option-letter { background: #28a745; color: white; }
+        .matching-table { width: 100%; }
+        .matching-table td { padding: 8px; vertical-align: top; }
+        .matching-left { font-weight: bold; background: #f0f0f0; width: 45%; }
+        .matching-right { background: #e8f4f8; }
+        .ordering-list { counter-reset: item; list-style: none; padding: 0; }
+        .ordering-list li {
+            padding: 10px 15px;
+            margin: 8px 0;
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .ordering-list li::before {
+            counter-increment: item;
+            content: counter(item);
+            background: #8B4513;
+            color: white;
+            padding: 3px 10px;
+            border-radius: 50%;
+            font-weight: bold;
+        }
+        .category-section { margin: 15px 0; }
+        .category-title {
+            background: #8B4513;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px 4px 0 0;
+            font-weight: bold;
+        }
+        .category-items {
+            border: 1px solid #8B4513;
+            border-top: none;
+            padding: 10px;
+            border-radius: 0 0 4px 4px;
+        }
+        .category-item {
+            padding: 8px 12px;
+            margin: 5px 0;
+            background: #f8f9fa;
+            border-radius: 4px;
         }
         .print-btn {
             background: #8B4513;
@@ -93,23 +147,43 @@
             margin: 20px auto;
             display: block;
         }
-        .print-btn:hover {
-            background: #6d3710;
+        .print-btn:hover { background: #6d3710; }
+        .feedback {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin-top: 10px;
+            border-radius: 4px;
+            font-style: italic;
+            font-size: 14px;
+        }
+        .numeric-answer {
+            background: #d4edda;
+            padding: 10px 15px;
+            border-radius: 4px;
+            font-weight: bold;
         }
         @media print {
             .print-btn { display: none; }
             body { padding: 20px; }
+            .question { break-inside: avoid; }
         }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>📊 Data Analysis: Election of 1800</h1>
-        <p>HIS-131 Module 3 Learning Activity 3</p>
-        <p><strong>Instructions:</strong> Analyze the electoral map and vote data to answer questions about the first peaceful transfer of power between parties.</p>
+        <h1>LA4: Analyzing the Election of 1800</h1>
+        <p>HIS-131 Module 3 | Data Analysis Activity</p>
     </div>
 
-    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+    <div class="quiz-info">
+        <strong>Canvas New Quiz Format</strong><br>
+        <strong>Points:</strong> 25 | <strong>Time:</strong> 35 minutes | <strong>Attempts:</strong> 2 (highest score kept)<br>
+        <strong>Question Types:</strong> Multiple Choice, Multiple Answer, Matching, Ordering, Categorization, Numeric<br>
+        <strong>Skills:</strong> Data Literacy (HTS6), Chronological Reasoning (HTS2)
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print This Page</button>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:30px">Electoral Votes: Election of 1800</h2>
@@ -127,71 +201,190 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td><strong>New England</strong></td>
-                    <td>Strong</td>
-                    <td>Weak</td>
-                </tr>
-                <tr>
-                    <td><strong>Middle States</strong></td>
-                    <td>Mixed</td>
-                    <td>Mixed</td>
-                </tr>
-                <tr>
-                    <td><strong>South</strong></td>
-                    <td>Weak</td>
-                    <td>Strong</td>
-                </tr>
-                <tr>
-                    <td><strong>West (KY, TN)</strong></td>
-                    <td>Very Weak</td>
-                    <td>Very Strong</td>
-                </tr>
+                <tr><td><strong>New England</strong></td><td>Strong</td><td>Weak</td></tr>
+                <tr><td><strong>Middle States</strong></td><td>Mixed</td><td>Mixed</td></tr>
+                <tr><td><strong>South</strong></td><td>Weak</td><td>Strong</td></tr>
+                <tr><td><strong>West (KY, TN)</strong></td><td>Very Weak</td><td>Very Strong</td></tr>
             </tbody>
         </table>
     </div>
 
     <div class="questions">
-        <h3>Analysis Questions</h3>
+        <h3>Quiz Questions (10 Questions, 25 Points Total)</h3>
 
+        <!-- Q1: Multiple Choice -->
         <div class="question">
-            <strong>Q1:</strong> Why did Jefferson and Burr receive the same number of electoral votes?
-            <div class="answer"><strong>Answer:</strong> Constitution didn't distinguish between President and VP; electors voted for two people</div>
+            <div class="question-header">
+                <span class="question-num">Q1</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">According to the electoral vote data, why did Jefferson and Burr receive the same number of electoral votes (73 each)?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> The original Constitution did not distinguish between presidential and vice-presidential votes; each elector cast two votes for president</div>
+                <div class="option"><span class="option-letter">B</span> There was a tie in the popular vote between the two candidates</div>
+                <div class="option"><span class="option-letter">C</span> The Federalists deliberately created a tie to prevent Jefferson from winning</div>
+                <div class="option"><span class="option-letter">D</span> Each state was required to split its electoral votes equally between party nominees</div>
+            </div>
+            <div class="feedback">Under the original Constitution, electors voted for two people without distinguishing president from vice president. This flaw led to the 12th Amendment (1804).</div>
         </div>
 
+        <!-- Q2: Multiple Answer -->
         <div class="question">
-            <strong>Q2:</strong> Which region gave strongest support to Federalists?
-            <div class="answer"><strong>Answer:</strong> New England</div>
+            <div class="question-header">
+                <span class="question-num">Q2</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on the regional voting patterns table, select ALL regions that showed strong support for the Democratic-Republicans. (Select all that apply)</div>
+            <div class="options">
+                <div class="option"><span class="option-letter">A</span> New England</div>
+                <div class="option"><span class="option-letter">B</span> Middle States</div>
+                <div class="option correct"><span class="option-letter">C</span> South</div>
+                <div class="option correct"><span class="option-letter">D</span> West (KY, TN)</div>
+            </div>
+            <div class="feedback">The South showed "Strong" support and the West showed "Very Strong" support for Democratic-Republicans, reflecting the agrarian interests of these regions.</div>
         </div>
 
+        <!-- Q3: Matching -->
         <div class="question">
-            <strong>Q3:</strong> Which region gave strongest support to Democratic-Republicans?
-            <div class="answer"><strong>Answer:</strong> South and Western states (KY, TN)</div>
+            <div class="question-header">
+                <span class="question-num">Q3</span>
+                <span class="question-type">Matching (2.5 pts)</span>
+            </div>
+            <div class="question-text">Match each region with its PRIMARY economic interest that influenced party alignment in 1800.</div>
+            <table class="matching-table">
+                <tr><td class="matching-left">New England (Federalist)</td><td class="matching-right">Commerce, shipping, and manufacturing</td></tr>
+                <tr><td class="matching-left">South (Democratic-Republican)</td><td class="matching-right">Plantation agriculture and export crops</td></tr>
+                <tr><td class="matching-left">West (Democratic-Republican)</td><td class="matching-right">Small farming and frontier expansion</td></tr>
+                <tr><td class="matching-left">Middle States (Mixed)</td><td class="matching-right">Diverse economy with both commercial and agricultural interests</td></tr>
+            </table>
+            <div class="feedback">Regional economic differences shaped political alignments: commercial Northeast supported Federalist policies while agrarian South and West supported Democratic-Republican opposition to centralized power.</div>
         </div>
 
+        <!-- Q4: Ordering -->
         <div class="question">
-            <strong>Q4:</strong> What constitutional problem did this election expose?
-            <div class="answer"><strong>Answer:</strong> Need to separate President and VP voting (led to 12th Amendment in 1804)</div>
+            <div class="question-header">
+                <span class="question-num">Q4</span>
+                <span class="question-type">Ordering (2.5 pts)</span>
+            </div>
+            <div class="question-text">Place the following events of the Election of 1800 crisis in chronological order, from first to last.</div>
+            <ol class="ordering-list">
+                <li>Electoral votes counted, revealing Jefferson-Burr tie at 73 votes each</li>
+                <li>Election moved to House of Representatives as required by Constitution</li>
+                <li>House deadlocked through 35 ballots over multiple days</li>
+                <li>Hamilton's influence helps break deadlock in favor of Jefferson</li>
+                <li>Jefferson elected president on 36th ballot</li>
+            </ol>
+            <div class="feedback">Hamilton, despite opposing Jefferson's politics, believed Burr was more dangerous and privately urged Federalists to support Jefferson.</div>
         </div>
 
+        <!-- Q5: Numeric -->
         <div class="question">
-            <strong>Q5:</strong> How was the tie between Jefferson and Burr resolved?
-            <div class="answer"><strong>Answer:</strong> House of Representatives chose Jefferson after 36 ballots; Hamilton's influence helped</div>
+            <div class="question-header">
+                <span class="question-num">Q5</span>
+                <span class="question-type">Numeric (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on the electoral vote data, calculate the total number of electoral votes cast in the Election of 1800.</div>
+            <div class="numeric-answer">Answer: 276 (73 + 73 + 65 + 64 + 1 = 276)</div>
+            <div class="feedback">Each elector cast 2 votes, and there were 138 electors, for a total of 276 electoral votes.</div>
         </div>
 
+        <!-- Q6: Categorization -->
         <div class="question">
-            <strong>Q6:</strong> Why is this election called the 'Revolution of 1800'?
-            <div class="answer"><strong>Answer:</strong> First peaceful transfer of power between opposing political parties in U.S. history</div>
+            <div class="question-header">
+                <span class="question-num">Q6</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">Categorize each of the following positions as belonging to the FEDERALIST or DEMOCRATIC-REPUBLICAN party platform in 1800.</div>
+            <div class="category-section">
+                <div class="category-title">Federalist Position</div>
+                <div class="category-items">
+                    <div class="category-item">Supported strong national bank and federal economic power</div>
+                    <div class="category-item">Advocated for closer ties with Britain</div>
+                    <div class="category-item">Supported Alien and Sedition Acts to suppress opposition</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Democratic-Republican Position</div>
+                <div class="category-items">
+                    <div class="category-item">Favored states' rights and limited federal government</div>
+                    <div class="category-item">Sympathized with French Revolution's democratic ideals</div>
+                    <div class="category-item">Opposed standing army as threat to liberty</div>
+                </div>
+            </div>
         </div>
 
+        <!-- Q7: Multiple Choice -->
         <div class="question">
-            <strong>Q7:</strong> What does the regional pattern reveal about political divisions?
-            <div class="answer"><strong>Answer:</strong> North-South divide with commercial North supporting Federalists, agrarian South supporting Republicans</div>
+            <div class="question-header">
+                <span class="question-num">Q7</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">The Election of 1800 is often called the "Revolution of 1800." Based on the electoral data showing a Federalist defeat, which statement BEST explains why historians use this term?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> It marked the first peaceful transfer of power between opposing political parties in American history</div>
+                <div class="option"><span class="option-letter">B</span> It resulted in violent protests that nearly overthrew the government</div>
+                <div class="option"><span class="option-letter">C</span> It was the first election where women were allowed to vote</div>
+                <div class="option"><span class="option-letter">D</span> It eliminated the Electoral College system</div>
+            </div>
+            <div class="feedback">Jefferson called it a "revolution" because power transferred peacefully from Federalists to Democratic-Republicans - proving the Constitution could handle political change without violence.</div>
         </div>
 
+        <!-- Q8: Multiple Answer -->
         <div class="question">
-            <strong>Q8:</strong> How many total electoral votes were cast?
-            <div class="answer"><strong>Answer:</strong> 276 total (138 electors × 2 votes each)</div>
+            <div class="question-header">
+                <span class="question-num">Q8</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">The regional voting pattern data reveals a North-South divide. Select ALL factors that contributed to Southern support for Democratic-Republicans. (Select all that apply)</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Democratic-Republicans opposed federal interference with slavery</div>
+                <div class="option correct"><span class="option-letter">B</span> Southern planters opposed Federalist tariffs that raised prices on imported goods</div>
+                <div class="option correct"><span class="option-letter">C</span> Democratic-Republican leaders like Jefferson and Madison were Virginians</div>
+                <div class="option"><span class="option-letter">D</span> The South had more factories that benefited from Democratic-Republican trade policies</div>
+            </div>
+            <div class="feedback">The South's support was driven by: protection of slavery from federal interference, opposition to tariffs harming agricultural exports, and identification with Virginia-based party leadership.</div>
+        </div>
+
+        <!-- Q9: Multiple Choice -->
+        <div class="question">
+            <div class="question-header">
+                <span class="question-num">Q9</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">Examining Adams's 65 electoral votes compared to Jefferson's 73, what does this relatively close margin suggest about the Election of 1800?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> The nation was deeply divided, with the outcome determined by a few swing states in the Middle region</div>
+                <div class="option"><span class="option-letter">B</span> Adams was universally unpopular and barely received any support</div>
+                <div class="option"><span class="option-letter">C</span> The Federalist Party had completely collapsed by 1800</div>
+                <div class="option"><span class="option-letter">D</span> Most Americans preferred monarchy to democracy</div>
+            </div>
+            <div class="feedback">The close margin (8 votes) shows deep division. The Middle States' "Mixed" support was decisive - New York's switch to Jefferson proved crucial.</div>
+        </div>
+
+        <!-- Q10: Categorization -->
+        <div class="question">
+            <div class="question-header">
+                <span class="question-num">Q10</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">The Election of 1800 exposed constitutional problems. Categorize each outcome as either a PROBLEM EXPOSED or a SOLUTION IMPLEMENTED after the election.</div>
+            <div class="category-section">
+                <div class="category-title">Problem Exposed by 1800 Election</div>
+                <div class="category-items">
+                    <div class="category-item">No distinction between presidential and vice-presidential electoral votes</div>
+                    <div class="category-item">House of Representatives deadlock when no candidate had majority</div>
+                    <div class="category-item">Running mates from same party could tie each other</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Solution Implemented After 1800</div>
+                <div class="category-items">
+                    <div class="category-item">12th Amendment requiring separate ballots for president and vice president</div>
+                    <div class="category-item">Peaceful transfer of power between opposing parties</div>
+                    <div class="category-item">Precedent established for accepting electoral defeat gracefully</div>
+                </div>
+            </div>
+            <div class="feedback">The 12th Amendment (1804) fixed the voting procedure, while the peaceful transfer established crucial democratic precedents.</div>
         </div>
     </div>
 
@@ -201,13 +394,7 @@
         new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: [
-                    'Thomas Jefferson\n(Democratic-Republican)',
-                    'Aaron Burr\n(Democratic-Republican)',
-                    'John Adams\n(Federalist)',
-                    'Charles C. Pinckney\n(Federalist)',
-                    'John Jay\n(Federalist)'
-                ],
+                labels: ['Thomas Jefferson\n(D-R)', 'Aaron Burr\n(D-R)', 'John Adams\n(Fed)', 'C.C. Pinckney\n(Fed)', 'John Jay\n(Fed)'],
                 datasets: [{
                     label: 'Electoral Votes',
                     data: [73, 73, 65, 64, 1],
@@ -219,39 +406,10 @@
             options: {
                 responsive: true,
                 maintainAspectRatio: true,
-                plugins: {
-                    title: {
-                        display: false
-                    },
-                    legend: {
-                        display: false
-                    },
-                    tooltip: {
-                        callbacks: {
-                            label: function(context) {
-                                return context.raw + ' electoral votes';
-                            }
-                        }
-                    }
-                },
+                plugins: { legend: { display: false } },
                 scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 80,
-                        title: {
-                            display: true,
-                            text: 'Electoral Votes',
-                            font: { size: 14, weight: 'bold' }
-                        }
-                    },
-                    x: {
-                        ticks: {
-                            autoSkip: false,
-                            maxRotation: 0,
-                            minRotation: 0,
-                            font: { size: 11 }
-                        }
-                    }
+                    y: { beginAtZero: true, max: 80, title: { display: true, text: 'Electoral Votes', font: { size: 14, weight: 'bold' } } },
+                    x: { ticks: { autoSkip: false, maxRotation: 0, minRotation: 0, font: { size: 11 } } }
                 }
             }
         });

@@ -3,276 +3,285 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIS-132 Module 6 LA3: Civil Rights Movement Data</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HIS-132 Module 6 LA4: Civil Rights Movement Data Analysis</title>
     <style>
-        body {
-            background: white;
-            padding: 40px 20px;
-            font-family: Georgia, serif;
-            color: #2c3e50;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #8B4513;
-        }
-        .header h1 {
-            color: #8B4513;
-            margin-bottom: 10px;
-        }
-        .header p {
-            color: #666;
-            font-style: italic;
-        }
-        .chart-container {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border: 2px solid #8B4513;
-        }
-        canvas {
-            max-width: 100%;
-            max-height: 400px;
-            margin: 20px 0;
-        }
-        .questions {
-            margin-top: 40px;
-        }
-        .questions h3 {
-            color: #8B4513;
-            margin-bottom: 20px;
-        }
-        .question {
-            background: #f8f9fa;
-            padding: 20px;
-            margin: 15px 0;
-            border-left: 4px solid #8B4513;
-            border-radius: 4px;
-        }
-        .question strong {
-            color: #8B4513;
-        }
-        .answer {
-            margin-top: 10px;
-            padding: 10px;
-            background: white;
-            border-radius: 4px;
-            font-style: italic;
-        }
-        .print-btn {
-            background: #8B4513;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: Georgia, serif;
-            margin: 20px auto;
-            display: block;
-        }
-        .print-btn:hover {
-            background: #6d3710;
-        }
-        .timeline {
-            background: white;
-            padding: 20px;
-            margin: 20px 0;
-            border-left: 4px solid #00b894;
-        }
-        .timeline h4 {
-            color: #00b894;
-            margin-bottom: 10px;
-        }
-        @media print {
-            .print-btn { display: none; }
-            body { padding: 20px; }
-        }
+        body { background: white; padding: 40px 20px; font-family: Georgia, serif; color: #2c3e50; max-width: 1000px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #8B4513; }
+        .header h1 { color: #8B4513; margin-bottom: 10px; }
+        .header p { color: #666; font-style: italic; }
+        .quiz-info { background: #e8f4f8; border-left: 4px solid #0984e3; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        .quiz-info strong { color: #0984e3; }
+        .chart-container { background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0; border: 2px solid #8B4513; }
+        canvas { max-width: 100%; max-height: 350px; margin: 20px 0; }
+        .questions { margin-top: 40px; }
+        .questions h3 { color: #8B4513; margin-bottom: 20px; border-bottom: 2px solid #8B4513; padding-bottom: 10px; }
+        .question { background: #f8f9fa; padding: 20px; margin: 20px 0; border-left: 4px solid #8B4513; border-radius: 4px; }
+        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .question-num { background: #8B4513; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; }
+        .question-type { background: #0984e3; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+        .question-text { font-weight: bold; color: #2c3e50; margin-bottom: 15px; line-height: 1.5; }
+        .options { margin-left: 20px; }
+        .option { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
+        .option-letter { background: #e0e0e0; padding: 3px 8px; border-radius: 3px; font-weight: bold; font-size: 12px; }
+        .correct { background: #d4edda; border-color: #28a745; }
+        .correct .option-letter { background: #28a745; color: white; }
+        .ordering-list { counter-reset: item; list-style: none; padding: 0; }
+        .ordering-list li { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
+        .ordering-list li::before { counter-increment: item; content: counter(item); background: #8B4513; color: white; padding: 3px 10px; border-radius: 50%; font-weight: bold; }
+        .category-section { margin: 15px 0; }
+        .category-title { background: #8B4513; color: white; padding: 8px 15px; border-radius: 4px 4px 0 0; font-weight: bold; }
+        .category-items { border: 1px solid #8B4513; border-top: none; padding: 10px; border-radius: 0 0 4px 4px; }
+        .category-item { padding: 8px 12px; margin: 5px 0; background: #f8f9fa; border-radius: 4px; }
+        .matching-table { width: 100%; }
+        .matching-table td { padding: 8px; vertical-align: top; }
+        .matching-left { font-weight: bold; background: #f0f0f0; width: 45%; }
+        .matching-right { background: #e8f4f8; }
+        .numeric-answer { background: #d4edda; padding: 10px 15px; border-radius: 4px; font-weight: bold; }
+        .feedback { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px 15px; margin-top: 10px; border-radius: 4px; font-style: italic; font-size: 14px; }
+        .print-btn { background: #8B4513; color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; font-size: 16px; font-family: Georgia, serif; margin: 20px auto; display: block; }
+        .print-btn:hover { background: #6d3710; }
+        .timeline { background: white; padding: 15px; margin: 10px 0; border-left: 4px solid #00b894; }
+        .timeline h4 { color: #00b894; margin: 0 0 5px 0; }
+        @media print { .print-btn { display: none; } body { padding: 20px; } .question { break-inside: avoid; } }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>📊 Data Analysis: Civil Rights Movement (1945-1968)</h1>
-        <p>HIS-132 Module 6 Learning Activity 3</p>
-        <p><strong>Instructions:</strong> Analyze Civil Rights movement data including voter registration, desegregation timeline, legislative victories, and protest participation.</p>
+        <h1>LA4: Analyzing Civil Rights Movement Data</h1>
+        <p>HIS-132 Module 6 | Data Analysis Activity</p>
     </div>
 
-    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+    <div class="quiz-info">
+        <strong>Canvas New Quiz Format</strong><br>
+        <strong>Points:</strong> 25 | <strong>Time:</strong> 35 minutes | <strong>Attempts:</strong> 2 (highest score kept)<br>
+        <strong>Question Types:</strong> Multiple Choice, Multiple Answer, Matching, Ordering, Categorization, Numeric<br>
+        <strong>Skills:</strong> Data Literacy (HTS6), Comparison (HTS4), Source Analysis (HTS1)
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print This Page</button>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Black Voter Registration in the South</h2>
-        <p style="text-align:center; font-style:italic; color:#666;">Registration rising from 3% (1940) to 29% (1960) to 62% (1968) after Voting Rights Act</p>
+        <p style="text-align:center; font-style:italic; color:#666;">Registration: 3% (1940) to 29% (1960) to 62% (1968) after Voting Rights Act</p>
         <canvas id="voterChart"></canvas>
     </div>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">School Desegregation Progress</h2>
-        <p style="text-align:center; font-style:italic; color:#666;">Only 2% of Black students in integrated schools by 1964, rising to 32% by 1968</p>
+        <p style="text-align:center; font-style:italic; color:#666;">Black students in integrated schools: 0% (1954) to 2% (1964) to 32% (1968)</p>
         <canvas id="schoolChart"></canvas>
     </div>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Major Civil Rights Legislation</h2>
-        <div class="timeline">
-            <h4>Civil Rights Act of 1964</h4>
-            <p>Banned discrimination in employment and public accommodations</p>
-        </div>
-        <div class="timeline">
-            <h4>Voting Rights Act of 1965</h4>
-            <p>Protected voting rights; banned literacy tests</p>
-        </div>
-        <div class="timeline">
-            <h4>Fair Housing Act of 1968</h4>
-            <p>Banned housing discrimination</p>
-        </div>
+        <div class="timeline"><h4>Civil Rights Act of 1964</h4><p>Banned discrimination in employment and public accommodations</p></div>
+        <div class="timeline"><h4>Voting Rights Act of 1965</h4><p>Protected voting rights; banned literacy tests</p></div>
+        <div class="timeline"><h4>Fair Housing Act of 1968</h4><p>Banned housing discrimination</p></div>
+    </div>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Major Protest Participation</h2>
+        <div class="timeline"><h4>Montgomery Bus Boycott (1955-56)</h4><p>50,000 participants (local)</p></div>
+        <div class="timeline"><h4>March on Washington (1963)</h4><p>250,000 participants (national)</p></div>
+        <div class="timeline"><h4>Selma to Montgomery March (1965)</h4><p>25,000 participants (regional)</p></div>
     </div>
 
     <div class="questions">
-        <h3>Analysis Questions</h3>
+        <h3>Quiz Questions (10 Questions, 25 Points Total)</h3>
 
+        <!-- Q1 -->
         <div class="question">
-            <strong>Q1:</strong> How did Black voter registration in the South change after the Voting Rights Act of 1965?
-            <div class="answer"><strong>Answer:</strong> Registration jumped from 29% (1960) to 62% (1968), demonstrating the law's effectiveness in protecting voting rights</div>
+            <div class="question-header">
+                <span class="question-num">Q1</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">According to the voter registration data, how did Black voter registration in the South change after the Voting Rights Act of 1965?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> It increased dramatically from 29% (1960) to 62% (1968), demonstrating the law's effectiveness</div>
+                <div class="option"><span class="option-letter">B</span> It declined because the law was not enforced</div>
+                <div class="option"><span class="option-letter">C</span> It remained unchanged at 29%</div>
+                <div class="option"><span class="option-letter">D</span> It decreased to 3% as in 1940</div>
+            </div>
+            <div class="feedback">The Voting Rights Act's federal oversight and ban on literacy tests produced immediate, measurable results - registration more than doubled in just 3 years.</div>
         </div>
 
+        <!-- Q2 -->
         <div class="question">
-            <strong>Q2:</strong> What does school desegregation data reveal about Southern resistance to Brown v. Board?
-            <div class="answer"><strong>Answer:</strong> Only 2% of Black students attended integrated schools by 1964 (10 years after Brown), showing massive resistance to court orders</div>
+            <div class="question-header">
+                <span class="question-num">Q2</span>
+                <span class="question-type">Numeric (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on the voter registration data, calculate the percentage point increase in Black voter registration from 1940 to 1968.</div>
+            <div class="numeric-answer">Answer: 59 percentage points (62% - 3% = 59)</div>
+            <div class="feedback">Most of this gain came after the Voting Rights Act (1965).</div>
         </div>
 
+        <!-- Q3 -->
         <div class="question">
-            <strong>Q3:</strong> Which Civil Rights law had the most immediate measurable impact on voting?
-            <div class="answer"><strong>Answer:</strong> Voting Rights Act of 1965, which banned literacy tests and led to dramatic increase in Black voter registration</div>
+            <div class="question-header">
+                <span class="question-num">Q3</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">The school desegregation data shows only 2% of Black students attended integrated schools by 1964 - TEN years after Brown v. Board. Select ALL factors that explain this slow progress. (Select all that apply)</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Southern states engaged in "massive resistance" to court orders</div>
+                <div class="option correct"><span class="option-letter">B</span> The federal government initially lacked enforcement mechanisms</div>
+                <div class="option correct"><span class="option-letter">C</span> White flight and neighborhood segregation limited integration</div>
+                <div class="option"><span class="option-letter">D</span> The Supreme Court immediately enforced desegregation nationwide</div>
+            </div>
+            <div class="feedback">Brown v. Board declared segregation unconstitutional but provided no enforcement timeline. Southern resistance combined with federal reluctance to intervene slowed progress dramatically.</div>
         </div>
 
+        <!-- Q4 -->
         <div class="question">
-            <strong>Q4:</strong> What pattern do you see in protest participation over time?
-            <div class="answer"><strong>Answer:</strong> Participation grew massively from local (Montgomery) to national (March on Washington with 250,000), showing movement's expanding reach</div>
+            <div class="question-header">
+                <span class="question-num">Q4</span>
+                <span class="question-type">Ordering (2.5 pts)</span>
+            </div>
+            <div class="question-text">Place the following Civil Rights legislation in chronological order (earliest to latest).</div>
+            <ol class="ordering-list">
+                <li>Civil Rights Act - banned discrimination in employment and public accommodations (1964)</li>
+                <li>Voting Rights Act - protected voting rights and banned literacy tests (1965)</li>
+                <li>Fair Housing Act - banned housing discrimination (1968)</li>
+            </ol>
+            <div class="feedback">The three major Civil Rights laws were passed in quick succession: 1964, 1965, 1968. Together they addressed the major areas of legal discrimination.</div>
         </div>
 
+        <!-- Q5 -->
         <div class="question">
-            <strong>Q5:</strong> Why might school desegregation have occurred more slowly than voter registration?
-            <div class="answer"><strong>Answer:</strong> School integration required overcoming local resistance, white flight, and lack of federal enforcement, while Voting Rights Act had federal oversight</div>
+            <div class="question-header">
+                <span class="question-num">Q5</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">Compare the voter registration and school desegregation data. Categorize each statement about the difference in progress rates.</div>
+            <div class="category-section">
+                <div class="category-title">Why Voter Registration Increased Faster</div>
+                <div class="category-items">
+                    <div class="category-item">Voting Rights Act included federal oversight and enforcement provisions</div>
+                    <div class="category-item">Federal registrars could be sent to counties with low Black registration</div>
+                    <div class="category-item">Clear metric (registration percentage) made progress measurable and enforceable</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Why School Desegregation Was Slower</div>
+                <div class="category-items">
+                    <div class="category-item">Integration required changing local school systems and overcoming white flight</div>
+                    <div class="category-item">Residential segregation meant neighborhood schools remained segregated</div>
+                    <div class="category-item">Local control of education allowed continued resistance to integration</div>
+                </div>
+            </div>
         </div>
 
+        <!-- Q6 -->
         <div class="question">
-            <strong>Q6:</strong> What do the three major civil rights laws (1964, 1965, 1968) collectively address?
-            <div class="answer"><strong>Answer:</strong> They comprehensively banned discrimination in public accommodations, voting, employment, and housing</div>
+            <div class="question-header">
+                <span class="question-num">Q6</span>
+                <span class="question-type">Matching (2.5 pts)</span>
+            </div>
+            <div class="question-text">Match each Civil Rights law with the specific barrier to equality it addressed.</div>
+            <table class="matching-table">
+                <tr><td class="matching-left">Civil Rights Act of 1964</td><td class="matching-right">Segregated lunch counters, hotels, and employment discrimination</td></tr>
+                <tr><td class="matching-left">Voting Rights Act of 1965</td><td class="matching-right">Literacy tests, poll taxes, and registration barriers</td></tr>
+                <tr><td class="matching-left">Fair Housing Act of 1968</td><td class="matching-right">Discriminatory practices by realtors, banks, and landlords</td></tr>
+                <tr><td class="matching-left">Brown v. Board of Education (1954)</td><td class="matching-right">Legally mandated separate schools for Black and white children</td></tr>
+            </table>
+            <div class="feedback">Each law targeted specific mechanisms of discrimination. Together with Brown, they dismantled legal segregation.</div>
         </div>
 
+        <!-- Q7 -->
         <div class="question">
-            <strong>Q7:</strong> How do protest numbers demonstrate the movement's power?
-            <div class="answer"><strong>Answer:</strong> Massive participation (250,000 at March on Washington) created political pressure forcing federal action on civil rights</div>
+            <div class="question-header">
+                <span class="question-num">Q7</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">The protest participation data shows growth from 50,000 (Montgomery, local) to 250,000 (March on Washington, national). What does this pattern reveal about the Civil Rights Movement's development?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> The movement expanded from local protests to massive national demonstrations, creating political pressure for federal action</div>
+                <div class="option"><span class="option-letter">B</span> Protest participation declined over time as people lost interest</div>
+                <div class="option"><span class="option-letter">C</span> All protests remained small and local throughout the period</div>
+                <div class="option"><span class="option-letter">D</span> The federal government organized and funded all protests</div>
+            </div>
+            <div class="feedback">The movement's growth from local to national demonstrated its expanding reach and created irresistible pressure for federal legislation.</div>
         </div>
 
+        <!-- Q8 -->
         <div class="question">
-            <strong>Q8:</strong> What does the 10-year gap between Brown v. Board (1954) and Civil Rights Act (1964) suggest?
-            <div class="answer"><strong>Answer:</strong> Legal victories alone were insufficient; grassroots protests and direct action were necessary to force federal legislation</div>
+            <div class="question-header">
+                <span class="question-num">Q8</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on ALL the data, select ALL conclusions about what made the Voting Rights Act of 1965 particularly effective. (Select all that apply)</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> It banned literacy tests that had been used to prevent Black registration</div>
+                <div class="option correct"><span class="option-letter">B</span> It allowed federal oversight in states with histories of discrimination</div>
+                <div class="option correct"><span class="option-letter">C</span> Registration numbers show immediate, dramatic improvement after passage</div>
+                <div class="option"><span class="option-letter">D</span> It relied entirely on Southern states to enforce their own compliance</div>
+            </div>
+            <div class="feedback">The Act's success came from its specific provisions: banning discriminatory tests, requiring federal preclearance, and sending federal registrars to enforce compliance.</div>
         </div>
 
+        <!-- Q9 -->
         <div class="question">
-            <strong>Q9:</strong> Which data source best demonstrates the effectiveness of federal enforcement?
-            <div class="answer"><strong>Answer:</strong> Voter registration data after 1965, showing that federal protection under Voting Rights Act produced immediate, measurable results</div>
+            <div class="question-header">
+                <span class="question-num">Q9</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">The data reveals a 10-year gap between Brown v. Board (1954) and the Civil Rights Act (1964). Categorize each factor.</div>
+            <div class="category-section">
+                <div class="category-title">Why Legal Victories Alone Were Insufficient</div>
+                <div class="category-items">
+                    <div class="category-item">Courts could declare laws unconstitutional but couldn't force compliance</div>
+                    <div class="category-item">Southern states found ways to resist or circumvent court orders</div>
+                    <div class="category-item">Federal government was reluctant to intervene without public pressure</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Why Grassroots Protests Were Necessary</div>
+                <div class="category-items">
+                    <div class="category-item">Mass demonstrations created political pressure and media attention</div>
+                    <div class="category-item">Direct action (sit-ins, marches) exposed injustice to national audience</div>
+                    <div class="category-item">Protests in Birmingham (1963) shocked nation and spurred legislation</div>
+                </div>
+            </div>
         </div>
 
+        <!-- Q10 -->
         <div class="question">
-            <strong>Q10:</strong> How do these data help historians understand the Civil Rights Movement's success?
-            <div class="answer"><strong>Answer:</strong> They reveal that legal changes required grassroots mobilization, federal enforcement, and persistence over decades to achieve measurable impact</div>
+            <div class="question-header">
+                <span class="question-num">Q10</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">Analyzing all the data together, which statement BEST describes what the evidence reveals about Civil Rights Movement success?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Success required the combination of legal challenges, grassroots protests, and federal legislation with enforcement mechanisms</div>
+                <div class="option"><span class="option-letter">B</span> A single Supreme Court decision immediately ended all discrimination</div>
+                <div class="option"><span class="option-letter">C</span> Progress occurred automatically without organized resistance</div>
+                <div class="option"><span class="option-letter">D</span> The data shows no measurable progress was made during this period</div>
+            </div>
+            <div class="feedback">The data reveals that multiple strategies working together produced change: Brown provided legal foundation, protests created pressure, legislation provided tools, and enforcement made laws effective.</div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script>
         // Voter Registration Chart
-        const voterCtx = document.getElementById('voterChart').getContext('2d');
-        new Chart(voterCtx, {
+        new Chart(document.getElementById('voterChart').getContext('2d'), {
             type: 'line',
             data: {
                 labels: [1940, 1950, 1960, 1965, 1968],
-                datasets: [{
-                    label: 'Black Voter Registration (%)',
-                    data: [3, 12, 29, 45, 62],
-                    borderColor: '#00b894',
-                    backgroundColor: '#00b89433',
-                    borderWidth: 4,
-                    tension: 0.4,
-                    fill: true,
-                    pointRadius: 6,
-                    pointHoverRadius: 8
-                }]
+                datasets: [{ label: 'Black Voter Registration (%)', data: [3, 12, 29, 45, 62], borderColor: '#00b894', backgroundColor: '#00b89433', borderWidth: 4, tension: 0.4, fill: true, pointRadius: 6, pointHoverRadius: 8 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false },
-                    annotation: {
-                        annotations: {
-                            line1: {
-                                type: 'line',
-                                xMin: '1965',
-                                xMax: '1965',
-                                borderColor: 'red',
-                                borderWidth: 2,
-                                borderDash: [6, 6],
-                                label: {
-                                    content: 'Voting Rights Act',
-                                    enabled: true,
-                                    position: 'top'
-                                }
-                            }
-                        }
-                    }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 70,
-                        title: { display: true, text: 'Percentage Registered to Vote' }
-                    },
-                    x: {
-                        title: { display: true, text: 'Year' }
-                    }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, max: 70, title: { display: true, text: 'Percentage Registered' } }, x: { title: { display: true, text: 'Year' } } } }
         });
 
         // School Desegregation Chart
-        const schoolCtx = document.getElementById('schoolChart').getContext('2d');
-        new Chart(schoolCtx, {
+        new Chart(document.getElementById('schoolChart').getContext('2d'), {
             type: 'bar',
             data: {
-                labels: ['1954\n(Brown v. Board)', '1960', '1964\n(Civil Rights Act)', '1968'],
-                datasets: [{
-                    label: 'Black Students in Integrated Schools (%)',
-                    data: [0, 1, 2, 32],
-                    backgroundColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'],
-                    borderColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'],
-                    borderWidth: 2
-                }]
+                labels: ['1954\n(Brown)', '1960', '1964\n(CRA)', '1968'],
+                datasets: [{ label: 'Black Students in Integrated Schools (%)', data: [0, 1, 2, 32], backgroundColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'], borderColor: ['#0984e3', '#0984e3', '#0984e3', '#00b894'], borderWidth: 2 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        max: 35,
-                        title: { display: true, text: 'Percentage in Integrated Schools' }
-                    },
-                    x: {
-                        title: { display: true, text: 'Year' }
-                    }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, max: 35, title: { display: true, text: 'Percentage Integrated' } }, x: { title: { display: true, text: 'Year' } } } }
         });
     </script>
 </body>

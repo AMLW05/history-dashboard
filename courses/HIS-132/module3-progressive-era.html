@@ -3,240 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIS-132 Module 3 LA3: Progressive Era Reform Data</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HIS-132 Module 3 LA4: Progressive Era Reform Data Analysis</title>
     <style>
-        body {
-            background: white;
-            padding: 40px 20px;
-            font-family: Georgia, serif;
-            color: #2c3e50;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #8B4513;
-        }
-        .header h1 {
-            color: #8B4513;
-            margin-bottom: 10px;
-        }
-        .header p {
-            color: #666;
-            font-style: italic;
-        }
-        .chart-container {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 8px;
-            margin: 30px 0;
-            border: 2px solid #8B4513;
-        }
-        canvas {
-            max-width: 100%;
-            max-height: 400px;
-            margin: 20px 0;
-        }
-        .questions {
-            margin-top: 40px;
-        }
-        .questions h3 {
-            color: #8B4513;
-            margin-bottom: 20px;
-        }
-        .question {
-            background: #f8f9fa;
-            padding: 20px;
-            margin: 15px 0;
-            border-left: 4px solid #8B4513;
-            border-radius: 4px;
-        }
-        .question strong {
-            color: #8B4513;
-        }
-        .answer {
-            margin-top: 10px;
-            padding: 10px;
-            background: white;
-            border-radius: 4px;
-            font-style: italic;
-        }
-        .print-btn {
-            background: #8B4513;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-family: Georgia, serif;
-            margin: 20px auto;
-            display: block;
-        }
-        .print-btn:hover {
-            background: #6d3710;
-        }
-        .note {
-            background: #fff3cd;
-            border-left: 4px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-        }
-        @media print {
-            .print-btn { display: none; }
-            body { padding: 20px; }
-        }
+        body { background: white; padding: 40px 20px; font-family: Georgia, serif; color: #2c3e50; max-width: 1000px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 3px solid #8B4513; }
+        .header h1 { color: #8B4513; margin-bottom: 10px; }
+        .header p { color: #666; font-style: italic; }
+        .quiz-info { background: #e8f4f8; border-left: 4px solid #0984e3; padding: 15px 20px; margin: 20px 0; border-radius: 4px; }
+        .quiz-info strong { color: #0984e3; }
+        .chart-container { background: #f8f9fa; padding: 30px; border-radius: 8px; margin: 30px 0; border: 2px solid #8B4513; }
+        canvas { max-width: 100%; max-height: 350px; margin: 20px 0; }
+        .questions { margin-top: 40px; }
+        .questions h3 { color: #8B4513; margin-bottom: 20px; border-bottom: 2px solid #8B4513; padding-bottom: 10px; }
+        .question { background: #f8f9fa; padding: 20px; margin: 20px 0; border-left: 4px solid #8B4513; border-radius: 4px; }
+        .question-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .question-num { background: #8B4513; color: white; padding: 5px 12px; border-radius: 20px; font-weight: bold; }
+        .question-type { background: #0984e3; color: white; padding: 4px 10px; border-radius: 4px; font-size: 12px; }
+        .question-text { font-weight: bold; color: #2c3e50; margin-bottom: 15px; line-height: 1.5; }
+        .options { margin-left: 20px; }
+        .option { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
+        .option-letter { background: #e0e0e0; padding: 3px 8px; border-radius: 3px; font-weight: bold; font-size: 12px; }
+        .correct { background: #d4edda; border-color: #28a745; }
+        .correct .option-letter { background: #28a745; color: white; }
+        .ordering-list { counter-reset: item; list-style: none; padding: 0; }
+        .ordering-list li { padding: 10px 15px; margin: 8px 0; background: white; border: 1px solid #ddd; border-radius: 4px; display: flex; align-items: center; gap: 10px; }
+        .ordering-list li::before { counter-increment: item; content: counter(item); background: #8B4513; color: white; padding: 3px 10px; border-radius: 50%; font-weight: bold; }
+        .category-section { margin: 15px 0; }
+        .category-title { background: #8B4513; color: white; padding: 8px 15px; border-radius: 4px 4px 0 0; font-weight: bold; }
+        .category-items { border: 1px solid #8B4513; border-top: none; padding: 10px; border-radius: 0 0 4px 4px; }
+        .category-item { padding: 8px 12px; margin: 5px 0; background: #f8f9fa; border-radius: 4px; }
+        .matching-table { width: 100%; }
+        .matching-table td { padding: 8px; vertical-align: top; }
+        .matching-left { font-weight: bold; background: #f0f0f0; width: 45%; }
+        .matching-right { background: #e8f4f8; }
+        .numeric-answer { background: #d4edda; padding: 10px 15px; border-radius: 4px; font-weight: bold; }
+        .feedback { background: #fff3cd; border-left: 4px solid #ffc107; padding: 10px 15px; margin-top: 10px; border-radius: 4px; font-style: italic; font-size: 14px; }
+        .print-btn { background: #8B4513; color: white; border: none; padding: 12px 30px; border-radius: 6px; cursor: pointer; font-size: 16px; font-family: Georgia, serif; margin: 20px auto; display: block; }
+        .print-btn:hover { background: #6d3710; }
+        .note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+        .timeline { background: white; padding: 15px; margin: 10px 0; border-left: 4px solid #00b894; }
+        .timeline h4 { color: #00b894; margin: 0 0 5px 0; }
+        @media print { .print-btn { display: none; } body { padding: 20px; } .question { break-inside: avoid; } }
     </style>
 </head>
 <body>
     <div class="header">
-        <h1>📊 Data Analysis: Progressive Era Reform (1890-1920)</h1>
-        <p>HIS-132 Module 3 Learning Activity 3</p>
-        <p><strong>Instructions:</strong> Analyze Progressive Era reform data including immigration trends, labor strikes, women's suffrage timeline, and child labor statistics.</p>
+        <h1>LA4: Analyzing Progressive Era Reform Data</h1>
+        <p>HIS-132 Module 3 | Data Analysis Activity</p>
     </div>
 
-    <button class="print-btn" onclick="window.print()">🖨️ Print This Page</button>
+    <div class="quiz-info">
+        <strong>Canvas New Quiz Format</strong><br>
+        <strong>Points:</strong> 25 | <strong>Time:</strong> 35 minutes | <strong>Attempts:</strong> 2 (highest score kept)<br>
+        <strong>Question Types:</strong> Multiple Choice, Multiple Answer, Matching, Ordering, Categorization, Numeric<br>
+        <strong>Skills:</strong> Data Literacy (HTS6), Chronological Reasoning (HTS2)
+    </div>
+
+    <button class="print-btn" onclick="window.print()">Print This Page</button>
 
     <div class="note">
-        <strong>📌 Note:</strong> The data below represents actual historical statistics from the Progressive Era (1890-1920). Study the charts carefully before answering the analysis questions.
+        <strong>Note:</strong> The data below represents actual historical statistics from the Progressive Era (1890-1920). Study the charts carefully before answering the analysis questions.
     </div>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Immigration to the United States (1890-1915)</h2>
-        <p style="text-align:center; font-style:italic; color:#666;">Annual immigration rising from 455,000 (1890) to peak of 1,285,000 (1907), then declining to 430,000 (1915) after restrictions and WWI</p>
+        <p style="text-align:center; font-style:italic; color:#666;">Annual immigration: 455,000 (1890) to peak of 1,285,000 (1907), declining to 430,000 (1915)</p>
         <canvas id="immigrationChart"></canvas>
     </div>
 
     <div class="chart-container">
         <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Labor Strikes & Work Stoppages (1890-1904)</h2>
-        <p style="text-align:center; font-style:italic; color:#666;">Strikes increasing from 1,900 (1890) to 4,450 (1904), demonstrating growing labor militancy</p>
+        <p style="text-align:center; font-style:italic; color:#666;">Strikes increasing from 1,900 (1890) to 4,450 (1904)</p>
         <canvas id="strikesChart"></canvas>
     </div>
 
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Women's Suffrage by State (Before 19th Amendment)</h2>
+        <div class="timeline"><h4>1890 - Wyoming</h4><p>First state to grant women's suffrage</p></div>
+        <div class="timeline"><h4>1893 - Colorado</h4><p>Second state to grant suffrage</p></div>
+        <div class="timeline"><h4>1896 - Utah, Idaho</h4><p>Western states continue leading</p></div>
+        <div class="timeline"><h4>1910-1912 - Washington, California, Arizona, Kansas, Oregon</h4><p>Suffrage movement accelerates</p></div>
+        <div class="timeline"><h4>1920 - 19th Amendment</h4><p>Nationwide suffrage ratified</p></div>
+        <p style="text-align:center; font-style:italic; color:#666; margin-top:15px;">Note: Southern and Eastern states did not grant suffrage until federal amendment</p>
+    </div>
+
+    <div class="chart-container">
+        <h2 style="text-align:center; color:#8B4513; margin-bottom:20px">Child Labor Statistics (1900)</h2>
+        <p style="text-align:center; font-size:24px; color:#d63031; font-weight:bold;">1.75 Million</p>
+        <p style="text-align:center; color:#666;">children under 16 employed in industrial work</p>
+    </div>
+
     <div class="questions">
-        <h3>Analysis Questions</h3>
+        <h3>Quiz Questions (10 Questions, 25 Points Total)</h3>
 
+        <!-- Q1 -->
         <div class="question">
-            <strong>Q1:</strong> Based on immigration data, what year saw peak immigration before WWI?
-            <div class="answer"><strong>Answer:</strong> 1907, with 1,285,000 immigrants</div>
+            <div class="question-header">
+                <span class="question-num">Q1</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">According to the immigration data, what year saw PEAK immigration to the United States before World War I?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> 1907, with 1,285,000 immigrants</div>
+                <div class="option"><span class="option-letter">B</span> 1890, with 455,000 immigrants</div>
+                <div class="option"><span class="option-letter">C</span> 1915, with 430,000 immigrants</div>
+                <div class="option"><span class="option-letter">D</span> 1900, with 800,000 immigrants</div>
+            </div>
+            <div class="feedback">1907 marked peak immigration at 1,285,000 - nearly triple the 1890 level. The Panic of 1907 and later WWI (1914) caused sharp declines.</div>
         </div>
 
+        <!-- Q2 -->
         <div class="question">
-            <strong>Q2:</strong> What pattern do you notice in the states that granted women's suffrage BEFORE the 19th Amendment?
-            <div class="answer"><strong>Answer:</strong> Western states granted suffrage first (Wyoming 1890, Colorado 1893, etc.), while Southern and Eastern states resisted until federal amendment</div>
+            <div class="question-header">
+                <span class="question-num">Q2</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on the immigration data, immigration declined sharply after 1907. Select ALL factors that contributed to this decline. (Select all that apply)</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> The Panic of 1907 (economic recession) reduced job opportunities</div>
+                <div class="option correct"><span class="option-letter">B</span> Growing restrictions on immigration through legislation</div>
+                <div class="option correct"><span class="option-letter">C</span> World War I disrupted Atlantic travel beginning in 1914</div>
+                <div class="option"><span class="option-letter">D</span> Immigration was completely banned by federal law in 1908</div>
+            </div>
+            <div class="feedback">Multiple factors converged: economic recession (1907), increasing restrictions, and WWI disrupting ocean travel.</div>
         </div>
 
+        <!-- Q3 -->
         <div class="question">
-            <strong>Q3:</strong> How did the number of labor strikes change from 1890 to 1904?
-            <div class="answer"><strong>Answer:</strong> Strikes more than doubled from 1,900 to 4,450, showing increased worker activism</div>
+            <div class="question-header">
+                <span class="question-num">Q3</span>
+                <span class="question-type">Ordering (2.5 pts)</span>
+            </div>
+            <div class="question-text">Based on the suffrage timeline, place these states/events in chronological order by when women gained voting rights (earliest to latest).</div>
+            <ol class="ordering-list">
+                <li>Wyoming grants women's suffrage (1890)</li>
+                <li>Colorado grants women's suffrage (1893)</li>
+                <li>Utah and Idaho grant women's suffrage (1896)</li>
+                <li>Washington and California grant women's suffrage (1910-1911)</li>
+                <li>19th Amendment ratified - nationwide suffrage (1920)</li>
+            </ol>
+            <div class="feedback">Western states led the suffrage movement. Eastern and especially Southern states resisted until forced by the 19th Amendment.</div>
         </div>
 
+        <!-- Q4 -->
         <div class="question">
-            <strong>Q4:</strong> Why might immigration have declined sharply after 1907?
-            <div class="answer"><strong>Answer:</strong> Economic recession (Panic of 1907), growing restrictions on immigration, and outbreak of WWI in Europe (1914)</div>
+            <div class="question-header">
+                <span class="question-num">Q4</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">The suffrage data shows Western states granted women's suffrage decades before Eastern and Southern states. Categorize each factor.</div>
+            <div class="category-section">
+                <div class="category-title">Why Western States Supported Suffrage</div>
+                <div class="category-items">
+                    <div class="category-item">Frontier societies had fewer established gender hierarchies</div>
+                    <div class="category-item">Suffrage seen as way to attract female settlers and promote "civilization"</div>
+                    <div class="category-item">Smaller populations made it easier to experiment with reforms</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Why Eastern/Southern States Resisted</div>
+                <div class="category-items">
+                    <div class="category-item">Entrenched political machines opposed new voters they couldn't control</div>
+                    <div class="category-item">Fear that women's suffrage would lead to Black women voting in the South</div>
+                    <div class="category-item">Traditional gender roles more deeply embedded in established society</div>
+                </div>
+            </div>
         </div>
 
+        <!-- Q5 -->
         <div class="question">
-            <strong>Q5:</strong> What does the child labor data reveal about the success of Progressive reforms by 1900?
-            <div class="answer"><strong>Answer:</strong> Despite reform efforts, 1.75 million children still worked, showing limited success of child labor laws by 1900</div>
+            <div class="question-header">
+                <span class="question-num">Q5</span>
+                <span class="question-type">Numeric (2.5 pts)</span>
+            </div>
+            <div class="question-text">According to the labor strike data, how many MORE strikes occurred in 1904 compared to 1890?</div>
+            <div class="numeric-answer">Answer: 2,550 (4,450 - 1,900 = 2,550)</div>
+            <div class="feedback">This represents a 134% increase, demonstrating growing worker militancy during the Progressive Era.</div>
         </div>
 
+        <!-- Q6 -->
         <div class="question">
-            <strong>Q6:</strong> Which region was MOST resistant to women's suffrage before 1920?
-            <div class="answer"><strong>Answer:</strong> The South, where most states did not grant suffrage until forced by the 19th Amendment</div>
+            <div class="question-header">
+                <span class="question-num">Q6</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">The labor strike data shows strikes more than doubled from 1,900 (1890) to 4,450 (1904). What does this pattern suggest about worker conditions during industrialization?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Workers were increasingly dissatisfied with wages, hours, and conditions, leading to more organized resistance</div>
+                <div class="option"><span class="option-letter">B</span> Workers were completely satisfied but struck to support their employers</div>
+                <div class="option"><span class="option-letter">C</span> The government encouraged strikes as official policy</div>
+                <div class="option"><span class="option-letter">D</span> Strike numbers declined as conditions improved</div>
+            </div>
+            <div class="feedback">Rising strikes reflected worker discontent with industrial conditions: long hours, dangerous workplaces, low wages, and lack of job security.</div>
         </div>
 
+        <!-- Q7 -->
         <div class="question">
-            <strong>Q7:</strong> What relationship do you see between immigration and labor strikes?
-            <div class="answer"><strong>Answer:</strong> Both increased during same period; immigrant workers often participated in strikes despite facing discrimination</div>
+            <div class="question-header">
+                <span class="question-num">Q7</span>
+                <span class="question-type">Matching (2.5 pts)</span>
+            </div>
+            <div class="question-text">Match each Progressive Era reform issue with the data point that BEST illustrates the need for that reform.</div>
+            <table class="matching-table">
+                <tr><td class="matching-left">Immigration restriction legislation</td><td class="matching-right">1.28 million immigrants in peak year 1907</td></tr>
+                <tr><td class="matching-left">Labor protection laws</td><td class="matching-right">4,450 strikes by 1904 showing worker grievances</td></tr>
+                <tr><td class="matching-left">Child labor laws</td><td class="matching-right">1.75 million children under 16 working in industry</td></tr>
+                <tr><td class="matching-left">Women's suffrage movement</td><td class="matching-right">30-year gap between first state and federal amendment</td></tr>
+            </table>
+            <div class="feedback">Progressives used data and statistics to document social problems and build support for reforms.</div>
         </div>
 
+        <!-- Q8 -->
         <div class="question">
-            <strong>Q8:</strong> Why might Western states have been more willing to grant women's suffrage?
-            <div class="answer"><strong>Answer:</strong> Frontier societies had fewer traditional gender restrictions; suffrage seen as way to attract settlers and promote 'civilization'</div>
+            <div class="question-header">
+                <span class="question-num">Q8</span>
+                <span class="question-type">Multiple Answer (2.5 pts)</span>
+            </div>
+            <div class="question-text">The child labor data shows 1.75 million children working in 1900. Select ALL conclusions historians can draw from this statistic. (Select all that apply)</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Despite reform efforts, child labor remained widespread at the turn of the century</div>
+                <div class="option correct"><span class="option-letter">B</span> Industrial capitalism relied heavily on cheap child labor</div>
+                <div class="option correct"><span class="option-letter">C</span> Progressive child labor laws had limited success in the early period</div>
+                <div class="option"><span class="option-letter">D</span> Child labor was completely eliminated by 1900</div>
+            </div>
+            <div class="feedback">The 1.75 million figure shows child labor's persistence. Effective federal child labor regulation didn't come until the 1930s.</div>
         </div>
 
+        <!-- Q9 -->
         <div class="question">
-            <strong>Q9:</strong> What does rising labor militancy suggest about worker satisfaction during industrialization?
-            <div class="answer"><strong>Answer:</strong> Workers were increasingly dissatisfied with wages, conditions, and treatment, leading to more organized resistance</div>
+            <div class="question-header">
+                <span class="question-num">Q9</span>
+                <span class="question-type">Categorization (2.5 pts)</span>
+            </div>
+            <div class="question-text">Analyzing the immigration and strike data together reveals connections. Categorize each statement.</div>
+            <div class="category-section">
+                <div class="category-title">Supported by the Data</div>
+                <div class="category-items">
+                    <div class="category-item">Immigration and strike numbers both increased during the same period (1890-1904)</div>
+                    <div class="category-item">Immigrant workers often participated in labor strikes</div>
+                    <div class="category-item">Rising immigration coincided with industrial expansion and worker unrest</div>
+                    <div class="category-item">Both trends reflect the rapid industrialization transforming American society</div>
+                </div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Not Supported by the Data</div>
+                <div class="category-items">
+                    <div class="category-item">Immigration caused strikes to decrease</div>
+                    <div class="category-item">Native-born workers never participated in strikes</div>
+                </div>
+            </div>
         </div>
 
+        <!-- Q10 -->
         <div class="question">
-            <strong>Q10:</strong> How do these data sources help historians understand the Progressive Era?
-            <div class="answer"><strong>Answer:</strong> They reveal patterns of social change, resistance to reform, regional differences, and gap between reformers' goals and actual outcomes</div>
+            <div class="question-header">
+                <span class="question-num">Q10</span>
+                <span class="question-type">Multiple Choice (2.5 pts)</span>
+            </div>
+            <div class="question-text">Considering all the data together, what does the evidence reveal about the LIMITATIONS of Progressive Era reforms?</div>
+            <div class="options">
+                <div class="option correct"><span class="option-letter">A</span> Reforms were often incomplete, regionally uneven, and slow to address root causes of social problems</div>
+                <div class="option"><span class="option-letter">B</span> Progressive reforms solved all social problems by 1920</div>
+                <div class="option"><span class="option-letter">C</span> The data shows no reforms were attempted during this period</div>
+                <div class="option"><span class="option-letter">D</span> Southern states led the nation in implementing Progressive reforms</div>
+            </div>
+            <div class="feedback">The data shows reforms' limits: suffrage took 30 years; 1.75 million children still worked; strikes increased as underlying conditions persisted. Progress was real but uneven and incomplete.</div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script>
         // Immigration Chart
-        const immigrationCtx = document.getElementById('immigrationChart').getContext('2d');
-        new Chart(immigrationCtx, {
+        new Chart(document.getElementById('immigrationChart').getContext('2d'), {
             type: 'line',
             data: {
                 labels: [1890, 1895, 1900, 1905, 1907, 1910, 1915],
-                datasets: [{
-                    label: 'Annual Immigration (thousands)',
-                    data: [455, 600, 800, 1100, 1285, 1050, 430],
-                    borderColor: '#0984e3',
-                    backgroundColor: '#0984e333',
-                    borderWidth: 3,
-                    tension: 0.4,
-                    fill: true
-                }]
+                datasets: [{ label: 'Annual Immigration (thousands)', data: [455, 600, 800, 1100, 1285, 1050, 430], borderColor: '#0984e3', backgroundColor: '#0984e333', borderWidth: 3, tension: 0.4, fill: true }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Number of Immigrants (thousands)' }
-                    },
-                    x: {
-                        title: { display: true, text: 'Year' }
-                    }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Immigrants (thousands)' } }, x: { title: { display: true, text: 'Year' } } } }
         });
 
         // Strikes Chart
-        const strikesCtx = document.getElementById('strikesChart').getContext('2d');
-        new Chart(strikesCtx, {
+        new Chart(document.getElementById('strikesChart').getContext('2d'), {
             type: 'bar',
             data: {
                 labels: [1890, 1894, 1898, 1901, 1904],
-                datasets: [{
-                    label: 'Number of Strikes',
-                    data: [1900, 2800, 3200, 3900, 4450],
-                    backgroundColor: '#d63031',
-                    borderColor: '#d63031',
-                    borderWidth: 2
-                }]
+                datasets: [{ label: 'Number of Strikes', data: [1900, 2800, 3200, 3900, 4450], backgroundColor: '#d63031', borderColor: '#d63031', borderWidth: 2 }]
             },
-            options: {
-                responsive: true,
-                maintainAspectRatio: true,
-                plugins: {
-                    legend: { display: false }
-                },
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        title: { display: true, text: 'Number of Strikes' }
-                    },
-                    x: {
-                        title: { display: true, text: 'Year' }
-                    }
-                }
-            }
+            options: { responsive: true, maintainAspectRatio: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, title: { display: true, text: 'Number of Strikes' } }, x: { title: { display: true, text: 'Year' } } } }
         });
     </script>
 </body>
