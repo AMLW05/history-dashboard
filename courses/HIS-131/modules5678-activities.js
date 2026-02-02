@@ -462,11 +462,11 @@ const module8Activities = {
                 { event: "W.E.B. Du Bois publishes The Souls of Black Folk", date: "1903", order: 10 }
             ]
         },
-        synthesisActivity: {
+        comparisonActivity: {
             title: "Synthesis Activity: Connecting Course Themes",
             instructions: "Match each historical example to the course theme it best illustrates. Some examples illustrate multiple themes.",
-            themes: ["Power & Authority", "Identity & Citizenship", "Economic Systems", "Reform & Resistance", "Conflict & Compromise"],
-            examples: [
+            regions: ["Power & Authority", "Identity & Citizenship", "Economic Systems", "Reform & Resistance", "Conflict & Compromise"],
+            characteristics: [
                 { text: "Constitutional Convention debates over federal vs. state power", answer: "Power & Authority / Conflict & Compromise" },
                 { text: "Bacon's Rebellion leading to hardening of racial categories", answer: "Identity & Citizenship / Power & Authority" },
                 { text: "Cotton gin increasing demand for enslaved labor", answer: "Economic Systems" },
